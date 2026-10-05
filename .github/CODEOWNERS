@@ -1,0 +1,4 @@
+# Reviewers. With "Require review from Code Owners" on main, a PR needs approval
+# from one of these people. Anyone else's approval does not count.
+# A reviewer's own PR is approved by another reviewer.
+* @Nine14282 @nacs-970
