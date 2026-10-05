@@ -1,0 +1,19 @@
+# Secrets and local config
+.env
+.env.*
+.claude/settings.local.json
+
+# Cover page holds student IDs, full names and phone numbers. Never commit it.
+cover/
+cover-page.*
+report/cover*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS and editor
+.DS_Store
+Thumbs.db
