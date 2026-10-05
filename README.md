@@ -86,8 +86,10 @@ These are configured on GitHub for `ilma-org/os-coop-job-research`. Apply them a
 
 - Public repository in a free GitHub Organization. Default branch `main`.
 - Squash-merge only, and delete branches after merge.
-- Protection on `main`: pull request required, 1 approval, the `lint` status check required, applied to admins too. Do **not** turn on "Require approval of the most recent reviewable push", or the reviewer's own verification commit blocks their approval. "Dismiss stale approvals" is optional; if it is on, the reviewer must approve after pushing the verification commit.
-- Push and merge to `main` restricted to a `reviewers` team of the 3 reviewers, once that team exists.
+- Protection on `main`: pull request required, 1 approval, "Require review from Code Owners" on, the `lint` status check required, applied to admins too. Do **not** turn on "Require approval of the most recent reviewable push", or the reviewer's own verification commit blocks their approval. "Dismiss stale approvals" is optional; if it is on, the reviewer must approve after pushing the verification commit.
+- Reviewers: the 3 code owners listed in `.github/CODEOWNERS`. Because code-owner review is required, only their approvals count. Members who are not reviewers can open PRs but cannot approve them.
+- Push and merge to `main` restricted by username to the same 3 reviewers (`restrictions.users` in the branch-protection settings; no team is used).
+- To add or remove a reviewer: give them Write access first (a code owner without write access is ignored), then change `.github/CODEOWNERS` in a PR, then update the push restriction to match. Another reviewer approves and merges that PR.
 - Labels: `topic`, `dispute`, `needs-review`.
 - One `topic` Issue per topic directory, with the Issue number set in each `index.md` (`issue: null` and `owner: "@TBD"` until assigned).
 - Branch-protection options depend on the GitHub plan. If one is unavailable, the rule becomes an honor rule.
