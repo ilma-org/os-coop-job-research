@@ -1,0 +1,16 @@
+#!/bin/sh
+# Runs the knowledge-base lint before every push. CI runs the same script.
+# Enable once per clone with: sh scripts/setup.sh
+
+ROOT=$(git rev-parse --show-toplevel) || exit 1
+cd "$ROOT" || exit 1
+
+PY=$(command -v python3 || command -v python) || {
+    echo "pre-push: Python 3 not found, cannot lint" >&2
+    exit 1
+}
+
+"$PY" scripts/lint_front_matter.py || {
+    echo "pre-push: lint failed, push aborted. Fix the errors above and push again." >&2
+    exit 1
+}
