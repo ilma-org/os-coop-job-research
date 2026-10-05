@@ -68,6 +68,6 @@ gh issue create --web            # choose the Dispute template
 
 - `main` is protected. Push to a branch and open a PR, never push to `main`.
 - Commit in small, separate steps. See "Commits" in `AGENTS.md`.
-- A PR needs one approval from someone other than its author.
+- A PR needs one approval from a reviewer (a code owner in `.github/CODEOWNERS`) who is not its author. Approvals from other members do not count.
 - If `git push` is rejected, run `git pull --rebase` and push again. Do not force-push a branch that others use.
 - If the pre-push lint fails, read the errors, fix them, commit the fix, and push again. Do not skip the hook.

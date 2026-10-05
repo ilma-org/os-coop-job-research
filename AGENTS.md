@@ -66,5 +66,5 @@ Use `gh` for PRs and Issues. The exact commands for owners and reviewers are in 
 2. Create a branch named `<NN>-<slug>/<short-description>`. PR title: `[<NN>-<slug>] what changed`. The PR body says `Closes #<issue>`.
 3. Run `python scripts/lint_front_matter.py` before pushing and before opening a PR. Fix every error. Never bypass the pre-push hook.
 4. The reviewer opens each cited source, runs the blind AI recheck, then pushes a **verification commit** to the PR branch that fills `ai_recheck` and `review` and sets `human-verified` for passing claims. The reviewer approves after that commit.
-5. A PR is merged only after one approval from someone other than the author. Squash-merge. For a PR written by a reviewer, another reviewer merges it.
+5. A PR is merged only after one approval from a reviewer (a code owner in `.github/CODEOWNERS`) who is not the author. Squash-merge. For a PR written by a reviewer, another reviewer merges it.
 6. If a merged claim is found wrong, open a `dispute` Issue. See "Disputed claims" in `docs/schema.md`.
