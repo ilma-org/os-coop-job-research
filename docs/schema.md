@@ -41,7 +41,7 @@ Each topic is a directory. The topic owner creates and organizes the notes insid
 | `12-organization-and-working-environment` | 4.7 | 5 |
 | `13-preparation-plan` | 10 (outcome 8) | 12 |
 
-The company is not chosen yet. Topic 12 stays empty until it is. Before that, anything about the working environment is a typical SRE environment and must be `type: assumption`.
+The target company is Google. Topic 12 covers it. A claim about Google is an `org-fact`; anything about Google's internal environment that no published source states must be `type: assumption`.
 
 ## `topic-index` fields
 

@@ -7,7 +7,7 @@ Rules for any AI agent (Claude Code, Codex CLI, Antigravity, or another) working
 A secondary-research knowledge base for the course 204341 final assignment: GenAI-assisted career and Operating Systems exploration for COOP/job training.
 
 - Target position: **Site Reliability Engineer (SRE)**.
-- Target company: not chosen yet. Topic 12 stays empty until it is.
+- Target company: **Google**. Topic 12 covers Google; other topics stay about SRE in general unless a claim is about Google.
 - Report deadline: Sunday 18 October 2026, 23:59 (CMU Mango). The report is 10–15 pages excluding the cover page, 12-point Times New Roman, A4. The prompts appendix counts toward the page cap.
 - The report toolchain (LaTeX or docx) and the final report are not decided. This repo holds verified claims, not the report.
 
@@ -21,7 +21,7 @@ A secondary-research knowledge base for the course 204341 final assignment: GenA
 
 1. **No claim without a real source and an exact quote.** Every `fact` and `org-fact` needs a source you actually opened in this session, an access date, and a sentence copied verbatim from it. Never invent a URL, title, quote or date. If you cannot open the source, set `status: unverified` and say so.
 2. **Secondary research only.** Use published sources: official docs, job ads, papers, articles. No interviews or surveys.
-3. **Never claim what a company uses without evidence.** An `org-fact` needs real evidence and an archive link. Until the company is chosen, anything about the working environment is a typical SRE environment and must be `type: assumption`.
+3. **Never claim what a company uses without evidence.** A claim about Google is an `org-fact` and needs real evidence from a published source (Google job ads, Google's SRE books, official Google pages) and an archive link. Anything about Google's internal environment that no published source states is `type: assumption`.
 4. **Label assumptions and recommendations as `type: assumption`.** Never write them in the voice of a verified fact.
 5. **Agents never set `status: human-verified` and never write the `review` block.** Only a human reviewer does. Agents may set `unverified` and `ai-checked`.
 6. **Agents never merge or approve PRs and never push to `main`.**
