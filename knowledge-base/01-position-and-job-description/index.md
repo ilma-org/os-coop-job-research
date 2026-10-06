@@ -4,7 +4,7 @@ topic: 01-position-and-job-description
 title: Position and job description
 assignment_section: "4.1"
 report_sections: [3]
-owner: "@TBD"
+owner: "@Bximai"
 issue: null
 updated: 2026-10-05
 ---

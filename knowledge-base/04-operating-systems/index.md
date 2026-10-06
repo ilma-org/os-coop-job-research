@@ -4,7 +4,7 @@ topic: 04-operating-systems
 title: Operating systems required or recommended
 assignment_section: "4.3"
 report_sections: [6]
-owner: "@TBD"
+owner: "@csinside"
 issue: null
 updated: 2026-10-05
 ---

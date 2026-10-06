@@ -4,7 +4,7 @@ topic: 07-dev-and-runtime-tools
 title: Development and runtime tools
 assignment_section: "4.4"
 report_sections: [9]
-owner: "@TBD"
+owner: "@nacs-970"
 issue: null
 updated: 2026-10-05
 ---

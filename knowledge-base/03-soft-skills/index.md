@@ -4,7 +4,7 @@ topic: 03-soft-skills
 title: Soft skills
 assignment_section: "4.6"
 report_sections: [4]
-owner: "@TBD"
+owner: "@Nine14282"
 issue: null
 updated: 2026-10-05
 ---

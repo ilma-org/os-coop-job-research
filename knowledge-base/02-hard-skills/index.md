@@ -4,7 +4,7 @@ topic: 02-hard-skills
 title: Hard skills and technical knowledge
 assignment_section: "4.2"
 report_sections: [4]
-owner: "@TBD"
+owner: "@Nine14282"
 issue: null
 updated: 2026-10-05
 ---

@@ -4,7 +4,7 @@ topic: 11-os-course-concepts
 title: Operating Systems course concepts
 assignment_section: "4.5"
 report_sections: [10]
-owner: "@TBD"
+owner: "@TonCS05"
 issue: null
 updated: 2026-10-05
 ---

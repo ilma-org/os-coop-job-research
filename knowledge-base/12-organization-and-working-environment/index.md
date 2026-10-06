@@ -4,7 +4,7 @@ topic: 12-organization-and-working-environment
 title: Organization and working environment (Google)
 assignment_section: "4.7"
 report_sections: [5]
-owner: "@TBD"
+owner: "@Bximai"
 issue: null
 updated: 2026-10-06
 ---
