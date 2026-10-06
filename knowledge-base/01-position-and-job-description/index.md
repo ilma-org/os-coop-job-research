@@ -5,7 +5,7 @@ title: Position and job description
 assignment_section: "4.1"
 report_sections: [3]
 owner: "@Bximai"
-issue: null
+issue: 6
 updated: 2026-10-05
 ---
 

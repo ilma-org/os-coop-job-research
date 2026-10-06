@@ -5,7 +5,7 @@ title: Preparation plan
 assignment_section: "10 (outcome 8)"
 report_sections: [12]
 owner: "@TonCS05"
-issue: null
+issue: 18
 updated: 2026-10-05
 ---
 
