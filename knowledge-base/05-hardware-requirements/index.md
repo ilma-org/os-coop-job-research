@@ -5,7 +5,7 @@ title: Hardware requirements
 assignment_section: "4.3"
 report_sections: [7]
 owner: "@csinside"
-issue: null
+issue: 10
 updated: 2026-10-05
 ---
 

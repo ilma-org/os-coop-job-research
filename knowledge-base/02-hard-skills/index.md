@@ -5,7 +5,7 @@ title: Hard skills and technical knowledge
 assignment_section: "4.2"
 report_sections: [4]
 owner: "@Nine14282"
-issue: null
+issue: 7
 updated: 2026-10-05
 ---
 
