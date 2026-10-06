@@ -4,7 +4,7 @@ topic: 06-system-architecture-infrastructure
 title: System architecture and infrastructure
 assignment_section: "4.3"
 report_sections: [8]
-owner: "@TBD"
+owner: "@csinside"
 issue: null
 updated: 2026-10-05
 ---

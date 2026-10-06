@@ -4,7 +4,7 @@ topic: 05-hardware-requirements
 title: Hardware requirements
 assignment_section: "4.3"
 report_sections: [7]
-owner: "@TBD"
+owner: "@csinside"
 issue: null
 updated: 2026-10-05
 ---

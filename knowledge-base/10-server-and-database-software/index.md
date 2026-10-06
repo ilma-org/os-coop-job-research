@@ -4,7 +4,7 @@ topic: 10-server-and-database-software
 title: Server and database software
 assignment_section: "4.4"
 report_sections: [9]
-owner: "@TBD"
+owner: "@Nine14282"
 issue: null
 updated: 2026-10-05
 ---
