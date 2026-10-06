@@ -3,7 +3,7 @@
 Secondary-research knowledge base for the course 204341 final assignment (GenAI-assisted career and Operating Systems exploration for COOP/job training). Teammates research the target position, and every claim is fact-checked twice, by AI and by a human reviewer, before the report uses it.
 
 - Position: Site Reliability Engineer
-- Company: not chosen yet
+- Company: Google
 - Assignment rules: [`docs/assignment.md`](docs/assignment.md)
 - Field and workflow spec: [`docs/schema.md`](docs/schema.md)
 - Git and `gh` commands for owners and reviewers: [`docs/workflow.md`](docs/workflow.md)
@@ -50,7 +50,7 @@ Each directory contains:
 - `index.md`: the topic's scope, owner and Issue number.
 - Notes (`*.md`): Markdown files whose front matter lists **claims**. A claim has a source, an exact quote, an access date, a `type` (`fact`, `org-fact` or `assumption`) and a `status` (`unverified`, `ai-checked`, `human-verified` or `disputed`). The body is optional prose.
 
-The company is not chosen yet, so topic 12 stays empty. Until then, anything about the working environment is a typical SRE environment and is labeled `assumption`. Every field is defined in [`docs/schema.md`](docs/schema.md).
+The target company is Google, covered in topic 12. A claim about Google is an `org-fact` and needs published evidence and an archive link; anything about Google's internal environment that no published source states is labeled `assumption`. Every field is defined in [`docs/schema.md`](docs/schema.md).
 
 ## Using AI agents here
 
@@ -103,6 +103,5 @@ These are configured on GitHub for `ilma-org/os-coop-job-research`. Apply them a
 
 ## Still undecided
 
-- The target company (topic 12).
 - The report toolchain (LaTeX or docx). Keep notes in Markdown so Pandoc can produce either. The assignment requires 12-point Times New Roman on A4.
 - Any internal deadline for the knowledge base.

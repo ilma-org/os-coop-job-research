@@ -1,17 +1,17 @@
 ---
 doc_type: topic-index
 topic: 12-organization-and-working-environment
-title: Organization and working environment
+title: Organization and working environment (Google)
 assignment_section: "4.7"
 report_sections: [5]
 owner: "@TBD"
 issue: null
-updated: 2026-10-05
+updated: 2026-10-06
 ---
 
 # Organization and working environment
 
-Assignment Appendix G. Empty until the company is chosen. Do not claim what the company uses without reliable evidence; until then write only a typical SRE environment, labeled as an assumption.
+Assignment Appendix G. Target company: **Google** (SRE). Do not claim what Google uses without reliable published evidence (Google job ads, Google's SRE books, official Google pages), and archive every source. Anything about Google's internal environment that no published source states is labeled as an assumption.
 
 ## Scope
 
