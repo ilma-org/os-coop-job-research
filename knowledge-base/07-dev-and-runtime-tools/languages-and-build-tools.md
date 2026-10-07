@@ -57,7 +57,7 @@ claims:
     os_concepts: []
     pr: null
   - id: 07-05
-    claim: "Google's early cluster-configuration shell scripts were brittle and did not scale with the number of people or cluster permutations."
+    claim: "The shell scripts Google used to configure clusters, as the SRE book tells it, were brittle and did not scale with the number of people making changes or the number of cluster permutations."
     type: org-fact
     status: unverified
     source:
@@ -70,7 +70,7 @@ claims:
     os_concepts: []
     pr: null
   - id: 07-06
-    claim: "Google SRE extended the Python unit test framework into Prodtest, which unit-tests real-world services."
+    claim: "Google's Prodtest (Production Test) extended the Python unit test framework to allow unit testing of real-world services."
     type: org-fact
     status: unverified
     source:
@@ -79,11 +79,11 @@ claims:
       kind: official-doc
       accessed: 2026-10-06
       archive: https://web.archive.org/web/20260910213452/https://sre.google/sre-book/automation-at-google/
-    quote: "We extended the Python unit test framework to allow for unit testing of real-world services."
+    quote: "Prodtest (Production Test) was an ingenious solution to these unwelcome surprises. We extended the Python unit test framework to allow for unit testing of real-world services."
     os_concepts: []
     pr: null
   - id: 07-07
-    claim: "Google's early production automation consisted of simple Python scripts."
+    claim: "In the SRE book's cluster-management case study, the initial automation Google describes consisted of simple Python scripts."
     type: org-fact
     status: unverified
     source:
