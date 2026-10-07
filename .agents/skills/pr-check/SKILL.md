@@ -9,7 +9,8 @@ Read-only. It reports problems and does not fix, push, approve or merge. Rules a
 
 ## Author mode (before the PR opens)
 
-1. `python3 scripts/lint_front_matter.py` has 0 errors. This includes the leak scan, prompt-log fields and `redactions` counts.
+1. `python3 scripts/lint_front_matter.py` has 0 errors. This includes the Markdown leak scan, prompt-log fields and `redactions` counts.
+   `python3 scripts/pr_leak_scan.py --body-file <PR body file>` has 0 errors. It also scans added lines in every file type, commit messages and the PR text. Warnings about commit email addresses mean the git email is not a GitHub noreply address. Report them and do not rewrite commits unless the person asks.
 2. Branch is `<NN>-<slug>/<short-description>`, or `chore/...` or `meta/...` for repo-system changes. The PR title is `[<NN>-<slug>] ...` or `[meta] ...`. The body has `Closes #<n>`.
 3. No agent-only status gate is crossed. This must print nothing:
    `git diff origin/main...HEAD -U0 -- knowledge-base | grep -E '^\+ +(status: human-verified|review:|ai_recheck:)'`
@@ -23,6 +24,7 @@ Read-only. It reports problems and does not fix, push, approve or merge. Rules a
 
 1. `gh pr checkout <n>`, then run the lint with the PR context:
    `PR_AUTHOR=<author login> BASE_SHA=$(git merge-base origin/main HEAD) python3 scripts/lint_front_matter.py`
+   Then run the leak scan on the diff, commits and the PR title and body: `python3 scripts/pr_leak_scan.py --pr <n>`.
 2. Walk the "Reviewer section" of the PR template. List which boxes are done and which are not.
 3. Remind the human of what only they do: open every cited source, run the blind recheck in a separate session that sees only the claim and the URL, then push the verification commit with `ai_recheck`, `review` and `human-verified`.
 4. Never set `human-verified`, write `review`, approve or merge.

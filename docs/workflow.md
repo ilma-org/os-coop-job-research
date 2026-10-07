@@ -27,6 +27,7 @@ git push -u origin HEAD                  # the pre-push hook runs the lint
 Open the PR. Copy `.github/pull_request_template.md` to a temporary file outside the repo, fill in the session summary, then:
 
 ```
+python3 scripts/pr_leak_scan.py --body-file /tmp/pr-body.md   # added lines, commits and PR text; must pass
 gh pr create --title "[02-hard-skills] add networking claims" --body-file /tmp/pr-body.md
 ```
 
@@ -46,6 +47,7 @@ gh pr status                 # your open PRs and review requests
 gh pr list                       # PRs waiting for review
 gh pr checkout <number>          # switch to the PR branch
 gh pr diff <number>              # read the changes
+python3 scripts/pr_leak_scan.py --pr <number>   # leak scan: added lines, commits, PR title and body
 # open every cited source, run the blind AI recheck in a separate session,
 # fill ai_recheck, review and status in the notes
 python3 scripts/lint_front_matter.py
@@ -57,6 +59,20 @@ gh pr merge <number> --squash --delete-branch   # never your own PR
 ```
 
 To ask for changes instead: `gh pr review <number> --request-changes --body "..."`.
+
+## Change the repo system (rules, scripts, skills, CI, templates)
+
+Work that adds no claim is not a topic PR. Use a `chore/<short-description>` or `meta/<short-description>` branch from `origin/main` and the title `[meta] what changed`.
+
+```
+git fetch && git switch -c chore/short-description origin/main
+# ... edit, then commit atomically ...
+python3 scripts/lint_front_matter.py
+python3 scripts/pr_leak_scan.py --body-file /tmp/pr-body.md
+gh pr create --title "[meta] what changed" --body-file /tmp/pr-body.md
+```
+
+Fill `/tmp/pr-body.md` from `.github/PULL_REQUEST_TEMPLATE/repo-system.md`. On the web, add `?template=repo-system.md` to the new-PR URL. The same approval rule applies: one code owner who is not the author.
 
 ## Report a wrong claim
 

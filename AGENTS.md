@@ -82,3 +82,5 @@ Use `gh` for PRs and Issues. The exact commands for owners and reviewers are in 
 4. The reviewer opens each cited source, runs the blind AI recheck, then pushes a **verification commit** to the PR branch that fills `ai_recheck` and `review` and sets `human-verified` for passing claims. The reviewer approves after that commit.
 5. A PR is merged only after one approval from a reviewer (a code owner in `.github/CODEOWNERS`) who is not the author. Squash-merge. For a PR written by a reviewer, another reviewer merges it.
 6. If a merged claim is found wrong, open a `dispute` Issue. See "Disputed claims" in `docs/schema.md`.
+7. A change to the repo system (rules, docs, scripts, skills, CI, templates) adds no claims. Use a `chore/<short-description>` branch, the title `[meta] what changed` and `.github/PULL_REQUEST_TEMPLATE/repo-system.md`.
+8. Run `python3 scripts/pr_leak_scan.py --body-file <PR body file>` before every PR. It scans what the lint does not: added lines in every file type, commit messages and the PR text.
