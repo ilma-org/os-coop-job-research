@@ -15,7 +15,8 @@ This guide uses the GitHub CLI (`gh`) so nobody has to remember the git and pull
 gh issue list --label topic              # find your topic Issue
 git switch main && git pull              # start from the latest main
 git switch -c 02-hard-skills/networking  # branch: <NN-slug>/<short-description>
-# ... write notes, run the blind AI check (agent-fact-check skill), save prompt logs in prompts/ ...
+# ... add claims (scripts/add_claim.py), run the blind AI check (agent-fact-check skill),
+# ... build the prompt log (scripts/make_prompt_log.py), refresh the index (scripts/update_index.py) ...
 python3 scripts/lint_front_matter.py     # must pass
 git add knowledge-base/02-hard-skills/networking.md
 git commit -m "Add networking claims to 02-hard-skills"
@@ -32,6 +33,8 @@ gh pr create --title "[02-hard-skills] add networking claims" --body-file /tmp/p
 ```
 
 `gh pr create --web` opens the PR form in the browser with the template instead. The body must say `Closes #<issue>`.
+
+Or let the scripts do it: `python3 scripts/ship.py prepare` runs the lint and the leak scan and drafts the body in `.local/pr-body.md`. Fill the `<agent: ...>` placeholders, then run `python3 scripts/ship.py open --title-text "add networking claims"` for a dry run, and add `--yes` to push and open the PR.
 
 Useful follow-ups:
 
@@ -73,6 +76,23 @@ gh pr create --title "[meta] what changed" --body-file /tmp/pr-body.md
 ```
 
 Fill `/tmp/pr-body.md` from `.github/PULL_REQUEST_TEMPLATE/repo-system.md`. On the web, add `?template=repo-system.md` to the new-PR URL. The same approval rule applies: one code owner who is not the author.
+
+## Scripts that write the repetitive parts
+
+Run these instead of typing the output by hand. Each has `--help`.
+
+| Script | What it does |
+|---|---|
+| `scripts/add_claim.py` | Adds one claim to a note. Checks the quote against the page and finds an archive snapshot by code, takes the next free ID, writes the YAML block. |
+| `scripts/update_index.py` | Rewrites the notes list in a topic's `index.md` from the notes' front matter. |
+| `scripts/make_prompt_log.py` | Builds `prompts/<id>.md` from a saved session: verbatim turns, redaction, ledger, front matter. |
+| `scripts/status.py` | Claim counts per topic, claims missing `ai_check`, notes missing a summary. |
+| `scripts/make_pr_body.py` | Drafts the PR body from the repo. Leaves `<agent: ...>` placeholders for judgment. |
+| `scripts/ship.py` | `prepare` runs the checks and drafts the body. `open` pushes and opens the PR, only with `--yes`. |
+| `scripts/verify_quote.py` | Checks one quote against one URL. |
+| `scripts/lint_front_matter.py`, `scripts/pr_leak_scan.py` | The checks. |
+
+The blind AI check has its own helper in `.agents/skills/agent-fact-check/scripts/`.
 
 ## Report a wrong claim
 

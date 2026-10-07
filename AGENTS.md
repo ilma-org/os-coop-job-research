@@ -84,3 +84,4 @@ Use `gh` for PRs and Issues. The exact commands for owners and reviewers are in 
 6. If a merged claim is found wrong, open a `dispute` Issue. See "Disputed claims" in `docs/schema.md`.
 7. A change to the repo system (rules, docs, scripts, skills, CI, templates) adds no claims. Use a `chore/<short-description>` branch, the title `[meta] what changed` and `.github/PULL_REQUEST_TEMPLATE/repo-system.md`.
 8. Run `python3 scripts/pr_leak_scan.py --body-file <PR body file>` before every PR. It scans what the lint does not: added lines in every file type, commit messages and the PR text.
+9. Do not hand-write what a script generates: claims (`scripts/add_claim.py`), prompt logs (`scripts/make_prompt_log.py`), the index notes list (`scripts/update_index.py`), the PR body (`scripts/make_pr_body.py`) and the PR itself (`scripts/ship.py`, which pushes only with `--yes`). `scripts/status.py` shows progress. See `docs/workflow.md`.

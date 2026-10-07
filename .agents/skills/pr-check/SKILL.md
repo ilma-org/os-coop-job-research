@@ -9,6 +9,8 @@ Read-only. It reports problems and does not fix, push, approve or merge. Rules a
 
 ## Author mode (before the PR opens)
 
+`python3 scripts/ship.py prepare` runs the lint and the leak scan and drafts the PR body with `scripts/make_pr_body.py`. The numbered items below are what to confirm by hand or from its output.
+
 1. `python3 scripts/lint_front_matter.py` has 0 errors. This includes the Markdown leak scan, prompt-log fields and `redactions` counts.
    `python3 scripts/pr_leak_scan.py --body-file <PR body file>` has 0 errors. It also scans added lines in every file type, commit messages and the PR text. Warnings about commit email addresses mean the git email is not a GitHub noreply address. Report them and do not rewrite commits unless the person asks.
 2. Branch is `<NN>-<slug>/<short-description>`, or `chore/...` or `meta/...` for repo-system changes. The PR title is `[<NN>-<slug>] ...` or `[meta] ...`. The body has `Closes #<n>`.

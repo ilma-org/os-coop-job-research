@@ -13,9 +13,8 @@ Input: a topic Issue number `<n>` and its directory `<NN-slug>`. Find them with 
 
 1. Issue: `gh issue view <n> --json number,title,state,assignees,milestone,body`. Read the "done when" checklist in the body.
 2. PRs: `gh pr list --state all --search "Closes #<n>" --json number,title,state,headRefName,reviewDecision`.
-3. Claims on this branch, by status: `grep -h '^    status:' knowledge-base/<NN-slug>/*.md | sort | uniq -c`.
-4. Gaps: read the "Not found yet" list in `knowledge-base/<NN-slug>/index.md`.
-5. Branch: `git branch --show-current`, `git status --short` and `git log --oneline origin/main..HEAD`.
+3. Claims on this branch: `python3 scripts/status.py <NN-slug>` (counts by status and type, claims past `unverified` with no `ai_check`, notes missing a summary, and the "not found yet" list). `python3 scripts/status.py` alone shows every topic.
+4. Branch: `git branch --show-current`, `git status --short` and `git log --oneline origin/main..HEAD`.
 
 ## Report
 
