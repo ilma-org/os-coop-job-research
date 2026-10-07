@@ -60,6 +60,16 @@ A secondary-research knowledge base for the course 204341 final assignment: GenA
 
 `.local/` is git-ignored and skipped by the lint. Put scratch files, exports, to-do lists and personal notes there, anything that must not go upstream. Never link to it from a tracked file, and never copy its content into one without checking it against the leak rules above.
 
+## Repo skills
+
+Repo-only skills live in `.agents/skills/<name>/SKILL.md`. Codex CLI loads that folder by itself. For any other agent, open the file and follow it. The skills use plain shell commands and name no agent-specific tool.
+
+- `research`: research claims for a topic note, from source to `unverified` claim.
+- `agent-fact-check`: run the blind author check and record `ai_check`.
+- `pr-check`: check a branch before its PR opens, or check a PR as reviewer.
+- `issue-status`: read-only status of a topic Issue and its claims.
+- `issue-update`: post a progress comment or tick the Issue checklist, after confirmation.
+
 ## Git and GitHub
 
 Use `gh` for PRs and Issues. The exact commands for owners and reviewers are in `docs/workflow.md`. Use them instead of inventing your own steps.
