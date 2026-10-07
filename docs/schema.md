@@ -72,7 +72,17 @@ claims:
 ---
 ```
 
-The body is optional prose: reasoning, context, drafting notes. Anything the report relies on must be a claim in the front matter.
+The body starts with two sections, in this order:
+
+```markdown
+## Summary
+<2 to 5 sentences: what this note found, and what it could not find.>
+
+## Key points
+- <one point, ending with its claim IDs, for example (02-01, 02-02)>
+```
+
+Write both only from the claims in the front matter. Do not add a fact that is not a claim. More prose (reasoning, context, drafting notes) may follow. Anything the report relies on must still be a claim in the front matter. The lint warns when a section is missing. It never fails the run for this.
 
 ## Claim fields
 
