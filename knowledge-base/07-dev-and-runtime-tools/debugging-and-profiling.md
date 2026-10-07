@@ -31,7 +31,7 @@ claims:
     os_concepts: []
     pr: null
   - id: 07-18
-    claim: "In the SRE book's troubleshooting chapter, profiling the server is the step that shows where CPU time is being used."
+    claim: "The SRE book's troubleshooting chapter illustrates its \"what, where, why\" method with a Spanner latency example in which profiling the server shows where CPU time is being used."
     type: fact
     status: unverified
     source:
@@ -44,7 +44,7 @@ claims:
     os_concepts: ["processes and CPU scheduling"]
     pr: null
   - id: 07-19
-    claim: "The authors of Building Secure and Reliable Systems describe a slow web server where a profiler showed that logging all input to disk and calling sync caused the delay, not the backends."
+    claim: "Building Secure and Reliable Systems illustrates its debugging method with an example in which a profiler showed that logging all input to disk and calling sync, not the backends, slowed a web server. The example teaches looking at the system before assuming a cause."
     type: fact
     status: unverified
     source:
@@ -53,7 +53,7 @@ claims:
       kind: official-doc
       accessed: 2026-10-06
       archive: null
-    quote: "We assumed the problem lay in the backends, but a profiler showed that the practice of logging every possible scrap of input to disk and then calling sync was causing vast amounts of delay."
+    quote: "We assumed the problem lay in the backends, but a profiler showed that the practice of logging every possible scrap of input to disk and then calling sync was causing vast amounts of delay. We discovered this only when we set aside our initial assumptions and dug into the system more deeply."
     os_concepts: ["file systems and I/O"]
     pr: null
   - id: 07-20
@@ -122,7 +122,7 @@ claims:
     os_concepts: []
     pr: null
   - id: 07-25
-    claim: "Go can still suffer data races even though it disallows the memory corruption typical of C++, and the Go Race Detector finds them."
+    claim: "Go can still suffer data races even though it is designed to disallow the memory corruption typical of C++, and the Go Race Detector can detect them."
     type: fact
     status: unverified
     source:
@@ -177,4 +177,4 @@ claims:
 
 # Debugging and profiling tools
 
-Debugging and profiling tools named in the books. Claim 07-17 is general advice on logs from the SRE book's troubleshooting chapter. Claim 07-18 comes from that chapter's worked example. The sanitizer and Valgrind claims describe C/C++ tools in a Google-authored book; they do not show that Google SRE uses them day to day.
+Debugging and profiling tools named in the books. Claim 07-17 is general advice on logs from the SRE book's troubleshooting chapter. Claims 07-18 and 07-19 are worked examples of troubleshooting method with profiling as one step. They show the practice, not which profiler Google SRE uses. The sanitizer and Valgrind claims describe C/C++ tools in a Google-authored book; they do not show that Google SRE uses them day to day.
