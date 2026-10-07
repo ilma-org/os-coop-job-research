@@ -63,7 +63,8 @@ def cmd_prepare(a: argparse.Namespace) -> int:
         print("warning: uncommitted changes. The body describes commits only.")
     if not step("lint", kb.run(sys.executable, "scripts/lint_front_matter.py")):
         return 1
-    res = kb.run(sys.executable, "scripts/make_pr_body.py", "--base", a.base, "--out", str(body))
+    extra = ["--issue", str(a.issue)] if a.issue else []
+    res = kb.run(sys.executable, "scripts/make_pr_body.py", "--base", a.base, "--out", str(body), *extra)
     print(res.stderr.strip())
     if not step("draft body", res):
         return 1
@@ -117,6 +118,7 @@ def main() -> int:
         s = sub.add_parser(name)
         s.add_argument("--base", default="origin/main")
         s.add_argument("--body-file", default=str(DEFAULT_BODY))
+    sub.choices["prepare"].add_argument("--issue", type=int, help="Issue number, for a repo-system PR")
     o = sub.choices["open"]
     o.add_argument("--title-text", required=True, help="the part after the [topic] prefix")
     o.add_argument("--draft", action="store_true")

@@ -56,7 +56,7 @@ def tick(text: str, needle: str) -> tuple[str, bool]:
 
 
 def set_item(text: str, label: str, value: str) -> str:
-    return re.sub(rf"^- {re.escape(label)}:[ \t]*$", lambda _: f"- {label}: {value}", text, count=1, flags=re.M)
+    return re.sub(rf"^- {re.escape(label)}:.*$", lambda _: f"- {label}: {value}", text, count=1, flags=re.M)
 
 
 def set_section(text: str, heading: str, body: str, level: str = "###") -> str:
@@ -189,7 +189,7 @@ def add_scan_box(text: str) -> str:
     return re.sub(r"(^- \[ \] `python3 scripts/lint_front_matter.py` passes\.\n)", lambda m: m.group(1) + box, text, count=1, flags=re.M)
 
 
-def system_body(base: str, head: str, changed: list[str]) -> str:
+def system_body(base: str, head: str, changed: list[str], issue: int | None) -> str:
     text = (kb.ROOT / SYSTEM_TEMPLATE).read_text(encoding="utf-8")
     areas = []
     for label, test in (("rules", lambda p: p in ("AGENTS.md", "README.md") or p.startswith("docs/")),
@@ -199,6 +199,8 @@ def system_body(base: str, head: str, changed: list[str]) -> str:
         if any(test(p) for p in changed):
             areas.append(label)
     text = re.sub(r"^Area \(keep the ones that apply\):.*$", lambda _: "Area: " + (", ".join(areas) or "other"), text, count=1, flags=re.M)
+    closes = f"Closes #{issue}" if issue else ""
+    text = re.sub(r"^Closes #<issue>.*\n\n?", lambda _: closes + "\n\n" if closes else "", text, count=1, flags=re.M)
     commits = kb.git("log", "--reverse", "--format=- %h %s", f"{base}..{head}").strip()
     text = text.replace("This PR changes how the repo works. It adds, edits or verifies no claim. Claims go in a topic PR.",
                         "This PR changes how the repo works. It adds, edits or verifies no claim. Claims go in a topic PR.\n\n"
@@ -245,6 +247,7 @@ def main() -> int:
     p.add_argument("--base", default="origin/main")
     p.add_argument("--head", default="HEAD")
     p.add_argument("--out", help="write the body here (outside the repo, or under .local/)")
+    p.add_argument("--issue", type=int, help="Issue number for a repo-system PR (a topic PR reads it from index.md)")
     a = p.parse_args()
 
     changed = files_changed(a.base, a.head)
@@ -257,7 +260,7 @@ def main() -> int:
     if stray:
         print("warning: a topic PR should hold only its topic directory and prompt logs. Also changed: "
               + ", ".join(stray[:6]) + (" ..." if len(stray) > 6 else ""), file=sys.stderr)
-    body = topic_body(a.base, a.head, topics[0], changed) if topics else system_body(a.base, a.head, changed)
+    body = topic_body(a.base, a.head, topics[0], changed) if topics else system_body(a.base, a.head, changed, a.issue)
     holes = len(PLACEHOLDER.findall(body))
     if a.out:
         out = kb.outside_repo_or_local(Path(a.out))
