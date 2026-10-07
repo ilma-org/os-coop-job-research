@@ -70,7 +70,7 @@ claims:
     os_concepts: []
     pr: null
   - id: 07-13
-    claim: "Popular IDEs such as CLion integrate directly with the Google Sanitizers."
+    claim: "Popular IDEs such as CLion provide first-class integration with the Google Sanitizers."
     type: fact
     status: unverified
     source:
@@ -96,7 +96,7 @@ claims:
     os_concepts: []
     pr: null
   - id: 07-15
-    claim: "The SRE Workbook advises looking for an editor plug-in that runs style and lint tools on configuration files."
+    claim: "The SRE Workbook suggests investigating whether an editor plug-in can integrate style and lint tools for configuration files into your workflow."
     type: fact
     status: unverified
     source:
