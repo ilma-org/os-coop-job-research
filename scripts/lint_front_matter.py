@@ -28,7 +28,7 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parent.parent
 KB = "knowledge-base"
-SKIP_DIRS = {".git", ".venv", "venv", "node_modules", "__pycache__"}
+SKIP_DIRS = {".git", ".venv", "venv", "node_modules", "__pycache__", ".local"}
 
 TOPIC_DIR_RE = re.compile(r"^(\d{2})-[a-z0-9]+(?:-[a-z0-9]+)*$")
 CLAIM_ID_RE = re.compile(r"^(\d{2})-(\d+)$")
