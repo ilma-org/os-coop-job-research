@@ -338,6 +338,11 @@ class Linter:
         for i, claim in enumerate(claims):
             self.check_claim(path, topic, i, claim)
 
+    def check_note_summary(self, path: str, body: str) -> None:
+        for heading in ("Summary", "Key points"):
+            if not re.search(rf"^##[ \t]+{heading}[ \t]*$", body, re.M):
+                self.rep.warn(path, f"body has no `## {heading}` section (see docs/schema.md)")
+
     def check_prompt_log(self, path: str, stem: str, data: dict, body: str, full_text: str) -> None:
         if data.get("doc_type") != "prompt-log":
             self.rep.error(path, "doc_type must be prompt-log")
@@ -416,6 +421,7 @@ class Linter:
                     self.check_topic_index(path, topic, data)
                 else:
                     self.check_topic_note(path, topic, data)
+                    self.check_note_summary(path, body)
             elif top == "prompts":
                 self.check_prompt_log(path, file.stem, data, body, text)
             else:
