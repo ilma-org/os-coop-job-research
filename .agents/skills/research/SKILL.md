@@ -13,7 +13,7 @@ Follows `AGENTS.md` and `docs/schema.md`. Read both first, then the topic's `ind
 2. Choose sources. Prefer official docs and books, then job ads, papers and articles. Secondary research only. A claim about Google needs a Google-published source (SRE books, Google careers pages, official Google pages).
 3. Open each source yourself. Pick one or two sentences per claim. Write the claim no broader than the quote. If the passage is an example or an anecdote, say so in the claim text.
 4. Check every quote against the live page. The command must print `EXACT`:
-   `python3 .agents/skills/research/scripts/verify_quote.py <url> "<quote>"`
+   `python3 scripts/verify_quote.py <url> "<quote>"`
 5. For an org-fact, find an archive snapshot: `curl -s "https://archive.org/wayback/available?url=<url>"`. Then run `verify_quote.py` on the snapshot URL. If no snapshot exists, ask the person before requesting a new one.
 6. Write the claims in a topic note, following `docs/schema.md`. Set `status: unverified`, `pr: null` and today's `accessed` date. Add no `ai_check`. Use `type: assumption` for anything no source states, and never write it as a fact.
 7. Start the note body with `## Summary` and `## Key points`, written only from the claims. Cite claim IDs in each key point. Add no fact that is not a claim.
