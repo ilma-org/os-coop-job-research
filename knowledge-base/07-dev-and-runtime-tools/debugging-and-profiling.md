@@ -5,7 +5,7 @@ title: "Debugging and profiling tools"
 updated: 2026-10-06
 claims:
   - id: 07-16
-    claim: "The SRE book says every Google server runs an HTTP server that exposes diagnostics and statistics for a given task, to support dashboards, monitoring and debugging."
+    claim: "In its description of Google's production environment, the SRE book says every server has an HTTP server that provides diagnostics and statistics for a given task, to support dashboards, monitoring and debugging."
     type: org-fact
     status: unverified
     source:
