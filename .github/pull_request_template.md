@@ -8,7 +8,7 @@ Closes #<issue>
 - [ ] I am the owner of this topic directory (or `owner` is reassigned in `index.md` in this PR).
 - [ ] Every `fact` and `org-fact` has a source I opened, an exact quote and an access date.
 - [ ] Anything without evidence is `type: assumption`.
-- [ ] I ran the AI fact check and filled `ai_check`. No claim is `human-verified` (only a reviewer sets that).
+- [ ] I ran the blind AI check (the checker saw only each claim and its source URL, not the quote) and filled `ai_check`. It is logged in `prompts/` with `role: author-check`. No claim is `human-verified` (only a reviewer sets that).
 - [ ] Prompt logs are in `prompts/`: exact conversation, redacted only at sensitive spans, tool-call ledger, `significant` set.
 - [ ] `python3 scripts/lint_front_matter.py` passes.
 - [ ] No cover-page data, real names, emails, home-directory paths or tokens anywhere.

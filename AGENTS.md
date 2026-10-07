@@ -34,7 +34,7 @@ A secondary-research knowledge base for the course 204341 final assignment: GenA
 ## Roles
 
 - **Researcher**: finds sources, writes claims as `unverified` in the topic owner's directory.
-- **Author check**: before the PR is opened, the author's agent re-checks each claim against its source and fills `ai_check`. The most a claim can reach here is `ai-checked`.
+- **Author check**: after the researcher has written the claims and before the PR is opened, a blind check runs on every claim. The checker is a fresh subagent (or a fresh agent context if the platform has no subagents). Give it only the claim text, the source URL and the archive URL. Do not give it the stored `quote`, the research session or any earlier AI output. Its prompts and reports go in their own prompt log with `role: author-check`, which `ai_check.prompt_log` points to. The most a claim can reach here is `ai-checked`. The `agent-fact-check` skill runs these steps.
 - **Reviewer recheck**: the reviewer's agent runs in a separate session that has none of the author's context. Give it only the claim text and the source URL. Do not give it the author's AI output or prompts. It fills `ai_recheck`. The human reviewer decides any disagreement.
 - **Session summary**: when a PR opens, the agent writes a detailed, redacted summary of the session into the PR description using the PR template.
 - **Drafter**: later, an agent may draft report text from the knowledge base. Use only claims that are `human-verified`, or `assumption` claims worded as recommendations. A human edits and verifies every draft. Pasting unverified AI text does not satisfy the assignment.

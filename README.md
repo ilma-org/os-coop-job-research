@@ -59,7 +59,7 @@ Every agent should follow [`AGENTS.md`](AGENTS.md). Codex CLI and Antigravity re
 ## How a claim gets verified
 
 1. The topic owner writes a claim with a source, an exact quote and an access date. Status: `unverified`.
-2. The owner's agent re-checks it against the source and the owner records the result in `ai_check`. Status: `ai-checked`. The owner opens a PR with a detailed session summary.
+2. A blind subagent re-checks every claim against its source. It sees only the claim text and the source URL, not the quote. The owner records the result in `ai_check`, with the check logged in `prompts/` as `role: author-check`. Status: `ai-checked`. The owner opens a PR with a detailed session summary.
 3. A reviewer opens every cited source, runs an AI recheck in a separate session that sees only the claim and the source URL, and records `ai_recheck` and `review` in a verification commit on the PR branch. Passing claims become `human-verified`. The reviewer approves.
 4. Someone other than the author merges. Claims that cannot be verified stay `unverified`, or become `assumption`.
 5. A merged claim later found wrong is handled with a `dispute` Issue.

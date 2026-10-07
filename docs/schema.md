@@ -90,7 +90,7 @@ The body is optional prose: reasoning, context, drafting notes. Anything the rep
   quote: "<exact sentence copied from the source>"
   os_concepts: []                # optional: OS course concepts this claim supports
   pr: 12                         # PR number, or null
-  ai_check:                      # the author's AI check
+  ai_check:                      # the author's blind AI check (claim text and URL only)
     platform: Claude Code
     model: "<model name and version>"
     prompt_log: prompts/2026-10-06-member1-toil.md
@@ -128,6 +128,7 @@ Rules enforced across fields:
 
 - `ai_check.prompt_log` and `ai_recheck.prompt_log` must be different existing prompt logs.
 - The `ai_check` log must have `role: author-check`. The `ai_recheck` log must have `role: reviewer-recheck`, and its `author` must equal `review.by`.
+- The `ai_check` is blind: the checking agent gets only the claim text, the source URL and the archive URL, never the `quote` or the research session. The lint cannot enforce this. The PR author states it in the checklist and the reviewer reads the `author-check` log.
 - `review.by` must not be the PR author. CI checks this for the notes the PR changes; older claims keep the reviewer they had. The pre-push hook skips it because it does not know the PR author.
 - Agents never set `status: human-verified` and never write `review`. Only a human reviewer does.
 

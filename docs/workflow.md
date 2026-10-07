@@ -15,7 +15,7 @@ This guide uses the GitHub CLI (`gh`) so nobody has to remember the git and pull
 gh issue list --label topic              # find your topic Issue
 git switch main && git pull              # start from the latest main
 git switch -c 02-hard-skills/networking  # branch: <NN-slug>/<short-description>
-# ... write notes, run your AI fact check, save prompt logs in prompts/ ...
+# ... write notes, run the blind AI check (agent-fact-check skill), save prompt logs in prompts/ ...
 python3 scripts/lint_front_matter.py     # must pass
 git add knowledge-base/02-hard-skills/networking.md
 git commit -m "Add networking claims to 02-hard-skills"
