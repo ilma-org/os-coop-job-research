@@ -56,6 +56,10 @@ A secondary-research knowledge base for the course 204341 final assignment: GenA
 - Run `python3 scripts/lint_front_matter.py` before committing content.
 - Commit and push only when the person you work for asks. Never commit to `main`. Do not rewrite pushed commits or force-push a shared branch.
 
+## Local files
+
+`.local/` is git-ignored and skipped by the lint. Put scratch files, exports, to-do lists and personal notes there, anything that must not go upstream. Never link to it from a tracked file, and never copy its content into one without checking it against the leak rules above.
+
 ## Git and GitHub
 
 Use `gh` for PRs and Issues. The exact commands for owners and reviewers are in `docs/workflow.md`. Use them instead of inventing your own steps.

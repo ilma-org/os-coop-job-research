@@ -80,6 +80,8 @@ python3 scripts/lint_front_matter.py
 python3 scripts/appendix_budget.py
 ```
 
+Keep your own scratch files, exports and notes in `.local/`. It is git-ignored and the lint skips it, so nothing there goes upstream.
+
 ## Maintainer reference: repo settings
 
 These are configured on GitHub for `ilma-org/os-coop-job-research`. Apply them again if the repo is recreated.
