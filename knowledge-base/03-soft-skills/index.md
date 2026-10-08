@@ -5,7 +5,7 @@ title: Soft skills
 assignment_section: "4.6"
 report_sections: [4]
 owner: "@Nine14282"
-issue: null
+issue: 8
 updated: 2026-10-05
 ---
 

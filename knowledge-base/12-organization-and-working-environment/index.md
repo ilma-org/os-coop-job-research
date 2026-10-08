@@ -5,7 +5,7 @@ title: Organization and working environment (Google)
 assignment_section: "4.7"
 report_sections: [5]
 owner: "@Bximai"
-issue: null
+issue: 17
 updated: 2026-10-06
 ---
 

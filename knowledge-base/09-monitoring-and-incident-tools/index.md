@@ -5,7 +5,7 @@ title: Monitoring and incident tools
 assignment_section: "4.4"
 report_sections: [9]
 owner: "@nacs-970"
-issue: null
+issue: 14
 updated: 2026-10-05
 ---
 

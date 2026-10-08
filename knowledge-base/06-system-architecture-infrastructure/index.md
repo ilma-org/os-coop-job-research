@@ -5,7 +5,7 @@ title: System architecture and infrastructure
 assignment_section: "4.3"
 report_sections: [8]
 owner: "@csinside"
-issue: null
+issue: 11
 updated: 2026-10-05
 ---
 
