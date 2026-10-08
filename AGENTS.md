@@ -34,7 +34,7 @@ A secondary-research knowledge base for the course 204341 final assignment: GenA
 ## Roles
 
 - **Researcher**: finds sources, writes claims as `unverified` in the topic owner's directory.
-- **Author check**: before the PR is opened, the author's agent re-checks each claim against its source and fills `ai_check`. The most a claim can reach here is `ai-checked`.
+- **Author check**: after the researcher has written the claims and before the PR is opened, a blind check runs on every claim. The checker is a fresh subagent (or a fresh agent context if the platform has no subagents). Give it only the claim text, the source URL and the archive URL. Do not give it the stored `quote`, the research session or any earlier AI output. Its prompts and reports go in their own prompt log with `role: author-check`, which `ai_check.prompt_log` points to. The most a claim can reach here is `ai-checked`. The `agent-fact-check` skill runs these steps.
 - **Reviewer recheck**: the reviewer's agent runs in a separate session that has none of the author's context. Give it only the claim text and the source URL. Do not give it the author's AI output or prompts. It fills `ai_recheck`. The human reviewer decides any disagreement.
 - **Session summary**: when a PR opens, the agent writes a detailed, redacted summary of the session into the PR description using the PR template.
 - **Drafter**: later, an agent may draft report text from the knowledge base. Use only claims that are `human-verified`, or `assumption` claims worded as recommendations. A human edits and verifies every draft. Pasting unverified AI text does not satisfy the assignment.
@@ -56,6 +56,20 @@ A secondary-research knowledge base for the course 204341 final assignment: GenA
 - Run `python3 scripts/lint_front_matter.py` before committing content.
 - Commit and push only when the person you work for asks. Never commit to `main`. Do not rewrite pushed commits or force-push a shared branch.
 
+## Local files
+
+`.local/` is git-ignored and skipped by the lint. Put scratch files, exports, to-do lists and personal notes there, anything that must not go upstream. Never link to it from a tracked file, and never copy its content into one without checking it against the leak rules above.
+
+## Repo skills
+
+Repo-only skills live in `.agents/skills/<name>/SKILL.md`. Codex CLI loads that folder by itself. For any other agent, open the file and follow it. The skills use plain shell commands and name no agent-specific tool.
+
+- `research`: research claims for a topic note, from source to `unverified` claim.
+- `agent-fact-check`: run the blind author check and record `ai_check`.
+- `pr-check`: check a branch before its PR opens, or check a PR as reviewer.
+- `issue-status`: read-only status of a topic Issue and its claims.
+- `issue-update`: post a progress comment or tick the Issue checklist, after confirmation.
+
 ## Git and GitHub
 
 Use `gh` for PRs and Issues. The exact commands for owners and reviewers are in `docs/workflow.md`. Use them instead of inventing your own steps.
@@ -68,3 +82,6 @@ Use `gh` for PRs and Issues. The exact commands for owners and reviewers are in 
 4. The reviewer opens each cited source, runs the blind AI recheck, then pushes a **verification commit** to the PR branch that fills `ai_recheck` and `review` and sets `human-verified` for passing claims. The reviewer approves after that commit.
 5. A PR is merged only after one approval from a reviewer (a code owner in `.github/CODEOWNERS`) who is not the author. Squash-merge. For a PR written by a reviewer, another reviewer merges it.
 6. If a merged claim is found wrong, open a `dispute` Issue. See "Disputed claims" in `docs/schema.md`.
+7. A change to the repo system (rules, docs, scripts, skills, CI, templates) adds no claims. Use a `chore/<short-description>` branch, the title `[meta] what changed` and `.github/PULL_REQUEST_TEMPLATE/repo-system.md`.
+8. Run `python3 scripts/pr_leak_scan.py --body-file <PR body file>` before every PR. It scans what the lint does not: added lines in every file type, commit messages and the PR text.
+9. Do not hand-write what a script generates: claims (`scripts/add_claim.py`), prompt logs (`scripts/make_prompt_log.py`), the index notes list (`scripts/update_index.py`), the PR body (`scripts/make_pr_body.py`) and the PR itself (`scripts/ship.py`, which pushes only with `--yes`). `scripts/status.py` shows progress. See `docs/workflow.md`.

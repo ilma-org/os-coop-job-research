@@ -17,3 +17,6 @@ venv/
 # OS and editor
 .DS_Store
 Thumbs.db
+
+# Local artifact
+.local
