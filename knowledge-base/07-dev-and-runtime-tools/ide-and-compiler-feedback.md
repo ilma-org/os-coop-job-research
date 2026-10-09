@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 07-dev-and-runtime-tools
 title: "IDEs, editors and compiler feedback"
-updated: 2026-10-08
+updated: 2026-10-09
 claims:
   - id: 07-08
     claim: "Compiler plug-ins such as Error Prone for Java and Tsetse for TypeScript can prohibit risky code patterns at compile time."
@@ -169,5 +169,21 @@ claims:
 ---
 
 # IDEs, editors and compiler feedback
+
+## Summary
+
+Building Secure and Reliable Systems treats compiler checks and IDE plug-ins as fast feedback for developers: compiler plug-ins such as Error Prone and Tsetse can prohibit risky code patterns, and the authors report that compiler errors give faster feedback than opt-in tools such as linters or checks at code review time (07-08, 07-09). It also names IDE plug-ins that underline problematic code, recommends stricter type-checking extensions such as Pytype, and says IDEs such as CLion integrate with the Google Sanitizers (07-10 to 07-13). The SRE Workbook lists IDE integration among the tooling that supports configuration files, suggests an editor plug-in for style and lint tools, and says code-complexity tools exist for IDEs such as Visual Studio, Eclipse and IntelliJ (07-14, 07-15, 07-29). No book names an editor or an IDE as an SRE tool; see `index.md` for the gaps.
+
+## Key points
+
+- Compiler plug-ins such as Error Prone for Java and Tsetse for TypeScript can prohibit risky code patterns at compile time. (07-08)
+- Compiler errors give faster feedback than opt-in tools such as linters or checks at code review time. (07-09)
+- IDE plug-ins that underline problematic code are named as a fast feedback mechanism. (07-10)
+- Stricter type-checking extensions are recommended for languages that use dynamic or weak typing by default; Pytype is the Python example. (07-11, 07-12)
+- Popular IDEs such as CLion provide first-class integration with the Google Sanitizers. (07-13)
+- The SRE Workbook lists linters, debuggers, formatters and IDE integration as tooling that supports configuration files, and suggests checking whether an editor plug-in can bring style and lint tools into your workflow. (07-14, 07-15)
+- Code-complexity measurement tools exist for a number of IDEs, including Visual Studio, Eclipse and IntelliJ. (07-29)
+
+## Sources and limits
 
 What the books say about IDE plug-ins, editor plug-ins and compiler checks. No book names an editor as an SRE tool. Vim appears in one passage of BSRS ch.5 as an attacker example, not as a tool. See `index.md` for the gaps.
