@@ -32,3 +32,13 @@ The owner organizes notes (`topic-note` files) here. List them below as they are
 - [toil-and-automation.md](toil-and-automation.md): Toil, automation and production changes. 8 claims (02-15 to 02-22): 8 ai-checked.
 - [troubleshooting-and-systems-knowledge.md](troubleshooting-and-systems-knowledge.md): Troubleshooting, OS, kernel and network knowledge. 8 claims (02-23 to 02-30): 8 ai-checked.
 <!-- notes:end -->
+
+## Not found yet
+
+Scope items that no claim in this topic covers yet:
+
+- Programming and scripting languages
+- Operating systems and computer architecture (topics 04 and 11 cover OS)
+- Cloud computing, virtualization and containers
+- Database systems (topic 10 covers server and database software)
+- Software development tools other than version control (02-06) and testing (02-02)
