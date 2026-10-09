@@ -25,11 +25,11 @@ Not only which OS is used, but why it is appropriate and how it is configured.
 The owner organizes notes (`topic-note` files) here. List them below as they are added.
 
 <!-- notes:start -->
-- [linux-in-google-production.md](linux-in-google-production.md): Linux and the cluster operating system in Google production. 15 claims (04-01 to 04-08, 04-26 to 04-32): 15 ai-checked.
-- [kernel-updates-and-os-logs.md](kernel-updates-and-os-logs.md): Kernel updates, live patching and OS logs in Google production. 7 claims (04-09 to 04-14, 04-43): 7 ai-checked.
-- [isolation-and-resource-limits.md](isolation-and-resource-limits.md): Process isolation, sandboxing and OS resource limits. 18 claims (04-15 to 04-21, 04-33 to 04-41, 04-56 to 04-57): 18 ai-checked.
-- [workstations-and-servers.md](workstations-and-servers.md): Engineer workstations versus production servers. 12 claims (04-22 to 04-25, 04-44 to 04-51): 11 ai-checked, 1 unverified.
-- [google-cloud-container-os.md](google-cloud-container-os.md): Container-Optimized OS on Google Cloud. 4 claims (04-52 to 04-55): 4 ai-checked.
+- [linux-in-google-production.md](linux-in-google-production.md): Linux and the cluster operating system in Google production. 15 claims (04-01 to 04-08, 04-26 to 04-32): 15 human-verified.
+- [kernel-updates-and-os-logs.md](kernel-updates-and-os-logs.md): Kernel updates, live patching and OS logs in Google production. 7 claims (04-09 to 04-14, 04-43): 7 human-verified.
+- [isolation-and-resource-limits.md](isolation-and-resource-limits.md): Process isolation, sandboxing and OS resource limits. 18 claims (04-15 to 04-21, 04-33 to 04-41, 04-56 to 04-57): 18 human-verified.
+- [workstations-and-servers.md](workstations-and-servers.md): Engineer workstations versus production servers. 12 claims (04-22 to 04-25, 04-44 to 04-51): 11 human-verified, 1 unverified.
+- [google-cloud-container-os.md](google-cloud-container-os.md): Container-Optimized OS on Google Cloud. 4 claims (04-52 to 04-55): 4 human-verified.
 <!-- notes:end -->
 
 ## Sources covered so far

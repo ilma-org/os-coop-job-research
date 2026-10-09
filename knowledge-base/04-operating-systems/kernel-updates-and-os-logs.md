@@ -7,7 +7,7 @@ claims:
   - id: 04-09
     claim: "Building Secure and Reliable Systems says Google regularly pushes new kernels to its entire fleet of machines."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.16 Disaster Planning"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch16.html
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-10
     claim: "Building Secure and Reliable Systems says Google's fleet-wide kernel rollouts have a target of less than 30 days."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.16 Disaster Planning"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch16.html
@@ -50,10 +55,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-11
     claim: "Building Secure and Reliable Systems describes ksplice as a runtime kernel patch that uses function redirection tables so that rebooting into a new kernel is unnecessary."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.16 Disaster Planning"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch16.html
@@ -73,10 +83,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-12
     claim: "Building Secure and Reliable Systems says that, for two 2018 Linux kernel vulnerabilities, Google SREs were able to apply a ksplice to production systems."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.16 Disaster Planning"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch16.html
@@ -96,10 +111,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-13
     claim: "In its case study of moving Google's Ads Database (MySQL) onto Borg from late 2008, the SRE book says the MySQL instances ran on shared machines that were subject to reboots for kernel upgrades."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.7 The Evolution of Automation at Google"
       url: https://sre.google/sre-book/automation-at-google/
@@ -119,10 +139,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-14
     claim: "Building Secure and Reliable Systems says Linux and Mac have syslog and auditd logs, while Windows has Windows Event logs."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.15 Investigating Systems"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch15.html
@@ -142,10 +167,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-43
     claim: "The Linux kernel's livepatch documentation says livepatching redirects function calls so that critical functions can be fixed without a system reboot."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Linux Kernel documentation, Livepatch"
       url: https://docs.kernel.org/livepatch/livepatch.html
@@ -165,6 +195,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
 ---
 
 # Kernel updates, live patching and OS logs in Google production

@@ -7,7 +7,7 @@ claims:
   - id: 04-01
     claim: "Building Secure and Reliable Systems says the Linux kernel underpins much of Google's production infrastructure."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.16 Disaster Planning"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch16.html
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-02
     claim: "Building Secure and Reliable Systems says Google has an internal Linux distribution and describes how its rollout evolved."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.9 Design for Recovery"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch09.html
@@ -50,10 +55,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-03
     claim: "Building Secure and Reliable Systems says Google installed all the machines in its datacenters with a \"base\" or \"golden\" image."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.9 Design for Recovery"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch09.html
@@ -73,10 +83,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-04
     claim: "Building Secure and Reliable Systems says Google later designed more granular release units for its machines, one for each software package."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.9 Design for Recovery"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch09.html
@@ -96,10 +111,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-05
     claim: "The SRE book says resource allocation in Google's datacenters is handled by Borg, which it calls Google's cluster operating system."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.2 The Production Environment at Google, from the Viewpoint of an SRE"
       url: https://sre.google/sre-book/production-environment/
@@ -119,10 +139,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-06
     claim: "The SRE Workbook says Borg is Google's internal container management system and that it runs huge numbers of Linux containers."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.7 Simplicity"
       url: https://sre.google/workbook/simplicity/
@@ -142,10 +167,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-07
     claim: "Building Secure and Reliable Systems says that inside a Borg alloc, one or more sets of Linux processes can be run in a container."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.14 Deploying Code"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch14.html
@@ -165,10 +195,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-08
     claim: "The SRE book uses \"node\" and \"machine\" interchangeably for a single instance of a running kernel, whether on a physical server, a virtual machine or a container."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.6 Monitoring Distributed Systems"
       url: https://sre.google/sre-book/monitoring-distributed-systems/
@@ -188,10 +223,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-26
     claim: "A 2013 USENIX LISA paper by Google engineer Marc Merlin says Google's server applications run in a different partition from the base Linux distribution that boots the machine."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Marc Merlin (Google), Live Upgrading Thousands of Servers from an Ancient Red Hat Distribution to 10 Year Newer Debian Based One, USENIX LISA '13"
       url: https://www.usenix.org/conference/lisa13/technical-sessions/presentation/merlin
@@ -211,10 +251,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-27
     claim: "The same 2013 LISA paper describes a difficult upgrade of Google's servers from a Red Hat 7.1 image snapshot with layers of patches."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Marc Merlin (Google), Live Upgrading Thousands of Servers from an Ancient Red Hat Distribution to 10 Year Newer Debian Based One, USENIX LISA '13"
       url: https://www.usenix.org/conference/lisa13/technical-sessions/presentation/merlin
@@ -234,10 +279,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-28
     claim: "The same 2013 LISA paper says the target of that upgrade was a Debian Testing based distribution built from source."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Marc Merlin (Google), Live Upgrading Thousands of Servers from an Ancient Red Hat Distribution to 10 Year Newer Debian Based One, USENIX LISA '13"
       url: https://www.usenix.org/conference/lisa13/technical-sessions/presentation/merlin
@@ -257,10 +307,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-29
     claim: "The same 2013 LISA paper says the distribution change was done as a live upgrade, without a long \"flag day\"."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Marc Merlin (Google), Live Upgrading Thousands of Servers from an Ancient Red Hat Distribution to 10 Year Newer Debian Based One, USENIX LISA '13"
       url: https://www.usenix.org/conference/lisa13/technical-sessions/presentation/merlin
@@ -280,10 +335,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-30
     claim: "Google Cloud's \"What are containers?\" page says everything at Google, from Gmail to YouTube to Search, runs in containers."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google Cloud, What are containers?"
       url: https://cloud.google.com/learn/what-are-containers
@@ -303,10 +363,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-31
     claim: "Google Cloud's \"Containers at Google\" page says Google has been using containers since the early 2000s."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google Cloud, Containers at Google"
       url: https://cloud.google.com/containers
@@ -326,10 +391,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-32
     claim: "Google Cloud's \"What are containers?\" page says Google contributed cgroups to the Linux kernel."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google Cloud, What are containers?"
       url: https://cloud.google.com/learn/what-are-containers
@@ -349,6 +419,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
 ---
 
 # Linux and the cluster operating system in Google production

@@ -7,7 +7,7 @@ claims:
   - id: 04-52
     claim: "Google Cloud documentation says Container-Optimized OS is maintained by Google and based on the open source Chromium OS project."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Container-Optimized OS documentation, Container-Optimized OS Overview"
       url: https://cloud.google.com/container-optimized-os/docs/concepts/features-and-benefits
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-53
     claim: "Google Cloud documentation says Container-Optimized OS is the default node OS image in Google Kubernetes Engine."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Container-Optimized OS documentation, Container-Optimized OS Overview"
       url: https://cloud.google.com/container-optimized-os/docs/concepts/features-and-benefits
@@ -50,10 +55,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-54
     claim: "Google Cloud documentation says Container-Optimized OS instances automatically download weekly updates in the background and need only a reboot to use them."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Container-Optimized OS documentation, Container-Optimized OS Overview"
       url: https://cloud.google.com/container-optimized-os/docs/concepts/features-and-benefits
@@ -73,10 +83,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-55
     claim: "Google Cloud documentation says the Container-Optimized OS kernel is locked down, so third-party kernel modules or drivers cannot be installed."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Container-Optimized OS documentation, Container-Optimized OS Overview"
       url: https://cloud.google.com/container-optimized-os/docs/concepts/features-and-benefits
@@ -96,6 +111,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
 ---
 
 # Container-Optimized OS on Google Cloud

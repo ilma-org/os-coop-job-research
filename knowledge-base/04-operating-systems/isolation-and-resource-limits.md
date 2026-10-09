@@ -7,7 +7,7 @@ claims:
   - id: 04-15
     claim: "The SRE book says that if a task tries to use more resources than it requested, Borg kills the task and restarts it."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.2 The Production Environment at Google, from the Viewpoint of an SRE"
       url: https://sre.google/sre-book/production-environment/
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-16
     claim: "Building Secure and Reliable Systems describes a Google debugging case in which a memory container ran out of RAM and the kernel issued a SIGKILL for all processes in the container."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.15 Investigating Systems"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch15.html
@@ -50,10 +55,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-17
     claim: "The SRE book says running out of file descriptors can lead to an inability to initialize network connections."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.22 Addressing Cascading Failures"
       url: https://sre.google/sre-book/addressing-cascading-failures/
@@ -73,10 +83,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-18
     claim: "The SRE book says that in extreme cases thread starvation can cause a server to run out of process IDs."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.22 Addressing Cascading Failures"
       url: https://sre.google/sre-book/addressing-cascading-failures/
@@ -96,10 +111,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-19
     claim: "Building Secure and Reliable Systems says the Linux kernel exposed Google App Engine to a large attack surface."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.8 Design for Resilience"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch08.html
@@ -119,10 +139,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-20
     claim: "Building Secure and Reliable Systems says Google added a second layer of ptrace sandboxing to App Engine to filter and alert on unexpected system calls."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.8 Design for Resilience"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch08.html
@@ -142,10 +167,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-21
     claim: "Building Secure and Reliable Systems says a kernel vulnerability in the host operating system can be patched without changing the application container."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.7 Design for a Changing Landscape"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch07.html
@@ -165,10 +195,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-33
     claim: "Google Cloud's \"What are containers?\" page says containers share the OS kernel and use a fraction of the memory that VMs require."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google Cloud, What are containers?"
       url: https://cloud.google.com/learn/what-are-containers
@@ -188,10 +223,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-34
     claim: "The Linux kernel documentation describes cgroup as a mechanism to organize processes hierarchically and distribute system resources along the hierarchy."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Linux Kernel documentation, Control Group v2"
       url: https://docs.kernel.org/admin-guide/cgroup-v2.html
@@ -211,10 +251,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-35
     claim: "The Linux kernel's cgroup v2 documentation says that when a cgroup's memory usage reaches its memory.max hard limit and can't be reduced, the OOM killer is invoked in the cgroup."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Linux Kernel documentation, Control Group v2"
       url: https://docs.kernel.org/admin-guide/cgroup-v2.html
@@ -234,10 +279,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-36
     claim: "The Linux kernel's cgroup v2 documentation says the memory.oom.group setting decides whether the OOM killer treats a cgroup as an indivisible workload, killing its tasks together or not at all."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Linux Kernel documentation, Control Group v2"
       url: https://docs.kernel.org/admin-guide/cgroup-v2.html
@@ -257,10 +307,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-37
     claim: "Building Secure and Reliable Systems says Google has many out-of-memory (OOM) conditions every day."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.15 Investigating Systems"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch15.html
@@ -280,10 +335,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-38
     claim: "Building Secure and Reliable Systems says Google adapted the App Engine Python runtime to compile down to Native Client (NaCl) bitcode."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.8 Design for Resilience"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch08.html
@@ -303,10 +363,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-39
     claim: "The gVisor documentation describes gVisor as an application kernel that implements a Linux-like interface."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "gVisor documentation, What is gVisor?"
       url: https://gvisor.dev/docs/
@@ -326,10 +391,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-40
     claim: "The gVisor documentation says gVisor intercepts application system calls and acts as the guest kernel."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "gVisor documentation, What is gVisor?"
       url: https://gvisor.dev/docs/
@@ -349,10 +419,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-41
     claim: "Google Kubernetes Engine documentation says the container runtime often runs as a privileged user on the node and has access to most system calls into the host kernel."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google Kubernetes Engine documentation, GKE Sandbox"
       url: https://docs.cloud.google.com/kubernetes-engine/docs/concepts/sandbox-pods
@@ -372,10 +447,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-56
     claim: "Google's infrastructure security design overview says the isolation and sandboxing techniques Google uses to protect a service from other services on the same machine include Linux user separation."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google Cloud, Google infrastructure security design overview"
       url: https://docs.cloud.google.com/docs/security/infrastructure/design
@@ -395,10 +475,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
   - id: 04-57
     claim: "Google's infrastructure security design overview lists an application kernel for containers, such as gVisor, among those isolation techniques."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google Cloud, Google infrastructure security design overview"
       url: https://docs.cloud.google.com/docs/security/infrastructure/design
@@ -418,6 +503,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-09
+      result: pass
+      opened_source: true
 ---
 
 # Process isolation, sandboxing and OS resource limits
