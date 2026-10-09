@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 07-dev-and-runtime-tools
 title: "Debugging and profiling tools"
-updated: 2026-10-08
+updated: 2026-10-09
 claims:
   - id: 07-16
     claim: "In its description of Google's production environment, the SRE book says every server has an HTTP server that provides diagnostics and statistics for a given task, to support dashboards, monitoring and debugging."
@@ -241,5 +241,24 @@ claims:
 ---
 
 # Debugging and profiling tools
+
+## Summary
+
+The SRE book says every server in Google's production environment has an HTTP server that provides diagnostics and statistics for debugging, and that text logs suit real-time debugging while structured binary logs support deeper retrospective analysis (07-16, 07-17). Two worked examples, a Spanner latency case and a web-server logging case, use profiling as one step of a troubleshooting method (07-18, 07-19). The books also describe memory and concurrency tools: Valgrind, AddressSanitizer, ThreadSanitizer and the Go Race Detector. The sanitizers run up to 10 times faster than Valgrind but can make binaries orders of magnitude slower, so many projects run them in CI/CD less often (07-21 to 07-27). These claims do not show that Google SRE uses these tools day to day, and no command-line debugger or tracer is named as an SRE tool; see `index.md` for the gaps.
+
+## Key points
+
+- Every server has an HTTP server that provides diagnostics and statistics for a given task, to support dashboards, monitoring and debugging. (07-16)
+- Text logs suit real-time debugging, while structured binary logs let teams build tools for deeper retrospective analysis. (07-17)
+- In the SRE book's Spanner example, profiling the server shows where CPU time is used. In the Building Secure and Reliable Systems example, a profiler showed that logging all input to disk and calling sync slowed a web server, which teaches looking at the system before assuming a cause. (07-18, 07-19)
+- Interfaces such as the Java Virtual Machine Profiling Interface are a source of white-box monitoring metrics. (07-20)
+- Valgrind runs a user's binary in a virtual machine, so developers can catch memory errors without recompiling. (07-21)
+- AddressSanitizer detects memory errors such as buffer overflows and use after free; ThreadSanitizer detects data races and deadlocks. (07-22, 07-23)
+- The Google Sanitizers run up to 10 times faster than Valgrind, began in LLVM, and are now also supported by GCC and other compilers. (07-24, 07-26)
+- Go can still have data races, and the Go Race Detector can detect them. (07-25)
+- Sanitizer-instrumented binaries can be orders of magnitude slower, so many projects run sanitizer pipelines in CI/CD less often, for example nightly. (07-27)
+- Performance profilers and code coverage report generators are the best-known types of dynamic program analysis. (07-28)
+
+## Sources and limits
 
 Debugging and profiling tools named in the books. Claim 07-17 is general advice on logs from the SRE book's troubleshooting chapter. Claims 07-18 and 07-19 are worked examples of troubleshooting method with profiling as one step. They show the practice, not which profiler Google SRE uses. The sanitizer and Valgrind claims describe C/C++ tools in a Google-authored book; they do not show that Google SRE uses them day to day.
