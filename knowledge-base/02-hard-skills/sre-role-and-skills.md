@@ -40,7 +40,7 @@ claims:
     kind: official-doc
     accessed: '2026-10-07'
     archive: https://web.archive.org/web/20251123125903/https://sre.google/static/pdf/TrainingSiteReliabilityEngineers.pdf
-  quote: an SRE’s job is to apply software engineering skills to operations problems. This means that we expect SREs to spend a lot of time on software engineering.
+  quote: an SRE’s job is to apply software engineering skills to operations problems.
   os_concepts: []
   pr: null
 - id: 02-04
@@ -53,7 +53,7 @@ claims:
     kind: official-doc
     accessed: '2026-10-07'
     archive: https://web.archive.org/web/20260919200604/https://sre.google/workbook/canarying-releases/
-  quote: In Google’s experience, a majority of incidents are triggered by binary or configuration pushes (see Results of Postmortem Analysis).
+  quote: In Google’s experience, a majority of incidents are triggered by binary or configuration pushes
   os_concepts: []
   pr: null
 - id: 02-05
@@ -66,7 +66,7 @@ claims:
     kind: official-doc
     accessed: '2026-10-07'
     archive: https://web.archive.org/web/20260909103330/https://sre.google/workbook/eliminating-toil/
-  quote: Google limits the time SRE teams spend on operational work (including both toil- and non-toil-intensive work) at 50% (for more context on why, see Chapter 5 in our first book).
+  quote: Google limits the time SRE teams spend on operational work (including both toil- and non-toil-intensive work) at 50%
   os_concepts: []
   pr: null
 - id: 02-06

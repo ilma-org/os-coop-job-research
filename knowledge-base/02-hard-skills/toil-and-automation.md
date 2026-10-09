@@ -53,7 +53,7 @@ claims:
     kind: official-doc
     accessed: '2026-10-07'
     archive: https://web.archive.org/web/20260224150156/https://google.github.io/building-secure-and-reliable-systems/raw/ch03.html
-  quote: Zero Touch Prod is a project at Google that requires every change in production to be made by automation (instead of humans), prevalidated by software, or triggered through an audited breakglass mechanism.
+  quote: Zero Touch Prod is a project at Google that requires every change in production to be made by automation (instead of humans), prevalidated by software, or triggered through an audited breakglass mechanism
   os_concepts: []
   pr: null
 - id: 02-19
