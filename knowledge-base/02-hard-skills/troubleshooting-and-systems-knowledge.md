@@ -5,7 +5,7 @@ title: Troubleshooting, OS, kernel and network knowledge
 updated: 2026-10-09
 claims:
 - id: 02-23
-  claim: Heather Adkins says insider-threat controls and mistake prevention have very similar solutions, which is why reliability and security were blended in the book.
+  claim: Heather Adkins says insider-threat controls and mistake prevention often have very similar solutions.
   type: fact
   status: unverified
   source:
