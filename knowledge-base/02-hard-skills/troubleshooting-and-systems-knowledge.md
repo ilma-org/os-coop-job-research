@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 02-hard-skills
 title: Troubleshooting, OS, kernel and network knowledge
-updated: '2026-10-07'
+updated: 2026-10-09
 claims:
 - id: 02-23
   claim: Heather Adkins says insider-threat controls and mistake prevention have very similar solutions, which is why reliability and security were blended in the book.
@@ -20,7 +20,7 @@ claims:
 - id: 02-24
   claim: With global load balancing between GFE and backends, Google can redirect traffic during a datacenter outage, reducing mitigation time.
   type: org-fact
-  status: unverified
+  status: ai-checked
   source:
     title: Building Secure and Reliable Systems, Chapter 7
     url: https://google.github.io/building-secure-and-reliable-systems/raw/ch07.html
@@ -30,10 +30,15 @@ claims:
   quote: Global load balancing helps move traffic between GFE and backends. For example, we can redirect traffic during a datacenter outage, reducing mitigation time.
   os_concepts: []
   pr: null
+  ai_check:
+    platform: Claude Code
+    model: "Sonnet 5.5 (claude-sonnet-5-5)"
+    prompt_log: prompts/2026-10-09-nacs-970-hard-skills-author-check.md
+    result: supported
 - id: 02-25
   claim: Unchecked recurring outages increase operational toil and can exhaust error budgets, erode user trust and hurt revenue.
   type: fact
-  status: unverified
+  status: ai-checked
   source:
     title: 'Google SRE: Incident Management Guide (PDF)'
     url: https://sre.google/static/pdf/IncidentManagementGuide.pdf
@@ -43,10 +48,15 @@ claims:
   quote: Left unchecked, outages tend to regularly resurface and accumulate over time. This increases the operational toil for the team and can lead to expended error budgets, eroded user trust, and impacted revenue.
   os_concepts: []
   pr: null
+  ai_check:
+    platform: Claude Code
+    model: "Sonnet 5.5 (claude-sonnet-5-5)"
+    prompt_log: prompts/2026-10-09-nacs-970-hard-skills-author-check.md
+    result: supported
 - id: 02-26
   claim: Resilience testing checks a system survives faults, latency or disruptions, while recovery testing checks it can return to a stable state after a full shutdown.
   type: fact
-  status: unverified
+  status: ai-checked
   source:
     title: Lessons Learned from Two Decades of Site Reliability Engineering (Google SRE 20th anniversary PDF)
     url: https://sre.google/static/pdf/LessonsLearnedFromTwoDecades.pdf
@@ -56,10 +66,15 @@ claims:
   quote: While resilience testing verifies that your service or system could survive in the event of faults, latency, or disruptions, recovery testing verifies that your service can transition back to homeostasis after a full shutdown.
   os_concepts: []
   pr: null
+  ai_check:
+    platform: Claude Code
+    model: "Sonnet 5.5 (claude-sonnet-5-5)"
+    prompt_log: prompts/2026-10-09-nacs-970-hard-skills-author-check.md
+    result: supported
 - id: 02-27
   claim: Nonfunctional requirements include SLOs for metrics such as uptime and 95th- and 99th-percentile latency, and behavior under load above a threshold.
   type: fact
-  status: unverified
+  status: ai-checked
   source:
     title: Building Secure and Reliable Systems, Chapter 4
     url: https://google.github.io/building-secure-and-reliable-systems/raw/ch04.html
@@ -69,10 +84,15 @@ claims:
   quote: What are the service level objectives (SLOs) for metrics such as uptime or 95th-percentile and 99th-percentile response latency? How does the system respond under load above a certain threshold?
   os_concepts: []
   pr: null
+  ai_check:
+    platform: Claude Code
+    model: "Sonnet 5.5 (claude-sonnet-5-5)"
+    prompt_log: prompts/2026-10-09-nacs-970-hard-skills-author-check.md
+    result: supported
 - id: 02-28
   claim: When Google set tighter memory limits on Borg jobs, tasks that exceeded them even slightly were killed immediately, causing service disruptions and latency.
   type: org-fact
-  status: unverified
+  status: ai-checked
   source:
     title: 'Case Studies in Infrastructure Change Management: How Google Rebuilds the Jet While Flying It (O''Reilly/Google report)'
     url: https://sre.google/static/pdf/CaseStudiesInfrastructureChangeManagement.pdf
@@ -82,10 +102,15 @@ claims:
   quote: Therefore, if any tasks went over their new memory limits, even by a small amount, Borg killed them immediately, causing localized service disruptions and latency.
   os_concepts: []
   pr: null
+  ai_check:
+    platform: Claude Code
+    model: "Sonnet 5.5 (claude-sonnet-5-5)"
+    prompt_log: prompts/2026-10-09-nacs-970-hard-skills-author-check.md
+    result: supported
 - id: 02-29
   claim: Google's Disaster Recovery Testing (DiRT) frequently simulates regional outages against pipelines that depend on a datacenter.
   type: org-fact
-  status: unverified
+  status: ai-checked
   source:
     title: 'The Site Reliability Workbook: Data Processing Pipelines'
     url: https://sre.google/workbook/data-processing/
@@ -95,10 +120,15 @@ claims:
   quote: For example, many pipelines at Google depend on the availability of the datacenter where they run. Our Disaster Recovery Testing (DiRT) frequently targets these systems, simulating a regional outage.
   os_concepts: []
   pr: null
+  ai_check:
+    platform: Claude Code
+    model: "Sonnet 5.5 (claude-sonnet-5-5)"
+    prompt_log: prompts/2026-10-09-nacs-970-hard-skills-author-check.md
+    result: supported
 - id: 02-30
   claim: Google announces IPs via BGP from multiple points in its network and relies on BGP routing to deliver packets to the closest frontend location that can terminate a TCP session.
   type: org-fact
-  status: unverified
+  status: ai-checked
   source:
     title: 'The Site Reliability Workbook: Managing Load'
     url: https://sre.google/workbook/managing-load/
@@ -108,6 +138,11 @@ claims:
   quote: Google announces IPs via Border Gateway Protocol (BGP) from multiple points in our network.
   os_concepts: []
   pr: null
+  ai_check:
+    platform: Claude Code
+    model: "Sonnet 5.5 (claude-sonnet-5-5)"
+    prompt_log: prompts/2026-10-09-nacs-970-hard-skills-author-check.md
+    result: supported
 ---
 
 # Troubleshooting, OS, kernel and network knowledge
