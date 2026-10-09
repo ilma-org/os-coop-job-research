@@ -7,7 +7,7 @@ claims:
 - id: 02-23
   claim: Heather Adkins says insider-threat controls and mistake prevention often have very similar solutions.
   type: fact
-  status: unverified
+  status: ai-checked
   source:
     title: 'Google SRE Prodcast transcript: The One With Heather Adkins'
     url: https://sre.google/prodcast/transcripts/sre-prodcast-05-03/
@@ -17,6 +17,11 @@ claims:
   quote: And if you think about, how do I keep an employee from doing something malicious, or how do I keep an employee from making a mistake, the solutions are often very similar.
   os_concepts: []
   pr: null
+  ai_check:
+    platform: Claude Code
+    model: "Sonnet 5.5 (claude-sonnet-5-5)"
+    prompt_log: prompts/2026-10-09-nacs-970-hard-skills-author-check-2.md
+    result: supported
 - id: 02-24
   claim: With global load balancing between GFE and backends, Google can redirect traffic during a datacenter outage, reducing mitigation time.
   type: org-fact
