@@ -22,6 +22,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-02
     claim: "Building Secure and Reliable Systems says Google has an internal Linux distribution and describes how its rollout evolved."
     type: org-fact
@@ -39,6 +44,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
   - id: 04-03
     claim: "Building Secure and Reliable Systems says Google installed all the machines in its datacenters with a \"base\" or \"golden\" image."
@@ -58,6 +68,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-04
     claim: "Building Secure and Reliable Systems says Google later designed more granular release units for its machines, one for each software package."
     type: org-fact
@@ -75,6 +90,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
   - id: 04-05
     claim: "The SRE book says resource allocation in Google's datacenters is handled by Borg, which it calls Google's cluster operating system."
@@ -94,6 +114,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-06
     claim: "The SRE Workbook says Borg is Google's internal container management system and that it runs huge numbers of Linux containers."
     type: org-fact
@@ -111,6 +136,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
   - id: 04-07
     claim: "Building Secure and Reliable Systems says that inside a Borg alloc, one or more sets of Linux processes can be run in a container."
@@ -130,6 +160,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-08
     claim: "The SRE book uses \"node\" and \"machine\" interchangeably for a single instance of a running kernel, whether on a physical server, a virtual machine or a container."
     type: fact
@@ -147,6 +182,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
   - id: 04-26
     claim: "A 2013 USENIX LISA paper by Google engineer Marc Merlin says Google's server applications run in a different partition from the base Linux distribution that boots the machine."
@@ -166,6 +206,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-27
     claim: "The same 2013 LISA paper describes a difficult upgrade of Google's servers from a Red Hat 7.1 image snapshot with layers of patches."
     type: org-fact
@@ -183,6 +228,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
   - id: 04-28
     claim: "The same 2013 LISA paper says the target of that upgrade was a Debian Testing based distribution built from source."
@@ -202,6 +252,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-29
     claim: "The same 2013 LISA paper says the distribution change was done as a live upgrade, without a long \"flag day\"."
     type: org-fact
@@ -219,6 +274,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
   - id: 04-30
     claim: "Google Cloud's \"What are containers?\" page says everything at Google, from Gmail to YouTube to Search, runs in containers."
@@ -238,6 +298,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-31
     claim: "Google Cloud's \"Containers at Google\" page says Google has been using containers since the early 2000s."
     type: org-fact
@@ -256,6 +321,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-32
     claim: "Google Cloud's \"What are containers?\" page says Google contributed cgroups to the Linux kernel."
     type: org-fact
@@ -273,6 +343,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
 ---
 

@@ -22,6 +22,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-53
     claim: "Google Cloud documentation says Container-Optimized OS is the default node OS image in Google Kubernetes Engine."
     type: org-fact
@@ -39,6 +44,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
   - id: 04-54
     claim: "Google Cloud documentation says Container-Optimized OS instances automatically download weekly updates in the background and need only a reboot to use them."
@@ -58,6 +68,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-55
     claim: "Google Cloud documentation says the Container-Optimized OS kernel is locked down, so third-party kernel modules or drivers cannot be installed."
     type: org-fact
@@ -75,6 +90,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
 ---
 

@@ -22,6 +22,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-23
     claim: "In the same Shellshock example, Building Secure and Reliable Systems says Google deemed a large number of Googler workstations to be higher risk."
     type: org-fact
@@ -40,6 +45,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-24
     claim: "Building Secure and Reliable Systems says that under Google's BeyondCorp model, a workstation is trusted based on a certificate issued to the machine and assertions about its configuration, such as up-to-date software."
     type: org-fact
@@ -57,6 +67,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
   - id: 04-25
     claim: "Recommendation (assumption): prepare to work every day in a Linux shell, both on a workstation and on remote servers. Google's production servers run Linux (04-01) and Google offers a Debian-based Linux system among its desktop platforms (04-44, 04-48), but no source says which operating system Google's SREs use on their own workstations."
@@ -82,6 +97,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-45
     claim: "The same 2022 post says Google runs a corporate fleet of hundreds of thousands of devices across multiple platforms, to support all employees, including engineers."
     type: org-fact
@@ -99,6 +119,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
   - id: 04-46
     claim: "The same 2022 post says Google's internal-facing Linux distribution, Goobuntu, was for a long time based on Ubuntu LTS releases."
@@ -118,6 +143,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-47
     claim: "The same 2022 post says that in 2018 Google completed a move of that distribution to a rolling release model based on Debian."
     type: org-fact
@@ -135,6 +165,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
   - id: 04-48
     claim: "The same 2022 post names the rolling distribution gLinux Rodete, short for Rolling Debian Testing."
@@ -154,6 +189,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-49
     claim: "The same 2022 post says Google chose Debian for gLinux because it wanted to offer a smooth in-place migration."
     type: org-fact
@@ -171,6 +211,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
   - id: 04-50
     claim: "The same 2022 post says each gLinux release is guided to the fleet using SRE principles such as incremental canarying and monitoring fleet health."
@@ -190,6 +235,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-51
     claim: "The same 2022 post says the rolling release schedule lets Google patch security holes on the entire fleet quickly."
     type: org-fact
@@ -207,6 +257,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
 ---
 

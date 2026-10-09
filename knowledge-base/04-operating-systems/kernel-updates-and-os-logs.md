@@ -22,6 +22,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-10
     claim: "Building Secure and Reliable Systems says Google's fleet-wide kernel rollouts have a target of less than 30 days."
     type: org-fact
@@ -39,6 +44,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
   - id: 04-11
     claim: "Building Secure and Reliable Systems describes ksplice as a runtime kernel patch that uses function redirection tables so that rebooting into a new kernel is unnecessary."
@@ -58,6 +68,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-12
     claim: "Building Secure and Reliable Systems says that, for two 2018 Linux kernel vulnerabilities, Google SREs were able to apply a ksplice to production systems."
     type: org-fact
@@ -75,6 +90,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
   - id: 04-13
     claim: "In its case study of moving Google's Ads Database (MySQL) onto Borg from late 2008, the SRE book says the MySQL instances ran on shared machines that were subject to reboots for kernel upgrades."
@@ -94,6 +114,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-14
     claim: "Building Secure and Reliable Systems says Linux and Mac have syslog and auditd logs, while Windows has Windows Event logs."
     type: fact
@@ -112,6 +137,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
+      result: supported
   - id: 04-43
     claim: "The Linux kernel's livepatch documentation says livepatching redirects function calls so that critical functions can be fixed without a system reboot."
     type: fact
@@ -129,6 +159,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-04-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nine14282-04-reviewer-recheck.md
       result: supported
 ---
 
