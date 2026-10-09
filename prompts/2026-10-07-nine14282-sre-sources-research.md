@@ -12,7 +12,7 @@ significant_reason: Produced the 100 unverified claims in topics 02, 03 and 10 f
 purpose: Read sre.google (SRE book, Workbook, Building Secure and Reliable Systems, resources, Prodcast), extract quotes for topics 02, 03 and 10, and write them as unverified topic notes.
 pr: null
 claims: [02-01, 02-02, 02-03, 02-04, 02-05, 02-06, 02-07, 02-08, 02-09, 02-10, 02-11, 02-12, 02-13, 02-14, 02-15, 02-16, 02-17, 02-18, 02-19, 02-20, 02-21, 02-22, 02-23, 02-24, 02-25, 02-26, 02-27, 02-28, 02-29, 02-30, 03-01, 03-02, 03-03, 03-04, 03-05, 03-06, 03-07, 03-08, 03-09, 03-10, 03-11, 03-12, 03-13, 03-14, 03-15, 03-16, 03-17, 03-18, 03-19, 03-20, 03-21, 03-22, 03-23, 03-24, 03-25, 03-26, 03-27, 03-28, 03-29, 03-30, 03-31, 03-32, 03-33, 03-34, 10-01, 10-02, 10-03, 10-04, 10-05, 10-06, 10-07, 10-08, 10-09, 10-10, 10-11, 10-12, 10-13, 10-14, 10-15, 10-16, 10-17, 10-18, 10-19, 10-20, 10-21, 10-22, 10-23, 10-24, 10-25, 10-26, 10-27, 10-28, 10-29, 10-30, 10-31, 10-32, 10-33, 10-34, 10-35, 10-36]
-redactions: 4
+redactions: 6
 supporting_docs:
   - https://sre.google/books/
   - https://sre.google/sre-book/table-of-contents/
@@ -209,7 +209,7 @@ Now updating the three `index.md` files to list the new notes.
 - Bash: Check archive.today and Wayback status | curl -s -o /dev/null -w '%{http_code} %{redirect_url}\n' --max-time 30 -A 'Mozilla/5.0' 'https://archive.ph/newest/https://sre.google/sre-book/elimina
 - ToolSearch: query=select:Monitor, max_results=1
 - Monitor: command=while true; do printf '%s ' "$(date +%H:%M)"; for f in /tmp/sre-crawl/candidates/*.jsonl; do printf '%s=%s ' "$(basename, description=candidate counts per reader batch (every 3 min), timeout_ms=1800000
-- Bash: Inspect session transcript structure | ls -la ~/.claude/projects/-home-nanthiphat-MyWork-os-coop-job-research/*.jsonl | tail -3; f=~/.claude/projects/-home-nanthiphat-MyWork-os-coop-job-res
+- Bash: Inspect session transcript structure | ls -la ~/.claude/projects/[REDACTED:path]-MyWork-os-coop-job-research/*.jsonl | tail -3; f=~/.claude/projects/[REDACTED:path]-MyWork-os-coop-job-res
 - Bash: Write and test prompt-log exporter | cat > /tmp/sre-tools/export_log.py <<'EOF'
 - Bash: Check reader progress and verify quotes | cd /tmp/sre-crawl/candidates; for f in *.jsonl; do printf '%s=%s ' ${f%.jsonl} $(wc -l <$f); done; echo; python3 -P /tmp/sre-tools/verify.py; python3 
 - ToolSearch: query=select:SendMessage, max_results=1
