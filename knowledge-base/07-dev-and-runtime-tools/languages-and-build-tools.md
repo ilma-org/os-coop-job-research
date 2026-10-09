@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 07-dev-and-runtime-tools
 title: "Languages, runtimes and build tools in Google's SRE books"
-updated: 2026-10-08
+updated: 2026-10-09
 claims:
   - id: 07-01
     claim: "The SRE book says Google's build tool Blaze builds binaries from what Google calls its standard languages: C++, Java, Python, Go and JavaScript."
@@ -133,5 +133,19 @@ claims:
 ---
 
 # Languages, runtimes and build tools in Google's SRE books
+
+## Summary
+
+The SRE book says Google's build tool Blaze, open sourced as Bazel, builds binaries from what Google calls its standard languages: C++, Java, Python, Go and JavaScript (07-01, 07-02). Builds are hermetic, and Bazel rebuilds only the part of the software that depends on a changed file (07-03, 07-04). On scripting, the book's history of Google's cluster automation describes brittle shell scripts, initial automation in simple Python scripts, and Prodtest, which extended Python's unit test framework to test real services (07-05 to 07-07). This note does not show which languages Google SRE job ads require; see `index.md` for the gaps.
+
+## Key points
+
+- Blaze, open sourced as Bazel, builds binaries from Google's standard languages: C++, Java, Python, Go and JavaScript. (07-01, 07-02)
+- Google's builds are hermetic: they depend on known versions of build tools such as compilers, not on software installed on the build machine. (07-03)
+- Bazel builds a dependency graph of a project and rebuilds only the part that depends on a changed file. (07-04)
+- The shell scripts Google used to configure clusters were brittle and did not scale with the number of people making changes or the number of cluster permutations. (07-05)
+- Python appears in the book's automation history as simple Python scripts, and Prodtest extended the Python unit test framework to unit test real-world services. (07-06, 07-07)
+
+## Sources and limits
 
 Evidence on which languages and build tools Google's SRE books name. The SRE book text is dated (page footer: copyright 2017), so claims describe what the book says, not Google today. Shell and Python evidence comes from the book's history of Google's automation.
