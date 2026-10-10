@@ -2,12 +2,12 @@
 doc_type: topic-note
 topic: 02-hard-skills
 title: SLIs, SLOs, error budgets, monitoring and alerting
-updated: 2026-10-09
+updated: 2026-10-11
 claims:
   - id: 02-07
     claim: "The SRE Fundamentals with Google course covers identifying key metrics, building SLOs and alerts, and systems design including single points of failure, performance and capacity planning."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "SRE Fundamentals online course with Google"
       url: https://sre.google/resources/practices-and-processes/sre-fundamentals-course/
@@ -22,6 +22,16 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-08
     claim: "A report says SLOs are reliability targets measured by SLIs, and measurable SLOs eliminate conflicts around change management and event handling."
     type: fact
@@ -43,7 +53,7 @@ claims:
   - id: 02-09
     claim: "Peter Pellerzi, who works on Google data center infrastructure, says the metric they look at is availability, with a target of five nines."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE Prodcast transcript: The One With Data Centers and Peter Pellerzi"
       url: https://sre.google/prodcast/transcripts/sre-prodcast-04-02/
@@ -58,10 +68,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-10
     claim: "The talk defines an SLI as time series data showing how good the level of service is, often from logs or sampled counters."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE - SLOs ecosystem to measure reliability"
       url: https://sre.google/resources/practices-and-processes/measuring-reliability/
@@ -76,6 +96,16 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-11
     claim: "Data processing can be declared reliable if well-reasoned SLOs are met; the freshness SLO asks whether the job completed in time and measures how long we can wait for the data to be available."
     type: fact
@@ -97,7 +127,7 @@ claims:
   - id: 02-12
     claim: "The Workbook says each alert condition should have a playbook entry describing the steps to recovery, and that Google finds it useful to link this documentation in alert messages sent to on-call engineers."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook: Data Processing Pipelines"
       url: https://sre.google/workbook/data-processing/
@@ -112,10 +142,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-13
     claim: "SRE is a term and job role coined by Ben Treynor Sloss, a VP of engineering at Google."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook: How SRE Relates to DevOps"
       url: https://sre.google/workbook/how-sre-relates/
@@ -130,10 +170,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-14
     claim: "At Google, a well-thought-out and adopted SLO is key to making data-informed decisions about the opportunity cost of reliability work and how to prioritize it."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook: Implementing SLOs"
       url: https://sre.google/workbook/implementing-slos/
@@ -148,6 +198,17 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
+
 ---
 
 # SLIs, SLOs, error budgets, monitoring and alerting

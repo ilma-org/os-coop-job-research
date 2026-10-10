@@ -2,12 +2,12 @@
 doc_type: topic-note
 topic: 02-hard-skills
 title: What Google looks for in an SRE
-updated: 2026-10-09
+updated: 2026-10-11
 claims:
   - id: 02-01
     claim: "Cody Smith says Google SRE had a mission-control program where engineers from pure dev teams joined SRE for a six-month rotation."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE Prodcast transcript: Maglev: load balancing at Google with Cody Smith and Trisha Weir"
       url: https://sre.google/prodcast/transcripts/sre-prodcast-03-10/
@@ -22,10 +22,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-02
     claim: "Google says unit tests have limited scope and do not fully replicate the runtime environment, which is why it advocates integration testing."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Lessons Learned from Two Decades of Site Reliability Engineering (Google SRE 20th anniversary PDF)"
       url: https://sre.google/static/pdf/LessonsLearnedFromTwoDecades.pdf
@@ -40,10 +50,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-03
     claim: "The report quotes Ben Treynor Sloss that an SRE's job is to apply software engineering skills to operations problems."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Training Site Reliability Engineers (O'Reilly report by Google authors, 2019/2020)"
       url: https://sre.google/static/pdf/TrainingSiteReliabilityEngineers.pdf
@@ -58,10 +78,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-04
     claim: "In Google's experience, a majority of incidents are triggered by binary or configuration pushes."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook: Canarying Releases"
       url: https://sre.google/workbook/canarying-releases/
@@ -76,10 +106,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-05
     claim: "Google limits the time SRE teams spend on operational work (toil and non-toil) to 50%."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook: Eliminating Toil"
       url: https://sre.google/workbook/eliminating-toil/
@@ -94,10 +134,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-06
     claim: "Many Google teams manage and configure services using version control and process organizational requests as pull requests, called changelists (CLs), which brings code review and continuous deployment to internal service configuration changes."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook: Eliminating Toil"
       url: https://sre.google/workbook/eliminating-toil/
@@ -112,6 +162,17 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
+
 ---
 
 # What Google looks for in an SRE

@@ -2,12 +2,12 @@
 doc_type: topic-note
 topic: 02-hard-skills
 title: Toil, automation and production changes
-updated: 2026-10-09
+updated: 2026-10-11
 claims:
   - id: 02-15
     claim: "Google SRE describes a YouTube outage in which a caching config change fully hobbled the service for 13 minutes, and says canarying those global changes with a progressive rollout could have curbed it before it had global impact."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE lessons - key principles of site reliability engineering"
       url: https://sre.google/resources/practices-and-processes/twenty-years-of-sre-lessons-learned/
@@ -22,10 +22,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-16
     claim: "Google SRE says it is sometimes better to use an automated mitigation first and save root-causing for after user impact has been avoided."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE lessons - key principles of site reliability engineering"
       url: https://sre.google/resources/practices-and-processes/twenty-years-of-sre-lessons-learned/
@@ -40,10 +50,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-17
     claim: "The Enterprise Roadmap to SRE says that once toil overwhelms an SRE team, all other SRE activities grind to a halt."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Enterprise Roadmap to SRE (Google Cloud/SRE report)"
       url: https://sre.google/static/pdf/enterprise-roadmap-to-sre.pdf
@@ -58,10 +78,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-18
     claim: "Google's Zero Touch Prod requires every production change to be made by automation, prevalidated by software, or triggered through an audited breakglass mechanism."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, Chapter 3"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch03.html
@@ -76,10 +106,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-19
     claim: "Google estimates about 13% of all Google-evaluated outages could have been prevented or mitigated with Zero Touch Prod."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, Chapter 3"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch03.html
@@ -94,6 +134,16 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-20
     claim: "The SRE organization at Google is working to build on least privilege through automation, aiming for Zero Touch interfaces."
     type: org-fact
@@ -115,7 +165,7 @@ claims:
   - id: 02-21
     claim: "Zero Touch interfaces aim to make Google safer and reduce outages by removing direct human access to production roles."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, Chapter 5"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch05.html
@@ -130,10 +180,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-22
     claim: "SRE as practiced at Google has a hard limit of 50% of a team member's time on toil."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook: How SRE Relates to DevOps"
       url: https://sre.google/workbook/how-sre-relates/
@@ -148,6 +208,17 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
+
 ---
 
 # Toil, automation and production changes

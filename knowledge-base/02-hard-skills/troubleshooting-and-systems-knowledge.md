@@ -2,12 +2,12 @@
 doc_type: topic-note
 topic: 02-hard-skills
 title: Troubleshooting, OS, kernel and network knowledge
-updated: 2026-10-09
+updated: 2026-10-11
 claims:
   - id: 02-23
     claim: "Heather Adkins says insider-threat controls and mistake prevention often have very similar solutions."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE Prodcast transcript: The One With Heather Adkins"
       url: https://sre.google/prodcast/transcripts/sre-prodcast-05-03/
@@ -22,10 +22,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-24
     claim: "Building Secure and Reliable Systems says global load balancing helps move traffic between GFE and backends, and gives the example that Google can redirect traffic during a datacenter outage, reducing mitigation time."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, Chapter 7"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch07.html
@@ -40,10 +50,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-25
     claim: "Unchecked recurring outages increase operational toil and can exhaust error budgets, erode user trust and hurt revenue."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE: Incident Management Guide (PDF)"
       url: https://sre.google/static/pdf/IncidentManagementGuide.pdf
@@ -58,10 +78,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-26
     claim: "Resilience testing checks a system survives faults, latency or disruptions, while recovery testing checks it can return to a stable state after a full shutdown."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Lessons Learned from Two Decades of Site Reliability Engineering (Google SRE 20th anniversary PDF)"
       url: https://sre.google/static/pdf/LessonsLearnedFromTwoDecades.pdf
@@ -76,10 +106,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-27
     claim: "Building Secure and Reliable Systems asks what the SLOs are for metrics such as uptime or 95th- and 99th-percentile response latency, and how the system responds under load above a certain threshold."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, Chapter 4"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch04.html
@@ -94,6 +134,16 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-28
     claim: "In a Google case study (the Steamroller project), new memory limits for Borg jobs did not account for small RAM spikes, so Borg immediately killed tasks that went over them even slightly, causing localized service disruptions and latency."
     type: org-fact
@@ -112,10 +162,15 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
   - id: 02-29
     claim: "Google's Disaster Recovery Testing (DiRT) frequently simulates regional outages against pipelines that depend on a datacenter."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook: Data Processing Pipelines"
       url: https://sre.google/workbook/data-processing/
@@ -130,10 +185,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-30
     claim: "Google announces IPs via BGP from multiple points in its network and relies on BGP routing to deliver packets to the closest frontend location that can terminate a TCP session."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook: Managing Load"
       url: https://sre.google/workbook/managing-load/
@@ -148,6 +213,17 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-nine14282-hard-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
+
 ---
 
 # Troubleshooting, OS, kernel and network knowledge
