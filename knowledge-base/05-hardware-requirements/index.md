@@ -6,7 +6,7 @@ assignment_section: "4.3"
 report_sections: [7]
 owner: "@csinside"
 issue: 10
-updated: 2026-10-09
+updated: 2026-10-11
 ---
 
 # Hardware requirements
@@ -25,10 +25,10 @@ What hardware and infrastructure the operating systems run on.
 The owner organizes notes (`topic-note` files) here. List them below as they are added.
 
 <!-- notes:start -->
-- [datacenter-hardware.md](datacenter-hardware.md): Google datacenter hardware, network and storage. 14 claims (05-01 to 05-11, 05-22 to 05-23, 05-36): 12 ai-checked, 2 unverified.
+- [datacenter-hardware.md](datacenter-hardware.md): Google datacenter hardware, network and storage. 14 claims (05-01 to 05-11, 05-22 to 05-23, 05-36): 14 ai-checked.
 - [firmware-and-cpu-platforms.md](firmware-and-cpu-platforms.md): Firmware, BIOS and CPU platforms in Google's fleet. 9 claims (05-12 to 05-17, 05-24 to 05-26): 9 ai-checked.
 - [sizing-and-practice-hardware.md](sizing-and-practice-hardware.md): Machine sizing numbers and hardware for practice. 6 claims (05-18 to 05-21, 05-34 to 05-35): 5 ai-checked, 1 unverified.
-- [google-cloud-instance-hardware.md](google-cloud-instance-hardware.md): CPU platforms and accelerators on Google Cloud. 7 claims (05-27 to 05-33): 5 ai-checked, 2 unverified.
+- [google-cloud-instance-hardware.md](google-cloud-instance-hardware.md): CPU platforms and accelerators on Google Cloud. 7 claims (05-27 to 05-33): 7 ai-checked.
 <!-- notes:end -->
 
 ## Sources covered so far
