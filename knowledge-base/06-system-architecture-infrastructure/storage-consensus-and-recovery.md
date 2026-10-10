@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 06-system-architecture-infrastructure
 title: "Distributed storage, consensus, backups and disaster recovery"
-updated: 2026-10-09
+updated: 2026-10-11
 claims:
   - id: 06-16
     claim: "The SRE book says Colossus creates a cluster-wide filesystem with usual filesystem semantics, plus replication and encryption."
@@ -113,58 +113,58 @@ claims:
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
       result: supported
   - id: 06-22
-    claim: "The SRE book warns that replication and redundancy are not recoverability."
+    claim: "The SRE book says that, in designing a data integrity program, it's important to recognize that replication and redundancy are not recoverability."
     type: fact
     status: ai-checked
     source:
       title: "Site Reliability Engineering, ch.26 Data Integrity: What You Read Is What You Wrote"
       url: https://sre.google/sre-book/data-integrity/
       kind: official-doc
-      accessed: 2026-10-08
+      accessed: 2026-10-11
       archive: null
-    quote: "replication and redundancy are not recoverability"
+    quote: "it’s important to recognize that replication and redundancy are not recoverability"
     os_concepts: []
     pr: null
     ai_check:
       platform: Claude Code (desktop app)
-      model: "Claude Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-09-csinside-06-author-check.md
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-csinside-06-author-check-3.md
       result: supported
   - id: 06-23
-    claim: "The SRE book says Google recovered lost Gmail data in 2011 from its previously undisclosed tape backup system."
+    claim: "In its case study headed \"Gmail—February, 2011: Restore from GTape\", the SRE book says Google recovered the lost data from its previously undisclosed tape backup system."
     type: org-fact
     status: ai-checked
     source:
       title: "Site Reliability Engineering, ch.26 Data Integrity: What You Read Is What You Wrote"
       url: https://sre.google/sre-book/data-integrity/
       kind: official-doc
-      accessed: 2026-10-08
+      accessed: 2026-10-11
       archive: https://web.archive.org/web/20261001045117/https://sre.google/sre-book/data-integrity/
     quote: "recovered this data from our previously undisclosed tape backup system"
     os_concepts: []
     pr: null
     ai_check:
       platform: Claude Code (desktop app)
-      model: "Claude Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-09-csinside-06-author-check.md
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-csinside-06-author-check-3.md
       result: supported
   - id: 06-24
-    claim: "Building Secure and Reliable Systems says Google runs annual Disaster Recovery Training (DiRT) exercises."
+    claim: "Building Secure and Reliable Systems describes one of Google's annual Disaster Recovery Training (DiRT) exercises."
     type: org-fact
     status: ai-checked
     source:
       title: "Building Secure and Reliable Systems, ch.16 Disaster Planning"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch16.html
       kind: official-doc
-      accessed: 2026-10-08
+      accessed: 2026-10-11
       archive: https://web.archive.org/web/20260420235255/https://google.github.io/building-secure-and-reliable-systems/raw/ch16.html
     quote: "one of our annual Disaster Recovery Training (DiRT) exercises"
     os_concepts: []
     pr: null
     ai_check:
       platform: Claude Code (desktop app)
-      model: "Claude Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-09-csinside-06-author-check.md
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-csinside-06-author-check-3.md
       result: supported
   - id: 06-25
     claim: "In its case study on decommissioning Google's filer-backed home directories, the SRE Workbook says the data was owned by 60,000 POSIX users in 400 disk volumes on 124 NAS appliances."
@@ -190,7 +190,7 @@ claims:
 
 ## Summary
 
-The SRE book describes Google's storage stack: Colossus as a cluster-wide filesystem with replication and encryption, Bigtable as a NoSQL store for petabyte-size databases, and Spanner for an SQL-like interface with real consistency across the world (06-16 to 06-18). The Chubby lock service handles locks across datacenters using the Paxos protocol (06-19). The SRE Workbook also shows classic network-attached storage: Google's filer-backed home directories, which it decommissioned, sat on 124 NAS appliances (06-25). For recovery, the book defines failure domains, separates backups from archives, warns that replication and redundancy are not recoverability, and recounts restoring Gmail data from tape; Building Secure and Reliable Systems adds Google's annual DiRT exercises (06-20 to 06-24).
+The SRE book describes Google's storage stack: Colossus as a cluster-wide filesystem with replication and encryption, Bigtable as a NoSQL store for petabyte-size databases, and Spanner for an SQL-like interface with real consistency across the world (06-16 to 06-18). The Chubby lock service handles locks across datacenters using the Paxos protocol (06-19). The SRE Workbook also shows classic network-attached storage: Google's filer-backed home directories, which it decommissioned, sat on 124 NAS appliances (06-25). For recovery, the book defines failure domains, separates backups from archives, says it's important to recognize that replication and redundancy are not recoverability, and recounts restoring lost data from tape in its "Gmail—February, 2011" case study; Building Secure and Reliable Systems describes one of Google's annual DiRT exercises (06-20 to 06-24).
 
 ## Key points
 
@@ -199,7 +199,7 @@ The SRE book describes Google's storage stack: Colossus as a cluster-wide filesy
 - Network-attached storage: filer-backed home directories for 60,000 POSIX users on 124 NAS appliances, in a decommissioning case study. (06-25)
 - Failure domains decide what a single failure can take down. (06-20)
 - Backups can be restored into an application, archives cannot, and replication alone is not recovery. (06-21, 06-22)
-- Google restored Gmail data from tape backups and runs annual disaster recovery exercises. (06-23, 06-24)
+- In the Gmail 2011 case study, Google restored lost data from tape backups; the security book describes one of its annual DiRT exercises. (06-23, 06-24)
 
 ## Sources and limits
 
