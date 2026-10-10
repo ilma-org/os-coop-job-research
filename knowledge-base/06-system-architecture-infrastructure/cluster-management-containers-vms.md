@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 06-system-architecture-infrastructure
 title: "Cluster management, containers and virtual machines"
-updated: 2026-10-09
+updated: 2026-10-11
 claims:
   - id: 06-09
     claim: "The SRE book says Borg jobs can be indefinitely running servers or batch processes such as MapReduce."
@@ -48,15 +48,15 @@ claims:
       title: "Site Reliability Engineering, ch.2 The Production Environment at Google, from the Viewpoint of an SRE"
       url: https://sre.google/sre-book/production-environment/
       kind: official-doc
-      accessed: 2026-10-08
+      accessed: 2026-10-11
       archive: https://web.archive.org/web/20260911034439/https://sre.google/sre-book/production-environment/
-    quote: "Borg won’t run all of a job’s tasks on the same rack"
+    quote: "also accounts for failure domains (for example: Borg won’t run all of a job’s tasks on the same rack"
     os_concepts: ["scheduling"]
     pr: null
     ai_check:
       platform: Claude Code (desktop app)
-      model: "Claude Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-09-csinside-06-author-check.md
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-csinside-06-author-check-3.md
       result: supported
   - id: 06-12
     claim: "The SRE book calls Kubernetes Borg's descendant: an open source container cluster orchestration framework that Google started in 2014."
@@ -95,40 +95,40 @@ claims:
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
       result: supported
   - id: 06-14
-    claim: "Building Secure and Reliable Systems says Google decided that running each App Engine user's code in an independent virtual machine was too inefficient."
+    claim: "Building Secure and Reliable Systems says that, for the original implementation of Google App Engine, Google decided that running each user's code in an independent virtual machine was too inefficient for the level of planned adoption."
     type: org-fact
     status: ai-checked
     source:
       title: "Building Secure and Reliable Systems, ch.8 Design for Resilience"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch08.html
       kind: official-doc
-      accessed: 2026-10-08
+      accessed: 2026-10-11
       archive: https://web.archive.org/web/20260704103623/https://google.github.io/building-secure-and-reliable-systems/raw/ch08.html
-    quote: "running each user’s code in an independent virtual machine was too inefficient"
+    quote: "we decided that running each user’s code in an independent virtual machine was too inefficient for the level of planned adoption"
     os_concepts: ["virtualization"]
     pr: null
     ai_check:
       platform: Claude Code (desktop app)
-      model: "Claude Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-09-csinside-06-author-check.md
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-csinside-06-author-check-3.md
       result: supported
   - id: 06-15
-    claim: "Building Secure and Reliable Systems says running virtual machines controlled by mutually distrustful parties on the same hardware risks zero-day vulnerabilities in the virtualization layer or subtle cross-VM information leaks."
+    claim: "Building Secure and Reliable Systems gives, as an example of the compartmentalization tradeoff, that running two virtual machines controlled by mutually distrustful entities on the same hardware comes with a certain risk: exposure to zero-day vulnerabilities in the virtualization layer perhaps, or subtle cross-VM information leaks."
     type: fact
     status: ai-checked
     source:
       title: "Building Secure and Reliable Systems, ch.8 Design for Resilience"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch08.html
       kind: official-doc
-      accessed: 2026-10-08
+      accessed: 2026-10-11
       archive: null
-    quote: "exposure to zero-day vulnerabilities in the virtualization layer perhaps, or subtle cross-VM information leaks"
+    quote: "For example, running two virtual machines (VMs)—each controlled by different mutually distrustful entities—on the same hardware comes with a certain risk: exposure to zero-day vulnerabilities in the virtualization layer perhaps, or subtle cross-VM information leaks."
     os_concepts: ["virtualization", "security"]
     pr: null
     ai_check:
       platform: Claude Code (desktop app)
-      model: "Claude Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-09-csinside-06-author-check.md
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-csinside-06-author-check-3.md
       result: supported
   - id: 06-27
     claim: "A 2017 Google Cloud Blog post says Google Cloud uses the open-source KVM hypervisor."
@@ -172,13 +172,13 @@ claims:
 
 ## Summary
 
-The SRE book says Borg jobs are long-running servers or batch processes, that a malfunctioning task is killed and restarted, possibly on another machine, and that Borg spreads a job's tasks across racks to account for failure domains (06-09 to 06-11). It calls Kubernetes Borg's descendant, and the SRE Workbook describes GKE as a Google-managed system that runs Kubernetes clusters for users (06-12, 06-13). For virtual machines, Building Secure and Reliable Systems says per-user VMs were too inefficient for App Engine, and that VMs of mutually distrustful parties on the same hardware risk virtualization-layer vulnerabilities and cross-VM leaks (06-14, 06-15). A 2017 Google Cloud Blog post names the hypervisor: Google Cloud uses the open-source KVM hypervisor and, instead of QEMU, Google's own user-space virtual machine monitor (06-27, 06-28).
+The SRE book says Borg jobs are long-running servers or batch processes, that a malfunctioning task is killed and restarted, possibly on another machine, and that Borg spreads a job's tasks across racks to account for failure domains (06-09 to 06-11). It calls Kubernetes Borg's descendant, and the SRE Workbook describes GKE as a Google-managed system that runs Kubernetes clusters for users (06-12, 06-13). For virtual machines, Building Secure and Reliable Systems says a VM per user was too inefficient for the planned adoption of the original App Engine, and gives, as an example of the compartmentalization tradeoff, that two VMs of mutually distrustful entities on the same hardware carry a certain risk, perhaps of virtualization-layer vulnerabilities or cross-VM leaks (06-14, 06-15). A 2017 Google Cloud Blog post names the hypervisor: Google Cloud uses the open-source KVM hypervisor and, instead of QEMU, Google's own user-space virtual machine monitor (06-27, 06-28).
 
 ## Key points
 
 - Borg runs servers and batch jobs, restarts failed tasks, and avoids putting all of a job's tasks on one rack. (06-09, 06-10, 06-11)
 - Kubernetes descends from Borg; GKE is Google's managed Kubernetes. (06-12, 06-13)
-- VM trade-offs: a VM per user was too inefficient for App Engine, and shared hardware brings virtualization-layer risk. (06-14, 06-15)
+- VM trade-offs: a VM per user was too inefficient for the original App Engine, and the book's example of shared hardware for distrustful tenants carries a possible virtualization-layer risk. (06-14, 06-15)
 - Hypervisor: open-source KVM, with Google's own user-space virtual machine monitor instead of QEMU. (06-27, 06-28)
 
 ## Notes for the write-up
