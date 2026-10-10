@@ -2,6 +2,7 @@
 .env
 .env.*
 .claude/settings.local.json
+.agents/settings.local.json
 
 # Cover page holds student IDs, full names and phone numbers. Never commit it.
 cover/
