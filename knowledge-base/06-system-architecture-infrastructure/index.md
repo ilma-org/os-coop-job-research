@@ -6,7 +6,7 @@ assignment_section: "4.3"
 report_sections: [8]
 owner: "@csinside"
 issue: 11
-updated: 2026-10-08
+updated: 2026-10-11
 ---
 
 # System architecture and infrastructure
@@ -26,9 +26,9 @@ Assignment Appendix E. Architecture and infrastructure an SRE encounters.
 The owner organizes notes (`topic-note` files) here. List them below as they are added.
 
 <!-- notes:start -->
-- [request-path-and-load-balancing.md](request-path-and-load-balancing.md): Client-server request path, RPC and load balancing. 9 claims (06-01 to 06-08, 06-26): 9 unverified.
-- [cluster-management-containers-vms.md](cluster-management-containers-vms.md): Cluster management, containers and virtual machines. 9 claims (06-09 to 06-15, 06-27 to 06-28): 9 unverified.
-- [storage-consensus-and-recovery.md](storage-consensus-and-recovery.md): Distributed storage, consensus, backups and disaster recovery. 10 claims (06-16 to 06-25): 10 unverified.
+- [request-path-and-load-balancing.md](request-path-and-load-balancing.md): Client-server request path, RPC and load balancing. 9 claims (06-01 to 06-08, 06-26): 9 ai-checked.
+- [cluster-management-containers-vms.md](cluster-management-containers-vms.md): Cluster management, containers and virtual machines. 9 claims (06-09 to 06-15, 06-27 to 06-28): 9 ai-checked.
+- [storage-consensus-and-recovery.md](storage-consensus-and-recovery.md): Distributed storage, consensus, backups and disaster recovery. 10 claims (06-16 to 06-25): 10 ai-checked.
 <!-- notes:end -->
 
 ## Sources covered so far
