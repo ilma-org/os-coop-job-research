@@ -22,6 +22,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-10-TonCS05-11-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
+      result: supported
   - id: 11-09
     claim: "Linux fsync() blocks until the storage device reports that the transfer has completed."
     type: fact
@@ -39,6 +44,11 @@ claims:
       platform: Codex
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-10-TonCS05-11-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
       result: supported
   - id: 11-10
     claim: "Linux puts file data into the page cache when reading it to avoid expensive disk access on subsequent reads."
@@ -81,6 +91,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-10-TonCS05-11-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
+      result: supported
   - id: 11-12
     claim: "TCP delivers data in order and retransmits lost packets."
     type: fact
@@ -99,6 +114,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-10-TonCS05-11-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
+      result: supported
   - id: 11-13
     claim: "During Linux path resolution, lack of search permission on the current lookup directory returns EACCES (Permission denied)."
     type: fact
@@ -116,6 +136,11 @@ claims:
       platform: Codex
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-10-TonCS05-11-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
       result: supported
   - id: 11-14
     claim: "Recommended SRE course connection: for a service that writes persistent data, distinguish successful write() calls, cache activity and completed synchronization when investigating latency or crash recovery. Relate the workload's durability requirements to filesystem and I/O concepts; do not assume that a successful write alone proves durable storage."

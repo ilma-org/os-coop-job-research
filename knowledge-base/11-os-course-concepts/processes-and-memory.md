@@ -22,6 +22,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-10-TonCS05-11-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
+      result: supported
   - id: 11-02
     claim: "POSIX threads in one process share global memory, including data and heap segments, while each thread has its own stack."
     type: fact
@@ -39,6 +44,11 @@ claims:
       platform: Codex
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-10-TonCS05-11-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
       result: supported
   - id: 11-03
     claim: "On Linux, SIGKILL and SIGSTOP cannot be caught, blocked or ignored."
@@ -58,6 +68,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-10-TonCS05-11-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
+      result: supported
   - id: 11-04
     claim: "The mmap() system call creates a mapping in the calling process's virtual address space."
     type: fact
@@ -75,6 +90,11 @@ claims:
       platform: Codex
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-10-TonCS05-11-author-check-2.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
       result: supported
   - id: 11-05
     claim: "The SRE book's troubleshooting guidance notes that diagnosis may require analyzing system logs across one or several processes."
