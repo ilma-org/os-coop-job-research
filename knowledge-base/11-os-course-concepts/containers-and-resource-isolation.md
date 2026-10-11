@@ -7,7 +7,7 @@ claims:
   - id: 11-16
     claim: "Linux namespaces can be used to implement containers."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Linux man-pages: namespaces(7)"
       url: https://man7.org/linux/man-pages/man7/namespaces.7.html
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-17
     claim: "Linux cgroups organize processes hierarchically and distribute system resources through that hierarchy in a controlled, configurable manner."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Linux Kernel documentation: Control Group v2"
       url: https://docs.kernel.org/admin-guide/cgroup-v2.html
@@ -50,10 +55,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-18
     claim: "Docker's introductory explanation describes multiple containers as sharing the same kernel."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Docker Docs: What is a container?"
       url: https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/
@@ -73,10 +83,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-19
     claim: "Kubernetes CPU limits are enforced through CPU throttling."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Kubernetes documentation: Resource Management for Pods and Containers"
       url: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
@@ -96,10 +111,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-20
     claim: "Kubernetes memory limits are enforced by the kernel through out-of-memory kills."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Kubernetes documentation: Resource Management for Pods and Containers"
       url: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
@@ -119,10 +139,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-21
     claim: "QEMU system emulation supplies a virtual machine model containing CPU, memory and emulated devices to run a guest operating system."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "QEMU documentation: System Emulation Introduction"
       url: https://www.qemu.org/docs/master/system/introduction.html
@@ -142,6 +167,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-22
     claim: "Recommended SRE course connection: compare the guest OS and virtual hardware of a QEMU machine with the shared-kernel model described for containers; then distinguish namespace-based isolation from cgroup resource control. This is a proposed learning comparison, not a claim that Google uses these products in this configuration."
     type: assumption

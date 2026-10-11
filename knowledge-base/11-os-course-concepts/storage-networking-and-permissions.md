@@ -7,7 +7,7 @@ claims:
   - id: 11-08
     claim: "A successful Linux write() return does not guarantee that the data has been committed to disk."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Linux man-pages: write(2)"
       url: https://man7.org/linux/man-pages/man2/write.2.html
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-09
     claim: "Linux fsync() blocks until the storage device reports that the transfer has completed."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Linux man-pages: fsync(2)"
       url: https://man7.org/linux/man-pages/man2/fsync.2.html
@@ -50,10 +55,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-10
     claim: "Linux puts file data into the page cache when reading it to avoid expensive disk access on subsequent reads."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Linux Kernel documentation: Concepts overview, Page cache"
       url: https://docs.kernel.org/admin-guide/mm/concepts.html
@@ -73,10 +83,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-11
     claim: "Linux's BSD-compatible sockets provide an interface between user processes and kernel network protocol stacks."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Linux man-pages: socket(7)"
       url: https://man7.org/linux/man-pages/man7/socket.7.html
@@ -96,10 +111,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-12
     claim: "TCP delivers data in order and retransmits lost packets."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Linux man-pages: tcp(7)"
       url: https://man7.org/linux/man-pages/man7/tcp.7.html
@@ -119,10 +139,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-13
     claim: "During Linux path resolution, lack of search permission on the current lookup directory returns EACCES (Permission denied)."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Linux man-pages: path_resolution(7)"
       url: https://man7.org/linux/man-pages/man7/path_resolution.7.html
@@ -142,6 +167,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-14
     claim: "Recommended SRE course connection: for a service that writes persistent data, distinguish successful write() calls, cache activity and completed synchronization when investigating latency or crash recovery. Relate the workload's durability requirements to filesystem and I/O concepts; do not assume that a successful write alone proves durable storage."
     type: assumption

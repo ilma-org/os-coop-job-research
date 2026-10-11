@@ -7,7 +7,7 @@ claims:
   - id: 11-31
     claim: "Based on probe results, Kubernetes can restart unhealthy containers or stop sending traffic to containers that are not ready."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Kubernetes documentation: Liveness, Readiness, and Startup Probes"
       url: https://kubernetes.io/docs/concepts/workloads/pods/probes/
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-32
     claim: "The SRE book recommends limiting retries per request rather than retrying indefinitely."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Chapter 22: Addressing Cascading Failures"
       url: https://sre.google/sre-book/addressing-cascading-failures/
@@ -50,6 +55,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-33
     claim: "Recommended course connection: relate periodic health probes to the lecture failure-detection model, distinguish an observed failed check from a confirmed root cause, and compare traffic removal with container restart as different responses. Test bounded retries in the hypothetical service rather than assuming retries always restore availability. This is a proposed exercise, not evidence of Google deployment."
     type: assumption

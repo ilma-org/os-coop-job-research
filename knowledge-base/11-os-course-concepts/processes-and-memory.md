@@ -7,7 +7,7 @@ claims:
   - id: 11-01
     claim: "The Linux scheduler selects which runnable thread executes on the CPU next."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Linux man-pages: sched(7)"
       url: https://man7.org/linux/man-pages/man7/sched.7.html
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-02
     claim: "POSIX threads in one process share global memory, including data and heap segments, while each thread has its own stack."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Linux man-pages: pthreads(7)"
       url: https://man7.org/linux/man-pages/man7/pthreads.7.html
@@ -50,10 +55,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-03
     claim: "On Linux, SIGKILL and SIGSTOP cannot be caught, blocked or ignored."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Linux man-pages: signal(7)"
       url: https://man7.org/linux/man-pages/man7/signal.7.html
@@ -73,10 +83,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-04
     claim: "The mmap() system call creates a mapping in the calling process's virtual address space."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Linux man-pages: mmap(2)"
       url: https://man7.org/linux/man-pages/man2/mmap.2.html
@@ -96,10 +111,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck-2.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-05
     claim: "The SRE book's troubleshooting guidance notes that diagnosis may require analyzing system logs across one or several processes."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Chapter 12: Effective Troubleshooting"
       url: https://sre.google/sre-book/effective-troubleshooting/
@@ -119,6 +139,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-06
     claim: "Recommended SRE course connection: for a slow multithreaded service, examine runnable threads and CPU scheduling alongside latency measurements; for a restart, examine process logs and signals before assigning a cause. This is a proposed analysis exercise, not evidence of a particular company's workflow."
     type: assumption
@@ -134,7 +159,7 @@ claims:
   - id: 11-24
     claim: "Page tables translate virtual addresses used by the CPU into physical addresses on the memory bus."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Linux Kernel documentation: Page Tables"
       url: https://docs.kernel.org/mm/page_tables.html
@@ -154,10 +179,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-25
     claim: "Demand paging brings data into physical memory only as required by the current execution context."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Zephyr Project documentation: Demand Paging"
       url: https://docs.zephyrproject.org/latest/kernel/memory_management/demand_paging.html
@@ -177,10 +207,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-26
     claim: "On Linux, getrusage() reports major page faults as faults whose servicing required I/O activity."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Linux man-pages: getrusage(2), published by Debian"
       url: https://manpages.debian.org/testing/manpages-dev/getrusage.2.en.html
@@ -200,10 +235,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-27
     claim: "When allocation triggers direct reclaim at the minimum free-page watermark, Linux stalls the allocation until enough pages are reclaimed to satisfy it."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Linux Kernel documentation: Concepts overview, Reclaim"
       url: https://docs.kernel.org/admin-guide/mm/concepts.html
@@ -223,6 +263,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 11-28
     claim: "Linux scheduler-statistics counters accumulate rather than representing only the latest observation interval."
     type: fact
