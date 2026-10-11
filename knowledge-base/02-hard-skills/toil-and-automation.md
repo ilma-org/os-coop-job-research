@@ -162,6 +162,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-11-nine14282-hard-skills-author-check-3.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck-2.md
+      result: partial
   - id: 02-21
     claim: "Zero Touch interfaces aim to make Google safer and reduce outages by removing direct human access to production roles."
     type: org-fact
