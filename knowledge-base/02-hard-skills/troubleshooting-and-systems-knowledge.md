@@ -147,7 +147,7 @@ claims:
   - id: 02-28
     claim: "In a Google case study (the Steamroller project), new memory limits for Borg jobs did not account for small RAM spikes, so Borg immediately killed tasks that went over them even slightly, causing localized service disruptions and latency."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Case Studies in Infrastructure Change Management: How Google Rebuilds the Jet While Flying It (O'Reilly/Google report)"
       url: https://sre.google/static/pdf/CaseStudiesInfrastructureChangeManagement.pdf
@@ -167,6 +167,11 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-29
     claim: "Google's Disaster Recovery Testing (DiRT) frequently simulates regional outages against pipelines that depend on a datacenter."
     type: org-fact
