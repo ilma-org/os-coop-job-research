@@ -1,7 +1,7 @@
 ---
 doc_type: topic-note
 topic: 02-hard-skills
-title: What Google looks for in an SRE
+title: The SRE role and engineering practices in Google sources
 updated: 2026-10-11
 claims:
   - id: 02-01
@@ -175,15 +175,15 @@ claims:
 
 ---
 
-# What Google looks for in an SRE
+# The SRE role and engineering practices in Google sources
 
 ## Summary
 
-Google-published sources describe the SRE job as applying software engineering skills to operations problems (02-03), with operational work capped at 50% of a team's time (02-05). They also show engineering habits Google expects: integration testing on top of unit tests (02-02), configuration kept in version control and changed through code review (02-06), and care with binary and configuration pushes, which trigger most incidents in Google's experience (02-04). Each claim rests on one Google source; no second source was compared. This note has no claim yet on programming languages or formal qualifications.
+A Google report quotes Ben Treynor Sloss that an SRE's job is to apply software engineering skills to operations problems (02-03), and Google limits SRE operational work to 50% of a team's time (02-05). Google sources also describe engineering practices: integration testing, because unit tests do not fully replicate the runtime environment (02-02), and, at many Google teams, configuration kept in version control and changed through code review (02-06). In Google's experience, a majority of incidents are triggered by binary or configuration pushes (02-04). Each claim rests on one Google source; no second source was compared. This note has no claim yet on programming languages, formal qualifications or Google's hiring criteria.
 
 ## Key points
 
-- An SRE's job is to apply software engineering skills to operations problems (02-03).
+- The report quotes Ben Treynor Sloss that an SRE's job is to apply software engineering skills to operations problems (02-03).
 - Google limits the time SRE teams spend on operational work, toil and non-toil, to 50% (02-05).
 - In Google's experience a majority of incidents are triggered by binary or configuration pushes (02-04).
 - Many Google teams manage service configuration in version control and change it through changelists, which brings code review and continuous deployment to internal service configuration changes (02-06).
