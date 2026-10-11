@@ -50,6 +50,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-11-nine14282-hard-skills-author-check-3.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck-2.md
+      result: supported
   - id: 02-09
     claim: "Peter Pellerzi, who works on Google data center infrastructure, says the metric they look at is availability, with a target of five nines."
     type: org-fact
@@ -123,6 +128,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-11-nine14282-hard-skills-author-check-3.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck-2.md
       result: supported
   - id: 02-12
     claim: "The Workbook says each alert condition should have a playbook entry describing the steps to recovery, and that Google finds it useful to link this documentation in alert messages sent to on-call engineers."
