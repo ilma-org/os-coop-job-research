@@ -1,7 +1,7 @@
 ---
 doc_type: topic-note
 topic: 02-hard-skills
-title: Troubleshooting, OS, kernel and network knowledge
+title: Networking, resilience testing and outage case studies
 updated: 2026-10-11
 claims:
   - id: 02-23
@@ -226,11 +226,11 @@ claims:
 
 ---
 
-# Troubleshooting, OS, kernel and network knowledge
+# Networking, resilience testing and outage case studies
 
 ## Summary
 
-These claims cover systems knowledge an SRE uses to diagnose and prevent outages: networking (BGP announcements that reach the closest frontend, 02-30, and global load balancing between GFE and backends, 02-24), memory limits on Borg jobs (02-28) and latency percentiles in SLOs (02-27). Testing practice includes resilience versus recovery testing (02-26) and DiRT regional-outage drills (02-29). Unchecked recurring outages increase operational toil and can exhaust error budgets (02-25). Each claim rests on one source; no second source was compared. This note has no claim yet on Linux or kernel internals, which topics 04 and 11 cover.
+These claims cover networking (BGP announcements that reach the closest frontend, 02-30, and global load balancing between GFE and backends, 02-24), Borg memory limits in a Google case study (02-28), SLOs for uptime and latency percentiles (02-27), resilience versus recovery testing (02-26), DiRT regional-outage drills (02-29), the cost of unchecked recurring outages (02-25) and insider-threat versus mistake prevention (02-23). Each claim rests on one source; no second source was compared. This note has no claim yet on Linux or kernel internals, which topics 04 and 11 cover.
 
 ## Key points
 
@@ -262,3 +262,4 @@ Source years in this note: 2026, 2020, 2019, 2018. A year is the publication or 
 
 - `org-fact` claims carry a Wayback Machine snapshot in `source.archive`. The exact quote was found in that snapshot on the claim's `source.accessed` date.
 - Podcast speakers are named in the claim. A speaker who is not a Google employee is not evidence about Google, so those claims are `fact`, not `org-fact`.
+- `02-28` names the Steamroller project. The stored quote does not; the case-study heading and the sentence before the quote name the team.
