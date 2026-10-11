@@ -22,6 +22,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
+      result: supported
   - id: 06-10
     claim: "The SRE book says that if a Borg task malfunctions, it is killed and restarted, possibly on a different machine."
     type: org-fact
@@ -40,10 +45,15 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
+      result: supported
   - id: 06-11
     claim: "The SRE book says Borg accounts for failure domains when it places tasks; for example, it won't run all of a job's tasks on the same rack."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.2 The Production Environment at Google, from the Viewpoint of an SRE"
       url: https://sre.google/sre-book/production-environment/
@@ -58,6 +68,16 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-11-csinside-06-author-check-3.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-06-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 06-12
     claim: "The SRE book calls Kubernetes Borg's descendant: an open source container cluster orchestration framework that Google started in 2014."
     type: org-fact
@@ -75,6 +95,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
       result: supported
   - id: 06-13
     claim: "The SRE Workbook describes Google Kubernetes Engine (GKE) as a Google-managed system that creates, hosts and runs Kubernetes clusters for users."
@@ -94,10 +119,15 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
+      result: supported
   - id: 06-14
     claim: "Building Secure and Reliable Systems says that, for the original implementation of Google App Engine, Google decided that running each user's code in an independent virtual machine was too inefficient for the level of planned adoption."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.8 Design for Resilience"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch08.html
@@ -112,10 +142,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-11-csinside-06-author-check-3.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-06-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 06-15
     claim: "Building Secure and Reliable Systems gives, as an example of the compartmentalization tradeoff, that running two virtual machines controlled by mutually distrustful entities on the same hardware comes with a certain risk: exposure to zero-day vulnerabilities in the virtualization layer perhaps, or subtle cross-VM information leaks."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.8 Design for Resilience"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch08.html
@@ -130,6 +170,16 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-11-csinside-06-author-check-3.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-06-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 06-27
     claim: "A 2017 Google Cloud Blog post says Google Cloud uses the open-source KVM hypervisor."
     type: org-fact
@@ -147,6 +197,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check-2.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
       result: supported
   - id: 06-28
     claim: "The same 2017 post says Google does not use QEMU and instead wrote its own user-space virtual machine monitor."
@@ -166,6 +221,12 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
+      result: supported
+
 ---
 
 # Cluster management, containers and virtual machines

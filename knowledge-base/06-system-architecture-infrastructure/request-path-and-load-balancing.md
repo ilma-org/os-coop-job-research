@@ -22,6 +22,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
+      result: supported
   - id: 06-02
     claim: "The SRE book says that, in traditional terms, a server's frontend is called the client and its backend is called the server."
     type: fact
@@ -39,6 +44,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
       result: supported
   - id: 06-03
     claim: "In the SRE book's example request, the user's DNS request ultimately ends up at Google's DNS server, which talks to GSLB (the Global Software Load Balancer)."
@@ -58,6 +68,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
+      result: supported
   - id: 06-04
     claim: "The SRE book describes the Google Frontend (GFE) as a reverse proxy that terminates the TCP connection."
     type: org-fact
@@ -75,6 +90,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
       result: supported
   - id: 06-05
     claim: "The SRE book says Google's services communicate using a Remote Procedure Call (RPC) infrastructure named Stubby."
@@ -94,6 +114,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
+      result: supported
   - id: 06-06
     claim: "The SRE Workbook says Google Cloud Load Balancer (GCLB) does not use DNS load balancing and uses anycast instead."
     type: org-fact
@@ -111,6 +136,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
       result: supported
   - id: 06-07
     claim: "The SRE Workbook says Google implements stabilized anycast using Maglev, its custom load balancer."
@@ -130,6 +160,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
+      result: supported
   - id: 06-08
     claim: "The SRE Workbook says GCLB is the externalization of one of Google's internally developed global load balancing systems."
     type: org-fact
@@ -147,6 +182,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
       result: supported
   - id: 06-26
     claim: "Cloud Load Balancing documentation says external Application Load Balancers are implemented using Google Front Ends (GFEs) or managed proxies."
@@ -166,6 +206,12 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
+      result: supported
+
 ---
 
 # Client-server request path, RPC and load balancing

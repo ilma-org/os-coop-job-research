@@ -22,6 +22,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
+      result: supported
   - id: 06-17
     claim: "The SRE book describes Bigtable as a NoSQL database system that can handle databases that are petabytes in size."
     type: org-fact
@@ -39,6 +44,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
       result: supported
   - id: 06-18
     claim: "The SRE book says Spanner offers an SQL-like interface for users that require real consistency across the world."
@@ -58,6 +68,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
+      result: supported
   - id: 06-19
     claim: "The SRE book says the Chubby lock service handles locks across datacenter locations and uses the Paxos protocol for asynchronous consensus."
     type: org-fact
@@ -75,6 +90,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
       result: supported
   - id: 06-20
     claim: "The SRE book defines a failure domain as the set of components of a system that can become unavailable as a result of a single failure."
@@ -94,6 +114,11 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
+      result: supported
   - id: 06-21
     claim: "The SRE book says the most important difference between backups and archives is that backups can be loaded back into an application, while archives cannot."
     type: fact
@@ -112,10 +137,15 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
+      result: supported
   - id: 06-22
     claim: "The SRE book says that, in designing a data integrity program, it's important to recognize that replication and redundancy are not recoverability."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.26 Data Integrity: What You Read Is What You Wrote"
       url: https://sre.google/sre-book/data-integrity/
@@ -130,10 +160,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-11-csinside-06-author-check-3.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-06-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 06-23
     claim: "In its case study headed \"Gmail—February, 2011: Restore from GTape\", the SRE book says Google recovered the lost data from its previously undisclosed tape backup system."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.26 Data Integrity: What You Read Is What You Wrote"
       url: https://sre.google/sre-book/data-integrity/
@@ -148,10 +188,20 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-11-csinside-06-author-check-3.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-06-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 06-24
     claim: "Building Secure and Reliable Systems describes one of Google's annual Disaster Recovery Training (DiRT) exercises."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.16 Disaster Planning"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch16.html
@@ -166,6 +216,16 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-11-csinside-06-author-check-3.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-06-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 06-25
     claim: "In its case study on decommissioning Google's filer-backed home directories, the SRE Workbook says the data was owned by 60,000 POSIX users in 400 disk volumes on 124 NAS appliances."
     type: org-fact
@@ -184,6 +244,12 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-06-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-09-nacs-970-06-reviewer-recheck.md
+      result: supported
+
 ---
 
 # Distributed storage, consensus, backups and disaster recovery
