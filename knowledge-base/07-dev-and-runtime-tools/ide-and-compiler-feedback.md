@@ -7,7 +7,7 @@ claims:
   - id: 07-08
     claim: "Compiler plug-ins such as Error Prone for Java and Tsetse for TypeScript can prohibit risky code patterns at compile time."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.12 Writing Code"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch12.html
@@ -22,10 +22,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-09
     claim: "The authors of Building Secure and Reliable Systems report that compiler errors give faster feedback than opt-in tools such as linters or checks at code review time."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.12 Writing Code"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch12.html
@@ -40,10 +50,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-10
     claim: "Building Secure and Reliable Systems names IDE plug-ins that underline problematic code as a fast feedback mechanism for developers."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.12 Writing Code"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch12.html
@@ -58,10 +78,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-11
     claim: "Building Secure and Reliable Systems recommends adding stricter type-checking extensions to languages that use dynamic or weak typing by default."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.12 Writing Code"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch12.html
@@ -76,10 +106,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-12
     claim: "Building Secure and Reliable Systems lists Pytype as one of its recommended type-checking extensions, for Python."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.12 Writing Code"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch12.html
@@ -94,10 +134,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-13
     claim: "Popular IDEs such as CLion provide first-class integration with the Google Sanitizers."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.12 Writing Code"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch12.html
@@ -112,10 +162,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-14
     claim: "The SRE Workbook lists linters, debuggers, formatters and IDE integration as tooling that supports configuration files."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.15 Configuration Specifics"
       url: https://sre.google/workbook/configuration-specifics/
@@ -130,10 +190,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-15
     claim: "The SRE Workbook suggests investigating whether an editor plug-in can integrate style and lint tools for configuration files into your workflow."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.15 Configuration Specifics"
       url: https://sre.google/workbook/configuration-specifics/
@@ -148,10 +218,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-29
     claim: "The SRE Workbook says code-complexity measurement tools exist for a number of IDEs, including Visual Studio, Eclipse and IntelliJ."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.7 Simplicity"
       url: https://sre.google/workbook/simplicity/
@@ -166,6 +246,16 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
 ---
 
 # IDEs, editors and compiler feedback

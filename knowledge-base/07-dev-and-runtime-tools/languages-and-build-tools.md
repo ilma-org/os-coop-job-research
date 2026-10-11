@@ -7,7 +7,7 @@ claims:
   - id: 07-01
     claim: "The SRE book says Google's build tool Blaze builds binaries from what Google calls its standard languages: C++, Java, Python, Go and JavaScript."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.8 Release Engineering"
       url: https://sre.google/sre-book/release-engineering/
@@ -22,10 +22,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-02
     claim: "The SRE book says its build tool Blaze has been open sourced as Bazel."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.8 Release Engineering"
       url: https://sre.google/sre-book/release-engineering/
@@ -40,10 +50,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-03
     claim: "The SRE book says Google's builds are hermetic: they depend on known versions of build tools such as compilers, not on software installed on the build machine."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.8 Release Engineering"
       url: https://sre.google/sre-book/release-engineering/
@@ -58,10 +78,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-04
     claim: "Bazel builds a dependency graph of a project and rebuilds only the part of the software that depends on a changed file."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.17 Testing for Reliability"
       url: https://sre.google/sre-book/testing-reliability/
@@ -76,10 +106,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-05
     claim: "The shell scripts Google used to configure clusters, as the SRE book tells it, were brittle and did not scale with the number of people making changes or the number of cluster permutations."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.7 The Evolution of Automation at Google"
       url: https://sre.google/sre-book/automation-at-google/
@@ -94,10 +134,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-06
     claim: "Google's Prodtest (Production Test) extended the Python unit test framework to allow unit testing of real-world services."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.7 The Evolution of Automation at Google"
       url: https://sre.google/sre-book/automation-at-google/
@@ -112,10 +162,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-07
     claim: "In the SRE book's cluster-management case study, the initial automation Google describes consisted of simple Python scripts."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.7 The Evolution of Automation at Google"
       url: https://sre.google/sre-book/automation-at-google/
@@ -130,6 +190,16 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
 ---
 
 # Languages, runtimes and build tools in Google's SRE books
