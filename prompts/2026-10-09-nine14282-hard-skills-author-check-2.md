@@ -10,7 +10,7 @@ role: author-check
 significant: false
 significant_reason: null
 purpose: Blind author check of 4 claims in 02-hard-skills
-pr: null
+pr: 27
 claims: [02-06, 02-07, 02-09, 02-20]
 redactions: 6
 supporting_docs:
