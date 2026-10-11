@@ -2,12 +2,12 @@
 doc_type: topic-note
 topic: 07-dev-and-runtime-tools
 title: "Debugging and profiling tools"
-updated: 2026-10-08
+updated: 2026-10-09
 claims:
   - id: 07-16
     claim: "In its description of Google's production environment, the SRE book says every server has an HTTP server that provides diagnostics and statistics for a given task, to support dashboards, monitoring and debugging."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.2 The Production Environment at Google, from the Viewpoint of an SRE"
       url: https://sre.google/sre-book/production-environment/
@@ -22,10 +22,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check-07-16.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-17
     claim: "Text logs suit real-time debugging, while structured binary logs let teams build tools for deeper retrospective analysis."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.12 Effective Troubleshooting"
       url: https://sre.google/sre-book/effective-troubleshooting/
@@ -40,10 +50,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-18
     claim: "The SRE book's troubleshooting chapter illustrates its \"what, where, why\" method with a Spanner latency example in which profiling the server shows where CPU time is being used."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.12 Effective Troubleshooting"
       url: https://sre.google/sre-book/effective-troubleshooting/
@@ -58,10 +78,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-19
     claim: "Building Secure and Reliable Systems illustrates its debugging method with an example in which a profiler showed that logging all input to disk and calling sync, not the backends, slowed a web server. The example teaches looking at the system before assuming a cause."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.15 Investigating Systems"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch15.html
@@ -76,10 +106,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-20
     claim: "The SRE book counts interfaces such as the Java Virtual Machine Profiling Interface as a source of white-box monitoring metrics."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.6 Monitoring Distributed Systems"
       url: https://sre.google/sre-book/monitoring-distributed-systems/
@@ -94,10 +134,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-21
     claim: "Valgrind runs a user's binary in a virtual machine, so developers can catch memory errors without recompiling their code."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.12 Writing Code"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch12.html
@@ -112,10 +162,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-22
     claim: "AddressSanitizer (ASan) detects memory errors such as buffer overflows, use after free and incorrect initialization order."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.12 Writing Code"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch12.html
@@ -130,10 +190,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-23
     claim: "ThreadSanitizer (TSan) detects data races and deadlocks."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.12 Writing Code"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch12.html
@@ -148,10 +218,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-24
     claim: "The Google Sanitizers suite runs up to 10 times faster than Valgrind."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.12 Writing Code"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch12.html
@@ -166,10 +246,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-25
     claim: "Go can still suffer data races even though it is designed to disallow the memory corruption typical of C++, and the Go Race Detector can detect them."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.12 Writing Code"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch12.html
@@ -184,10 +274,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-26
     claim: "The Google Sanitizers began in the LLVM compiler infrastructure and are now also supported by GCC and other compilers."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.13 Testing Code"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch13.html
@@ -202,10 +302,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-27
     claim: "Sanitizer-instrumented binaries can be orders of magnitude slower, so many projects run sanitizer pipelines in CI/CD less often, for example nightly."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.13 Testing Code"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch13.html
@@ -220,10 +330,20 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 07-28
     claim: "Performance profilers and code coverage report generators are the best-known types of dynamic program analysis."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.13 Testing Code"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch13.html
@@ -238,8 +358,37 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-08-nacs-970-sre-book-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-Nine14282-07-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
 ---
 
 # Debugging and profiling tools
+
+## Summary
+
+The SRE book says every server in Google's production environment has an HTTP server that provides diagnostics and statistics for debugging, and that text logs suit real-time debugging while structured binary logs support deeper retrospective analysis (07-16, 07-17). Two worked examples, a Spanner latency case and a web-server logging case, use profiling as one step of a troubleshooting method (07-18, 07-19). The books also describe memory and concurrency tools: Valgrind, AddressSanitizer, ThreadSanitizer and the Go Race Detector. The sanitizers run up to 10 times faster than Valgrind but can make binaries orders of magnitude slower, so many projects run them in CI/CD less often (07-21 to 07-27). These claims do not show that Google SRE uses these tools day to day, and no command-line debugger or tracer is named as an SRE tool; see `index.md` for the gaps.
+
+## Key points
+
+- Every server has an HTTP server that provides diagnostics and statistics for a given task, to support dashboards, monitoring and debugging. (07-16)
+- Text logs suit real-time debugging, while structured binary logs let teams build tools for deeper retrospective analysis. (07-17)
+- In the SRE book's Spanner example, profiling the server shows where CPU time is used. In the Building Secure and Reliable Systems example, a profiler showed that logging all input to disk and calling sync slowed a web server, which teaches looking at the system before assuming a cause. (07-18, 07-19)
+- Interfaces such as the Java Virtual Machine Profiling Interface are a source of white-box monitoring metrics. (07-20)
+- Valgrind runs a user's binary in a virtual machine, so developers can catch memory errors without recompiling. (07-21)
+- AddressSanitizer detects memory errors such as buffer overflows and use after free; ThreadSanitizer detects data races and deadlocks. (07-22, 07-23)
+- The Google Sanitizers run up to 10 times faster than Valgrind, began in LLVM, and are now also supported by GCC and other compilers. (07-24, 07-26)
+- Go can still have data races, and the Go Race Detector can detect them. (07-25)
+- Sanitizer-instrumented binaries can be orders of magnitude slower, so many projects run sanitizer pipelines in CI/CD less often, for example nightly. (07-27)
+- Performance profilers and code coverage report generators are the best-known types of dynamic program analysis. (07-28)
+
+## Sources and limits
 
 Debugging and profiling tools named in the books. Claim 07-17 is general advice on logs from the SRE book's troubleshooting chapter. Claims 07-18 and 07-19 are worked examples of troubleshooting method with profiling as one step. They show the practice, not which profiler Google SRE uses. The sanitizer and Valgrind claims describe C/C++ tools in a Google-authored book; they do not show that Google SRE uses them day to day.
