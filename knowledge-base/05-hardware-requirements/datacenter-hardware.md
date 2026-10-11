@@ -2,12 +2,12 @@
 doc_type: topic-note
 topic: 05-hardware-requirements
 title: "Google datacenter hardware, network and storage"
-updated: 2026-10-09
+updated: 2026-10-11
 claims:
   - id: 05-01
     claim: "The SRE book says most of Google's compute resources are in Google-designed datacenters with proprietary power distribution, cooling, networking and compute hardware."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.2 The Production Environment at Google, from the Viewpoint of an SRE"
       url: https://sre.google/sre-book/production-environment/
@@ -22,10 +22,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-02
     claim: "In its main text, the SRE book says the compute hardware in a Google-designed datacenter is the same across the board; a footnote on that sentence qualifies it as roughly the same, mostly."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.2 The Production Environment at Google, from the Viewpoint of an SRE"
       url: https://sre.google/sre-book/production-environment/
@@ -40,10 +50,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-03
     claim: "The SRE book's chapter on load balancing in the datacenter says not all machines in the same datacenter are necessarily the same."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.20 Load Balancing in the Datacenter"
       url: https://sre.google/sre-book/load-balancing-datacenter/
@@ -58,10 +78,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-04
     claim: "The SRE book says tens of machines are placed in a rack in a Google datacenter."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.2 The Production Environment at Google, from the Viewpoint of an SRE"
       url: https://sre.google/sre-book/production-environment/
@@ -76,10 +106,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-05
     claim: "The SRE book says a Google datacenter building usually houses multiple clusters."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.2 The Production Environment at Google, from the Viewpoint of an SRE"
       url: https://sre.google/sre-book/production-environment/
@@ -94,10 +134,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-06
     claim: "The SRE book says that in a single Google cluster in a typical year, thousands of machines fail and thousands of hard disks break."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.2 The Production Environment at Google, from the Viewpoint of an SRE"
       url: https://sre.google/sre-book/production-environment/
@@ -112,10 +162,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-07
     claim: "The SRE book says Google built its Jupiter datacenter network by connecting hundreds of Google-built switches in a Clos network fabric."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.2 The Production Environment at Google, from the Viewpoint of an SRE"
       url: https://sre.google/sre-book/production-environment/
@@ -130,10 +190,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-08
     claim: "The SRE book says Jupiter supports 1.3 Pbps of bisection bandwidth among servers in its largest configuration."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.2 The Production Environment at Google, from the Viewpoint of an SRE"
       url: https://sre.google/sre-book/production-environment/
@@ -148,10 +218,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-09
     claim: "The SRE book says Google's datacenters are connected to each other by its globe-spanning backbone network, B4."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.2 The Production Environment at Google, from the Viewpoint of an SRE"
       url: https://sre.google/sre-book/production-environment/
@@ -166,10 +246,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-10
     claim: "The SRE book says D, the lowest layer of Google's storage stack, uses both spinning disks and flash storage."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.2 The Production Environment at Google, from the Viewpoint of an SRE"
       url: https://sre.google/sre-book/production-environment/
@@ -184,10 +274,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-11
     claim: "The SRE Workbook says that besides its proprietary datacenters, Google has racks of proxy/cache machines in colocation facilities (colos)."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.10 Postmortem Culture: Learning from Failure"
       url: https://sre.google/workbook/postmortem-culture/
@@ -202,10 +302,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-22
     claim: "Google's infrastructure security design overview says Google designs its server boards and networking equipment."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google Cloud, Google infrastructure security design overview"
       url: https://docs.cloud.google.com/docs/security/infrastructure/design
@@ -220,10 +330,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-23
     claim: "Google's data center website says Google custom builds servers exclusively for its data centers."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google Data Centers, homepage"
       url: https://datacenters.google/
@@ -238,10 +358,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-36
     claim: "A footnote in the SRE book says some Google datacenters end up with multiple generations of compute hardware."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.2 The Production Environment at Google, from the Viewpoint of an SRE"
       url: https://sre.google/sre-book/production-environment/
@@ -256,6 +386,16 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
 ---
 
 # Google datacenter hardware, network and storage

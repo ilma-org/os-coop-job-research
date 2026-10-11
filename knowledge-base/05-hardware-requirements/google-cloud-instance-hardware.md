@@ -2,12 +2,12 @@
 doc_type: topic-note
 topic: 05-hardware-requirements
 title: "CPU platforms and accelerators on Google Cloud"
-updated: 2026-10-09
+updated: 2026-10-11
 claims:
   - id: 05-27
     claim: "Compute Engine's CPU platform documentation lists Google Axion processors, with Arm Neoverse V2 (Armv9) cores, among its Arm CPU platforms."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Compute Engine documentation, CPU platforms"
       url: https://docs.cloud.google.com/compute/docs/cpu-platforms
@@ -22,10 +22,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-28
     claim: "Compute Engine documentation says that for most x86 processors, each vCPU is implemented as a single hardware thread."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Compute Engine documentation, CPU platforms"
       url: https://docs.cloud.google.com/compute/docs/cpu-platforms
@@ -40,10 +50,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-29
     claim: "Compute Engine documentation says that for Arm processors it uses one thread per core, so each vCPU maps to a physical core with no simultaneous multithreading (SMT)."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Compute Engine documentation, CPU platforms"
       url: https://docs.cloud.google.com/compute/docs/cpu-platforms
@@ -58,10 +78,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-30
     claim: "Compute Engine documentation says some machine types can run on more than one CPU platform."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Compute Engine documentation, CPU platforms"
       url: https://docs.cloud.google.com/compute/docs/cpu-platforms
@@ -76,10 +106,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-31
     claim: "Compute Engine documentation says you can see an instance's CPU platform by connecting to the guest OS and running the lscpu command."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Compute Engine documentation, CPU platforms"
       url: https://docs.cloud.google.com/compute/docs/cpu-platforms
@@ -94,10 +134,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-32
     claim: "Cloud TPU documentation says Tensor Processing Units (TPUs) are Google's custom-developed application-specific integrated circuits (ASICs) used to accelerate machine learning workloads."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Cloud TPU documentation, Introduction to Cloud TPU"
       url: https://docs.cloud.google.com/tpu/docs/intro-to-tpu
@@ -112,10 +162,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-33
     claim: "Compute Engine documentation describes NVIDIA GPU models that can accelerate machine learning (ML) and data processing on Compute Engine instances."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Compute Engine documentation, GPU machine types"
       url: https://docs.cloud.google.com/compute/docs/gpus
@@ -130,6 +190,16 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
 ---
 
 # CPU platforms and accelerators on Google Cloud

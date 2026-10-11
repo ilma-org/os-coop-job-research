@@ -2,12 +2,12 @@
 doc_type: topic-note
 topic: 05-hardware-requirements
 title: "Firmware, BIOS and CPU platforms in Google's fleet"
-updated: 2026-10-09
+updated: 2026-10-11
 claims:
   - id: 05-12
     claim: "Building Secure and Reliable Systems gives a machine and its BIOS, and a network interface card (NIC) and its firmware, as examples of hardware devices with their own firmware."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.9 Design for Recovery"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch09.html
@@ -22,10 +22,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-13
     claim: "Building Secure and Reliable Systems says Google manages the firmware on its machines with the same systems and processes it uses to manage host software updates."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.9 Design for Recovery"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch09.html
@@ -40,10 +50,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-14
     claim: "Building Secure and Reliable Systems says Google's automation securely distributes the intended state for all firmware as a package."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.9 Design for Recovery"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch09.html
@@ -58,10 +78,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-15
     claim: "Building Secure and Reliable Systems lists Arm and x86 CPUs, and UEFI and bare-metal firmware, among the environments where Google implements a cryptographic key management protocol."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.9 Design for Recovery"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch09.html
@@ -76,10 +106,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-16
     claim: "In an SRE book incident where automation sent machines to have their disks erased, the BIOS on the affected machines either halted or went into a constant reboot cycle."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.13 Emergency Response"
       url: https://sre.google/sre-book/emergency-response/
@@ -94,10 +134,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-17
     claim: "The SRE book recounts an automation bug after which Diskerase wiped the disks on all machines in Google's CDN."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.7 The Evolution of Automation at Google"
       url: https://sre.google/sre-book/automation-at-google/
@@ -112,10 +162,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-24
     claim: "Google's infrastructure security design overview says Google designs custom chips, including a hardware security chip called Titan."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google Cloud, Google infrastructure security design overview"
       url: https://docs.cloud.google.com/docs/security/infrastructure/design
@@ -130,10 +190,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-25
     claim: "Google's infrastructure security design overview says these chips let Google authenticate legitimate Google devices at the hardware level and serve as hardware roots of trust."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google Cloud, Google infrastructure security design overview"
       url: https://docs.cloud.google.com/docs/security/infrastructure/design
@@ -148,10 +218,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-26
     claim: "Google's infrastructure security design overview says Google servers use various technologies to make sure they boot the intended software stack."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google Cloud, Google infrastructure security design overview"
       url: https://docs.cloud.google.com/docs/security/infrastructure/design
@@ -166,6 +246,16 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
 ---
 
 # Firmware, BIOS and CPU platforms in Google's fleet

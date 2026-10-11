@@ -2,12 +2,12 @@
 doc_type: topic-note
 topic: 05-hardware-requirements
 title: "Machine sizing numbers and hardware for practice"
-updated: 2026-10-09
+updated: 2026-10-11
 claims:
   - id: 05-18
     claim: "The SRE Workbook's non-abstract large system design (NALSD) example assumes a standard machine footprint of 16 cores, 64 GB of RAM and 1 Gbps of network throughput."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.12 Introducing Non-Abstract Large System Design"
       url: https://sre.google/workbook/non-abstract-design/
@@ -22,10 +22,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-19
     claim: "The SRE Workbook says a common 4 TB HDD might sustain about 200 input/output operations per second (IOPS)."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.12 Introducing Non-Abstract Large System Design"
       url: https://sre.google/workbook/non-abstract-design/
@@ -40,10 +50,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-20
     claim: "The SRE Workbook says a single-machine design has single points of failure such as CPU, memory, storage, power, network and cooling."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.12 Introducing Non-Abstract Large System Design"
       url: https://sre.google/workbook/non-abstract-design/
@@ -58,6 +78,16 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-21
     claim: "Recommendation (assumption): for hands-on practice before applying, a personal laptop or desktop with about 8 GB of RAM can run either minikube (05-35) or two or three small Debian virtual machines without a desktop (05-34); 16 GB runs both at once. Server-class hardware is not needed. These RAM figures are this note's estimate from the cited minimums, not a source's recommendation."
     type: assumption
@@ -67,7 +97,7 @@ claims:
   - id: 05-34
     claim: "Debian's installation guide lists the RAM and disk for an install: without a desktop, 512MB RAM minimum, 1GB recommended and 4GB disk; with a desktop, 1GB RAM minimum, 2GB recommended and 10GB disk."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Debian GNU/Linux Installation Guide, 3.4 Meeting Minimum Hardware Requirements"
       url: https://www.debian.org/releases/stable/amd64/ch03s04.en.html
@@ -82,10 +112,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 05-35
     claim: "The minikube documentation says running local Kubernetes with minikube needs 2 CPUs or more, 2GB of free memory and 20GB of free disk space."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "minikube documentation, minikube start"
       url: https://minikube.sigs.k8s.io/docs/start/
@@ -100,6 +140,16 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-09-csinside-05-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code (CLI)
+      model: "Claude Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-11-bximai-05-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Bximai"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
 ---
 
 # Machine sizing numbers and hardware for practice
