@@ -58,6 +58,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-10-TonCS05-11-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
+      result: supported
   - id: 11-11
     claim: "Linux's BSD-compatible sockets provide an interface between user processes and kernel network protocol stacks."
     type: fact

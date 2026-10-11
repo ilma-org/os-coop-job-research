@@ -22,6 +22,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-11-TonCS05-11-course-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
+      result: supported
   - id: 11-32
     claim: "The SRE book recommends limiting retries per request rather than retrying indefinitely."
     type: fact
@@ -39,6 +44,11 @@ claims:
       platform: Codex
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-11-TonCS05-11-course-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
       result: supported
   - id: 11-33
     claim: "Recommended course connection: relate periodic health probes to the lecture failure-detection model, distinguish an observed failed check from a confirmed root cause, and compare traffic removal with container restart as different responses. Test bounded retries in the hypothetical service rather than assuming retries always restore availability. This is a proposed exercise, not evidence of Google deployment."

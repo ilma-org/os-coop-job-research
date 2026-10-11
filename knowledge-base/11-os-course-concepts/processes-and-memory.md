@@ -94,6 +94,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-10-TonCS05-11-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
+      result: supported
   - id: 11-06
     claim: "Recommended SRE course connection: for a slow multithreaded service, examine runnable threads and CPU scheduling alongside latency measurements; for a restart, examine process logs and signals before assigning a cause. This is a proposed analysis exercise, not evidence of a particular company's workflow."
     type: assumption
@@ -124,6 +129,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-11-TonCS05-11-course-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
+      result: supported
   - id: 11-25
     claim: "Demand paging brings data into physical memory only as required by the current execution context."
     type: fact
@@ -141,6 +151,11 @@ claims:
       platform: Codex
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-11-TonCS05-11-course-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
       result: supported
   - id: 11-26
     claim: "On Linux, getrusage() reports major page faults as faults whose servicing required I/O activity."
@@ -160,6 +175,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-11-TonCS05-11-course-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
+      result: supported
   - id: 11-27
     claim: "When allocation triggers direct reclaim at the minimum free-page watermark, Linux stalls the allocation until enough pages are reclaimed to satisfy it."
     type: fact
@@ -178,6 +198,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-11-TonCS05-11-course-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
+      result: supported
   - id: 11-28
     claim: "Linux scheduler-statistics counters accumulate rather than representing only the latest observation interval."
     type: fact
@@ -195,6 +220,11 @@ claims:
       platform: Codex
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-11-TonCS05-11-course-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
       result: supported
   - id: 11-29
     claim: "Recommended course connection: use the lecture model of address translation and demand paging to interpret virtual mappings, resident memory and changes in major-fault counts; consider reclaim-related allocation stalls when testing a memory-pressure hypothesis. This is a proposed SRE analysis exercise, not proof that every page fault indicates exhaustion or failure."

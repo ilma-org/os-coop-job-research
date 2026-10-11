@@ -40,6 +40,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-10-TonCS05-11-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
+      result: supported
   - id: 11-18
     claim: "Docker's introductory explanation describes multiple containers as sharing the same kernel."
     type: fact
@@ -57,6 +62,11 @@ claims:
       platform: Codex
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-10-TonCS05-11-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
       result: supported
   - id: 11-19
     claim: "Kubernetes CPU limits are enforced through CPU throttling."
@@ -76,6 +86,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-10-TonCS05-11-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
+      result: supported
   - id: 11-20
     claim: "Kubernetes memory limits are enforced by the kernel through out-of-memory kills."
     type: fact
@@ -94,6 +109,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-10-TonCS05-11-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
+      result: supported
   - id: 11-21
     claim: "QEMU system emulation supplies a virtual machine model containing CPU, memory and emulated devices to run a guest operating system."
     type: fact
@@ -111,6 +131,11 @@ claims:
       platform: Codex
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-10-TonCS05-11-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
       result: supported
   - id: 11-22
     claim: "Recommended SRE course connection: compare the guest OS and virtual hardware of a QEMU machine with the shared-kernel model described for containers; then distinguish namespace-based isolation from cgroup resource control. This is a proposed learning comparison, not a claim that Google uses these products in this configuration."
