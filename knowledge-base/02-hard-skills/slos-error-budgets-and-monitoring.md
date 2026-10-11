@@ -35,7 +35,7 @@ claims:
   - id: 02-08
     claim: "A report says SLOs are reliability targets measured by SLIs, and measurable SLOs eliminate the conflicts inherent in change management and event handling."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE - Adoption and usage of slo with google sre"
       url: https://sre.google/resources/practices-and-processes/slo-adoption-and-usage/
@@ -55,6 +55,11 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck-2.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-09
     claim: "Peter Pellerzi, who works on Google data center infrastructure, says the metric they look at is availability, with a target of five nines."
     type: org-fact
@@ -114,7 +119,7 @@ claims:
   - id: 02-11
     claim: "To apply an SRE approach, data processing can be declared reliable if well-reasoned SLOs are met; the freshness SLO asks whether the job completed in time and measures how long we can wait for the data to be available."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Reliable Data Processing with Minimal Toil (Google SRE, Oct 12, 2021)"
       url: https://sre.google/static/pdf/reliable_data_processing_with_minimal_toil.pdf
@@ -134,6 +139,11 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck-2.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-11
+      result: pass
+      opened_source: true
   - id: 02-12
     claim: "The Workbook says each alert condition should have a playbook entry describing the steps to recovery, and that Google finds it useful to link this documentation in alert messages sent to on-call engineers."
     type: org-fact
