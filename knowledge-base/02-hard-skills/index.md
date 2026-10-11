@@ -28,7 +28,7 @@ The owner organizes notes (`topic-note` files) here. List them below as they are
 
 <!-- notes:start -->
 - [sre-role-and-skills.md](sre-role-and-skills.md): The SRE role and engineering practices in Google sources. 6 claims (02-01 to 02-06): 6 human-verified.
-- [slos-error-budgets-and-monitoring.md](slos-error-budgets-and-monitoring.md): SLIs, SLOs, monitoring and alerting. 8 claims (02-07 to 02-14): 2 ai-checked, 6 human-verified.
+- [slos-error-budgets-and-monitoring.md](slos-error-budgets-and-monitoring.md): SLIs, SLOs, monitoring and alerting. 8 claims (02-07 to 02-14): 8 human-verified.
 - [toil-and-automation.md](toil-and-automation.md): Toil, automation and production changes. 8 claims (02-15 to 02-22): 1 ai-checked, 7 human-verified.
 - [troubleshooting-and-systems-knowledge.md](troubleshooting-and-systems-knowledge.md): Networking, resilience testing and outage case studies. 8 claims (02-23 to 02-30): 1 ai-checked, 7 human-verified.
 <!-- notes:end -->
