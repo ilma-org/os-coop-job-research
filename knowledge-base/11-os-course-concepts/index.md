@@ -28,10 +28,10 @@ Connect the SRE job to OS concepts from the course. Feeds the relationship visua
 The owner organizes notes (`topic-note` files) here. List them below as they are added.
 
 <!-- notes:start -->
-- [processes-and-memory.md](processes-and-memory.md): Processes, threads, scheduling and virtual memory for SRE. 14 claims (11-01 to 11-07, 11-24 to 11-30): 10 ai-checked, 4 unverified.
-- [storage-networking-and-permissions.md](storage-networking-and-permissions.md): File I/O, networking and permissions in SRE troubleshooting. 8 claims (11-08 to 11-15): 6 ai-checked, 2 unverified.
-- [containers-and-resource-isolation.md](containers-and-resource-isolation.md): Virtualization, containers and resource isolation for SRE. 8 claims (11-16 to 11-23): 6 ai-checked, 2 unverified.
-- [distributed-failure-detection-and-recovery.md](distributed-failure-detection-and-recovery.md): Distributed failure detection and recovery for SRE. 3 claims (11-31 to 11-33): 2 ai-checked, 1 unverified.
+- [processes-and-memory.md](processes-and-memory.md): Processes, threads, scheduling and virtual memory for SRE. 14 claims (11-01 to 11-07, 11-24 to 11-30): 1 ai-checked, 9 human-verified, 4 unverified.
+- [storage-networking-and-permissions.md](storage-networking-and-permissions.md): File I/O, networking and permissions in SRE troubleshooting. 8 claims (11-08 to 11-15): 6 human-verified, 2 unverified.
+- [containers-and-resource-isolation.md](containers-and-resource-isolation.md): Virtualization, containers and resource isolation for SRE. 8 claims (11-16 to 11-23): 6 human-verified, 2 unverified.
+- [distributed-failure-detection-and-recovery.md](distributed-failure-detection-and-recovery.md): Distributed failure detection and recovery for SRE. 3 claims (11-31 to 11-33): 2 human-verified, 1 unverified.
 <!-- notes:end -->
 
 ## Research coverage
