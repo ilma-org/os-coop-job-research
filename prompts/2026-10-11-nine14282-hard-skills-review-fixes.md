@@ -12,7 +12,7 @@ significant_reason: "Rewrote claims 02-08, 02-11, 02-20 and the Summary and Key 
 purpose: Apply the PR #27 review: reword 02-08, 02-11 and 02-20, narrow the 02-hard-skills Summary and Key points, and find the CI lint failure
 pr: 27
 claims: [02-08, 02-11, 02-20]
-redactions: 41
+redactions: 46
 supporting_docs: []
 ---
 
@@ -479,7 +479,7 @@ Tick the two author boxes before the body edit. Once that's done, the reviewer h
 - Bash: Dump note bodies and key claims | cd [REDACTED:path] && for f in *.md; do echo "##### $f"; grep -nE '^title:' $f; awk '/^---$/{n++; next} n>=2' $f; done; python3 -
 - Bash: Find existing claim notes, show 02-28 and 02-08 YAML | grep -n 'note:' *.md | grep -v 'note: null'; awk '/id: 02-28/,/id: 02-29/' troubleshooting-and-systems-knowledge.md; awk '/id: 02-08/,/id: 02-09/' slos-error-budgets-and-monitoring.md
 - Bash: Read prompt log tool usage and pr field docs | cd [REDACTED:path] && sed -n 1,40p scripts/make_prompt_log.py; grep -nE '^\s*pr:|`pr`' docs/schema.md docs/workflow.md; grep -rn 'BASE_SHA\|--base' scripts/hoo
-- Bash: Look for session exports and transcripts | cd [REDACTED:path] && ls -la .local/ | head -30; ls -la ~/.claude/projects/-home-[REDACTED:name]-MyWork-os-coop-job-research/*.jsonl 2>/dev/null | awk '{print $5,$6,$7,$8,$9}' 
+- Bash: Look for session exports and transcripts | cd [REDACTED:path] && ls -la .local/ | head -30; ls -la ~/.claude/projects/-home-[REDACTED:name]-[REDACTED:path]-os-coop-job-research/*.jsonl 2>/dev/null | awk '{print $5,$6,$7,$8,$9}' 
 - Bash: List user turns in fix-session transcript | python3 - <<'EOF' import json p='[REDACTED:path]' n=0 for line in open(p):     d=json.loads(li
 - Bash: Inspect make_prompt_log json handling | cd [REDACTED:path] && grep -nE 'def |ledger|add_argument' scripts/make_prompt_log.py | head -60; ls prompts/ | tail; sed -n 1,30p prompts/2026-10-09-nine14282-
 - Bash: Edit claim text for 02-08, 02-11, 02-20 and reset to unverified | cd [REDACTED:path] && python3 - <<'EOF' import re edits = {  'slos-error-budgets-and-monitoring.md': {   '02-08': ('measurable SL
@@ -513,8 +513,8 @@ Tick the two author boxes before the body edit. Once that's done, the reviewer h
 - Bash: Remove scratch worktree and final lint | cd [REDACTED:path] && git worktree remove --force .local/wt27m && git worktree list; cd .local/wt27 && python3 scripts/lint_front_matter.py 2>&1 | tail -1; git diff --stat
 - Bash: Record PR #27 fix state in memory | f=[REDACTED:path]; python3 - "$f" <<'EOF' import sys p=sys.argv[1]; s=open(p).read() s=s.repla
 - Bash: Run pr-check author items on PR #27 worktree | cd [REDACTED:path] && echo "== lint CI-like"; PR_AUTHOR=Nine14282 BASE_SHA=$(git merge-base origin/main HEAD) python3 scripts/lint_front_matter.py 2>&1 | grep 
-- Bash: Grep new files and bodies for leaks | f=prompts/2026-10-09-nine14282-hard-skills-pr20-fix.md; echo "== fix log leaks"; grep -noiE '[REDACTED:name]|[REDACTED:name]|nitro|_ba@|cmu\.ac\.th|gmail\.com|[REDACTED:path]]|/tmp/claude|ghp_|gho_|github_pat|\b0[689
-- Bash: Inspect redaction context in fix log | grep -noE '.{0,25}\[REDACTED:(path|name)\].{0,40}' prompts/2026-10-09-nine14282-hard-skills-pr20-fix.md | head -8; grep -c 'MyWork' prompts/2026-10-09-nine14282-hard-skills-pr20-fix.md
+- Bash: Grep new files and bodies for leaks | f=prompts/2026-10-09-nine14282-hard-skills-pr20-fix.md; echo "== fix log leaks"; grep -noiE '[REDACTED:name]|[REDACTED:name]|[REDACTED:host]|[REDACTED:email]|cmu\.ac\.th|gmail\.com|[REDACTED:path]]|/tmp/claude|ghp_|gho_|github_pat|\b0[689
+- Bash: Inspect redaction context in fix log | grep -noE '.{0,25}\[REDACTED:(path|name)\].{0,40}' prompts/2026-10-09-nine14282-hard-skills-pr20-fix.md | head -8; grep -c '[REDACTED:path]' prompts/2026-10-09-nine14282-hard-skills-pr20-fix.md
 - Bash: Tighten summaries and key points to claim wording | cd [REDACTED:path] && python3 - <<'EOF' def edit(f, pairs):     s = open(f).read()     for old, new in pairs:         assert s.co
 - Bash: Remove home path from CLAUDE.local.md, sync PR body | cd [REDACTED:path] && sed -i 's#^7\. `~/.claude/WORKFLOW.md`: fills gaps only#7. My global WORKFLOW.md: fills gaps only#' CLAUDE.local.md && grep -n 'WORKFLOW\|~/' CLAUDE.
 - Bash: List marker kinds and counting code | cd [REDACTED:path] && grep -ohE '\[REDACTED:[^]]*\]?' prompts/*.md | sort | uniq -c; grep -n 'REDACT_RE\|count("\[REDACTED' scripts/*.py .agents/skills/agent-f
@@ -524,7 +524,7 @@ Tick the two author boxes before the body edit. Once that's done, the reviewer h
 - Bash: Simulate merged branch under unchanged lint | git -C .local/wt27 diff > /tmp/plog/wt27.patch && git worktree add -q --detach .local/sim 47e58bc && cd .local/sim && git -c user.name=sim -c user.email=sim@example.com merge -q --no-edit origin/main 
 - Bash: Remove sim worktree, update PR body, leak scan | cd [REDACTED:path] && git worktree remove --force .local/sim && python3 - <<'EOF' p='.local/pr27-body.md'; s=open(p).read() i=s.index('- CI `lint` failure:'); j=s.index('\
 - Write: file_path=[REDACTED:path]
-- Bash: Index new memory, update PR memory | cd ~/.claude/projects/-home-[REDACTED:name]-MyWork-os-coop-job-research/memory && echo '- [Lint is the spec](lint-is-the-spec.md) — on lint/CI failure change own work, never the lint or CI files' >> MEMORY
+- Bash: Index new memory, update PR memory | cd ~/.claude/projects/-home-[REDACTED:name]-[REDACTED:path]-os-coop-job-research/memory && echo '- [Lint is the spec](lint-is-the-spec.md) — on lint/CI failure change own work, never the lint or CI files' >> MEMORY
 - Bash: Fetch latest PR reviews and comments | gh pr view 27 --json reviews,comments,reviewDecision --jq '.reviewDecision, (.reviews[]|"R \(.author.login) \(.state) \(.submittedAt) \(.body|length)"), (.comments[]|"C \(.author.login) \(.createdAt)\
 - Bash: Verify each review item against worktree | cd [REDACTED:path] && K=knowledge-base/02-hard-skills; echo "== reviewer blocks intact (removed lines with ai_recheck/review/human-verified must be 0)"; git di
 - Bash: Print titles, summaries, key points | cd [REDACTED:path] && for f in sre-role-and-skills.md slos-error-budgets-and-monitoring.md toil-and-automation.md troubleshooting
