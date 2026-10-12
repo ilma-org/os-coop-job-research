@@ -172,7 +172,7 @@ claims:
 
 ## Summary
 
-The books mention Kubernetes as Borg's open source descendant and as an application whose configuration needs managing, and Docker only inside one incident case study (a corrupted image pulled from DockerHub). SSH and shell scripts appear mostly as things Google moved away from: SSH-based automation was replaced for security reasons, and ad hoc shell scripts gave way to peer-reviewed RPC servers. A Bash script appears once, as an example of data that is hard to express in a configuration language. The pages searched do not teach Docker, Kubernetes, SSH or Bash as skills, so these claims show how the books mention each tool, not what a Google SRE must know.
+The books mention Kubernetes as Borg's open source descendant and as an application whose configuration needs managing, and Docker in one incident case study among these claims (a corrupted image pulled from DockerHub). SSH and shell scripts appear mostly as things Google moved away from: SSH-based automation was replaced for security reasons, and ad hoc shell scripts gave way to peer-reviewed RPC servers. A Bash script appears once, as an example of data that is hard to express in a configuration language. The pages searched do not teach Docker, Kubernetes, SSH or Bash as skills, so these claims show how the books mention each tool, not what a Google SRE must know.
 
 ## Key points
 
