@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 11-os-course-concepts
 title: "Processes, threads, scheduling and virtual memory for SRE"
-updated: 2026-10-11
+updated: 2026-10-12
 claims:
   - id: 11-01
     claim: "The Linux scheduler selects which runnable thread executes on the CPU next."
@@ -269,27 +269,22 @@ claims:
       result: pass
       opened_source: true
   - id: 11-28
-    claim: "Linux scheduler-statistics counters accumulate rather than representing only the latest observation interval."
+    claim: "Linux schedstats counters are cumulative; programs should record a baseline and calculate counter changes at subsequent observations."
     type: fact
     status: ai-checked
     source:
       title: "Linux Kernel documentation: Scheduler Statistics"
       url: https://docs.kernel.org/scheduler/sched-stats.html
       kind: official-doc
-      accessed: 2026-10-11
+      accessed: 2026-10-12
       archive: null
-    quote: "These fields are counters, and only increment."
+    quote: "These fields are counters, and only increment. Programs which make use of these will need to start with a baseline observation and then calculate the change in the counters at each subsequent observation."
     os_concepts: ["CPU scheduling", "monitoring"]
     pr: null
     ai_check:
       platform: Codex
       model: "gpt-6.1-sol"
-      prompt_log: prompts/2026-10-11-TonCS05-11-course-author-check.md
-      result: supported
-    ai_recheck:
-      platform: Claude Code
-      model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-11-nacs-970-11-reviewer-recheck.md
+      prompt_log: prompts/2026-10-12-TonCS05-11-28-author-check-2.md
       result: supported
   - id: 11-29
     claim: "Recommended course connection: use the lecture model of address translation and demand paging to interpret virtual mappings, resident memory and changes in major-fault counts; consider reclaim-related allocation stalls when testing a memory-pressure hypothesis. This is a proposed SRE analysis exercise, not proof that every page fault indicates exhaustion or failure."
@@ -307,7 +302,7 @@ claims:
 
 ## Summary
 
-Linux scheduling selects runnable threads, POSIX threads share global memory while retaining separate stacks, and signal handling has explicit limits (11-01 to 11-03). Memory mapping operates in a process's virtual address space, and the SRE troubleshooting guidance discusses examining logs across processes (11-04, 11-05). The proposed SRE applications connect these mechanisms to investigating slow services, restarts and memory demand; these applications are recommendations recorded as assumptions (11-06, 11-07). Page-table translation, demand paging, major faults requiring I/O and direct-reclaim stalls deepen the memory connection (11-24 to 11-27). Cumulative scheduler counters and two further proposed exercises connect observation intervals with course concepts (11-28 to 11-30).
+Linux scheduling selects runnable threads, POSIX threads share global memory while retaining separate stacks, and signal handling has explicit limits (11-01 to 11-03). Memory mapping operates in a process's virtual address space, and the SRE troubleshooting guidance discusses examining logs across processes (11-04, 11-05). The proposed SRE applications connect these mechanisms to investigating slow services, restarts and memory demand; these applications are recommendations recorded as assumptions (11-06, 11-07). Page-table translation, demand paging, major faults requiring I/O and direct-reclaim stalls deepen the memory connection (11-24 to 11-27). Cumulative schedstats counters and two further proposed exercises connect baseline comparisons with course concepts (11-28 to 11-30).
 
 ## Key points
 
@@ -318,7 +313,7 @@ Linux scheduling selects runnable threads, POSIX threads share global memory whi
 - Recommended connection: compare virtual mappings with resident memory observations when investigating memory demand. (11-07)
 - Page tables translate virtual to physical addresses; demand paging brings data into physical memory as needed. (11-24, 11-25)
 - Major faults require I/O; direct reclaim can stall an allocation. (11-26, 11-27)
-- Scheduler counters accumulate; proposed exercises compare changes and interpret observations through the course models. (11-28 to 11-30)
+- Linux schedstats counters accumulate; measure changes from a baseline, then interpret observations through the proposed course exercises. (11-28 to 11-30)
 
 ## Proposed connection to SRE work
 
