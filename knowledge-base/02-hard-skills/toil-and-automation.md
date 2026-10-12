@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 02-hard-skills
 title: Toil, automation and production changes
-updated: 2026-10-11
+updated: 2026-10-12
 claims:
   - id: 02-15
     claim: "Google SRE describes a YouTube outage in which a caching config change fully hobbled the service for 13 minutes, and says canarying those global changes with a progressive rollout could have curbed it before it had global impact."
@@ -145,7 +145,7 @@ claims:
       result: pass
       opened_source: true
   - id: 02-20
-    claim: "Building Secure and Reliable Systems (2020) says the SRE organization at Google is working to build on least privilege through automation, aiming for Zero Touch interfaces."
+    claim: "Building Secure and Reliable Systems says the SRE organization at Google is working to build on least privilege through automation, aiming for Zero Touch interfaces."
     type: org-fact
     status: ai-checked
     source:
@@ -157,16 +157,16 @@ claims:
     quote: "The SRE organization at Google is working to build upon the concept of least privilege through automation, with the goal of moving to what we call Zero Touch interfaces."
     os_concepts: []
     pr: 20
-    ai_check:
-      platform: Claude Code
-      model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-11-nine14282-hard-skills-author-check-3.md
-      result: supported
     ai_recheck:
       platform: Claude Code
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck-2.md
       result: partial
+    ai_check:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-12-nine14282-hard-skills-author-check-4.md
+      result: supported
   - id: 02-21
     claim: "Zero Touch interfaces aim to make Google safer and reduce outages by removing direct human access to production roles."
     type: org-fact
@@ -230,7 +230,7 @@ claims:
 
 ## Summary
 
-Google sources set a limit on toil and use automation to guard production changes. SRE as practiced at Google limits toil to 50% of a team member's time (02-22), and once toil overwhelms a team the other SRE work grinds to a halt (02-17). Zero Touch Prod requires changes to come from automation, software prevalidation or an audited breakglass (02-18), and Google estimates it could have prevented or mitigated about 13% of evaluated outages (02-19). Building Secure and Reliable Systems (2020) says the SRE organization at Google is working toward Zero Touch interfaces (02-20, 02-21). Canarying (02-15) and automated mitigation (02-16) come from Google's lessons learned. Each claim rests on one source; no second source was compared.
+Google sources set a limit on toil and use automation to guard production changes. SRE as practiced at Google limits toil to 50% of a team member's time (02-22), and once toil overwhelms a team the other SRE work grinds to a halt (02-17). Zero Touch Prod requires changes to come from automation, software prevalidation or an audited breakglass (02-18), and Google estimates it could have prevented or mitigated about 13% of evaluated outages (02-19). Building Secure and Reliable Systems says the SRE organization at Google is working toward Zero Touch interfaces (02-20, 02-21). Canarying (02-15) and automated mitigation (02-16) come from Google's lessons learned; each claim rests on one source and no second source was compared.
 
 ## Key points
 
@@ -238,7 +238,7 @@ Google sources set a limit on toil and use automation to guard production change
 - Once toil overwhelms an SRE team, all other SRE activities grind to a halt (02-17).
 - Zero Touch Prod requires every production change to be made by automation, prevalidated by software, or made through an audited breakglass (02-18).
 - Google estimates about 13% of Google-evaluated outages could have been prevented or mitigated with Zero Touch Prod (02-19).
-- Building Secure and Reliable Systems (2020) says the SRE organization at Google is working to build on least privilege through automation, aiming for Zero Touch interfaces, which aim to remove direct human access to production roles (02-20, 02-21).
+- Building Secure and Reliable Systems says the SRE organization at Google is working to build on least privilege through automation, aiming for Zero Touch interfaces, which aim to remove direct human access to production roles (02-20, 02-21).
 - A YouTube outage caused by a caching config change could have been curbed before it had global impact by canarying with a progressive rollout (02-15).
 - It is sometimes better to run an automated mitigation first and root-cause after user impact is avoided (02-16).
 
@@ -253,7 +253,7 @@ Source years in this note: 2025, 2022, 2020, 2018. A year is the publication or 
 - `02-17` (fact): The Enterprise Roadmap to SRE says that once toil overwhelms an SRE team, all other SRE activities grind to a halt.
 - `02-18` (org-fact): Google's Zero Touch Prod requires every production change to be made by automation, prevalidated by software, or triggered through an audited breakglass mechanism.
 - `02-19` (org-fact): Google estimates about 13% of all Google-evaluated outages could have been prevented or mitigated with Zero Touch Prod.
-- `02-20` (org-fact): Building Secure and Reliable Systems (2020) says the SRE organization at Google is working to build on least privilege through automation, aiming for Zero Touch interfaces.
+- `02-20` (org-fact): Building Secure and Reliable Systems says the SRE organization at Google is working to build on least privilege through automation, aiming for Zero Touch interfaces.
 - `02-21` (org-fact): Zero Touch interfaces aim to make Google safer and reduce outages by removing direct human access to production roles.
 - `02-22` (org-fact): SRE as practiced at Google has a hard limit of 50% of a team member's time on toil.
 
