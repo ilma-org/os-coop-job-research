@@ -198,6 +198,6 @@ The books treat configuration like code: it is kept in a version control system,
 - Push configuration gradually so a bad push can be stopped before it causes a full outage. Kubernetes rolling updates are the example (08-19, 08-20).
 - Box.com uses Git hooks to push configuration changes to production (08-21).
 - One Jsonnet evaluation can emit both an Nginx configuration and a Terraform firewall configuration (08-22).
-- Named infrastructure tools: Terraform, GCP Deployment Manager and AWS Cloud Formation, used with Kubernetes for containers (08-35). Terraform is also the example of a declarative configuration language, with the advice to capture how the service was created (08-36).
+- Named infrastructure tools: Terraform, GCP Deployment Manager and AWS Cloud Formation, used with Kubernetes for containers (08-36). Terraform is also the example of a declarative configuration language, with the advice to capture how the service was created (08-35).
 - Puppet, Chef, cfengine and Perl differ mostly in the level of abstraction they offer for automation (08-23).
 - Idempotent fixes can be run on a schedule, every 15 minutes in Google's example, without damaging a cluster's configuration (08-24).
