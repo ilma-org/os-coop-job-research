@@ -235,7 +235,7 @@ claims:
 
 ## Summary
 
-A talk defines an SLI as time series data about how good the level of service is (02-10), and a report says SLOs are reliability targets measured by SLIs (02-08). At Google, a well-thought-out and adopted SLO is key to making data-informed decisions about prioritizing reliability work (02-14). To apply an SRE approach, data processing can be declared reliable if well-reasoned SLOs are met, for example a freshness SLO (02-11), and each alert condition should have a playbook entry (02-12). The SRE Fundamentals with Google course groups these skills with systems design and capacity planning (02-07). Each claim rests on one source; no second source was compared. This note has no claim yet on error budgets. Specific monitoring tools belong to topic 09.
+A talk defines an SLI as time series data about how good the level of service is (02-10), and a report says SLOs are reliability targets measured by SLIs (02-08). At Google, a well-thought-out and adopted SLO is key to making data-informed decisions about prioritizing reliability work (02-14). To apply an SRE approach, data processing can be declared reliable if well-reasoned SLOs are met, for example a freshness SLO (02-11), and each alert condition should have a playbook entry (02-12). The SRE Fundamentals with Google course groups these skills with systems design and capacity planning (02-07). Each claim rests on one source and no second source was compared; this note has no claim yet on error budgets, and specific monitoring tools belong to topic 09.
 
 ## Key points
 
