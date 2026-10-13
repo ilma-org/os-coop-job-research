@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 13-preparation-plan
 title: "A practical SRE preparation roadmap and completion gates"
-updated: 2026-10-11
+updated: 2026-10-13
 claims:
   - id: 13-07
     claim: "A Git commit records a project snapshot that can later be reverted to or compared with another snapshot."
@@ -22,6 +22,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-11-TonCS05-13-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-13-reviewer-recheck.md
+      result: supported
   - id: 13-08
     claim: "Prometheus collects target metrics by scraping HTTP metrics endpoints."
     type: fact
@@ -39,6 +44,11 @@ claims:
       platform: Codex
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-11-TonCS05-13-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-13-reviewer-recheck.md
       result: supported
   - id: 13-09
     claim: "The SRE book identifies latency, traffic, errors and saturation as the four golden signals of monitoring."
@@ -58,6 +68,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-11-TonCS05-13-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-13-reviewer-recheck.md
+      result: supported
   - id: 13-10
     claim: "The SRE book recommends regular review sessions to ensure completed postmortem drafts are reviewed."
     type: fact
@@ -76,6 +91,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-11-TonCS05-13-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-13-reviewer-recheck.md
+      result: supported
   - id: 13-11
     claim: "The SRE workbook cautions that automation should not remove human understanding of what is going wrong."
     type: fact
@@ -93,6 +113,11 @@ claims:
       platform: Codex
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-11-TonCS05-13-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-13-reviewer-recheck.md
       result: supported
   - id: 13-12
     claim: "Proposed core roadmap with completion gates: (1) configure the Linux lab and demonstrate SSH login plus inspection of processes, memory, files and sockets; (2) version a small HTTP service and a Bash or Python health-check script, testing both healthy and failed responses; (3) containerize the service and show reproducible startup, an HTTP request and logs; (4) instrument and scrape service metrics with Prometheus, record the four golden signals and test a documented practice alert; (5) stop the service or introduce a lab permission error, document detection, evidence, mitigation and recovery, then write a postmortem with impact, timeline, contributing causes and a preventive action. Advance when each gate passes; duration depends on prior skills and available time."
