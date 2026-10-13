@@ -7,7 +7,7 @@ claims:
   - id: 13-07
     claim: "A Git commit records a project snapshot that can later be reverted to or compared with another snapshot."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Pro Git, second edition: Recording Changes to the Repository"
       url: https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-13-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-13
+      result: pass
+      opened_source: true
   - id: 13-08
     claim: "Prometheus collects target metrics by scraping HTTP metrics endpoints."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Prometheus documentation: Getting started"
       url: https://prometheus.io/docs/prometheus/latest/getting_started/
@@ -50,10 +55,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-13-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-13
+      result: pass
+      opened_source: true
   - id: 13-09
     claim: "The SRE book identifies latency, traffic, errors and saturation as the four golden signals of monitoring."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, chapter 6: Monitoring Distributed Systems"
       url: https://sre.google/sre-book/monitoring-distributed-systems/
@@ -73,10 +83,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-13-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-13
+      result: pass
+      opened_source: true
   - id: 13-10
     claim: "The SRE book recommends regular review sessions to ensure completed postmortem drafts are reviewed."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, chapter 15: Postmortem Culture"
       url: https://sre.google/sre-book/postmortem-culture/
@@ -96,10 +111,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-13-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-13
+      result: pass
+      opened_source: true
   - id: 13-11
     claim: "The SRE workbook cautions that automation should not remove human understanding of what is going wrong."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, chapter 6: Eliminating Toil"
       url: https://sre.google/workbook/eliminating-toil/
@@ -119,6 +139,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-13-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-13
+      result: pass
+      opened_source: true
   - id: 13-12
     claim: "Proposed core roadmap with completion gates: (1) configure the Linux lab and demonstrate SSH login plus inspection of processes, memory, files and sockets; (2) version a small HTTP service and a Bash or Python health-check script, testing both healthy and failed responses; (3) containerize the service and show reproducible startup, an HTTP request and logs; (4) instrument and scrape service metrics with Prometheus, record the four golden signals and test a documented practice alert; (5) stop the service or introduce a lab permission error, document detection, evidence, mitigation and recovery, then write a postmortem with impact, timeline, contributing causes and a preventive action. Advance when each gate passes; duration depends on prior skills and available time."
     type: assumption

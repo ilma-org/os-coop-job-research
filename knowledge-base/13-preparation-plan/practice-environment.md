@@ -7,7 +7,7 @@ claims:
   - id: 13-01
     claim: "The Ubuntu Server basic-installation tutorial recommends at least 2 GB of RAM and 5 GB of disk space for that tutorial."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Ubuntu Server documentation: Basic installation"
       url: https://ubuntu.com/server/docs/tutorial/basic-installation/
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-13-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-13
+      result: pass
+      opened_source: true
   - id: 13-02
     claim: "SSH supports authentication between two hosts using cryptographic keys instead of a password."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Ubuntu Server documentation: OpenSSH server"
       url: https://ubuntu.com/server/docs/how-to/security/openssh-server/
@@ -50,10 +55,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-13-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-13
+      result: pass
+      opened_source: true
   - id: 13-03
     claim: "Docker's Ubuntu installation guide verifies installation by running the hello-world image."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Docker Docs: Install Docker Engine on Ubuntu"
       url: https://docs.docker.com/engine/install/ubuntu/
@@ -73,10 +83,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-13-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-13
+      result: pass
+      opened_source: true
   - id: 13-04
     claim: "The minikube start guide lists at least 2 CPUs, 2 GB of free memory and 20 GB of free disk space among its prerequisites."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "minikube documentation: minikube start"
       url: https://minikube.sigs.k8s.io/docs/start/
@@ -96,6 +111,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-13-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-13
+      result: pass
+      opened_source: true
   - id: 13-05
     claim: "Proposed practice environment: install Ubuntu Server 24.04 LTS in a disposable local VM, initially allocate 2 vCPUs, 4 GB RAM and 40 GB disk, and reserve resources for the host. Complete installation, package updates, user/permission and network configuration, then demonstrate SSH key login. These allocations are a starting proposal, not a measured requirement for the combined lab; check available memory and disk before extensions."
     type: assumption
