@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 01-position-and-job-description
 title: "SRE role and duties"
-updated: 2026-10-11
+updated: 2026-10-13
 claims:
   - id: 01-01
     claim: "The Google SRE book says SRE teams at Google focus on hiring software engineers to run products and to build systems that do work sysadmins would otherwise do, often manually."
@@ -22,6 +22,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-02
     claim: "The Google SRE book says SRE is what happens when a software engineer is asked to design an operations team, as SRE has come to be defined at Google."
     type: org-fact
@@ -39,6 +44,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-03
     claim: "The Google SRE book says an SRE team is generally responsible for the availability, latency, performance, efficiency, change management, monitoring, emergency response and capacity planning of its services."
@@ -58,6 +68,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-04
     claim: "The SRE Workbook says an SRE in general has particular expertise in the availability, latency, performance, efficiency, change management, monitoring, emergency response and capacity planning of the services they look after."
     type: fact
@@ -75,6 +90,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-05
     claim: "The SRE Workbook says the basic tenet of SRE is that doing operations well is a software problem."
@@ -94,6 +114,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-07
     claim: "The SRE Workbook says that, in a way, class SRE implements interface DevOps."
     type: fact
@@ -111,6 +136,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-08
     claim: "The Google SRE book says SRE can be viewed as a specific implementation of DevOps with some idiosyncratic extensions."
@@ -130,6 +160,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-09
     claim: "The Google SRE book says Google caps operational work for SREs at 50% of their time, and that the remaining time should go to project work using coding skills."
     type: org-fact
@@ -147,6 +182,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-10
     claim: "The SRE Workbook says the term Site Reliability Engineering and its associated job role were coined by a VP of engineering at Google."
@@ -166,6 +206,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-11
     claim: "The SRE Workbook describes SRE as a job role and a set of practices."
     type: fact
@@ -183,6 +228,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-75
     claim: "A Google job ad for Software Engineer, Android SRE says Site Reliability Engineering combines software and systems engineering to build and run large-scale, massively distributed, fault-tolerant systems."
@@ -202,6 +252,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-76
     claim: "A Google job ad for Software Engineer, Android SRE lists, as a responsibility, writing product or system development code."
     type: org-fact
@@ -219,6 +274,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-77
     claim: "A Google job ad for Software Engineer, Android SRE lists, as a responsibility, triaging product or system issues and debugging, tracking and resolving them by analyzing the sources of issues and their impact on hardware, network, or service operations and quality."
@@ -238,6 +298,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-78
     claim: "A Google job ad for Software Engineer, Android SRE lists, as a responsibility, participating in or leading design reviews with peers and stakeholders to decide amongst available technologies."
     type: org-fact
@@ -255,6 +320,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
 ---
 
