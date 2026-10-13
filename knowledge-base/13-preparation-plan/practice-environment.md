@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 13-preparation-plan
 title: "OS, hardware and tool setup for an SRE practice lab"
-updated: 2026-10-11
+updated: 2026-10-13
 claims:
   - id: 13-01
     claim: "The Ubuntu Server basic-installation tutorial recommends at least 2 GB of RAM and 5 GB of disk space for that tutorial."
@@ -22,6 +22,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-11-TonCS05-13-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-13-reviewer-recheck.md
+      result: supported
   - id: 13-02
     claim: "SSH supports authentication between two hosts using cryptographic keys instead of a password."
     type: fact
@@ -39,6 +44,11 @@ claims:
       platform: Codex
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-11-TonCS05-13-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-13-reviewer-recheck.md
       result: supported
   - id: 13-03
     claim: "Docker's Ubuntu installation guide verifies installation by running the hello-world image."
@@ -58,6 +68,11 @@ claims:
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-11-TonCS05-13-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-13-reviewer-recheck.md
+      result: supported
   - id: 13-04
     claim: "The minikube start guide lists at least 2 CPUs, 2 GB of free memory and 20 GB of free disk space among its prerequisites."
     type: fact
@@ -75,6 +90,11 @@ claims:
       platform: Codex
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-11-TonCS05-13-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-13-reviewer-recheck.md
       result: supported
   - id: 13-05
     claim: "Proposed practice environment: install Ubuntu Server 24.04 LTS in a disposable local VM, initially allocate 2 vCPUs, 4 GB RAM and 40 GB disk, and reserve resources for the host. Complete installation, package updates, user/permission and network configuration, then demonstrate SSH key login. These allocations are a starting proposal, not a measured requirement for the combined lab; check available memory and disk before extensions."
