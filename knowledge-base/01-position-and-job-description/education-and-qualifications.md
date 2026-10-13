@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 01-position-and-job-description
 title: "Education and qualifications"
-updated: 2026-10-11
+updated: 2026-10-13
 claims:
   - id: 01-57
     claim: "The Google SRE book says 50–60% of SREs are Google Software Engineers, hired via the standard procedure for Google Software Engineers."
@@ -22,6 +22,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-58
     claim: "The Google SRE book says the other 40–50% of SREs were candidates very close to the Google Software Engineering qualifications (85–99% of the skill set required) who also had a set of technical skills useful to SRE but rare for most software engineers."
     type: org-fact
@@ -39,6 +44,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-59
     claim: "The Google SRE book says UNIX system internals and networking (Layer 1 to Layer 3) expertise are the two most common types of alternate technical skills it seeks."
@@ -58,6 +68,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-60
     claim: "The Google SRE book says SREs end up sharing academic and intellectual background with the rest of the development organization."
     type: org-fact
@@ -75,6 +90,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-62
     claim: "The Google SRE book says Google hires people with a diverse background in systems and software engineering into SRE teams."
@@ -94,6 +114,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-63
     claim: "The Google SRE book says Google always strives to staff its SRE teams with a mix of engineers with traditional software development experience and engineers with systems engineering experience."
     type: org-fact
@@ -111,6 +136,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-64
     claim: "The Google SRE book says investing up front in the education and technical orientation of new SREs will shape them into better engineers."
@@ -130,6 +160,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-65
     claim: "The Google SRE book's table of SRE education practices lists, as a recommended pattern, enabling students to shadow their on-call rotation early."
     type: fact
@@ -147,6 +182,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-66
     claim: "The Google SRE book's table of SRE education practices lists, as a recommended pattern, carving out nontrivial project work for students so they gain partial ownership in the stack."
@@ -166,6 +206,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-67
     claim: "The Google SRE book's table of SRE education practices lists, as a recommended pattern, encouraging reverse engineering, statistical thinking, and working from fundamental principles."
     type: fact
@@ -183,6 +228,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-69
     claim: "The Google SRE book says common to all SREs is the belief in and aptitude for developing software systems to solve complex problems."
@@ -202,6 +252,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-71
     claim: "A Google job ad for Software Engineer, Android SRE lists, as a minimum qualification, a Bachelor’s degree in Computer Science, a related field, or equivalent practical experience."
     type: org-fact
@@ -219,6 +274,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-72
     claim: "A Google job ad for Software Engineer, Android SRE lists, as a minimum qualification, 2 years of experience with software development in one or more programming languages."
@@ -238,6 +298,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-73
     claim: "A Google job ad for Software Engineer, Android SRE lists, as a preferred qualification, a Master's degree in Computer Science or Engineering."
     type: org-fact
@@ -255,6 +320,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-74
     claim: "A Google job ad for Software Engineer, Android SRE lists, as a preferred qualification, 2 years of experience designing, analyzing, and troubleshooting large-scale distributed systems."
@@ -274,6 +344,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-107
     claim: "In a Workbook case study of a new Google SRE team, the team compiled a checklist of two dozen focus areas for people to practice before going on-call."
     type: org-fact
@@ -292,6 +367,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-108
     claim: "The Google SRE book says that within SRE, Google tracks the career progress of both groups closely and has to date found no practical difference in performance between engineers from the two tracks."
     type: org-fact
@@ -309,6 +389,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check-2.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
 ---
 
