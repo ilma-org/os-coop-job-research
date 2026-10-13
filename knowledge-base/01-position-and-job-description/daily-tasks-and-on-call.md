@@ -2,12 +2,12 @@
 doc_type: topic-note
 topic: 01-position-and-job-description
 title: "Daily tasks and on-call"
-updated: 2026-10-13
+updated: 2026-10-14
 claims:
   - id: 01-12
     claim: "The Google SRE book says on-call engineers, as guardians of production systems, manage outages that affect the team and perform or vet production changes."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.11 Being On-Call"
       url: https://sre.google/sre-book/being-on-call/
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-13
     claim: "The Google SRE book says typical paging response times are 5 minutes for user-facing or otherwise highly time-critical services and 30 minutes for less time-sensitive systems."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.11 Being On-Call"
       url: https://sre.google/sre-book/being-on-call/
@@ -50,10 +55,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-15
     claim: "The Google SRE book says nonpaging production events, such as lower priority alerts or software releases, can also be handled or vetted by the on-call engineer during business hours."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.11 Being On-Call"
       url: https://sre.google/sre-book/being-on-call/
@@ -73,10 +83,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-16
     claim: "The Google SRE book says many Google SRE teams have both a primary and a secondary on-call rotation."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.11 Being On-Call"
       url: https://sre.google/sre-book/being-on-call/
@@ -96,6 +111,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-17
     claim: "The Google SRE book says SRE aims for at least 50% of time on engineering, with no more than 25% of the remainder spent on-call and up to another 25% on other operational, nonproject work."
     type: org-fact
@@ -145,7 +165,7 @@ claims:
   - id: 01-19
     claim: "The Google SRE book says Google offers time-off-in-lieu or straight cash compensation for on-call, capped at some proportion of overall salary."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.11 Being On-Call"
       url: https://sre.google/sre-book/being-on-call/
@@ -165,10 +185,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-20
     claim: "The Google SRE book lists clear escalation paths, well-defined incident-management procedures and a blameless postmortem culture as the most important on-call resources."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.11 Being On-Call"
       url: https://sre.google/sre-book/being-on-call/
@@ -188,10 +213,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-21
     claim: "The Google SRE book says SRE teams must write postmortems after significant incidents and detail a full timeline of the events that occurred."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.11 Being On-Call"
       url: https://sre.google/sre-book/being-on-call/
@@ -211,10 +241,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-23
     claim: "The Google SRE book says all paging alerts should be actionable."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.11 Being On-Call"
       url: https://sre.google/sre-book/being-on-call/
@@ -234,10 +269,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-24
     claim: "The Google SRE book defines toil as work tied to running a production service that tends to be manual, repetitive, automatable, tactical, devoid of enduring value, and that scales linearly as a service grows."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.5 Eliminating Toil"
       url: https://sre.google/sre-book/eliminating-toil/
@@ -257,10 +297,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-25
     claim: "The Google SRE book says toil is interrupt-driven and reactive, and that handling pager alerts is toil."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.5 Eliminating Toil"
       url: https://sre.google/sre-book/eliminating-toil/
@@ -280,10 +325,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-26
     claim: "The Google SRE book says operational load falls into three general categories: pages, tickets, and ongoing operational activities."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.29 Dealing with Interrupts"
       url: https://sre.google/sre-book/dealing-with-interrupts/
@@ -303,10 +353,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-27
     claim: "The Google SRE book says tickets concern customer requests that require you to take an action."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.29 Dealing with Interrupts"
       url: https://sre.google/sre-book/dealing-with-interrupts/
@@ -326,10 +381,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-28
     claim: "The Google SRE book says pages are most commonly managed by a dedicated primary on-call engineer."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.29 Dealing with Interrupts"
       url: https://sre.google/sre-book/dealing-with-interrupts/
@@ -349,10 +409,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-29
     claim: "The Google SRE book says tickets are handled in different ways depending on the SRE team: by the primary on-call engineer, by the secondary, or by a dedicated ticket person who is not on-call."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.29 Dealing with Interrupts"
       url: https://sre.google/sre-book/dealing-with-interrupts/
@@ -372,10 +437,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-30
     claim: "The SRE Workbook says that during on-call shifts SREs diagnose, mitigate, fix, or escalate incidents as needed, and are regularly responsible for nonurgent production duties."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, Ch.8 On-Call"
       url: https://sre.google/workbook/on-call/
@@ -395,10 +465,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-31
     claim: "The SRE Workbook says that at Google, being on-call is one of the defining characteristics of SRE."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, Ch.8 On-Call"
       url: https://sre.google/workbook/on-call/
@@ -418,6 +493,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-32
     claim: "In a Workbook case study of a new Google SRE team, the guidelines said the on-call engineer reads the handoff from the previous shift at the start of each shift."
     type: org-fact
@@ -490,7 +570,7 @@ claims:
   - id: 01-35
     claim: "The SRE Workbook says playbooks contain high-level instructions on how to respond to automated alerts."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, Ch.8 On-Call"
       url: https://sre.google/workbook/on-call/
@@ -510,10 +590,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-105
     claim: "The Google SRE book says that once a page is received and acknowledged, the on-call engineer is expected to triage the problem and work toward its resolution, possibly involving other team members and escalating as needed."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.11 Being On-Call"
       url: https://sre.google/sre-book/being-on-call/
@@ -533,6 +618,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-106
     claim: "The Google SRE book says SRE can ask the developer team to be exclusively on-call for a system until it meets the standards of the SRE team in question."
     type: org-fact

@@ -2,12 +2,12 @@
 doc_type: topic-note
 topic: 01-position-and-job-description
 title: "Education and qualifications"
-updated: 2026-10-13
+updated: 2026-10-14
 claims:
   - id: 01-57
     claim: "The Google SRE book says 50–60% of SREs are Google Software Engineers, hired via the standard procedure for Google Software Engineers."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.1 Introduction"
       url: https://sre.google/sre-book/introduction/
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-58
     claim: "The Google SRE book says the other 40–50% of SREs were candidates very close to the Google Software Engineering qualifications (85–99% of the skill set required) who also had a set of technical skills useful to SRE but rare for most software engineers."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.1 Introduction"
       url: https://sre.google/sre-book/introduction/
@@ -50,10 +55,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-59
     claim: "The Google SRE book says UNIX system internals and networking (Layer 1 to Layer 3) expertise are the two most common types of alternate technical skills it seeks."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.1 Introduction"
       url: https://sre.google/sre-book/introduction/
@@ -73,10 +83,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-60
     claim: "The Google SRE book says SREs end up sharing academic and intellectual background with the rest of the development organization."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.1 Introduction"
       url: https://sre.google/sre-book/introduction/
@@ -96,10 +111,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-62
     claim: "The Google SRE book says Google hires people with a diverse background in systems and software engineering into SRE teams."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.11 Being On-Call"
       url: https://sre.google/sre-book/being-on-call/
@@ -119,10 +139,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-63
     claim: "The Google SRE book says Google always strives to staff its SRE teams with a mix of engineers with traditional software development experience and engineers with systems engineering experience."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.18 Software Engineering in SRE"
       url: https://sre.google/sre-book/software-engineering-in-sre/
@@ -142,10 +167,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-64
     claim: "The Google SRE book says investing up front in the education and technical orientation of new SREs will shape them into better engineers."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.28 Accelerating SREs to On-Call and Beyond"
       url: https://sre.google/sre-book/accelerating-sre-on-call/
@@ -165,10 +195,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-65
     claim: "The Google SRE book's table of SRE education practices lists, as a recommended pattern, enabling students to shadow their on-call rotation early."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.28 Accelerating SREs to On-Call and Beyond"
       url: https://sre.google/sre-book/accelerating-sre-on-call/
@@ -188,10 +223,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-66
     claim: "The Google SRE book's table of SRE education practices lists, as a recommended pattern, carving out nontrivial project work for students so they gain partial ownership in the stack."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.28 Accelerating SREs to On-Call and Beyond"
       url: https://sre.google/sre-book/accelerating-sre-on-call/
@@ -211,10 +251,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-67
     claim: "The Google SRE book's table of SRE education practices lists, as a recommended pattern, encouraging reverse engineering, statistical thinking, and working from fundamental principles."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.28 Accelerating SREs to On-Call and Beyond"
       url: https://sre.google/sre-book/accelerating-sre-on-call/
@@ -234,10 +279,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-69
     claim: "The Google SRE book says common to all SREs is the belief in and aptitude for developing software systems to solve complex problems."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Ch.1 Introduction"
       url: https://sre.google/sre-book/introduction/
@@ -257,10 +307,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-71
     claim: "A Google job ad for Software Engineer, Android SRE lists, as a minimum qualification, a Bachelor’s degree in Computer Science, a related field, or equivalent practical experience."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Software Engineer, Android SRE, Google Careers job ad"
       url: https://www.google.com/about/careers/applications/jobs/results/121141635160384198-software-engineer-android-sre
@@ -280,10 +335,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-72
     claim: "A Google job ad for Software Engineer, Android SRE lists, as a minimum qualification, 2 years of experience with software development in one or more programming languages."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Software Engineer, Android SRE, Google Careers job ad"
       url: https://www.google.com/about/careers/applications/jobs/results/121141635160384198-software-engineer-android-sre
@@ -303,10 +363,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-73
     claim: "A Google job ad for Software Engineer, Android SRE lists, as a preferred qualification, a Master's degree in Computer Science or Engineering."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Software Engineer, Android SRE, Google Careers job ad"
       url: https://www.google.com/about/careers/applications/jobs/results/121141635160384198-software-engineer-android-sre
@@ -326,10 +391,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-74
     claim: "A Google job ad for Software Engineer, Android SRE lists, as a preferred qualification, 2 years of experience designing, analyzing, and troubleshooting large-scale distributed systems."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Software Engineer, Android SRE, Google Careers job ad"
       url: https://www.google.com/about/careers/applications/jobs/results/121141635160384198-software-engineer-android-sre
@@ -349,6 +419,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 01-107
     claim: "In a Workbook case study of a new Google SRE team, the team compiled a checklist of two dozen focus areas for people to practice before going on-call."
     type: org-fact
