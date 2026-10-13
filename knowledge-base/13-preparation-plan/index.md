@@ -6,7 +6,7 @@ assignment_section: "10 (outcome 8)"
 report_sections: [12]
 owner: "@TonCS05"
 issue: 18
-updated: 2026-10-11
+updated: 2026-10-13
 ---
 
 # Preparation plan
@@ -25,8 +25,8 @@ Learning outcome 8: a practical hands-on preparation plan.
 The owner organizes notes (`topic-note` files) here. List them below as they are added.
 
 <!-- notes:start -->
-- [practice-environment.md](practice-environment.md): OS, hardware and tool setup for an SRE practice lab. 6 claims (13-01 to 13-06): 4 ai-checked, 2 unverified.
-- [practice-roadmap.md](practice-roadmap.md): A practical SRE preparation roadmap and completion gates. 8 claims (13-07 to 13-14): 5 ai-checked, 3 unverified.
+- [practice-environment.md](practice-environment.md): OS, hardware and tool setup for an SRE practice lab. 6 claims (13-01 to 13-06): 4 human-verified, 2 unverified.
+- [practice-roadmap.md](practice-roadmap.md): A practical SRE preparation roadmap and completion gates. 8 claims (13-07 to 13-14): 5 human-verified, 3 unverified.
 <!-- notes:end -->
 
 ## Research coverage
