@@ -6,7 +6,7 @@ assignment_section: "4.1"
 report_sections: [3]
 owner: "@Bximai"
 issue: 6
-updated: 2026-10-11
+updated: 2026-10-14
 ---
 
 # Position and job description
@@ -28,11 +28,11 @@ Assignment Appendix C. What a Computer Science student should understand and pra
 The owner organizes notes (`topic-note` files) here. List them below as they are added.
 
 <!-- notes:start -->
-- [role-and-duties.md](role-and-duties.md): SRE role and duties. 14 claims (01-01 to 01-05, 01-07 to 01-11, 01-75 to 01-78): 14 unverified.
-- [daily-tasks-and-on-call.md](daily-tasks-and-on-call.md): Daily tasks and on-call. 24 claims (01-12 to 01-13, 01-15 to 01-21, 01-23 to 01-35, 01-105 to 01-106): 24 unverified.
-- [typical-projects.md](typical-projects.md): Typical projects. 19 claims (01-36 to 01-47, 01-50 to 01-54, 01-56, 01-109): 19 unverified.
-- [education-and-qualifications.md](education-and-qualifications.md): Education and qualifications. 17 claims (01-57 to 01-60, 01-62 to 01-67, 01-69, 01-71 to 01-74, 01-107 to 01-108): 17 unverified.
-- [environment-overview.md](environment-overview.md): Environment overview. 24 claims (01-79 to 01-81, 01-83 to 01-94, 01-96 to 01-100, 01-102 to 01-104, 01-110): 24 unverified.
+- [role-and-duties.md](role-and-duties.md): SRE role and duties. 14 claims (01-01 to 01-05, 01-07 to 01-11, 01-75 to 01-78): 14 human-verified.
+- [daily-tasks-and-on-call.md](daily-tasks-and-on-call.md): Daily tasks and on-call. 24 claims (01-12 to 01-13, 01-15 to 01-21, 01-23 to 01-35, 01-105 to 01-106): 6 ai-checked, 18 human-verified.
+- [typical-projects.md](typical-projects.md): Typical projects. 19 claims (01-36 to 01-47, 01-50 to 01-54, 01-56, 01-109): 19 human-verified.
+- [education-and-qualifications.md](education-and-qualifications.md): Education and qualifications. 17 claims (01-57 to 01-60, 01-62 to 01-67, 01-69, 01-71 to 01-74, 01-107 to 01-108): 2 ai-checked, 15 human-verified.
+- [environment-overview.md](environment-overview.md): Environment overview. 24 claims (01-79 to 01-81, 01-83 to 01-94, 01-96 to 01-100, 01-102 to 01-104, 01-110): 1 ai-checked, 23 human-verified.
 <!-- notes:end -->
 
 ## Not found yet
