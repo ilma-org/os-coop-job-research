@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 01-position-and-job-description
 title: "Daily tasks and on-call"
-updated: 2026-10-11
+updated: 2026-10-13
 claims:
   - id: 01-12
     claim: "The Google SRE book says on-call engineers, as guardians of production systems, manage outages that affect the team and perform or vet production changes."
@@ -22,6 +22,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-13
     claim: "The Google SRE book says typical paging response times are 5 minutes for user-facing or otherwise highly time-critical services and 30 minutes for less time-sensitive systems."
     type: org-fact
@@ -39,6 +44,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-15
     claim: "The Google SRE book says nonpaging production events, such as lower priority alerts or software releases, can also be handled or vetted by the on-call engineer during business hours."
@@ -58,6 +68,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-16
     claim: "The Google SRE book says many Google SRE teams have both a primary and a secondary on-call rotation."
     type: org-fact
@@ -75,6 +90,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-17
     claim: "The Google SRE book says SRE aims for at least 50% of time on engineering, with no more than 25% of the remainder spent on-call and up to another 25% on other operational, nonproject work."
@@ -94,6 +114,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-18
     claim: "The Google SRE book says the maximum number of incidents per day is 2 per 12-hour on-call shift."
     type: org-fact
@@ -111,6 +136,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-19
     claim: "The Google SRE book says Google offers time-off-in-lieu or straight cash compensation for on-call, capped at some proportion of overall salary."
@@ -130,6 +160,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-20
     claim: "The Google SRE book lists clear escalation paths, well-defined incident-management procedures and a blameless postmortem culture as the most important on-call resources."
     type: org-fact
@@ -147,6 +182,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-21
     claim: "The Google SRE book says SRE teams must write postmortems after significant incidents and detail a full timeline of the events that occurred."
@@ -166,6 +206,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-23
     claim: "The Google SRE book says all paging alerts should be actionable."
     type: fact
@@ -183,6 +228,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-24
     claim: "The Google SRE book defines toil as work tied to running a production service that tends to be manual, repetitive, automatable, tactical, devoid of enduring value, and that scales linearly as a service grows."
@@ -202,6 +252,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-25
     claim: "The Google SRE book says toil is interrupt-driven and reactive, and that handling pager alerts is toil."
     type: fact
@@ -219,6 +274,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-26
     claim: "The Google SRE book says operational load falls into three general categories: pages, tickets, and ongoing operational activities."
@@ -238,6 +298,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-27
     claim: "The Google SRE book says tickets concern customer requests that require you to take an action."
     type: fact
@@ -255,6 +320,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-28
     claim: "The Google SRE book says pages are most commonly managed by a dedicated primary on-call engineer."
@@ -274,6 +344,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-29
     claim: "The Google SRE book says tickets are handled in different ways depending on the SRE team: by the primary on-call engineer, by the secondary, or by a dedicated ticket person who is not on-call."
     type: org-fact
@@ -291,6 +366,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-30
     claim: "The SRE Workbook says that during on-call shifts SREs diagnose, mitigate, fix, or escalate incidents as needed, and are regularly responsible for nonurgent production duties."
@@ -310,6 +390,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-31
     claim: "The SRE Workbook says that at Google, being on-call is one of the defining characteristics of SRE."
     type: org-fact
@@ -327,6 +412,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-32
     claim: "In a Workbook case study of a new Google SRE team, the guidelines said the on-call engineer reads the handoff from the previous shift at the start of each shift."
@@ -346,6 +436,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-33
     claim: "In a Workbook case study of a new Google SRE team, the guidelines said the on-call engineer minimizes user impact first, then makes sure the issues are fully addressed."
     type: org-fact
@@ -363,6 +458,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-34
     claim: "In a Workbook case study of a new Google SRE team, the guidelines said the on-call engineer sends a handoff email to the next on-call engineer at the end of the shift."
@@ -382,6 +482,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-35
     claim: "The SRE Workbook says playbooks contain high-level instructions on how to respond to automated alerts."
     type: fact
@@ -399,6 +504,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-105
     claim: "The Google SRE book says that once a page is received and acknowledged, the on-call engineer is expected to triage the problem and work toward its resolution, possibly involving other team members and escalating as needed."
@@ -418,6 +528,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-106
     claim: "The Google SRE book says SRE can ask the developer team to be exclusively on-call for a system until it meets the standards of the SRE team in question."
     type: org-fact
@@ -435,6 +550,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check-2.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
 ---
 
