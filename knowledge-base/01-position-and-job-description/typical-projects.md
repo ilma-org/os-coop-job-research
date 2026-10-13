@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 01-position-and-job-description
 title: "Typical projects"
-updated: 2026-10-11
+updated: 2026-10-13
 claims:
   - id: 01-36
     claim: "The Google SRE book says SREs develop internal tools such as binary rollout mechanisms, monitoring, or a development environment built on dynamic server composition."
@@ -22,6 +22,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-37
     claim: "The Google SRE book says SRE-developed tools are full-fledged software engineering projects, distinct from one-off solutions and quick hacks."
     type: org-fact
@@ -39,6 +44,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-38
     claim: "The Google SRE book says achieving linear team growth in the face of exponential service growth requires perpetual automation work and efforts to streamline tools, processes, and other inefficiencies in production."
@@ -58,6 +68,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-39
     claim: "The Google SRE book describes Auxon as a tool developed within SRE to automate capacity planning for services running in Google production."
     type: org-fact
@@ -75,6 +90,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-40
     claim: "The Google SRE book says long-term project work gives SREs balance against interrupts and on-call work."
@@ -94,6 +114,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-41
     claim: "The Google SRE book says services rarely start with SRE support, so SRE needs a process, called onboarding, to evaluate a service, decide whether it merits SRE support, negotiate fixes for deficits, and institute support."
     type: org-fact
@@ -111,6 +136,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-42
     claim: "The Google SRE book says the most typical initial step of SRE engagement is the Production Readiness Review (PRR), a process that identifies the reliability needs of a service."
@@ -130,6 +160,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-43
     claim: "The Google SRE book says a PRR is considered a prerequisite for an SRE team to accept responsibility for managing the production aspects of a service."
     type: org-fact
@@ -147,6 +182,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-44
     claim: "The Google SRE book says that in the analysis phase of a PRR, SRE reviewers learn about the service and begin analyzing it for production shortcomings."
@@ -166,6 +206,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-45
     claim: "The Google SRE book says that after a PRR analysis, improvements are prioritized based upon importance for service reliability."
     type: org-fact
@@ -183,6 +228,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-46
     claim: "The Google SRE book proposes providing product development with a platform of SRE-validated infrastructure on which they can build their systems."
@@ -202,6 +252,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-47
     claim: "The Google SRE book says Google defines a launch as any new code that introduces an externally visible change to an application."
     type: org-fact
@@ -219,6 +274,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-50
     claim: "The Google SRE book says that for SRE, automation is a force multiplier, not a panacea."
@@ -238,6 +298,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-51
     claim: "In a Workbook case study, Google targeted the repair of failed datacenter line cards as the first stage of creating datacenter network repair automation."
     type: org-fact
@@ -255,6 +320,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-52
     claim: "In a Workbook case study, moving Google away from filer-backed home directories was an ongoing, iterative, multiyear effort that entailed multiple internal projects."
@@ -274,6 +344,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-53
     claim: "The SRE Workbook says an SRE team might formally engage with a service once it has been generally available for months or years and is facing reliability or scaling challenges."
     type: fact
@@ -291,6 +366,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
   - id: 01-54
     claim: "The Google SRE book says many Google teams have moved to an approach it calls Intent-based Capacity Planning."
@@ -310,6 +390,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-56
     claim: "The Google SRE book says the basic premise of Intent-based Capacity Planning is to programmatically encode the dependencies and parameters."
     type: org-fact
@@ -328,6 +413,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      result: supported
   - id: 01-109
     claim: "In the NORAD Tracks Santa launch example, the Google SRE book says coordinating between the different engineering groups involved in the launch fell to a special SRE team, the Launch Coordination Engineers."
     type: org-fact
@@ -345,6 +435,11 @@ claims:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-bximai-01-position-author-check-3.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
       result: supported
 ---
 
