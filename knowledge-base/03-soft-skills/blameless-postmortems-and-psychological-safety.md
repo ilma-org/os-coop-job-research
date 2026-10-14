@@ -22,6 +22,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
+      result: supported
   - id: 03-10
     claim: "On Google's SRE Prodcast, Steph Hippo says that when she first got to SRE at Google, all incident command was still done on IRC, and as a junior SRE she could just follow along with outages her team was not responsible for."
     type: org-fact
@@ -39,6 +44,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check-2.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
   - id: 03-12
     claim: "The Google SRE report Anatomy of an Incident quotes a definition of psychological safety as a belief that one will not be punished or humiliated for speaking up with ideas, questions, concerns or mistakes."
@@ -58,6 +68,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
+      result: supported
   - id: 03-13
     claim: "The report Enterprise Roadmap to SRE says the team must feel psychologically safe when put in the high-pressure position of control over major systems, and must be able to say no to peers and leaders without fear of retribution."
     type: fact
@@ -75,6 +90,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check-2.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
   - id: 03-14
     claim: "The report Enterprise Roadmap to SRE says citing 'human error' when humans make mistakes has been shown to be somewhat meaningless and not an effective way to improve a system, and that SRE instead promotes blamelessness."
@@ -94,6 +114,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
+      result: supported
   - id: 03-15
     claim: "In its section on remediating and learning from incidents, Google's Incident Management Guide calls open and blameless postmortem writing the most effective tool Google has found for that purpose."
     type: org-fact
@@ -112,6 +137,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
+      result: supported
   - id: 03-16
     claim: "Google's Incident Management Guide says regular practice such as Wheel of Misfortune exercises can keep knowledge up to date and gives less experienced on-callers an opportunity to develop their skills in a safe environment."
     type: fact
@@ -129,6 +159,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check-2.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
 ---
 
