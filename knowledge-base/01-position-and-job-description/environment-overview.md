@@ -32,29 +32,6 @@ claims:
       date: 2026-10-14
       result: pass
       opened_source: true
-  - id: 01-80
-    claim: "The Google SRE book says the compute hardware in a Google-designed datacenter is the same across the board."
-    type: org-fact
-    status: ai-checked
-    source:
-      title: "Site Reliability Engineering, Ch.2 The Production Environment at Google, from the Viewpoint of an SRE"
-      url: https://sre.google/sre-book/production-environment/
-      kind: official-doc
-      accessed: 2026-10-11
-      archive: https://web.archive.org/web/20260911034439/https://sre.google/sre-book/production-environment/
-    quote: "the compute hardware in a Google-designed datacenter is the same across the board."
-    os_concepts: []
-    pr: null
-    ai_check:
-      platform: Claude Code (desktop app)
-      model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-11-bximai-01-position-author-check.md
-      result: supported
-    ai_recheck:
-      platform: Claude Code
-      model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
-      result: supported
   - id: 01-81
     claim: "The Google SRE book says that in a single cluster in a typical year, thousands of machines fail and thousands of hard disks break."
     type: org-fact
@@ -671,17 +648,35 @@ claims:
       date: 2026-10-14
       result: pass
       opened_source: true
+  - id: 01-121
+    claim: "A footnote in the Google SRE book qualifies its statement that the compute hardware in a Google-designed datacenter is the same across the board: the footnote says it is \"roughly the same. Mostly.\""
+    type: org-fact
+    status: ai-checked
+    source:
+      title: "Site Reliability Engineering, Ch.2 The Production Environment at Google, from the Viewpoint of an SRE"
+      url: https://sre.google/sre-book/production-environment/
+      kind: official-doc
+      accessed: 2026-10-14
+      archive: https://web.archive.org/web/20260911034439/https://sre.google/sre-book/production-environment/
+    quote: "Well, roughly the same. Mostly."
+    os_concepts: []
+    pr: null
+    ai_check:
+      platform: Claude Code (desktop app)
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-bximai-01-position-author-check-4.md
+      result: supported
 ---
 
 # Environment overview
 
 ## Summary
 
-The SRE book describes the environment Google SREs work in as Google-designed datacenters with uniform compute hardware, a cluster operating system called Borg, layered cluster storage, a software-defined network and a shared software infrastructure (01-79, 01-80, 01-85, 01-88, 01-84, 01-110). Services are managed by software because hardware failures are frequent (01-81, 01-86, 01-87). Engineers work from a single shared repository with mandatory review and automatic testing (01-97, 01-98, 01-99). This note is an overview and points to topics 04 to 09 for detail. All claims come from one chapter, the SRE book's production-environment chapter, and describe what that book says Google uses, not what any other company uses or what a COOP student would touch.
+The SRE book describes the environment Google SREs work in as Google-designed datacenters with uniform compute hardware, a cluster operating system called Borg, layered cluster storage, a software-defined network and a shared software infrastructure (01-79, 01-121, 01-85, 01-88, 01-84, 01-110). Services are managed by software because hardware failures are frequent (01-81, 01-86, 01-87). Engineers work from a single shared repository with mandatory review and automatic testing (01-97, 01-98, 01-99). This note is an overview and points to topics 04 to 09 for detail. All claims come from one chapter, the SRE book's production-environment chapter, and describe what that book says Google uses, not what any other company uses or what a COOP student would touch.
 
 ## Key points
 
-- Hardware: most compute resources are in Google-designed datacenters with proprietary power distribution, cooling, networking and compute hardware; the compute hardware is the same across the board; each campus has teams dedicated to maintaining hardware and datacenter infrastructure. (01-79, 01-80, 01-100)
+- Hardware: most compute resources are in Google-designed datacenters with proprietary power distribution, cooling, networking and compute hardware; the compute hardware is the same across the board, though a footnote hedges that it is only "roughly the same. Mostly."; each campus has teams dedicated to maintaining hardware and datacenter infrastructure. (01-79, 01-121, 01-100)
 - Layout: one or more rows form a cluster, and a datacenter building usually houses multiple clusters. (01-103, 01-102)
 - Failures: in a single cluster in a typical year, thousands of machines fail and thousands of hard disks break. (01-81)
 - Network: a very fast virtual switch built from hundreds of Google-built switches in a Clos network fabric; datacenters are linked by a globe-spanning backbone; an OpenFlow-based software-defined network. (01-104, 01-83, 01-84)
