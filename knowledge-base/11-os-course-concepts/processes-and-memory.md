@@ -271,7 +271,7 @@ claims:
   - id: 11-28
     claim: "Linux schedstats counters are cumulative; programs should record a baseline and calculate counter changes at subsequent observations."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Linux Kernel documentation: Scheduler Statistics"
       url: https://docs.kernel.org/scheduler/sched-stats.html
@@ -291,6 +291,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-11-reviewer-recheck-3.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 11-29
     claim: "Recommended course connection: use the lecture model of address translation and demand paging to interpret virtual mappings, resident memory and changes in major-fault counts; consider reclaim-related allocation stalls when testing a memory-pressure hypothesis. This is a proposed SRE analysis exercise, not proof that every page fault indicates exhaustion or failure."
     type: assumption
