@@ -402,7 +402,7 @@ claims:
 
 ## Summary
 
-Google's SRE books describe Site Reliability Engineering as a job role in which software engineers run services and build systems to replace manual operations work (01-01, 01-02, 01-11). Both the SRE book and the SRE Workbook list the same duties: availability, latency, performance, efficiency, change management, monitoring, emergency response and capacity planning (01-03, 01-04). The books also say Google caps SRE operational work at 50% of time and treat SRE as a specific implementation of DevOps (01-07, 01-08, 01-09). Nearly all claims come from Google's own books and describe Google's view of the role. One Google job ad, for Software Engineer, Android SRE, repeats the software-plus-systems description and lists responsibilities (01-75 to 01-78). Not found yet: other companies' definitions.
+Google's SRE books describe Site Reliability Engineering as a job role in which software engineers run services and build systems to replace manual operations work (01-01, 01-02, 01-11). Both the SRE book and the SRE Workbook list the same duties: availability, latency, performance, efficiency, change management, monitoring, emergency response and capacity planning (01-03, 01-04). The books also say Google caps SRE operational work at 50% of time and treat SRE as a specific implementation of DevOps (01-07, 01-08, 01-09). Nearly all claims come from Google's own books and describe Google's view of the role, and one Google job ad, for Software Engineer, Android SRE, repeats the software-plus-systems description and lists responsibilities (01-75 to 01-78). Not found yet: other companies' definitions.
 
 ## Key points
 
