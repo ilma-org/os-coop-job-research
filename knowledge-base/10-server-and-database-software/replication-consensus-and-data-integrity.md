@@ -165,6 +165,65 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
+  - id: 10-32
+    claim: "The SRE Workbook names two main steps in fixing corrupt data: mitigate the impact by preventing further corrupt data from entering the system, and restore the data from a previously known good version or reprocess to repair it."
+    type: fact
+    status: ai-checked
+    source:
+      title: "The Site Reliability Workbook: Data Processing Pipelines"
+      url: https://sre.google/workbook/data-processing/
+      kind: official-doc
+      accessed: 2026-10-12
+      archive: https://web.archive.org/web/20260827232609/https://sre.google/workbook/data-processing/
+    quote: "There are two main steps involved in fixing corrupt data: Mitigate the impact by preventing further corrupt data from entering the system. Restore your data from a previously known good version, or reprocess to repair the data."
+    os_concepts: []
+    pr: null
+    ai_check:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-2.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      result: supported
+  - id: 10-34
+    claim: "In its AdWords example of non-abstract large system design, the SRE Workbook says to have the replicas of a shared service such as ClickMap use a consensus algorithm such as Paxos, so that the state of the calculations can be reliably stored if a datacenter-sized failure occurs."
+    type: fact
+    status: ai-checked
+    source:
+      title: "The Site Reliability Workbook, Chapter 12: Introducing Non-Abstract Large System Design"
+      url: https://sre.google/workbook/non-abstract-design/
+      kind: official-doc
+      accessed: 2026-10-07
+      archive: null
+    quote: "Have the replicas use a consensus algorithm such as Paxos to ensure that we can reliably store the state of the calculations if a datacenter-sized failure occurs."
+    os_concepts: []
+    pr: null
+    ai_check:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-5.md
+      result: supported
+  - id: 10-35
+    claim: "In its AdWords example of non-abstract large system design, the SRE Workbook assumes that executing Paxos with fault-isolated datacenters at least a few hundred kilometers apart takes roughly 25 milliseconds per operation."
+    type: fact
+    status: ai-checked
+    source:
+      title: "The Site Reliability Workbook, Chapter 12: Introducing Non-Abstract Large System Design"
+      url: https://sre.google/workbook/non-abstract-design/
+      kind: official-doc
+      accessed: 2026-10-07
+      archive: null
+    quote: "The latency of executing the Paxos algorithm with fault-isolated datacenters means that each operation needs roughly 25 milliseconds to complete. This latency assumption is based upon datacenters at least a few hundred kilometers apart."
+    os_concepts: []
+    pr: null
+    ai_check:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-5.md
+      result: supported
 ---
 
 # Replication, consensus, backups and data integrity

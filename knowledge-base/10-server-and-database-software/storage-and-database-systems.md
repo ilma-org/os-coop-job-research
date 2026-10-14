@@ -206,6 +206,29 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
+  - id: 10-30
+    claim: "The SRE Workbook says the internals of data storage often have a lowest level of granularity that may become unavailable if accessed heavily; for example, a Spanner tablet can become overloaded due to a problematic section of data even though most of the data storage is fine."
+    type: fact
+    status: ai-checked
+    source:
+      title: "The Site Reliability Workbook: Data Processing Pipelines"
+      url: https://sre.google/workbook/data-processing/
+      kind: official-doc
+      accessed: 2026-10-07
+      archive: https://web.archive.org/web/20260827232609/https://sre.google/workbook/data-processing/
+    quote: "Often, the internals of your data storage have a lowest level of granularity that may become unavailable if accessed heavily (e.g., a Spanner tablet can become overloaded due to a problematic section of data even though most of the data storage is fine)."
+    os_concepts: []
+    pr: null
+    ai_check:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-2.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      result: supported
 ---
 
 # Storage and database systems: GFS, Colossus, Spanner and caches
