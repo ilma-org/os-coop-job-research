@@ -147,7 +147,7 @@ claims:
   - id: 02-20
     claim: "Building Secure and Reliable Systems says the SRE organization at Google is working to build on least privilege through automation, aiming for Zero Touch interfaces."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, Chapter 5"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch05.html
@@ -162,6 +162,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-hard-skills-reviewer-recheck-3.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
     ai_check:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
