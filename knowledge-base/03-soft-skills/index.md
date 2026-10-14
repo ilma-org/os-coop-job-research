@@ -26,10 +26,10 @@ Assignment Appendix F. Explain why each skill matters for an SRE and the working
 The owner organizes notes (`topic-note` files) here. List them below as they are added.
 
 <!-- notes:start -->
-- [incident-command-and-communication.md](incident-command-and-communication.md): Incident command, communication and persuasion. 8 claims (03-01 to 03-08): 8 ai-checked.
-- [blameless-postmortems-and-psychological-safety.md](blameless-postmortems-and-psychological-safety.md): Blameless culture, psychological safety and working with product teams. 7 claims (03-09 to 03-10, 03-12 to 03-16): 7 ai-checked.
-- [on-call-load-and-burnout.md](on-call-load-and-burnout.md): On-call load, stress and burnout. 9 claims (03-17 to 03-25): 9 ai-checked.
-- [teamwork-collaboration-and-training.md](teamwork-collaboration-and-training.md): Teamwork, incident collaboration, design documents and approvals. 8 claims (03-26 to 03-31, 03-33 to 03-34): 8 ai-checked.
+- [incident-command-and-communication.md](incident-command-and-communication.md): Incident command, communication and persuasion. 8 claims (03-01 to 03-08): 8 human-verified.
+- [blameless-postmortems-and-psychological-safety.md](blameless-postmortems-and-psychological-safety.md): Blameless culture, psychological safety and working with product teams. 7 claims (03-09 to 03-10, 03-12 to 03-16): 7 human-verified.
+- [on-call-load-and-burnout.md](on-call-load-and-burnout.md): On-call load, stress and burnout. 9 claims (03-17 to 03-25): 9 human-verified.
+- [teamwork-collaboration-and-training.md](teamwork-collaboration-and-training.md): Teamwork, incident collaboration, design documents and approvals. 8 claims (03-26 to 03-31, 03-33 to 03-34): 8 human-verified.
 <!-- notes:end -->
 
 ## Not found yet

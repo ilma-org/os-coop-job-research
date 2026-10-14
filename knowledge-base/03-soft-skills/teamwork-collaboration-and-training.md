@@ -7,7 +7,7 @@ claims:
   - id: 03-26
     claim: "On Google's SRE Prodcast, Adam Kramer says that if they are paged for a completely specious thing, the attitude is 'please don't page us for that next time', but people should feel free to page them with new problems rather than let a problem sit and simmer."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE Prodcast transcript: Adam Kramer"
       url: https://sre.google/prodcast/transcripts/sre-prodcast-06-09/
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-27
     claim: "On Google's SRE Prodcast, Vrai Stacey says their team always adopted the view that if the on-caller needs your help, you drop what you are doing and help the on-caller."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE Prodcast transcript: Incident Response with Sarah Butt and Vrai Stacey"
       url: https://sre.google/prodcast/transcripts/sre-prodcast-03-06/
@@ -50,10 +55,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-28
     claim: "In a section headed \"Example: Google Design Document\", Building Secure and Reliable Systems says Google uses a design document template to guide new feature design and to collect feedback from stakeholders before starting an engineering project."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, Chapter 4"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch04.html
@@ -73,10 +83,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-29
     claim: "Google's Incident Management Guide says blameless postmortems are one of the core tenets of SRE culture, and that it is important to remember everyone involved in an incident had good intentions."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE: Incident Management Guide (PDF)"
       url: https://sre.google/static/pdf/IncidentManagementGuide.pdf
@@ -96,10 +111,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-30
     claim: "Google's Incident Management Guide says blaming individuals for unintended consequences during the response does not aid learning, so the focus is instead on improving systems, procedures and training to make them more resilient."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE: Incident Management Guide (PDF)"
       url: https://sre.google/static/pdf/IncidentManagementGuide.pdf
@@ -119,10 +139,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-31
     claim: "One of the lessons in Lessons Learned from Two Decades of Site Reliability Engineering says teams expected to use Google Hangouts and Google Meet to manage an incident, and that relying on these Google services when 350M users were logged out of their devices and services was, in retrospect, kind of a bad call."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Lessons Learned from Two Decades of Site Reliability Engineering (Google SRE 20th anniversary PDF)"
       url: https://sre.google/static/pdf/LessonsLearnedFromTwoDecades.pdf
@@ -142,10 +167,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-33
     claim: "Building Secure and Reliable Systems says social pressure around approvals may also lead to bad decisions."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, Chapter 5"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch05.html
@@ -165,10 +195,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-34
     claim: "Building Secure and Reliable Systems advises making sure the technology and social dynamics allow someone to say no before building a multi-party authorization system; otherwise the system is of little value."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, Chapter 5"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch05.html
@@ -188,6 +223,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
 ---
 
 # Teamwork, incident collaboration, design documents and approvals

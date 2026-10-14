@@ -7,7 +7,7 @@ claims:
   - id: 03-01
     claim: "Google SRE's lessons-learned article advises ensuring you have non-dependent backup communication channels and that you have tested them."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE lessons - key principles of site reliability engineering"
       url: https://sre.google/resources/practices-and-processes/twenty-years-of-sre-lessons-learned/
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-02
     claim: "On Google's SRE Prodcast, Peter Pellerzi says that when something goes wrong, all of their data centers have very specific protocols, for example immediately opening a common video chat that anybody who wants to can join."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE Prodcast transcript: The One With Data Centers and Peter Pellerzi"
       url: https://sre.google/prodcast/transcripts/sre-prodcast-04-02/
@@ -50,10 +55,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-03
     claim: "Google's Incident Management Guide says incident roles do not follow reporting chains and are instead based on knowledge and incident context."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE: Incident Management Guide (PDF)"
       url: https://sre.google/static/pdf/IncidentManagementGuide.pdf
@@ -73,10 +83,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-04
     claim: "Lessons Learned from Two Decades of Site Reliability Engineering says Google SRE learned the hard way that during an incident it should monitor and evaluate the severity of the situation and choose a mitigation path whose riskiness is appropriate for that severity."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Lessons Learned from Two Decades of Site Reliability Engineering (Google SRE 20th anniversary PDF)"
       url: https://sre.google/static/pdf/LessonsLearnedFromTwoDecades.pdf
@@ -96,10 +111,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-05
     claim: "Building Secure and Reliable Systems says Google has codified crisis response into a program called Incident Management at Google (IMAG), a standard, consistent way to handle all types of incidents."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, Chapter 1"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch01.html
@@ -119,10 +139,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-06
     claim: "The report Training Site Reliability Engineers says blameless postmortems help find root causes, and that when blaming is involved people tend to sweep things under the rug, which hinders finding the underlying causes and indirectly allows the same incident to happen again."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Training Site Reliability Engineers (O'Reilly report by Google authors, 2019/2020)"
       url: https://sre.google/static/pdf/TrainingSiteReliabilityEngineers.pdf
@@ -142,10 +167,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-07
     claim: "The report Training Site Reliability Engineers says that through interviews with different teams its authors found communication, agreement and trust are paramount to healthy SRE-developer relationships, and that the best functioning teams are those where it is barely known who is an SRE and who is a developer."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Training Site Reliability Engineers (O'Reilly report by Google authors, 2019/2020)"
       url: https://sre.google/static/pdf/TrainingSiteReliabilityEngineers.pdf
@@ -165,10 +195,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-08
     claim: "The Site Reliability Workbook gives, as an example, a first-person account by John Looney: an objective cost/benefit analysis showing the problem was costing Google $1,000 per hour convinced the devs to fix the problem with Looney's patch."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook: Eliminating Toil"
       url: https://sre.google/workbook/eliminating-toil/
@@ -188,6 +223,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
 ---
 
 # Incident command, communication and persuasion

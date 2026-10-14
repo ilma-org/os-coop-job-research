@@ -7,7 +7,7 @@ claims:
   - id: 03-09
     claim: "A Google SRE article on product-focused reliability says that to obtain product and user information, SRE needs to work with product managers and UX researchers, who define the product and its features using frameworks such as Jobs to be Done and Google's Critical User Journeys."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE - Product SRE, improving reliability of services"
       url: https://sre.google/resources/practices-and-processes/product-focused-reliability-for-sre/
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-10
     claim: "On Google's SRE Prodcast, Steph Hippo says that when she first got to SRE at Google, all incident command was still done on IRC, and as a junior SRE she could just follow along with outages her team was not responsible for."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE Prodcast transcript: The One With Stephanie Hippo and Observability"
       url: https://sre.google/prodcast/transcripts/sre-prodcast-05-01/
@@ -50,10 +55,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-12
     claim: "The Google SRE report Anatomy of an Incident quotes a definition of psychological safety as a belief that one will not be punished or humiliated for speaking up with ideas, questions, concerns or mistakes."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Anatomy of an Incident (Google SRE report)"
       url: https://sre.google/static/pdf/Anatomy_Of_An_Incident.pdf
@@ -73,10 +83,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-13
     claim: "The report Enterprise Roadmap to SRE says the team must feel psychologically safe when put in the high-pressure position of control over major systems, and must be able to say no to peers and leaders without fear of retribution."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Enterprise Roadmap to SRE (Google Cloud/SRE report)"
       url: https://sre.google/static/pdf/enterprise-roadmap-to-sre.pdf
@@ -96,10 +111,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-14
     claim: "The report Enterprise Roadmap to SRE says citing 'human error' when humans make mistakes has been shown to be somewhat meaningless and not an effective way to improve a system, and that SRE instead promotes blamelessness."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Enterprise Roadmap to SRE (Google Cloud/SRE report)"
       url: https://sre.google/static/pdf/enterprise-roadmap-to-sre.pdf
@@ -119,10 +139,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-15
     claim: "In its section on remediating and learning from incidents, Google's Incident Management Guide calls open and blameless postmortem writing the most effective tool Google has found for that purpose."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE: Incident Management Guide (PDF)"
       url: https://sre.google/static/pdf/IncidentManagementGuide.pdf
@@ -142,10 +167,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-16
     claim: "Google's Incident Management Guide says regular practice such as Wheel of Misfortune exercises can keep knowledge up to date and gives less experienced on-callers an opportunity to develop their skills in a safe environment."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE: Incident Management Guide (PDF)"
       url: https://sre.google/static/pdf/IncidentManagementGuide.pdf
@@ -165,6 +195,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
 ---
 
 # Blameless culture, psychological safety and working with product teams

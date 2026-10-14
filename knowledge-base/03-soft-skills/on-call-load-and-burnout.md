@@ -7,7 +7,7 @@ claims:
   - id: 03-17
     claim: "Google SRE's lessons-learned article says that to keep your cool during a high-risk, high-stress situation, it is important to practice recovery mechanisms and mitigations beforehand."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE lessons - key principles of site reliability engineering"
       url: https://sre.google/resources/practices-and-processes/twenty-years-of-sre-lessons-learned/
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-18
     claim: "On Google's SRE Prodcast, Steve McGhee recalls a method that teams or individuals could opt in to: first a text, then something else, and if they did not respond 90 seconds later, Telebot would wake them up."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE Prodcast transcript: Special Episode: You Missed a Page from Telebot"
       url: https://sre.google/prodcast/transcripts/sre-prodcast-03-14/
@@ -50,10 +55,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-19
     claim: "A Google SRE article on heroism defines heroism as when there is a systemic problem or gap in a system and an individual decides to fill that gap."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Why heroism is bad, and what we can do to stop it"
       url: https://sre.google/resources/practices-and-processes/no-heroes/
@@ -73,10 +83,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-20
     claim: "A Google SRE article on heroism says heroism should not be planned for or relied on in the long term; if you commit to an SLO, you should be able to meet it without any heroes."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Why heroism is bad, and what we can do to stop it"
       url: https://sre.google/resources/practices-and-processes/no-heroes/
@@ -96,10 +111,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-21
     claim: "A Google SRE article on heroism says on-call, when done right, does not require constant heroism."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Why heroism is bad, and what we can do to stop it"
       url: https://sre.google/resources/practices-and-processes/no-heroes/
@@ -119,10 +139,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-22
     claim: "On Google's SRE Prodcast, Vrai Stacey recalls a team with a three-minute SLO: after being paged, they were expected to be in front of a computer fixing the problem within three minutes."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Google SRE Prodcast transcript: Incident Response with Sarah Butt and Vrai Stacey"
       url: https://sre.google/prodcast/transcripts/sre-prodcast-03-06/
@@ -142,10 +167,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-23
     claim: "The Google SRE report Anatomy of an Incident says lack of accountability, poor communications, missing hierarchy and freelancing/heroes can lengthen resolution times, add stress for on-callers and responders, and impact customers."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Anatomy of an Incident (Google SRE report)"
       url: https://sre.google/static/pdf/Anatomy_Of_An_Incident.pdf
@@ -165,10 +195,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-24
     claim: "The Google SRE report Anatomy of an Incident says it can be challenging and expensive to find SREs with the right mix of skills to respond to incidents, so you don't want to burn them out by designating them solely to incident response."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Anatomy of an Incident (Google SRE report)"
       url: https://sre.google/static/pdf/Anatomy_Of_An_Incident.pdf
@@ -188,10 +223,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 03-25
     claim: "The report Training Site Reliability Engineers says too much on-call can burn SREs out, while too little can cause them to lose familiarity with the service and troubleshooting processes."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Training Site Reliability Engineers (O'Reilly report by Google authors, 2019/2020)"
       url: https://sre.google/static/pdf/TrainingSiteReliabilityEngineers.pdf
@@ -211,6 +251,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
 ---
 
 # On-call load, stress and burnout
