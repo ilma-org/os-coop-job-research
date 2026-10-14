@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 11-os-course-concepts
 title: "Processes, threads, scheduling and virtual memory for SRE"
-updated: 2026-10-12
+updated: 2026-10-14
 claims:
   - id: 11-01
     claim: "The Linux scheduler selects which runnable thread executes on the CPU next."
@@ -285,6 +285,11 @@ claims:
       platform: Codex
       model: "gpt-6.1-sol"
       prompt_log: prompts/2026-10-12-TonCS05-11-28-author-check-2.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-11-reviewer-recheck-3.md
       result: supported
   - id: 11-29
     claim: "Recommended course connection: use the lecture model of address translation and demand paging to interpret virtual mappings, resident memory and changes in major-fault counts; consider reclaim-related allocation stalls when testing a memory-pressure hypothesis. This is a proposed SRE analysis exercise, not proof that every page fault indicates exhaustion or failure."
