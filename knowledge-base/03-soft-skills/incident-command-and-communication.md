@@ -22,6 +22,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
+      result: supported
   - id: 03-02
     claim: "On Google's SRE Prodcast, Peter Pellerzi says that when something goes wrong, all of their data centers have very specific protocols, for example immediately opening a common video chat that anybody who wants to can join."
     type: org-fact
@@ -39,6 +44,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
   - id: 03-03
     claim: "Google's Incident Management Guide says incident roles do not follow reporting chains and are instead based on knowledge and incident context."
@@ -58,6 +68,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
+      result: supported
   - id: 03-04
     claim: "Lessons Learned from Two Decades of Site Reliability Engineering says Google SRE learned the hard way that during an incident it should monitor and evaluate the severity of the situation and choose a mitigation path whose riskiness is appropriate for that severity."
     type: org-fact
@@ -75,6 +90,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
   - id: 03-05
     claim: "Building Secure and Reliable Systems says Google has codified crisis response into a program called Incident Management at Google (IMAG), a standard, consistent way to handle all types of incidents."
@@ -94,6 +114,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
+      result: supported
   - id: 03-06
     claim: "The report Training Site Reliability Engineers says blameless postmortems help find root causes, and that when blaming is involved people tend to sweep things under the rug, which hinders finding the underlying causes and indirectly allows the same incident to happen again."
     type: org-fact
@@ -111,6 +136,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
   - id: 03-07
     claim: "The report Training Site Reliability Engineers says that through interviews with different teams its authors found communication, agreement and trust are paramount to healthy SRE-developer relationships, and that the best functioning teams are those where it is barely known who is an SRE and who is a developer."
@@ -130,6 +160,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
+      result: supported
   - id: 03-08
     claim: "The Site Reliability Workbook gives, as an example, a first-person account by John Looney: an objective cost/benefit analysis showing the problem was costing Google $1,000 per hour convinced the devs to fix the problem with Looney's patch."
     type: org-fact
@@ -147,6 +182,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-nine14282-soft-skills-author-check-3.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
 ---
 
