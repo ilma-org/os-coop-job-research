@@ -22,6 +22,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
+      result: supported
   - id: 03-18
     claim: "On Google's SRE Prodcast, Steve McGhee recalls a method that teams or individuals could opt in to: first a text, then something else, and if they did not respond 90 seconds later, Telebot would wake them up."
     type: org-fact
@@ -39,6 +44,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check-2.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
   - id: 03-19
     claim: "A Google SRE article on heroism defines heroism as when there is a systemic problem or gap in a system and an individual decides to fill that gap."
@@ -58,6 +68,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
+      result: supported
   - id: 03-20
     claim: "A Google SRE article on heroism says heroism should not be planned for or relied on in the long term; if you commit to an SLO, you should be able to meet it without any heroes."
     type: fact
@@ -75,6 +90,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
   - id: 03-21
     claim: "A Google SRE article on heroism says on-call, when done right, does not require constant heroism."
@@ -94,6 +114,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
+      result: supported
   - id: 03-22
     claim: "On Google's SRE Prodcast, Vrai Stacey recalls a team with a three-minute SLO: after being paged, they were expected to be in front of a computer fixing the problem within three minutes."
     type: org-fact
@@ -111,6 +136,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check-2.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
   - id: 03-23
     claim: "The Google SRE report Anatomy of an Incident says lack of accountability, poor communications, missing hierarchy and freelancing/heroes can lengthen resolution times, add stress for on-callers and responders, and impact customers."
@@ -130,6 +160,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
+      result: supported
   - id: 03-24
     claim: "The Google SRE report Anatomy of an Incident says it can be challenging and expensive to find SREs with the right mix of skills to respond to incidents, so you don't want to burn them out by designating them solely to incident response."
     type: fact
@@ -148,6 +183,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
+      result: supported
   - id: 03-25
     claim: "The report Training Site Reliability Engineers says too much on-call can burn SREs out, while too little can cause them to lose familiarity with the service and troubleshooting processes."
     type: org-fact
@@ -165,6 +205,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check-2.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
 ---
 
