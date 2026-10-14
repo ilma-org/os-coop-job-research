@@ -4,29 +4,6 @@ topic: 10-server-and-database-software
 title: "Replication, consensus, backups and data integrity"
 updated: 2026-10-14
 claims:
-  - id: 10-19
-    claim: "A Google SRE prodverb says backups are only as good as the last restore."
-    type: fact
-    status: ai-checked
-    source:
-      title: "Google SRE - Capture sre beliefs: Prodverbs by Perry Lorier"
-      url: https://sre.google/prodverbs/
-      kind: official-doc
-      accessed: 2026-10-07
-      archive: null
-    quote: "Backups are only as good as the last restore."
-    os_concepts: []
-    pr: null
-    ai_check:
-      platform: Claude Code
-      model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
-      result: supported
-    ai_recheck:
-      platform: Claude Code
-      model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
-      result: supported
   - id: 10-20
     claim: "The report Creating a Production Launch Plan says a product should have backups, its teams should have experience recovering the data fully, and data corruption risks, especially ones that can go unnoticed, must be added to the Risks and Mitigations table."
     type: fact
@@ -153,29 +130,6 @@ claims:
       accessed: 2026-10-07
       archive: https://web.archive.org/web/20261001045117/https://sre.google/sre-book/data-integrity/
     quote: "However, the real focus of such backup efforts should be data recovery, which distinguishes real backups from archives. As is sometimes observed: No one really wants to make backups; what people really want are restores."
-    os_concepts: []
-    pr: null
-    ai_check:
-      platform: Claude Code
-      model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
-      result: supported
-    ai_recheck:
-      platform: Claude Code
-      model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
-      result: supported
-  - id: 10-26
-    claim: "The SRE book says that in designing a data integrity program, it's important to recognize that replication and redundancy are not recoverability."
-    type: fact
-    status: ai-checked
-    source:
-      title: "Site Reliability Engineering (SRE book) - Data Integrity: What You Read Is What You Wrote"
-      url: https://sre.google/sre-book/data-integrity/
-      kind: official-doc
-      accessed: 2026-10-07
-      archive: https://web.archive.org/web/20261001045117/https://sre.google/sre-book/data-integrity/
-    quote: "In designing a data integrity program, it’s important to recognize that replication and redundancy are not recoverability."
     os_concepts: []
     pr: null
     ai_check:

@@ -73,29 +73,6 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
-  - id: 10-04
-    claim: "Building Secure and Reliable Systems gives, as an example of a desired reliability property, that when the load on any component is greater than it can handle, the component serves overload errors rather than crashing, to reduce the risk of cascading failure."
-    type: fact
-    status: ai-checked
-    source:
-      title: "Building Secure and Reliable Systems, Chapter 6"
-      url: https://google.github.io/building-secure-and-reliable-systems/raw/ch06.html
-      kind: official-doc
-      accessed: 2026-10-07
-      archive: https://web.archive.org/web/20260616012631/https://google.github.io/building-secure-and-reliable-systems/raw/ch06.html
-    quote: "When the load on any component is greater than that component can handle, in order to reduce the risk of cascading failure, that component will serve overload errors rather than crashing."
-    os_concepts: []
-    pr: null
-    ai_check:
-      platform: Claude Code
-      model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-2.md
-      result: supported
-    ai_recheck:
-      platform: Claude Code
-      model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
-      result: supported
   - id: 10-05
     claim: "Building Secure and Reliable Systems says load shedding is done by returning errors rather than serving requests, and throttling of clients by delaying responses until closer to the request deadline."
     type: fact
@@ -136,29 +113,6 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-2.md
-      result: supported
-    ai_recheck:
-      platform: Claude Code
-      model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
-      result: supported
-  - id: 10-07
-    claim: "Building Secure and Reliable Systems gives as an example the open source Envoy HTTP proxy, which is often used for load balancing and supports a fault injection HTTP filter that can return arbitrary errors for a percentage of traffic or delay requests for a specific amount of time."
-    type: fact
-    status: ai-checked
-    source:
-      title: "Building Secure and Reliable Systems, Chapter 16: Disaster Planning"
-      url: https://google.github.io/building-secure-and-reliable-systems/raw/ch16.html
-      kind: official-doc
-      accessed: 2026-10-07
-      archive: null
-    quote: "As an example, consider the open source Envoy HTTP proxy, which is often used for load balancing. In addition to its many load-balancing features, the proxy supports a fault injection HTTP filter, which you can use to return arbitrary errors for a percentage of traffic or to delay requests for a specific amount of time."
-    os_concepts: []
-    pr: null
-    ai_check:
-      platform: Claude Code
-      model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
       result: supported
     ai_recheck:
       platform: Claude Code

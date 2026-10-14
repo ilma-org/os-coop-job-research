@@ -4,29 +4,6 @@ topic: 10-server-and-database-software
 title: "Message queues, pipelines and operating data services"
 updated: 2026-10-14
 claims:
-  - id: 10-28
-    claim: "On the Google SRE Prodcast, Swapnil Haria says there are many ways to do admission control right, FIFO among them."
-    type: fact
-    status: ai-checked
-    source:
-      title: "Google SRE Prodcast transcript: The One With AI Agents, Ramón Llamas, and Swapnil Haria"
-      url: https://sre.google/prodcast/transcripts/sre-prodcast-04-09/
-      kind: other
-      accessed: 2026-10-12
-      archive: null
-    quote: "Now, with admission control, there are many ways to do it right. There is FIFO."
-    os_concepts: []
-    pr: null
-    ai_check:
-      platform: Claude Code
-      model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
-      result: supported
-    ai_recheck:
-      platform: Claude Code
-      model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
-      result: supported
   - id: 10-29
     claim: "Building Secure and Reliable Systems says that if a message queue is not designed to be reliable, for example if it stores data in volatile memory only, you can lose transactions, a new risk surface."
     type: fact
@@ -107,29 +84,6 @@ claims:
       accessed: 2026-10-12
       archive: https://web.archive.org/web/20260827232609/https://sre.google/workbook/data-processing/
     quote: "There are two main steps involved in fixing corrupt data: Mitigate the impact by preventing further corrupt data from entering the system. Restore your data from a previously known good version, or reprocess to repair the data."
-    os_concepts: []
-    pr: null
-    ai_check:
-      platform: Claude Code
-      model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-2.md
-      result: supported
-    ai_recheck:
-      platform: Claude Code
-      model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
-      result: supported
-  - id: 10-33
-    claim: "In a case study, the SRE Workbook says NFS/CIFS protocols were never designed to operate over a WAN, so user experience rapidly degraded with even a few tens of milliseconds of latency."
-    type: fact
-    status: ai-checked
-    source:
-      title: "The Site Reliability Workbook: Eliminating Toil"
-      url: https://sre.google/workbook/eliminating-toil/
-      kind: official-doc
-      accessed: 2026-10-07
-      archive: https://web.archive.org/web/20260909103330/https://sre.google/workbook/eliminating-toil/
-    quote: "NFS/CIFS protocols were never designed to operate over a WAN, so user experience rapidly degraded with even a few tens of milliseconds of latency."
     os_concepts: []
     pr: null
     ai_check:
