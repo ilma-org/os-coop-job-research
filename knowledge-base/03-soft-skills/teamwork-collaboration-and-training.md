@@ -22,6 +22,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
+      result: supported
   - id: 03-27
     claim: "On Google's SRE Prodcast, Vrai Stacey says their team always adopted the view that if the on-caller needs your help, you drop what you are doing and help the on-caller."
     type: org-fact
@@ -39,6 +44,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
   - id: 03-28
     claim: "In a section headed \"Example: Google Design Document\", Building Secure and Reliable Systems says Google uses a design document template to guide new feature design and to collect feedback from stakeholders before starting an engineering project."
@@ -58,6 +68,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-nine14282-soft-skills-author-check-3.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
+      result: supported
   - id: 03-29
     claim: "Google's Incident Management Guide says blameless postmortems are one of the core tenets of SRE culture, and that it is important to remember everyone involved in an incident had good intentions."
     type: fact
@@ -75,6 +90,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
   - id: 03-30
     claim: "Google's Incident Management Guide says blaming individuals for unintended consequences during the response does not aid learning, so the focus is instead on improving systems, procedures and training to make them more resilient."
@@ -94,6 +114,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
+      result: supported
   - id: 03-31
     claim: "One of the lessons in Lessons Learned from Two Decades of Site Reliability Engineering says teams expected to use Google Hangouts and Google Meet to manage an incident, and that relying on these Google services when 350M users were logged out of their devices and services was, in retrospect, kind of a bad call."
     type: org-fact
@@ -111,6 +136,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check-2.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
   - id: 03-33
     claim: "Building Secure and Reliable Systems says social pressure around approvals may also lead to bad decisions."
@@ -130,6 +160,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-nine14282-soft-skills-author-check-3.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
+      result: supported
   - id: 03-34
     claim: "Building Secure and Reliable Systems advises making sure the technology and social dynamics allow someone to say no before building a multi-party authorization system; otherwise the system is of little value."
     type: fact
@@ -147,6 +182,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-03-reviewer-recheck.md
       result: supported
 ---
 
