@@ -526,24 +526,6 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-bximai-01-position-author-check-3.md
       result: supported
-  - id: 01-113
-    claim: "The Google SRE book derives a maximum of 2 incidents per 12-hour on-call shift from its finding that dealing with an on-call incident takes 6 hours on average. The 2 per shift is derived from that average, not a fixed limit."
-    type: org-fact
-    status: ai-checked
-    source:
-      title: "Site Reliability Engineering, Ch.11 Being On-Call"
-      url: https://sre.google/sre-book/being-on-call/
-      kind: official-doc
-      accessed: 2026-10-14
-      archive: https://web.archive.org/web/20261011174517/https://sre.google/sre-book/being-on-call/
-    quote: "We’ve found that on average, dealing with the tasks involved in an on-call incident —root-cause analysis, remediation, and follow-up activities like writing a postmortem and fixing bugs—takes 6 hours. It follows that the maximum number of incidents per day is 2 per 12-hour on-call shift."
-    os_concepts: []
-    pr: null
-    ai_check:
-      platform: Claude Code (desktop app)
-      model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-14-bximai-01-position-author-check-3.md
-      result: supported
   - id: 01-114
     claim: "In the Workbook's case study of one new Google SRE team, the on-call guidelines the team reviewed said the on-call engineer reads the handoff from the previous shift at the start of each shift. This is one team's example from the Workbook, not a statement of general Google practice."
     type: org-fact
@@ -640,13 +622,31 @@ claims:
     status: unverified
     os_concepts: []
     pr: null
+  - id: 01-125
+    claim: "The Google SRE book derives a maximum of 2 incidents per 12-hour on-call shift from its finding that dealing with an on-call incident takes 6 hours on average."
+    type: org-fact
+    status: ai-checked
+    source:
+      title: "Site Reliability Engineering, Ch.11 Being On-Call"
+      url: https://sre.google/sre-book/being-on-call/
+      kind: official-doc
+      accessed: 2026-10-14
+      archive: https://web.archive.org/web/20261011174517/https://sre.google/sre-book/being-on-call/
+    quote: "We’ve found that on average, dealing with the tasks involved in an on-call incident —root-cause analysis, remediation, and follow-up activities like writing a postmortem and fixing bugs—takes 6 hours. It follows that the maximum number of incidents per day is 2 per 12-hour on-call shift."
+    os_concepts: []
+    pr: null
+    ai_check:
+      platform: Claude Code (desktop app)
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-bximai-01-position-author-check-7.md
+      result: supported
 ---
 
 # Daily tasks and on-call
 
 ## Summary
 
-Google's SRE books describe an SRE's work as on-call duty plus operational work that arrives as pages, tickets and ongoing operational activities (01-12, 01-26, 01-30). On-call engineers triage and resolve pages, handle nonpaging events and hand over to the next shift, and the books give limits on how much on-call and operational work one SRE should carry (01-105, 01-15, 01-122, 01-113, 01-116). They also describe supporting practices: escalation paths, postmortems, playbooks, actionable alerts and the option to give back the pager (01-20, 01-21, 01-35, 01-23, 01-120). The sources describe Google SRE teams as a general pattern. They do not give a day-by-day schedule for one SRE, and this note does not infer one.
+Google's SRE books describe an SRE's work as on-call duty plus operational work that arrives as pages, tickets and ongoing operational activities (01-12, 01-26, 01-30). On-call engineers triage and resolve pages, handle nonpaging events and hand over to the next shift, and the books give limits on how much on-call and operational work one SRE should carry (01-105, 01-15, 01-122, 01-125, 01-116). They also describe supporting practices: escalation paths, postmortems, playbooks, actionable alerts and the option to give back the pager (01-20, 01-21, 01-35, 01-23, 01-120). The sources describe Google SRE teams as a general pattern. They do not give a day-by-day schedule for one SRE, and this note does not infer one.
 
 ## Key points
 
@@ -654,7 +654,7 @@ Google's SRE books describe an SRE's work as on-call duty plus operational work 
 - Responding to a page: typical response times are 5 minutes for user-facing or time-critical services and 30 minutes for less time-sensitive ones; after acknowledging a page the engineer triages and works toward resolution, involving others and escalating as needed. (01-13, 01-105)
 - Other work on shift: nonpaging events such as lower priority alerts or software releases can be handled or vetted by the on-call engineer during business hours; tickets may go to the primary on-call, the secondary, or a dedicated ticket person. (01-15, 01-29)
 - Rotation structure: many teams run primary and secondary rotations, and pages are most commonly managed by a dedicated primary on-call engineer. (01-16, 01-28)
-- Workload limits: at least 50% of SRE time goes to engineering; of the remainder, no more than 25% goes to on-call and up to another 25% to other operational work. Reading the 25% as a share of total SRE time is an assumption, based on the book's sizing example of eight engineers, each on-call one week in every month. The maximum of 2 incidents per 12-hour on-call shift is derived from a 6-hour average per incident, not a fixed limit. (01-122, 01-111, 01-123, 01-113)
+- Workload limits: at least 50% of SRE time goes to engineering; of the remainder, no more than 25% goes to on-call and up to another 25% to other operational work. Reading the 25% as a share of total SRE time is an assumption, based on the book's sizing example of eight engineers, each on-call one week in every month. The book derives a maximum of 2 incidents per 12-hour on-call shift from a 6-hour average per incident. (01-122, 01-111, 01-123, 01-125)
 - Operational load types: pages, tickets and ongoing operational activities; toil is manual, repetitive, automatable, tactical work with no enduring value that scales linearly, and handling pager alerts counts as toil. (01-26, 01-27, 01-24, 01-25)
 - Handoffs (one new Google SRE team's guidelines in a Workbook case study, not general Google practice): read the previous shift's handoff at the start, minimize user impact first, send a handoff email at the end. (01-114, 01-115, 01-116)
 - Support for on-call: clear escalation paths, defined incident-management procedures and a blameless postmortem culture; postmortems with a full timeline after significant incidents; playbooks for automated alerts; all paging alerts should be actionable. (01-20, 01-21, 01-35, 01-23)
