@@ -22,6 +22,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-4.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      result: supported
   - id: 10-02
     claim: "In a section headed \"Example: Google's frontend design\", Building Secure and Reliable Systems says GFE also terminates traffic for incoming HTTP(S), TCP and TLS proxies, provides DDoS attack countermeasures, and routes and load balances traffic to Google Cloud services."
     type: org-fact
@@ -39,6 +44,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-4.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
   - id: 10-03
     claim: "In a section headed \"Example: Google's frontend design\", Building Secure and Reliable Systems says that if a service becomes overloaded, GFE can serve as a mitigation point by dropping or absorbing connections before the load reaches the backends."
@@ -58,6 +68,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-4.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      result: supported
   - id: 10-04
     claim: "Building Secure and Reliable Systems gives, as an example of a desired reliability property, that when the load on any component is greater than it can handle, the component serves overload errors rather than crashing, to reduce the risk of cascading failure."
     type: fact
@@ -75,6 +90,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-2.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
   - id: 10-05
     claim: "Building Secure and Reliable Systems says load shedding is done by returning errors rather than serving requests, and throttling of clients by delaying responses until closer to the request deadline."
@@ -94,6 +114,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      result: supported
   - id: 10-06
     claim: "Building Secure and Reliable Systems says that when the load on a component starts to exceed its capacity, you want it to serve errors for all excessive requests rather than crash, because crashing makes all of the component's capacity unavailable, not just the capacity for the excess requests."
     type: fact
@@ -111,6 +136,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-2.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
   - id: 10-07
     claim: "Building Secure and Reliable Systems gives as an example the open source Envoy HTTP proxy, which is often used for load balancing and supports a fault injection HTTP filter that can return arbitrary errors for a percentage of traffic or delay requests for a specific amount of time."
@@ -130,6 +160,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      result: supported
   - id: 10-08
     claim: "The SRE Workbook says GCLB does not use DNS load balancing, because DNS-based load balancing relies on client cooperation to properly expire and refetch DNS records."
     type: org-fact
@@ -148,6 +183,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      result: supported
   - id: 10-09
     claim: "The SRE book says that no matter how efficient a load balancing policy is, eventually some part of a system will become overloaded, and that gracefully handling overload conditions is fundamental to running a reliable serving system."
     type: fact
@@ -165,6 +205,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-2.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
 ---
 
