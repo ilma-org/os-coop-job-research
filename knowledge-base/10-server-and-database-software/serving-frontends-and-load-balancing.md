@@ -2,10 +2,10 @@
 doc_type: topic-note
 topic: 10-server-and-database-software
 title: "Front ends, load balancing and overload handling"
-updated: 2026-10-12
+updated: 2026-10-14
 claims:
   - id: 10-01
-    claim: "Building Secure and Reliable Systems says Google Front End (GFE) serves as a frontend layer to most Google services, implemented as a microservice, so these services are not directly exposed to the internet."
+    claim: "In a section headed \"Example: Google's frontend design\", Building Secure and Reliable Systems says Google Front End (GFE) serves as a frontend layer to most Google services, implemented as a microservice, so these services are not directly exposed to the internet."
     type: org-fact
     status: ai-checked
     source:
@@ -20,10 +20,10 @@ claims:
     ai_check:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-2.md
+      prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-4.md
       result: supported
   - id: 10-02
-    claim: "Building Secure and Reliable Systems says GFE also terminates traffic for incoming HTTP(S), TCP and TLS proxies, provides DDoS attack countermeasures, and routes and load balances traffic to Google Cloud services."
+    claim: "In a section headed \"Example: Google's frontend design\", Building Secure and Reliable Systems says GFE also terminates traffic for incoming HTTP(S), TCP and TLS proxies, provides DDoS attack countermeasures, and routes and load balances traffic to Google Cloud services."
     type: org-fact
     status: ai-checked
     source:
@@ -38,10 +38,10 @@ claims:
     ai_check:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-2.md
+      prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-4.md
       result: supported
   - id: 10-03
-    claim: "Building Secure and Reliable Systems says that if a service becomes overloaded, GFE can serve as a mitigation point by dropping or absorbing connections before the load reaches the backends."
+    claim: "In a section headed \"Example: Google's frontend design\", Building Secure and Reliable Systems says that if a service becomes overloaded, GFE can serve as a mitigation point by dropping or absorbing connections before the load reaches the backends."
     type: org-fact
     status: ai-checked
     source:
@@ -56,7 +56,7 @@ claims:
     ai_check:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-2.md
+      prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-4.md
       result: supported
   - id: 10-04
     claim: "Building Secure and Reliable Systems gives, as an example of a desired reliability property, that when the load on any component is greater than it can handle, the component serves overload errors rather than crashing, to reduce the risk of cascading failure."
@@ -172,13 +172,13 @@ claims:
 
 ## Summary
 
-Building Secure and Reliable Systems says Google Front End (GFE) is a frontend layer to most Google services that terminates traffic, provides DDoS countermeasures, and routes and load balances traffic to Google Cloud services (10-01, 10-02), and that it can drop or absorb connections when a service is overloaded (10-03). The same book says a component should serve errors for excessive requests rather than crash (10-04, 10-06), describes load shedding and client throttling (10-05) and gives Envoy's fault injection filter as an example (10-07). The SRE Workbook says GCLB does not use DNS load balancing because DNS-based load balancing relies on client cooperation (10-08), and the SRE book says some part of a system will eventually become overloaded however efficient its load balancing policy is (10-09). Each claim rests on one source; no second source was compared, and this note has no claim yet on web and application servers such as Apache or Nginx.
+In an example section on Google's frontend design, Building Secure and Reliable Systems says Google Front End (GFE) is a frontend layer to most Google services that terminates traffic, provides DDoS countermeasures, and routes and load balances traffic to Google Cloud services (10-01, 10-02), and that it can drop or absorb connections when a service is overloaded (10-03). The same book says a component should serve errors for excessive requests rather than crash (10-04, 10-06), describes load shedding and client throttling (10-05) and gives Envoy's fault injection filter as an example (10-07). The SRE Workbook says GCLB does not use DNS load balancing because DNS-based load balancing relies on client cooperation (10-08), and the SRE book says some part of a system will eventually become overloaded however efficient its load balancing policy is (10-09). Each claim rests on one source; no second source was compared, and this note has no claim yet on web and application servers such as Apache or Nginx.
 
 ## Key points
 
-- Building Secure and Reliable Systems says GFE serves as a frontend layer to most Google services, so they are not directly exposed to the internet (10-01).
-- The same book says GFE terminates HTTP(S), TCP and TLS proxy traffic, provides DDoS countermeasures, and routes and load balances traffic to Google Cloud services (10-02).
-- The same book says that if a service becomes overloaded, GFE can drop or absorb connections before the load reaches the backends (10-03).
+- In a section headed "Example: Google's frontend design", Building Secure and Reliable Systems says GFE serves as a frontend layer to most Google services, so they are not directly exposed to the internet (10-01).
+- The same example section says GFE terminates HTTP(S), TCP and TLS proxy traffic, provides DDoS countermeasures, and routes and load balances traffic to Google Cloud services (10-02).
+- The same example section says that if a service becomes overloaded, GFE can drop or absorb connections before the load reaches the backends (10-03).
 - The same book says a component under too much load should serve errors rather than crash, because crashing removes all of its capacity (10-04, 10-06).
 - The same book says load shedding returns errors rather than serving requests, and throttling delays responses until closer to the request deadline (10-05).
 - The same book gives Envoy as an example of a proxy with a fault injection filter that can return errors or delay requests (10-07).
@@ -191,9 +191,9 @@ Source years in this note: 2020, 2018, 2016. A year is the publication or last-u
 
 ## Claims at a glance
 
-- `10-01` (org-fact): Building Secure and Reliable Systems says Google Front End (GFE) serves as a frontend layer to most Google services, implemented as a microservice, so these services are not directly exposed to the internet.
-- `10-02` (org-fact): Building Secure and Reliable Systems says GFE also terminates traffic for incoming HTTP(S), TCP and TLS proxies, provides DDoS attack countermeasures, and routes and load balances traffic to Google Cloud services.
-- `10-03` (org-fact): Building Secure and Reliable Systems says that if a service becomes overloaded, GFE can serve as a mitigation point by dropping or absorbing connections before the load reaches the backends.
+- `10-01` (org-fact): In a section headed "Example: Google's frontend design", Building Secure and Reliable Systems says Google Front End (GFE) serves as a frontend layer to most Google services, implemented as a microservice, so these services are not directly exposed to the internet.
+- `10-02` (org-fact): In a section headed "Example: Google's frontend design", Building Secure and Reliable Systems says GFE also terminates traffic for incoming HTTP(S), TCP and TLS proxies, provides DDoS attack countermeasures, and routes and load balances traffic to Google Cloud services.
+- `10-03` (org-fact): In a section headed "Example: Google's frontend design", Building Secure and Reliable Systems says that if a service becomes overloaded, GFE can serve as a mitigation point by dropping or absorbing connections before the load reaches the backends.
 - `10-04` (fact): Building Secure and Reliable Systems gives, as an example of a desired reliability property, that when the load on any component is greater than it can handle, the component serves overload errors rather than crashing, to reduce the risk of cascading failure.
 - `10-05` (fact): Building Secure and Reliable Systems says load shedding is done by returning errors rather than serving requests, and throttling of clients by delaying responses until closer to the request deadline.
 - `10-06` (fact): Building Secure and Reliable Systems says that when the load on a component starts to exceed its capacity, you want it to serve errors for all excessive requests rather than crash, because crashing makes all of the component's capacity unavailable, not just the capacity for the excess requests.
@@ -205,3 +205,4 @@ Source years in this note: 2020, 2018, 2016. A year is the publication or last-u
 
 - `org-fact` claims carry a Wayback Machine snapshot in `source.archive`. The exact quote was found in that snapshot on the claim's `source.accessed` date.
 - Podcast speakers are named in the claim. A speaker who is not a Google employee is not evidence about Google, so those claims are `fact`, not `org-fact`.
+- `10-01` to `10-03` come from a section of Building Secure and Reliable Systems headed "Example: Google's frontend design". They describe Google's design as the book's example.

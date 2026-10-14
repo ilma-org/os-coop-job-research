@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 10-server-and-database-software
 title: "Storage and database systems: GFS, Colossus, Spanner and caches"
-updated: 2026-10-12
+updated: 2026-10-14
 claims:
   - id: 10-10
     claim: "On the Google SRE Prodcast, Silvia Botros says it is more about predicting failure and planning accordingly, so you don't want a single database failure to take down your whole product."
@@ -23,7 +23,7 @@ claims:
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
       result: supported
   - id: 10-11
-    claim: "In an outage example, Building Secure and Reliable Systems says that, according to normal behavior, a Spanner server buffered recent writes in memory and, as it ran low on memory, flushed the data to files on Colossus."
+    claim: "In a section headed \"Example: Temporary Files\", Building Secure and Reliable Systems says that, according to normal behavior, a Spanner server buffered recent writes in memory and, as it ran low on memory, flushed the data to files on Colossus."
     type: org-fact
     status: ai-checked
     source:
@@ -38,7 +38,7 @@ claims:
     ai_check:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-3.md
+      prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-4.md
       result: supported
   - id: 10-12
     claim: "The report Case Studies in Infrastructure Change Management says GFS was designed in 2001 as Google's first cluster-level file system, supported many petabytes of storage and allowed thousands of servers to interact with thousands of clients."
@@ -172,14 +172,14 @@ claims:
 
 ## Summary
 
-The report Case Studies in Infrastructure Change Management describes GFS, designed in 2001 as Google's first cluster-level file system, with chunkservers storing replicated chunks (10-12, 10-13), and Colossus, where D servers managed access to the raw data (10-14). In an outage example, Building Secure and Reliable Systems says a Spanner server flushed buffered writes to files on Colossus when it ran low on memory (10-11). The report Creating a Production Launch Plan gives examples of a relational database with a transaction throughput limit that adding CPU or memory can scale only so far (10-15) and of a cold cache that sends all video view requests to a metadata service (10-16), and the SRE book says caches sometimes become hard dependencies and that moving them to a separate binary like memcache may be worthwhile (10-17, 10-18). On the Google SRE Prodcast, Silvia Botros says you don't want a single database failure to take down your whole product (10-10). Each claim rests on one source; no second source was compared, and this note has no claim yet on operating MySQL, PostgreSQL, MongoDB, Redis or Bigtable.
+The report Case Studies in Infrastructure Change Management describes GFS, designed in 2001 as Google's first cluster-level file system, with chunkservers storing replicated chunks (10-12, 10-13), and Colossus, where D servers managed access to the raw data (10-14). In an outage example headed "Example: Temporary Files", Building Secure and Reliable Systems says a Spanner server flushed buffered writes to files on Colossus when it ran low on memory (10-11). The report Creating a Production Launch Plan gives examples of a relational database with a transaction throughput limit that adding CPU or memory can scale only so far (10-15) and of a cold cache that sends all video view requests to a metadata service (10-16), and the SRE book says caches sometimes become hard dependencies and that moving them to a separate binary like memcache may be worthwhile (10-17, 10-18). On the Google SRE Prodcast, Silvia Botros says you don't want a single database failure to take down your whole product (10-10). Each claim rests on one source; no second source was compared, and this note has no claim yet on operating MySQL, PostgreSQL, MongoDB, Redis or Bigtable.
 
 ## Key points
 
 - The report Case Studies in Infrastructure Change Management says GFS was designed in 2001 as Google's first cluster-level file system (10-12).
 - The same report says GFS chunkservers stored chunks on the local filesystem, and the client code replicated chunks to other chunkservers (10-13).
 - The same report says that in Colossus the D server managed access to the raw data, while Colossus managed the map of which data was on which D server (10-14).
-- In an outage example, Building Secure and Reliable Systems says a Spanner server buffered recent writes in memory and flushed them to files on Colossus when it ran low on memory (10-11).
+- In an outage example headed "Example: Temporary Files", Building Secure and Reliable Systems says a Spanner server buffered recent writes in memory and flushed them to files on Colossus when it ran low on memory (10-11).
 - The report Creating a Production Launch Plan gives as an example that a relational database with an upper limit on transaction throughput can be scaled only so far by adding CPU or memory (10-15).
 - The same report says a product may need significantly more resources on a cold cache (10-16).
 - The SRE book says caches are sometimes added for performance but wind up being hard dependencies (10-17), and that moving caching to a separate binary like memcache may be worthwhile (10-18).
@@ -192,7 +192,7 @@ Source years in this note: 2024, 2020, 2019, 2016. A year is the publication or 
 ## Claims at a glance
 
 - `10-10` (fact): On the Google SRE Prodcast, Silvia Botros says it is more about predicting failure and planning accordingly, so you don't want a single database failure to take down your whole product.
-- `10-11` (org-fact): In an outage example, Building Secure and Reliable Systems says that, according to normal behavior, a Spanner server buffered recent writes in memory and, as it ran low on memory, flushed the data to files on Colossus.
+- `10-11` (org-fact): In a section headed "Example: Temporary Files", Building Secure and Reliable Systems says that, according to normal behavior, a Spanner server buffered recent writes in memory and, as it ran low on memory, flushed the data to files on Colossus.
 - `10-12` (org-fact): The report Case Studies in Infrastructure Change Management says GFS was designed in 2001 as Google's first cluster-level file system, supported many petabytes of storage and allowed thousands of servers to interact with thousands of clients.
 - `10-13` (org-fact): The report Case Studies in Infrastructure Change Management says that in GFS, machines ran a daemon called a chunkserver to store chunks on the local filesystem, while the GFS client code split files into chunks, stored them on chunkservers and replicated them to other chunkservers for redundancy and bandwidth.
 - `10-14` (org-fact): The report Case Studies in Infrastructure Change Management says that in Colossus, the D server managed access to the raw data while Colossus managed the map of what data was on which D server.
@@ -205,3 +205,4 @@ Source years in this note: 2024, 2020, 2019, 2016. A year is the publication or 
 
 - `org-fact` claims carry a Wayback Machine snapshot in `source.archive`. The exact quote was found in that snapshot on the claim's `source.accessed` date.
 - Podcast speakers are named in the claim. A speaker who is not a Google employee is not evidence about Google, so those claims are `fact`, not `org-fact`.
+- `10-10` is one speaker's view on the Prodcast, not a statement of general SRE practice.

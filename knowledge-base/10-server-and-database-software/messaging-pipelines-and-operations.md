@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 10-server-and-database-software
 title: "Message queues, pipelines and operating data services"
-updated: 2026-10-12
+updated: 2026-10-14
 claims:
   - id: 10-28
     claim: "On the Google SRE Prodcast, Swapnil Haria says there are many ways to do admission control right, FIFO among them."
@@ -205,3 +205,4 @@ Source years in this note: 2025, 2020, 2018. A year is the publication or last-u
 
 - `org-fact` claims carry a Wayback Machine snapshot in `source.archive`. The exact quote was found in that snapshot on the claim's `source.accessed` date.
 - Podcast speakers are named in the claim. A speaker who is not a Google employee is not evidence about Google, so those claims are `fact`, not `org-fact`.
+- `10-28` is one speaker's view on the Prodcast, not a statement of general SRE practice.
