@@ -143,6 +143,62 @@ Lint passes. The 01-123 assumption stays `unverified` (an assumption can never b
 
 `--list` printed nothing: the raw `.jsonl` isn't in `/export` format. Checking how the previous log was built.
 
+Filename used capital "Bximai"; repo convention is lowercase. Regenerate with explicit id, then scan for leaks.
+
+Log clean: the only hit is the bare domain "gmail.com", no address. Next, run the leak scan against the current PR body.
+
+Leak scan crashed: diff came back `None`. Likely Windows encoding. Commit first (it also scans commit messages), then retry with UTF-8 mode. Checking commit identity:
+
+Commits in order: prompt logs, then notes, then index.
+
+New commits clean. The 16 warnings are all on old pushed commits, which the reviewer said need no action. PR body should list the new logs and claims, so regenerate a draft and compare.
+
+Keep the hand-written sections, update the generated facts, and add a "Fix round 2" section.
+
+Stray backslashes around "standard". Fixing, then rerunning the leak scan on the new body.
+
+Everything is ready locally. The next three steps change the PR on GitHub, so I need your go-ahead first.
+
+## What I changed (6 commits on your branch, not pushed)
+
+| Commit | What it does |
+|---|---|
+| `17040f2` | Author-check log `-5`: 01-122 and 01-124 both passed the blind check. |
+| `4d20ecb` | This session's prompt log, `review-fixes-2`, marked `significant: false` like the previous fix log. |
+| `d6c07dd` | Re-adds 01-112 as 01-122 with only what the quote says, and adds assumption 01-123 for the "share of total time" reading. Fixes the stale 01-106 to 01-120 in the same file. |
+| `ed3c951` | Re-adds the hardware main sentence as 01-124, cited next to 01-121. |
+| `6ae897a` | Fixes the stale 01-107 to 01-118 in the education summary. |
+| `5dca62e` | Refreshes the index counts. |
+
+- Lint passes with 0 errors.
+- The leak scan passes with 0 errors. Its 16 warnings are all about the old gmail email on commits that are already pushed. None of the new commits trigger one.
+- No old IDs are left anywhere in the topic 01 notes.
+
+## Things worth knowing
+- The Wayback API was down (HTTP 503). I passed the archive links by hand, reusing the snapshots the neighbouring claims already use. `add_claim.py` still confirmed the quote is in each snapshot.
+- The 01-124 checker said the claim reads stronger on its own than the footnote allows. It's cited next to 01-121 for exactly that reason, so I left it.
+- 01-123 is an assumption, so it stays `unverified`. Assumptions never become verified.
+
+## Waiting for your OK
+1. **Push** the 6 commits.
+2. **Update the PR body** from `.local/pr31-body-round3-new.md`. It adds the new logs, sources and claim counts, plus a "Fix round 2" section.
+3. **Post this reply** on the PR through `gh` in WSL:
+
+> @Nine14282 thanks, all three fixed:
+> - Stale IDs: the Summaries now cite 01-120 and 01-118.
+> - 01-80: the main sentence is back as **01-124**, cited next to 01-121. 01-121 is unchanged.
+> - 01-112: re-added as **01-122** with only the quote's wording. The "share of total SRE time" reading is now **01-123** (`type: assumption`), based on 01-111. I searched the SRE book and Workbook chapters on on-call and toil and found no sentence that states the 25% as a share of total time.
+>
+> @nacs-970 the recheck set is now **11 claims**: 01-111, 01-113 to 01-116, 01-118 to 01-122 and 01-124. 01-112 is gone (replaced by 01-122), and 01-123 is an assumption with no recheck. Mapping: 01-17 → 01-122 (via 01-112), 01-18 → 01-113, 01-32/33/34 → 01-114/115/116, 01-106 → 01-120, 01-107 → 01-118, 01-108 → 01-119, 01-80 → 01-124 + 01-121, and 01-111 is new.
+
+Should I do all three?
+
+## Turn 5 — user
+if you already save the log then commit and then follow the step
+
+## Turn 5 — assistant
+Log was built mid-session, so it's missing the end of turn 4 and this turn. Regenerating the full log, then committing.
+
 ## Tool-call ledger
 - Bash: Fetch PR 31 reviews and inline comments
 - PowerShell: Fetch PR 31 reviews
@@ -179,3 +235,17 @@ Lint passes. The 01-123 assumption stays `unverified` (an assumption can never b
 - Bash: Inspect previous session.json shape
 - Write: [REDACTED:path]
 - Bash: Convert transcript and list turns
+- Bash: Generate this session's prompt log
+- Bash: Regenerate log with lowercase id and scan
+- Bash: Regenerate log and scan for leaks
+- PowerShell: Save current PR body via gh in WSL
+- Bash: Run leak scan and inspect PR body sections
+- Bash: Check git identity and leak-scan diff code
+- Bash: Create six atomic commits
+- Bash: Retry leak scan in UTF-8 mode
+- Bash: Confirm new commits are warning-free; check PR body script
+- Bash: Generate fresh PR body draft and diff
+- Bash: Build updated PR body in .local
+- Bash: Check line endings and real diff
+- Bash: Fix quotes and leak-scan new body
+- Bash: Regenerate full prompt log and scan
