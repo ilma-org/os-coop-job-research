@@ -7,7 +7,7 @@ claims:
   - id: 10-01
     claim: "In a section headed \"Example: Google's frontend design\", Building Secure and Reliable Systems says Google Front End (GFE) serves as a frontend layer to most Google services, implemented as a microservice, so these services are not directly exposed to the internet."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, Chapter 7"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch07.html
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 10-02
     claim: "In a section headed \"Example: Google's frontend design\", Building Secure and Reliable Systems says GFE also terminates traffic for incoming HTTP(S), TCP and TLS proxies, provides DDoS attack countermeasures, and routes and load balances traffic to Google Cloud services."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, Chapter 7"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch07.html
@@ -50,10 +55,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 10-03
     claim: "In a section headed \"Example: Google's frontend design\", Building Secure and Reliable Systems says that if a service becomes overloaded, GFE can serve as a mitigation point by dropping or absorbing connections before the load reaches the backends."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, Chapter 7"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch07.html
@@ -73,10 +83,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 10-05
     claim: "Building Secure and Reliable Systems says load shedding is done by returning errors rather than serving requests, and throttling of clients by delaying responses until closer to the request deadline."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, Chapter 8"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch08.html
@@ -96,10 +111,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 10-06
     claim: "Building Secure and Reliable Systems says that when the load on a component starts to exceed its capacity, you want it to serve errors for all excessive requests rather than crash, because crashing makes all of the component's capacity unavailable, not just the capacity for the excess requests."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, Chapter 8"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch08.html
@@ -119,10 +139,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 10-08
     claim: "The SRE Workbook says that, at the time it was written, GCLB (Google Cloud Load Balancer) did not use DNS load balancing, because DNS-based load balancing relies on client cooperation to properly expire and refetch DNS records."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook: Managing Load"
       url: https://sre.google/workbook/managing-load/
@@ -142,10 +167,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck-2.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 10-09
     claim: "The SRE book says that no matter how efficient a load balancing policy is, eventually some part of a system will become overloaded, and that gracefully handling overload conditions is fundamental to running a reliable serving system."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering (SRE book) - Handling Overload"
       url: https://sre.google/sre-book/handling-overload/
@@ -165,6 +195,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
 ---
 
 # Front ends, load balancing and overload handling

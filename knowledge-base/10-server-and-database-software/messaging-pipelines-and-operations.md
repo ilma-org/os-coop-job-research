@@ -7,7 +7,7 @@ claims:
   - id: 10-29
     claim: "In an example where a queue buffers transaction data while a payment provider is unreachable, Building Secure and Reliable Systems says that if the message queue is not designed to be reliable, for example if it stores data in volatile memory only, you can lose transactions, a new risk surface."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, Chapter 4"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch04.html
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck-2.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 10-31
     claim: "For data pipelines, in a section headed \"Delayed data\", the SRE Workbook says stale data is almost always better than incorrect data."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook: Data Processing Pipelines"
       url: https://sre.google/workbook/data-processing/
@@ -50,10 +55,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck-2.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 10-36
     claim: "In its Waze case study, the SRE Workbook says the message queueing system was critical to operations because every component of Waze used it to communicate with other components internally."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, Chapter 21: Organizational Change Management in SRE"
       url: https://sre.google/workbook/organizational-change/
@@ -73,6 +83,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
 ---
 
 # Message queues and data pipelines

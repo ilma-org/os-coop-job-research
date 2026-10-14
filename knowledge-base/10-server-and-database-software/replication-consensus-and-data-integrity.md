@@ -7,7 +7,7 @@ claims:
   - id: 10-20
     claim: "The report Creating a Production Launch Plan says a product should have backups, its teams should have experience recovering the data fully, and data corruption risks, especially ones that can go unnoticed, must be added to the Risks and Mitigations table."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Creating a Production Launch Plan: For a Successful Launch, Planning Isn't Optional (O'Reilly/Google report)"
       url: https://sre.google/static/pdf/CreatingProductionLaunchPlan.pdf
@@ -27,10 +27,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 10-21
     claim: "The SRE book says a study of 19 data recovery efforts at Google found that the most common user-visible data loss scenarios involved data deletion or loss of referential integrity caused by software bugs."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering (SRE book) - Data Integrity: What You Read Is What You Wrote"
       url: https://sre.google/sre-book/data-integrity/
@@ -50,10 +55,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 10-22
     claim: "The SRE book says SRE makes sure global Chubby meets, but does not significantly exceed, its service level objective: in any quarter where a true failure has not dropped availability below the target, a controlled outage is synthesized by intentionally taking down the system."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering (SRE Book) - Service Level Objectives"
       url: https://sre.google/sre-book/service-level-objectives/
@@ -73,10 +83,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 10-23
     claim: "The SRE book says that in its replicated cron service, as long as the majority of group members are available, the distributed system as a whole can process new state changes despite the failure of bounded subsets of the infrastructure."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering (SRE book) - Distributed Periodic Scheduling with Cron"
       url: https://sre.google/sre-book/distributed-periodic-scheduling/
@@ -96,10 +111,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 10-24
     claim: "The SRE book says its distributed cron stores snapshots on local disk and, because they are critical, also backs them up onto a distributed filesystem, protecting against failures affecting all three machines."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering (SRE book) - Distributed Periodic Scheduling with Cron"
       url: https://sre.google/sre-book/distributed-periodic-scheduling/
@@ -119,10 +139,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 10-25
     claim: "The SRE book says the real focus of backup efforts should be data recovery, which distinguishes real backups from archives, and notes that, as is sometimes observed, no one really wants to make backups; what people really want are restores."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering (SRE book) - Data Integrity: What You Read Is What You Wrote"
       url: https://sre.google/sre-book/data-integrity/
@@ -142,10 +167,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 10-27
     claim: "The SRE book recommends using distributed consensus systems that have been formally proven and tested thoroughly whenever you see leader election, critical shared state or distributed locking."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering (SRE Book) - Managing Critical State: Distributed Consensus for Reliability"
       url: https://sre.google/sre-book/managing-critical-state/
@@ -165,10 +195,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 10-32
     claim: "The SRE Workbook names two main steps in fixing corrupt data: mitigate the impact by preventing further corrupt data from entering the system, and restore the data from a previously known good version or reprocess to repair it."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook: Data Processing Pipelines"
       url: https://sre.google/workbook/data-processing/
@@ -188,10 +223,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 10-34
     claim: "In its AdWords example of non-abstract large system design, the SRE Workbook says to have the replicas of a shared service such as ClickMap use a consensus algorithm such as Paxos, so that the state of the calculations can be reliably stored if a datacenter-sized failure occurs."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, Chapter 12: Introducing Non-Abstract Large System Design"
       url: https://sre.google/workbook/non-abstract-design/
@@ -211,10 +251,15 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck-2.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
   - id: 10-35
     claim: "In its AdWords example of non-abstract large system design, the SRE Workbook assumes that executing Paxos with fault-isolated datacenters at least a few hundred kilometers apart takes roughly 25 milliseconds per operation."
     type: fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, Chapter 12: Introducing Non-Abstract Large System Design"
       url: https://sre.google/workbook/non-abstract-design/
@@ -234,6 +279,11 @@ claims:
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck-2.md
       result: supported
+    review:
+      by: "@nacs-970"
+      date: 2026-10-14
+      result: pass
+      opened_source: true
 ---
 
 # Replication, consensus, backups and data integrity
