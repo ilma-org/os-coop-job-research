@@ -235,7 +235,7 @@ claims:
 
 ## Summary
 
-The report Case Studies in Infrastructure Change Management describes GFS, designed in 2001 as Google's first cluster-level file system, with chunkservers storing replicated chunks (10-12, 10-13), and Colossus, where D servers managed access to the raw data (10-14). In an outage example headed "Example: Temporary Files", Building Secure and Reliable Systems says a Spanner server flushed buffered writes to files on Colossus when it ran low on memory (10-11). The report Creating a Production Launch Plan gives examples of a relational database with a transaction throughput limit that adding CPU or memory can scale only so far (10-15) and of a cold cache that sends all video view requests to a metadata service (10-16), and the SRE book says caches sometimes become hard dependencies and that moving them to a separate binary like memcache may be worthwhile (10-17, 10-18). On the Google SRE Prodcast, Silvia Botros says you don't want a single database failure to take down your whole product (10-10). Each claim rests on one source; no second source was compared, and this note has no claim yet on operating MySQL, PostgreSQL, MongoDB, Redis or Bigtable.
+The report Case Studies in Infrastructure Change Management describes GFS, designed in 2001 as Google's first cluster-level file system, with chunkservers storing replicated chunks (10-12, 10-13), and Colossus, where D servers managed access to the raw data (10-14). In an outage example headed "Example: Temporary Files", Building Secure and Reliable Systems says a Spanner server flushed buffered writes to files on Colossus when it ran low on memory (10-11), and the SRE Workbook says a lowest level of storage granularity, such as a Spanner tablet, may become unavailable if accessed heavily (10-30). The report Creating a Production Launch Plan gives examples of a relational database with a transaction throughput limit that adding CPU or memory can scale only so far (10-15) and of a cold cache that sends all video view requests to a metadata service (10-16), and the SRE book says caches sometimes become hard dependencies and that moving them to a separate binary like memcache may be worthwhile (10-17, 10-18). On the Google SRE Prodcast, describing a culture shift away from relying on one DBA, Silvia Botros says you don't want a single database failure to take down your whole product (10-10). Each claim rests on one source; no second source was compared, and this note has no claim yet on operating MySQL, PostgreSQL, MongoDB, Redis or Bigtable.
 
 ## Key points
 
@@ -243,18 +243,19 @@ The report Case Studies in Infrastructure Change Management describes GFS, desig
 - The same report says GFS chunkservers stored chunks on the local filesystem, and the client code replicated chunks to other chunkservers (10-13).
 - The same report says that in Colossus the D server managed access to the raw data, while Colossus managed the map of which data was on which D server (10-14).
 - In an outage example headed "Example: Temporary Files", Building Secure and Reliable Systems says a Spanner server buffered recent writes in memory and flushed them to files on Colossus when it ran low on memory (10-11).
+- The SRE Workbook says a lowest level of data storage granularity, such as a Spanner tablet, may become unavailable if accessed heavily (10-30).
 - The report Creating a Production Launch Plan gives as an example that a relational database with an upper limit on transaction throughput can be scaled only so far by adding CPU or memory (10-15).
 - The same report says a product may need significantly more resources on a cold cache (10-16).
 - The SRE book says caches are sometimes added for performance but wind up being hard dependencies (10-17), and that moving caching to a separate binary like memcache may be worthwhile (10-18).
-- On the Google SRE Prodcast, Silvia Botros says you don't want a single database failure to take down your whole product (10-10).
+- On the Google SRE Prodcast, describing a culture shift away from relying on one DBA, Silvia Botros says you don't want a single database failure to take down your whole product (10-10).
 
 Claims are listed newest source first. Each claim's `status` in the front matter says how far it has been checked.
 
-Source years in this note: 2024, 2020, 2019, 2016. A year is the publication or last-update year of the source, or the book edition year when the page gives none (SRE book 2016, Workbook 2018, Building Secure and Reliable Systems 2020).
+Source years in this note: 2024, 2020, 2019, 2018, 2016. A year is the publication or last-update year of the source, or the book edition year when the page gives none (SRE book 2016, Workbook 2018, Building Secure and Reliable Systems 2020).
 
 ## Claims at a glance
 
-- `10-10` (fact): On the Google SRE Prodcast, Silvia Botros says it is more about predicting failure and planning accordingly, so you don't want a single database failure to take down your whole product.
+- `10-10` (fact): On the Google SRE Prodcast, Silvia Botros describes a culture shift in database engineering away from relying on one DBA, and says it is more about predicting failure and planning accordingly, so you don't want a single database failure to take down your whole product.
 - `10-11` (org-fact): In a section headed "Example: Temporary Files", Building Secure and Reliable Systems says that, according to normal behavior, a Spanner server buffered recent writes in memory and, as it ran low on memory, flushed the data to files on Colossus.
 - `10-12` (org-fact): The report Case Studies in Infrastructure Change Management says GFS was designed in 2001 as Google's first cluster-level file system, supported many petabytes of storage and allowed thousands of servers to interact with thousands of clients.
 - `10-13` (org-fact): The report Case Studies in Infrastructure Change Management says that in GFS, machines ran a daemon called a chunkserver to store chunks on the local filesystem, while the GFS client code split files into chunks, stored them on chunkservers and replicated them to other chunkservers for redundancy and bandwidth.
@@ -263,6 +264,7 @@ Source years in this note: 2024, 2020, 2019, 2016. A year is the publication or 
 - `10-16` (fact): The report Creating a Production Launch Plan says a product may require significantly more resources when operating on a cold cache; in its video example, if pointers to stored videos are lost when the cache clears, all video view requests start going to the video metadata service.
 - `10-17` (fact): The SRE book says caches are sometimes added to a service to improve performance but actually wind up being hard dependencies.
 - `10-18` (fact): The SRE book says it may be worthwhile to move caching from a server to a separate binary like memcache, which also allows cache sharing between many servers, at the cost of introducing another RPC and slight additional latency.
+- `10-30` (fact): The SRE Workbook says the internals of data storage often have a lowest level of granularity that may become unavailable if accessed heavily; for example, a Spanner tablet can become overloaded due to a problematic section of data even though most of the data storage is fine.
 
 ## Notes
 

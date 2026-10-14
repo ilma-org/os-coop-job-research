@@ -230,36 +230,39 @@ claims:
 
 ## Summary
 
-The SRE book says the focus of backups should be data recovery (10-25) and that replication and redundancy are not recoverability (10-26), and a Google SRE prodverb says backups are only as good as the last restore (10-19). The SRE book says a study of 19 data recovery efforts at Google found the most common user-visible data loss came from data deletion or loss of referential integrity caused by software bugs (10-21), and the report Creating a Production Launch Plan says a product should have backups and teams experienced in recovering the data (10-20). On consensus, the SRE book recommends formally proven, thoroughly tested distributed consensus systems for leader election, critical shared state and distributed locking (10-27), and describes a replicated cron service that keeps working while a majority is available and backs up its snapshots (10-23, 10-24). The SRE book also says SRE takes global Chubby down on purpose in a quarter where a true failure has not dropped availability below its target (10-22). Each claim rests on one source; no second source was compared, and most claims come from the 2016 SRE book.
+The SRE book says the focus of backups should be data recovery, because what people really want are restores (10-25), and the report Creating a Production Launch Plan says a product should have backups and teams experienced in recovering the data (10-20). The SRE book says a study of 19 data recovery efforts at Google found the most common user-visible data loss came from data deletion or loss of referential integrity caused by software bugs (10-21), and the SRE Workbook names two steps in fixing corrupt data: mitigate the impact, then restore or reprocess the data (10-32). On consensus, the SRE book recommends formally proven, thoroughly tested distributed consensus systems for leader election, critical shared state and distributed locking (10-27), and describes a replicated cron service that keeps working while a majority is available and backs up its snapshots (10-23, 10-24). In its AdWords design example, the SRE Workbook uses Paxos to store shared state reliably (10-34) and assumes roughly 25 milliseconds per Paxos operation across datacenters a few hundred kilometers apart (10-35). The SRE book also says SRE takes global Chubby down on purpose in a quarter where a true failure has not dropped availability below its target (10-22). Each claim rests on one source; no second source was compared, and most claims come from the 2016 SRE book.
 
 ## Key points
 
 - The SRE book says the real focus of backup efforts should be data recovery, and notes that, as is sometimes observed, what people really want are restores (10-25).
-- The SRE book says replication and redundancy are not recoverability (10-26).
-- A Google SRE prodverb says backups are only as good as the last restore (10-19).
-- The SRE book says the most common user-visible data loss in a study of 19 Google data recovery efforts involved data deletion or loss of referential integrity caused by software bugs (10-21).
 - The report Creating a Production Launch Plan says a product should have backups, teams experienced in recovering the data, and data corruption risks listed in its Risks and Mitigations table (10-20).
+- The SRE book says the most common user-visible data loss in a study of 19 Google data recovery efforts involved data deletion or loss of referential integrity caused by software bugs (10-21).
+- The SRE Workbook names two main steps in fixing corrupt data: stop further corrupt data from entering, then restore from a known good version or reprocess (10-32).
 - The SRE book recommends formally proven, thoroughly tested distributed consensus systems for leader election, critical shared state or distributed locking (10-27).
 - The SRE book says its replicated cron service can process state changes while a majority of group members is available (10-23), and backs its snapshots up onto a distributed filesystem (10-24).
+- In its AdWords design example, the SRE Workbook has replicas of a shared service such as ClickMap use Paxos so that state survives a datacenter-sized failure (10-34).
+- In the same design example, roughly 25 milliseconds per Paxos operation is a design assumption for datacenters at least a few hundred kilometers apart, not a measurement (10-35).
 - The SRE book says SRE synthesizes a controlled outage of global Chubby in a quarter where a true failure has not dropped availability below the target (10-22).
 
 Claims are listed newest source first. Each claim's `status` in the front matter says how far it has been checked.
 
-Source years in this note: 2025, 2019, 2016. A year is the publication or last-update year of the source, or the book edition year when the page gives none (SRE book 2016, Workbook 2018, Building Secure and Reliable Systems 2020).
+Source years in this note: 2019, 2018, 2016. A year is the publication or last-update year of the source, or the book edition year when the page gives none (SRE book 2016, Workbook 2018, Building Secure and Reliable Systems 2020).
 
 ## Claims at a glance
 
-- `10-19` (fact): A Google SRE prodverb says backups are only as good as the last restore.
 - `10-20` (fact): The report Creating a Production Launch Plan says a product should have backups, its teams should have experience recovering the data fully, and data corruption risks, especially ones that can go unnoticed, must be added to the Risks and Mitigations table.
 - `10-21` (org-fact): The SRE book says a study of 19 data recovery efforts at Google found that the most common user-visible data loss scenarios involved data deletion or loss of referential integrity caused by software bugs.
 - `10-22` (org-fact): The SRE book says SRE makes sure global Chubby meets, but does not significantly exceed, its service level objective: in any quarter where a true failure has not dropped availability below the target, a controlled outage is synthesized by intentionally taking down the system.
 - `10-23` (org-fact): The SRE book says that in its replicated cron service, as long as the majority of group members are available, the distributed system as a whole can process new state changes despite the failure of bounded subsets of the infrastructure.
 - `10-24` (org-fact): The SRE book says its distributed cron stores snapshots on local disk and, because they are critical, also backs them up onto a distributed filesystem, protecting against failures affecting all three machines.
 - `10-25` (fact): The SRE book says the real focus of backup efforts should be data recovery, which distinguishes real backups from archives, and notes that, as is sometimes observed, no one really wants to make backups; what people really want are restores.
-- `10-26` (fact): The SRE book says that in designing a data integrity program, it's important to recognize that replication and redundancy are not recoverability.
 - `10-27` (fact): The SRE book recommends using distributed consensus systems that have been formally proven and tested thoroughly whenever you see leader election, critical shared state or distributed locking.
+- `10-32` (fact): The SRE Workbook names two main steps in fixing corrupt data: mitigate the impact by preventing further corrupt data from entering the system, and restore the data from a previously known good version or reprocess to repair it.
+- `10-34` (fact): In its AdWords example of non-abstract large system design, the SRE Workbook says to have the replicas of a shared service such as ClickMap use a consensus algorithm such as Paxos, so that the state of the calculations can be reliably stored if a datacenter-sized failure occurs.
+- `10-35` (fact): In its AdWords example of non-abstract large system design, the SRE Workbook assumes that executing Paxos with fault-isolated datacenters at least a few hundred kilometers apart takes roughly 25 milliseconds per operation.
 
 ## Notes
 
 - `org-fact` claims carry a Wayback Machine snapshot in `source.archive`. The exact quote was found in that snapshot on the claim's `source.accessed` date.
 - Podcast speakers are named in the claim. A speaker who is not a Google employee is not evidence about Google, so those claims are `fact`, not `org-fact`.
+- `10-34` and `10-35` come from the SRE Workbook's AdWords example, a design exercise for a click-through-rate dashboard. They describe the book's example design, not a production system.

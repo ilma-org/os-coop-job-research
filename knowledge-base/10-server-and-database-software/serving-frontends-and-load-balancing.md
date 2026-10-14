@@ -166,17 +166,16 @@ claims:
 
 ## Summary
 
-In an example section on Google's frontend design, Building Secure and Reliable Systems says Google Front End (GFE) is a frontend layer to most Google services that terminates traffic, provides DDoS countermeasures, and routes and load balances traffic to Google Cloud services (10-01, 10-02), and that it can drop or absorb connections when a service is overloaded (10-03). The same book says a component should serve errors for excessive requests rather than crash (10-04, 10-06), describes load shedding and client throttling (10-05) and gives Envoy's fault injection filter as an example (10-07). The SRE Workbook says GCLB does not use DNS load balancing because DNS-based load balancing relies on client cooperation (10-08), and the SRE book says some part of a system will eventually become overloaded however efficient its load balancing policy is (10-09). Each claim rests on one source; no second source was compared, and this note has no claim yet on web and application servers such as Apache or Nginx.
+In an example section on Google's frontend design, Building Secure and Reliable Systems says Google Front End (GFE) is a frontend layer to most Google services that terminates traffic, provides DDoS countermeasures, and routes and load balances traffic to Google Cloud services (10-01, 10-02), and that it can drop or absorb connections when a service is overloaded (10-03). The same book says a component should serve errors for excessive requests rather than crash (10-06) and describes load shedding and client throttling (10-05). The SRE Workbook says that, at the time it was written, Google Cloud Load Balancer (GCLB) did not use DNS load balancing because DNS-based load balancing relies on client cooperation (10-08), and the SRE book says some part of a system will eventually become overloaded however efficient its load balancing policy is (10-09). Each claim rests on one source; no second source was compared, and this note has no claim yet on web and application servers such as Apache or Nginx.
 
 ## Key points
 
 - In a section headed "Example: Google's frontend design", Building Secure and Reliable Systems says GFE serves as a frontend layer to most Google services, so they are not directly exposed to the internet (10-01).
 - The same example section says GFE terminates HTTP(S), TCP and TLS proxy traffic, provides DDoS countermeasures, and routes and load balances traffic to Google Cloud services (10-02).
 - The same example section says that if a service becomes overloaded, GFE can drop or absorb connections before the load reaches the backends (10-03).
-- The same book says a component under too much load should serve errors rather than crash, because crashing removes all of its capacity (10-04, 10-06).
+- The same book says a component under too much load should serve errors rather than crash, because crashing removes all of its capacity (10-06).
 - The same book says load shedding returns errors rather than serving requests, and throttling delays responses until closer to the request deadline (10-05).
-- The same book gives Envoy as an example of a proxy with a fault injection filter that can return errors or delay requests (10-07).
-- The SRE Workbook says GCLB does not use DNS load balancing because it relies on client cooperation to expire and refetch DNS records (10-08).
+- The SRE Workbook says that, at the time it was written, Google Cloud Load Balancer (GCLB) did not use DNS load balancing because it relies on client cooperation to expire and refetch DNS records (10-08).
 - The SRE book says gracefully handling overload is fundamental to running a reliable serving system (10-09).
 
 Claims are listed newest source first. Each claim's `status` in the front matter says how far it has been checked.
@@ -188,11 +187,9 @@ Source years in this note: 2020, 2018, 2016. A year is the publication or last-u
 - `10-01` (org-fact): In a section headed "Example: Google's frontend design", Building Secure and Reliable Systems says Google Front End (GFE) serves as a frontend layer to most Google services, implemented as a microservice, so these services are not directly exposed to the internet.
 - `10-02` (org-fact): In a section headed "Example: Google's frontend design", Building Secure and Reliable Systems says GFE also terminates traffic for incoming HTTP(S), TCP and TLS proxies, provides DDoS attack countermeasures, and routes and load balances traffic to Google Cloud services.
 - `10-03` (org-fact): In a section headed "Example: Google's frontend design", Building Secure and Reliable Systems says that if a service becomes overloaded, GFE can serve as a mitigation point by dropping or absorbing connections before the load reaches the backends.
-- `10-04` (fact): Building Secure and Reliable Systems gives, as an example of a desired reliability property, that when the load on any component is greater than it can handle, the component serves overload errors rather than crashing, to reduce the risk of cascading failure.
 - `10-05` (fact): Building Secure and Reliable Systems says load shedding is done by returning errors rather than serving requests, and throttling of clients by delaying responses until closer to the request deadline.
 - `10-06` (fact): Building Secure and Reliable Systems says that when the load on a component starts to exceed its capacity, you want it to serve errors for all excessive requests rather than crash, because crashing makes all of the component's capacity unavailable, not just the capacity for the excess requests.
-- `10-07` (fact): Building Secure and Reliable Systems gives as an example the open source Envoy HTTP proxy, which is often used for load balancing and supports a fault injection HTTP filter that can return arbitrary errors for a percentage of traffic or delay requests for a specific amount of time.
-- `10-08` (org-fact): The SRE Workbook says GCLB does not use DNS load balancing, because DNS-based load balancing relies on client cooperation to properly expire and refetch DNS records.
+- `10-08` (org-fact): The SRE Workbook says that, at the time it was written, GCLB (Google Cloud Load Balancer) did not use DNS load balancing, because DNS-based load balancing relies on client cooperation to properly expire and refetch DNS records.
 - `10-09` (fact): The SRE book says that no matter how efficient a load balancing policy is, eventually some part of a system will become overloaded, and that gracefully handling overload conditions is fundamental to running a reliable serving system.
 
 ## Notes
