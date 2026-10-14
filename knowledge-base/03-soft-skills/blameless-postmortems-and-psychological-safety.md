@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 03-soft-skills
 title: "Blameless culture, psychological safety and working with product teams"
-updated: 2026-10-12
+updated: 2026-10-14
 claims:
   - id: 03-09
     claim: "A Google SRE article on product-focused reliability says that to obtain product and user information, SRE needs to work with product managers and UX researchers, who define the product and its features using frameworks such as Jobs to be Done and Google's Critical User Journeys."
@@ -33,24 +33,6 @@ claims:
       accessed: 2026-10-07
       archive: https://web.archive.org/web/20260306061602/https://sre.google/prodcast/transcripts/sre-prodcast-05-01/
     quote: "One of the things that I really loved about my time at Google, when I first got to SRE, all the incident command was still done on IRC. And I could, as a junior SRE, just follow along, outages that my team wasn't responsible for."
-    os_concepts: []
-    pr: null
-    ai_check:
-      platform: Claude Code
-      model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check-2.md
-      result: supported
-  - id: 03-11
-    claim: "In an anecdote on Google's SRE Prodcast, Steve McGhee says they put an SRE on stage and had him tell his story to the entire company."
-    type: org-fact
-    status: ai-checked
-    source:
-      title: "Google SRE Prodcast transcript: Embracing Complexity with Christina Schulman & Dr. Laura Maguire"
-      url: https://sre.google/prodcast/transcripts/sre-prodcast-03-11/
-      kind: other
-      accessed: 2026-10-07
-      archive: https://web.archive.org/web/20260615085124/https://sre.google/prodcast/transcripts/sre-prodcast-03-11/
-    quote: "They put him on stage. And they had him tell his story to the entire company."
     os_concepts: []
     pr: null
     ai_check:
@@ -154,7 +136,7 @@ claims:
 
 ## Summary
 
-In its section on learning from incidents, Google's Incident Management Guide calls open and blameless postmortem writing the most effective tool Google has found for that purpose (03-15), and the report Enterprise Roadmap to SRE says SRE promotes blamelessness instead of citing human error (03-14). On psychological safety, the report Anatomy of an Incident quotes a definition (03-12), and Enterprise Roadmap to SRE says a team in control of major systems must feel psychologically safe and be able to say no to peers and leaders without fear of retribution (03-13). Prodcast anecdotes describe a junior SRE following along with outages on IRC (03-10) and an SRE telling his story on stage to the entire company (03-11), and the guide says Wheel of Misfortune practice can keep knowledge up to date (03-16). A Google SRE article on working with product managers and UX researchers (03-09) is also kept here. Each claim rests on one source; no second source was compared, and this note has no claim yet from a source outside Google.
+In its section on learning from incidents, Google's Incident Management Guide calls open and blameless postmortem writing the most effective tool Google has found for that purpose (03-15), and the report Enterprise Roadmap to SRE says SRE promotes blamelessness instead of citing human error (03-14). On psychological safety, the report Anatomy of an Incident quotes a definition (03-12), and Enterprise Roadmap to SRE says a team in control of major systems must feel psychologically safe and be able to say no to peers and leaders without fear of retribution (03-13). A Prodcast speaker recalls following along with outages on IRC as a junior SRE (03-10), and the guide says Wheel of Misfortune practice can keep knowledge up to date (03-16). A Google SRE article on working with product managers and UX researchers (03-09) is also kept here. Each claim rests on one source; no second source was compared, and this note has no claim yet from a source outside Google.
 
 ## Key points
 
@@ -164,7 +146,6 @@ In its section on learning from incidents, Google's Incident Management Guide ca
 - The report Enterprise Roadmap to SRE says a team in control of major systems must feel psychologically safe and be able to say no without fear of retribution (03-13).
 - Google's Incident Management Guide says Wheel of Misfortune exercises can keep knowledge up to date and let less experienced on-callers develop their skills in a safe environment (03-16).
 - On Google's SRE Prodcast, Steph Hippo says that as a junior SRE she could follow along on IRC with outages her team was not responsible for (03-10).
-- In an anecdote on Google's SRE Prodcast, Steve McGhee says they put an SRE on stage to tell his story to the entire company (03-11).
 - A Google SRE article on product-focused reliability says SRE needs to work with product managers and UX researchers to obtain product and user information (03-09).
 
 Claims are listed newest source first. Each claim's `status` in the front matter says how far it has been checked.
@@ -175,7 +156,6 @@ Source years in this note: 2025, 2024, 2022, 2020. A year is the publication or 
 
 - `03-09` (org-fact): A Google SRE article on product-focused reliability says that to obtain product and user information, SRE needs to work with product managers and UX researchers, who define the product and its features using frameworks such as Jobs to be Done and Google's Critical User Journeys.
 - `03-10` (org-fact): On Google's SRE Prodcast, Steph Hippo says that when she first got to SRE at Google, all incident command was still done on IRC, and as a junior SRE she could just follow along with outages her team was not responsible for.
-- `03-11` (org-fact): In an anecdote on Google's SRE Prodcast, Steve McGhee says they put an SRE on stage and had him tell his story to the entire company.
 - `03-12` (fact): The Google SRE report Anatomy of an Incident quotes a definition of psychological safety as a belief that one will not be punished or humiliated for speaking up with ideas, questions, concerns or mistakes.
 - `03-13` (fact): The report Enterprise Roadmap to SRE says the team must feel psychologically safe when put in the high-pressure position of control over major systems, and must be able to say no to peers and leaders without fear of retribution.
 - `03-14` (fact): The report Enterprise Roadmap to SRE says citing 'human error' when humans make mistakes has been shown to be somewhat meaningless and not an effective way to improve a system, and that SRE instead promotes blamelessness.
@@ -187,3 +167,4 @@ Source years in this note: 2025, 2024, 2022, 2020. A year is the publication or 
 - `org-fact` claims carry a Wayback Machine snapshot in `source.archive`. The exact quote was found in that snapshot on the claim's `source.accessed` date.
 - Podcast speakers are named in the claim. A speaker who is not a Google employee is not evidence about Google, so those claims are `fact`, not `org-fact`.
 - `03-15` names the guide's section on learning from incidents. The stored quote says only "for achieving that"; the section heading and the sentences before the quote say what "that" is.
+- `03-10` is one speaker's account of their own early time in Google SRE, not a statement of general SRE practice.

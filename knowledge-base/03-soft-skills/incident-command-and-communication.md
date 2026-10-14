@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 03-soft-skills
 title: "Incident command, communication and persuasion"
-updated: 2026-10-12
+updated: 2026-10-14
 claims:
   - id: 03-01
     claim: "Google SRE's lessons-learned article advises ensuring you have non-dependent backup communication channels and that you have tested them."
@@ -131,7 +131,7 @@ claims:
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check-2.md
       result: supported
   - id: 03-08
-    claim: "In a first-person account in The Site Reliability Workbook, an engineer says an objective cost/benefit analysis showing the problem was costing Google $1,000 per hour convinced the devs to fix it with the engineer's patch."
+    claim: "The Site Reliability Workbook gives, as an example, a first-person account by John Looney: an objective cost/benefit analysis showing the problem was costing Google $1,000 per hour convinced the devs to fix the problem with Looney's patch."
     type: org-fact
     status: ai-checked
     source:
@@ -146,7 +146,7 @@ claims:
     ai_check:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
+      prompt_log: prompts/2026-10-14-nine14282-soft-skills-author-check-3.md
       result: supported
 ---
 
@@ -154,7 +154,7 @@ claims:
 
 ## Summary
 
-Building Secure and Reliable Systems says Google has codified crisis response into Incident Management at Google (IMAG) (03-05), and Google's Incident Management Guide says incident roles are based on knowledge and incident context rather than reporting chains (03-03). Google SRE's lessons advise keeping tested, non-dependent backup communication channels (03-01) and choosing a mitigation whose riskiness fits the severity (03-04), and a Prodcast speaker says their data centers open a common video chat when something goes wrong (03-02). The report Training Site Reliability Engineers says that when blaming is involved, people tend to sweep things under the rug (03-06) and that communication, agreement and trust are paramount to healthy SRE-developer relationships (03-07). A first-person account in The Site Reliability Workbook tells how a cost/benefit analysis convinced developers to fix a problem (03-08). Each claim rests on one source; no second source was compared, and this note has no claim yet on handoffs between on-call shifts.
+Building Secure and Reliable Systems says Google has codified crisis response into Incident Management at Google (IMAG) (03-05), and Google's Incident Management Guide says incident roles are based on knowledge and incident context rather than reporting chains (03-03). Google SRE's lessons advise keeping tested, non-dependent backup communication channels (03-01) and choosing a mitigation whose riskiness fits the severity (03-04), and a Prodcast speaker says their data centers open a common video chat when something goes wrong (03-02). The report Training Site Reliability Engineers says that when blaming is involved, people tend to sweep things under the rug (03-06) and that communication, agreement and trust are paramount to healthy SRE-developer relationships (03-07). The Site Reliability Workbook gives, as an example, a first-person account of how a cost/benefit analysis convinced developers to fix a problem (03-08). Each claim rests on one source; no second source was compared, and this note has no claim yet on handoffs between on-call shifts.
 
 ## Key points
 
@@ -165,7 +165,7 @@ Building Secure and Reliable Systems says Google has codified crisis response in
 - On Google's SRE Prodcast, Peter Pellerzi says their data centers have specific protocols when something goes wrong, for example a common video chat anybody can join (03-02).
 - The report Training Site Reliability Engineers says that when blaming is involved people tend to sweep things under the rug, which hinders finding the underlying causes (03-06).
 - The same report says communication, agreement and trust are paramount to healthy SRE-developer relationships (03-07).
-- In a first-person account in The Site Reliability Workbook, a cost/benefit analysis showing a problem cost Google $1,000 per hour convinced the devs to fix it (03-08).
+- The Site Reliability Workbook gives, as an example, a first-person account in which a cost/benefit analysis showing a problem cost Google $1,000 per hour convinced the devs to fix it (03-08).
 
 Claims are listed newest source first. Each claim's `status` in the front matter says how far it has been checked.
 
@@ -180,9 +180,11 @@ Source years in this note: 2025, 2020, 2019, 2018. A year is the publication or 
 - `03-05` (org-fact): Building Secure and Reliable Systems says Google has codified crisis response into a program called Incident Management at Google (IMAG), a standard, consistent way to handle all types of incidents.
 - `03-06` (org-fact): The report Training Site Reliability Engineers says blameless postmortems help find root causes, and that when blaming is involved people tend to sweep things under the rug, which hinders finding the underlying causes and indirectly allows the same incident to happen again.
 - `03-07` (org-fact): The report Training Site Reliability Engineers says that through interviews with different teams its authors found communication, agreement and trust are paramount to healthy SRE-developer relationships, and that the best functioning teams are those where it is barely known who is an SRE and who is a developer.
-- `03-08` (org-fact): In a first-person account in The Site Reliability Workbook, an engineer says an objective cost/benefit analysis showing the problem was costing Google $1,000 per hour convinced the devs to fix it with the engineer's patch.
+- `03-08` (org-fact): The Site Reliability Workbook gives, as an example, a first-person account by John Looney: an objective cost/benefit analysis showing the problem was costing Google $1,000 per hour convinced the devs to fix the problem with Looney's patch.
 
 ## Notes
 
 - `org-fact` claims carry a Wayback Machine snapshot in `source.archive`. The exact quote was found in that snapshot on the claim's `source.accessed` date.
 - Podcast speakers are named in the claim. A speaker who is not a Google employee is not evidence about Google, so those claims are `fact`, not `org-fact`.
+- `03-02` is one speaker's account of the data centers they work with, not a statement of general SRE practice.
+- `03-08` comes from a sidebar headed "Example: Manual Response to Toil". It is one engineer's account, not general guidance.

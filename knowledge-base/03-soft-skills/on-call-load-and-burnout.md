@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 03-soft-skills
 title: "On-call load, stress and burnout"
-updated: 2026-10-12
+updated: 2026-10-14
 claims:
   - id: 03-17
     claim: "Google SRE's lessons-learned article says that to keep your cool during a high-risk, high-stress situation, it is important to practice recovery mechanisms and mitigations beforehand."
@@ -206,3 +206,4 @@ Source years in this note: 2025, 2024, 2022, 2019. A year is the publication or 
 
 - `org-fact` claims carry a Wayback Machine snapshot in `source.archive`. The exact quote was found in that snapshot on the claim's `source.accessed` date.
 - Podcast speakers are named in the claim. A speaker who is not a Google employee is not evidence about Google, so those claims are `fact`, not `org-fact`.
+- `03-18` and `03-22` are each one speaker's account of one team or tool at one time, not a statement of general SRE practice.

@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 03-soft-skills
 title: "Teamwork, incident collaboration, design documents and approvals"
-updated: 2026-10-12
+updated: 2026-10-14
 claims:
   - id: 03-26
     claim: "On Google's SRE Prodcast, Adam Kramer says that if they are paged for a completely specious thing, the attitude is 'please don't page us for that next time', but people should feel free to page them with new problems rather than let a problem sit and simmer."
@@ -41,7 +41,7 @@ claims:
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
       result: supported
   - id: 03-28
-    claim: "In an example, Building Secure and Reliable Systems says Google uses a design document template to guide new feature design and to collect feedback from stakeholders before starting an engineering project."
+    claim: "In a section headed \"Example: Google Design Document\", Building Secure and Reliable Systems says Google uses a design document template to guide new feature design and to collect feedback from stakeholders before starting an engineering project."
     type: org-fact
     status: ai-checked
     source:
@@ -56,7 +56,7 @@ claims:
     ai_check:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
+      prompt_log: prompts/2026-10-14-nine14282-soft-skills-author-check-3.md
       result: supported
   - id: 03-29
     claim: "Google's Incident Management Guide says blameless postmortems are one of the core tenets of SRE culture, and that it is important to remember everyone involved in an incident had good intentions."
@@ -112,26 +112,8 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check-2.md
       result: supported
-  - id: 03-32
-    claim: "Building Secure and Reliable Systems gives the example that an SRE team might choose to audit breakglass events from the last week's on-call shift during a weekly team meeting."
-    type: fact
-    status: ai-checked
-    source:
-      title: "Building Secure and Reliable Systems, Chapter 5"
-      url: https://google.github.io/building-secure-and-reliable-systems/raw/ch05.html
-      kind: official-doc
-      accessed: 2026-10-07
-      archive: https://web.archive.org/web/20260616012631/https://google.github.io/building-secure-and-reliable-systems/raw/ch05.html
-    quote: "For example, an SRE team might choose to audit breakglass events from the last week’s on-call shift during a weekly team meeting."
-    os_concepts: []
-    pr: null
-    ai_check:
-      platform: Claude Code
-      model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
-      result: supported
   - id: 03-33
-    claim: "Building Secure and Reliable Systems says social pressure around approvals may lead to bad decisions; for example, an engineer might not feel comfortable rejecting a suspicious request issued by a manager, a senior engineer or someone standing over their desk."
+    claim: "Building Secure and Reliable Systems says social pressure around approvals may also lead to bad decisions."
     type: fact
     status: ai-checked
     source:
@@ -140,13 +122,13 @@ claims:
       kind: official-doc
       accessed: 2026-10-07
       archive: https://web.archive.org/web/20260616012631/https://google.github.io/building-secure-and-reliable-systems/raw/ch05.html
-    quote: "Social pressure around approvals may also lead to bad decisions. For example, an engineer might not feel comfortable rejecting a suspicious request if its issued by a manager, a senior engineer, or someone standing over their desk."
+    quote: "Social pressure around approvals may also lead to bad decisions."
     os_concepts: []
     pr: null
     ai_check:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-soft-skills-author-check.md
+      prompt_log: prompts/2026-10-14-nine14282-soft-skills-author-check-3.md
       result: supported
   - id: 03-34
     claim: "Building Secure and Reliable Systems advises making sure the technology and social dynamics allow someone to say no before building a multi-party authorization system; otherwise the system is of little value."
@@ -172,7 +154,7 @@ claims:
 
 ## Summary
 
-On Google's SRE Prodcast, Adam Kramer says people should feel free to page them with new problems (03-26), and Vrai Stacey says their team always adopted the view that you drop what you are doing to help an on-caller who needs it (03-27). Google's Incident Management Guide calls blameless postmortems one of the core tenets of SRE culture (03-29) and says blaming individuals does not aid learning (03-30). Building Secure and Reliable Systems gives examples of a design document template that collects stakeholder feedback (03-28) and of a team that might audit breakglass events in a weekly meeting (03-32), and says social pressure around approvals may lead to bad decisions (03-33) and that a multi-party authorization system is of little value unless the technology and social dynamics allow someone to say no (03-34). One of the lessons in Lessons Learned from Two Decades of Site Reliability Engineering says relying on Google Hangouts and Google Meet during an incident that logged out 350M users was, in retrospect, kind of a bad call (03-31). Each claim rests on one source; no second source was compared, and this note has no claim yet on presentation skills, time management or English and other language skills.
+On Google's SRE Prodcast, Adam Kramer says people should feel free to page them with new problems (03-26), and Vrai Stacey says their team always adopted the view that you drop what you are doing to help an on-caller who needs it (03-27). Google's Incident Management Guide calls blameless postmortems one of the core tenets of SRE culture (03-29) and says blaming individuals does not aid learning (03-30). Building Secure and Reliable Systems gives Google's design document template, which collects stakeholder feedback, as an example (03-28), and says social pressure around approvals may lead to bad decisions (03-33) and that a multi-party authorization system is of little value unless the technology and social dynamics allow someone to say no (03-34). One of the lessons in Lessons Learned from Two Decades of Site Reliability Engineering says relying on Google Hangouts and Google Meet during an incident that logged out 350M users was, in retrospect, kind of a bad call (03-31). Each claim rests on one source; no second source was compared, and this note has no claim yet on presentation skills, time management or English and other language skills.
 
 ## Key points
 
@@ -180,8 +162,7 @@ On Google's SRE Prodcast, Adam Kramer says people should feel free to page them 
 - On Google's SRE Prodcast, Vrai Stacey says their team always adopted the view that you drop what you are doing to help an on-caller who needs it (03-27).
 - Google's Incident Management Guide says blameless postmortems are one of the core tenets of SRE culture (03-29).
 - The same guide says blaming individuals does not aid learning, so the focus is on improving systems, procedures and training (03-30).
-- In an example, Building Secure and Reliable Systems says Google uses a design document template to collect feedback from stakeholders before an engineering project starts (03-28).
-- Building Secure and Reliable Systems gives the example that an SRE team might choose to audit the last week's breakglass events in a weekly team meeting (03-32).
+- In a section headed "Example: Google Design Document", Building Secure and Reliable Systems says Google uses a design document template to collect feedback from stakeholders before an engineering project starts (03-28).
 - The same book says social pressure around approvals may lead to bad decisions (03-33), and that a multi-party authorization system is of little value unless someone can say no (03-34).
 - One of the lessons in Lessons Learned from Two Decades of Site Reliability Engineering says relying on Google Hangouts and Google Meet when 350M users were logged out was, in retrospect, kind of a bad call (03-31).
 
@@ -193,12 +174,11 @@ Source years in this note: 2026, 2024, 2020. A year is the publication or last-u
 
 - `03-26` (fact): On Google's SRE Prodcast, Adam Kramer says that if they are paged for a completely specious thing, the attitude is 'please don't page us for that next time', but people should feel free to page them with new problems rather than let a problem sit and simmer.
 - `03-27` (org-fact): On Google's SRE Prodcast, Vrai Stacey says their team always adopted the view that if the on-caller needs your help, you drop what you are doing and help the on-caller.
-- `03-28` (org-fact): In an example, Building Secure and Reliable Systems says Google uses a design document template to guide new feature design and to collect feedback from stakeholders before starting an engineering project.
+- `03-28` (org-fact): In a section headed "Example: Google Design Document", Building Secure and Reliable Systems says Google uses a design document template to guide new feature design and to collect feedback from stakeholders before starting an engineering project.
 - `03-29` (fact): Google's Incident Management Guide says blameless postmortems are one of the core tenets of SRE culture, and that it is important to remember everyone involved in an incident had good intentions.
 - `03-30` (fact): Google's Incident Management Guide says blaming individuals for unintended consequences during the response does not aid learning, so the focus is instead on improving systems, procedures and training to make them more resilient.
 - `03-31` (org-fact): One of the lessons in Lessons Learned from Two Decades of Site Reliability Engineering says teams expected to use Google Hangouts and Google Meet to manage an incident, and that relying on these Google services when 350M users were logged out of their devices and services was, in retrospect, kind of a bad call.
-- `03-32` (fact): Building Secure and Reliable Systems gives the example that an SRE team might choose to audit breakglass events from the last week's on-call shift during a weekly team meeting.
-- `03-33` (fact): Building Secure and Reliable Systems says social pressure around approvals may lead to bad decisions; for example, an engineer might not feel comfortable rejecting a suspicious request issued by a manager, a senior engineer or someone standing over their desk.
+- `03-33` (fact): Building Secure and Reliable Systems says social pressure around approvals may also lead to bad decisions.
 - `03-34` (fact): Building Secure and Reliable Systems advises making sure the technology and social dynamics allow someone to say no before building a multi-party authorization system; otherwise the system is of little value.
 
 ## Notes
@@ -206,3 +186,4 @@ Source years in this note: 2026, 2024, 2020. A year is the publication or last-u
 - `org-fact` claims carry a Wayback Machine snapshot in `source.archive`. The exact quote was found in that snapshot on the claim's `source.accessed` date.
 - Podcast speakers are named in the claim. A speaker who is not a Google employee is not evidence about Google, so those claims are `fact`, not `org-fact`.
 - `03-26` is a `fact`: the Wayback Machine has no snapshot of the transcript, so it cannot be an `org-fact`, and the claim says nothing about Google beyond where it was said.
+- `03-26` and `03-27` are each one speaker's account of their own team, not a statement of general SRE practice.
