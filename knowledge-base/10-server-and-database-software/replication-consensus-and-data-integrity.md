@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 10-server-and-database-software
 title: "Replication, consensus, backups and data integrity"
-updated: 2026-10-12
+updated: 2026-10-14
 claims:
   - id: 10-19
     claim: "A Google SRE prodverb says backups are only as good as the last restore."
@@ -22,6 +22,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      result: supported
   - id: 10-20
     claim: "The report Creating a Production Launch Plan says a product should have backups, its teams should have experience recovering the data fully, and data corruption risks, especially ones that can go unnoticed, must be added to the Risks and Mitigations table."
     type: fact
@@ -39,6 +44,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-2.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
   - id: 10-21
     claim: "The SRE book says a study of 19 data recovery efforts at Google found that the most common user-visible data loss scenarios involved data deletion or loss of referential integrity caused by software bugs."
@@ -58,6 +68,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      result: supported
   - id: 10-22
     claim: "The SRE book says SRE makes sure global Chubby meets, but does not significantly exceed, its service level objective: in any quarter where a true failure has not dropped availability below the target, a controlled outage is synthesized by intentionally taking down the system."
     type: org-fact
@@ -75,6 +90,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
   - id: 10-23
     claim: "The SRE book says that in its replicated cron service, as long as the majority of group members are available, the distributed system as a whole can process new state changes despite the failure of bounded subsets of the infrastructure."
@@ -94,6 +114,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      result: supported
   - id: 10-24
     claim: "The SRE book says its distributed cron stores snapshots on local disk and, because they are critical, also backs them up onto a distributed filesystem, protecting against failures affecting all three machines."
     type: org-fact
@@ -111,6 +136,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
   - id: 10-25
     claim: "The SRE book says the real focus of backup efforts should be data recovery, which distinguishes real backups from archives, and notes that, as is sometimes observed, no one really wants to make backups; what people really want are restores."
@@ -130,6 +160,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      result: supported
   - id: 10-26
     claim: "The SRE book says that in designing a data integrity program, it's important to recognize that replication and redundancy are not recoverability."
     type: fact
@@ -148,6 +183,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      result: supported
   - id: 10-27
     claim: "The SRE book recommends using distributed consensus systems that have been formally proven and tested thoroughly whenever you see leader election, critical shared state or distributed locking."
     type: fact
@@ -165,6 +205,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
 ---
 
