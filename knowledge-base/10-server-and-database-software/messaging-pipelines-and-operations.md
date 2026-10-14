@@ -124,7 +124,7 @@ claims:
       result: supported
   - id: 10-36
     claim: "In its Waze case study, the SRE Workbook says the message queueing system was critical to operations because every component of Waze used it to communicate with other components internally."
-    type: org-fact
+    type: fact
     status: ai-checked
     source:
       title: "The Site Reliability Workbook, Chapter 21: Organizational Change Management in SRE"
