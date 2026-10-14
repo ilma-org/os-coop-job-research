@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 02-hard-skills
 title: Toil, automation and production changes
-updated: 2026-10-12
+updated: 2026-10-14
 claims:
   - id: 02-15
     claim: "Google SRE describes a YouTube outage in which a caching config change fully hobbled the service for 13 minutes, and says canarying those global changes with a progressive rollout could have curbed it before it had global impact."
@@ -159,9 +159,9 @@ claims:
     pr: 20
     ai_recheck:
       platform: Claude Code
-      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-11-nacs-970-hard-skills-reviewer-recheck-2.md
-      result: partial
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-hard-skills-reviewer-recheck-3.md
+      result: supported
     ai_check:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
