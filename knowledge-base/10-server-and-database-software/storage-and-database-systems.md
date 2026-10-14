@@ -5,7 +5,7 @@ title: "Storage and database systems: GFS, Colossus, Spanner and caches"
 updated: 2026-10-14
 claims:
   - id: 10-10
-    claim: "On the Google SRE Prodcast, Silvia Botros says it is more about predicting failure and planning accordingly, so you don't want a single database failure to take down your whole product."
+    claim: "On the Google SRE Prodcast, Silvia Botros describes a culture shift in database engineering away from relying on one DBA, and says it is more about predicting failure and planning accordingly, so you don't want a single database failure to take down your whole product."
     type: fact
     status: ai-checked
     source:
@@ -20,12 +20,7 @@ claims:
     ai_check:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
-      result: supported
-    ai_recheck:
-      platform: Claude Code
-      model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-5.md
       result: supported
   - id: 10-11
     claim: "In a section headed \"Example: Temporary Files\", Building Secure and Reliable Systems says that, according to normal behavior, a Spanner server buffered recent writes in memory and, as it ran low on memory, flushed the data to files on Colossus."

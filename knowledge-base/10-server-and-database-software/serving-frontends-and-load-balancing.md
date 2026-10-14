@@ -120,7 +120,7 @@ claims:
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
   - id: 10-08
-    claim: "The SRE Workbook says GCLB does not use DNS load balancing, because DNS-based load balancing relies on client cooperation to properly expire and refetch DNS records."
+    claim: "The SRE Workbook says that, at the time it was written, GCLB (Google Cloud Load Balancer) did not use DNS load balancing, because DNS-based load balancing relies on client cooperation to properly expire and refetch DNS records."
     type: org-fact
     status: ai-checked
     source:
@@ -135,12 +135,7 @@ claims:
     ai_check:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-2.md
-      result: supported
-    ai_recheck:
-      platform: Claude Code
-      model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-5.md
       result: supported
   - id: 10-09
     claim: "The SRE book says that no matter how efficient a load balancing policy is, eventually some part of a system will become overloaded, and that gracefully handling overload conditions is fundamental to running a reliable serving system."

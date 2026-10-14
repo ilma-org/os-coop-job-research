@@ -5,7 +5,7 @@ title: "Message queues, pipelines and operating data services"
 updated: 2026-10-14
 claims:
   - id: 10-29
-    claim: "Building Secure and Reliable Systems says that if a message queue is not designed to be reliable, for example if it stores data in volatile memory only, you can lose transactions, a new risk surface."
+    claim: "In an example where a queue buffers transaction data while a payment provider is unreachable, Building Secure and Reliable Systems says that if the message queue is not designed to be reliable, for example if it stores data in volatile memory only, you can lose transactions, a new risk surface."
     type: fact
     status: ai-checked
     source:
@@ -20,12 +20,7 @@ claims:
     ai_check:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-2.md
-      result: supported
-    ai_recheck:
-      platform: Claude Code
-      model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-5.md
       result: supported
   - id: 10-30
     claim: "The SRE Workbook says the internals of data storage often have a lowest level of granularity that may become unavailable if accessed heavily; for example, a Spanner tablet can become overloaded due to a problematic section of data even though most of the data storage is fine."
@@ -51,7 +46,7 @@ claims:
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
   - id: 10-31
-    claim: "The SRE Workbook says stale data is almost always better than incorrect data."
+    claim: "For data pipelines, in a section headed \"Delayed data\", the SRE Workbook says stale data is almost always better than incorrect data."
     type: fact
     status: ai-checked
     source:
@@ -66,12 +61,7 @@ claims:
     ai_check:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-2.md
-      result: supported
-    ai_recheck:
-      platform: Claude Code
-      model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-5.md
       result: supported
   - id: 10-32
     claim: "The SRE Workbook names two main steps in fixing corrupt data: mitigate the impact by preventing further corrupt data from entering the system, and restore the data from a previously known good version or reprocess to repair it."
@@ -97,7 +87,7 @@ claims:
       prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
   - id: 10-34
-    claim: "In a design example, the SRE Workbook says to have the replicas use a consensus algorithm such as Paxos so that the state of the calculations can be reliably stored if a datacenter-sized failure occurs."
+    claim: "In its AdWords example of non-abstract large system design, the SRE Workbook says to have the replicas of a shared service such as ClickMap use a consensus algorithm such as Paxos, so that the state of the calculations can be reliably stored if a datacenter-sized failure occurs."
     type: fact
     status: ai-checked
     source:
@@ -112,15 +102,10 @@ claims:
     ai_check:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
-      result: supported
-    ai_recheck:
-      platform: Claude Code
-      model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-5.md
       result: supported
   - id: 10-35
-    claim: "In the same design example, the SRE Workbook says executing Paxos with fault-isolated datacenters means each operation needs roughly 25 milliseconds, an assumption based on datacenters at least a few hundred kilometers apart."
+    claim: "In its AdWords example of non-abstract large system design, the SRE Workbook assumes that executing Paxos with fault-isolated datacenters at least a few hundred kilometers apart takes roughly 25 milliseconds per operation."
     type: fact
     status: ai-checked
     source:
@@ -135,12 +120,7 @@ claims:
     ai_check:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
-      prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
-      result: supported
-    ai_recheck:
-      platform: Claude Code
-      model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-5.md
       result: supported
   - id: 10-36
     claim: "In its Waze case study, the SRE Workbook says the message queueing system was critical to operations because every component of Waze used it to communicate with other components internally."
