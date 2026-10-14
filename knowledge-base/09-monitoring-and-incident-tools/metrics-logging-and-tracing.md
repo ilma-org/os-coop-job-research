@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 09-monitoring-and-incident-tools
 title: "Metrics, logging and tracing tools in Google's SRE books"
-updated: 2026-10-11
+updated: 2026-10-14
 claims:
   - id: 09-01
     claim: "The SRE book says Google built its monitoring system Borgmon shortly after the Borg job scheduler was created in 2003, to complement it."
@@ -284,13 +284,13 @@ claims:
       kind: official-doc
       accessed: 2026-10-11
       archive: https://web.archive.org/web/20260908010650/https://sre.google/sre-book/effective-troubleshooting/
-    quote: "Tracing requests through the whole stack using tools such as Dapper [Sig10] provides a very powerful way to understand how a distributed system is working"
+    quote: "Tracing requests through the whole stack using tools such as Dapper [Sig10] provides a very powerful way to understand how a distributed system is working, though varying use cases imply significantly different tracing designs"
     os_concepts: []
     pr: null
     ai_check:
       platform: Claude Code
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-11-nacs-970-09-author-check.md
+      prompt_log: prompts/2026-10-14-nacs-970-09-author-check-3.md
       result: supported
 ---
 
@@ -305,5 +305,5 @@ The SRE book and the Workbook describe Google's internal monitoring stack and it
 - Borgmon was built shortly after Borg in 2003. It scrapes a /varz URI from each target, stores the data in an in-memory database and evaluates rules over time-series (09-01, 09-02, 09-03, 09-21).
 - Monarch is described as Google's new monitoring system. Viceroy is a separate dashboarding service that showed data from both Borgmon and Monarch, so teams could migrate gradually (09-22, 09-23). The Workbook says Google has converged on one centrally run framework (09-06).
 - Open source tools named: Prometheus, Riemann, Heka and Bosun as Borgmon-like tools (09-04), the Prometheus format and OpenMetrics (09-24), and grafanalib for monitoring configuration as code (09-05, 09-25).
-- The four golden signals are latency, traffic, errors and saturation (09-07). Google SRE combines heavy white-box monitoring with modest black-box monitoring (09-08).
+- The four golden signals are latency, traffic, errors and saturation (09-07). Google SRE combines heavy white-box monitoring with modest but critical black-box monitoring (09-08).
 - For debugging, the books describe text and structured logs (09-09), per-server endpoints that show recent RPCs (09-10) and Dapper for request tracing (09-26).
