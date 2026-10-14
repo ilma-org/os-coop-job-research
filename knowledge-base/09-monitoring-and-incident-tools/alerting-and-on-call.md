@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 09-monitoring-and-incident-tools
 title: "Alerting, paging and on-call tools in Google's SRE books"
-updated: 2026-10-11
+updated: 2026-10-14
 claims:
   - id: 09-27
     claim: "The SRE book says the Alertmanager, which Borgmon connects to, is responsible for routing alert notifications to the correct destination."
@@ -185,7 +185,7 @@ claims:
       prompt_log: prompts/2026-10-11-nacs-970-09-author-check.md
       result: supported
   - id: 09-37
-    claim: "The SRE book says Google SRE invests at least 50% of time in engineering, and of the remainder no more than 25% can be spent on-call."
+    claim: "The SRE book says Google SRE strives to invest at least 50% of SRE time in engineering, and of the remainder no more than 25% can be spent on-call."
     type: org-fact
     status: ai-checked
     source:
@@ -200,7 +200,7 @@ claims:
     ai_check:
       platform: Claude Code
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-11-nacs-970-09-author-check.md
+      prompt_log: prompts/2026-10-14-nacs-970-09-author-check-3.md
       result: supported
   - id: 09-38
     claim: "The SRE book says many Google SRE teams have both a primary and a secondary on-call rotation."
@@ -256,6 +256,24 @@ claims:
       model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
       prompt_log: prompts/2026-10-11-nacs-970-09-author-check.md
       result: supported
+  - id: 09-46
+    claim: "The SRE book says the central replicated system that tracks alert acknowledgment for Google SRE is called \"The Escalator\", and that it was first a largely transparent tool that received copies of emails sent to on-call aliases."
+    type: org-fact
+    status: ai-checked
+    source:
+      title: "Site Reliability Engineering, ch.16 Tracking Outages"
+      url: https://sre.google/sre-book/tracking-outages/
+      kind: official-doc
+      accessed: 2026-10-14
+      archive: https://web.archive.org/web/20260913212844/https://sre.google/sre-book/tracking-outages/
+    quote: "This system, called \"The Escalator,\" was initially designed as a largely transparent tool that received copies of emails sent to on-call aliases."
+    os_concepts: []
+    pr: null
+    ai_check:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-09-author-check-3.md
+      result: supported
 ---
 
 # Alerting, paging and on-call tools in Google's SRE books
@@ -268,6 +286,6 @@ The books describe how alerts flow from monitoring to people at Google. Borgmon 
 
 - The Alertmanager routes alerts. Page-worthy alerts go to the on-call rotation and important but subcritical alerts go to ticket queues. Prober checks a target from the outside (09-27, 09-28, 09-29).
 - SLO-based alerting aims at events that consume a large fraction of the error budget. Multiple burn rates let an alert's priority match how fast a response is needed (09-30, 09-31).
-- A central replicated system tracks acknowledgment of every alert and escalates, for example from primary to secondary on-call. The Outalator receives alerts passively, lets users annotate and group them, and treats a group as an incident (09-32, 09-33, 09-34, 09-35). Messaging tools such as Slack, Hipchat and IRC are suggested hook points for a similar tool (09-36).
-- Google SRE spends at least 50% of time on engineering and no more than 25% on-call. Many teams run a primary and a secondary rotation (09-37, 09-38).
+- A central replicated system, called the Escalator, tracks acknowledgment of every alert and escalates, for example from primary to secondary on-call (09-32, 09-33, 09-46). The Outalator receives alerts passively, lets users annotate and group them, and treats a group as an incident (09-34, 09-35). Messaging tools such as Slack, Hipchat and IRC are suggested hook points for a similar tool (09-36).
+- Google SRE strives to spend at least 50% of SRE time on engineering, and of the remainder no more than 25% can go to on-call. Many teams run a primary and a secondary rotation (09-37, 09-38).
 - Alerts normally have a playbook entry (09-39). The Workbook names the Slack plug-in for Jenkins as a tool for a searchable timeline of changes (09-40).
