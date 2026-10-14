@@ -424,38 +424,33 @@ claims:
       date: 2026-10-14
       result: pass
       opened_source: true
-  - id: 01-107
-    claim: "In a Workbook case study of a new Google SRE team, the team compiled a checklist of two dozen focus areas for people to practice before going on-call."
+  - id: 01-118
+    claim: "In the Workbook's case study of one new Google SRE team, two SREs (named Sara and Mike on the page) compiled a checklist of two dozen focus areas for people to practice before going on-call. This is one team's example, not a statement of general Google practice."
     type: org-fact
     status: ai-checked
     source:
       title: "The Site Reliability Workbook, Ch.8 On-Call"
       url: https://sre.google/workbook/on-call/
       kind: official-doc
-      accessed: 2026-10-11
+      accessed: 2026-10-14
       archive: https://web.archive.org/web/20261011015106/https://sre.google/workbook/on-call/
-    quote: "a checklist of two dozen focus areas for people to practice before going on-call"
+    quote: "Sara and Mike compiled a checklist of two dozen focus areas for people to practice before going on-call"
     os_concepts: []
     pr: null
     ai_check:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-11-bximai-01-position-author-check-2.md
+      prompt_log: prompts/2026-10-14-bximai-01-position-author-check-3.md
       result: supported
-    ai_recheck:
-      platform: Claude Code
-      model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
-      result: supported
-  - id: 01-108
-    claim: "The Google SRE book says that within SRE, Google tracks the career progress of both groups closely and has to date found no practical difference in performance between engineers from the two tracks."
+  - id: 01-119
+    claim: "The Google SRE book says that, within SRE, Google tracks the career progress of both hiring groups closely (SREs hired via the standard Google Software Engineer procedure, and candidates very close to those qualifications who also have rare technical skills useful to SRE), and that at the time of writing it had found no practical difference in performance between engineers from the two tracks."
     type: org-fact
     status: ai-checked
     source:
       title: "Site Reliability Engineering, Ch.1 Introduction"
       url: https://sre.google/sre-book/introduction/
       kind: official-doc
-      accessed: 2026-10-11
+      accessed: 2026-10-14
       archive: https://web.archive.org/web/20260919013803/https://sre.google/sre-book/introduction/
     quote: "Within SRE, we track the career progress of both groups closely, and have to date found no practical difference in performance between engineers from the two tracks."
     os_concepts: []
@@ -463,12 +458,7 @@ claims:
     ai_check:
       platform: Claude Code (desktop app)
       model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-11-bximai-01-position-author-check-2.md
-      result: supported
-    ai_recheck:
-      platform: Claude Code
-      model: "Sonnet 5.5 (claude-sonnet-5-5)"
-      prompt_log: prompts/2026-10-13-nacs-970-01-reviewer-recheck.md
+      prompt_log: prompts/2026-10-14-bximai-01-position-author-check-3.md
       result: supported
 ---
 
@@ -484,10 +474,10 @@ The SRE book describes Google's SRE hiring as two groups: 50-60% are people hire
 - Alternate skills sought: UNIX system internals and networking (Layer 1 to Layer 3) are the two most common. (01-59)
 - Common traits: belief in and aptitude for developing software systems to solve complex problems; SREs share academic and intellectual background with the rest of the development organization. (01-69, 01-60)
 - Background mix: Google hires people with a diverse background in systems and software engineering, and strives for a mix of traditional software development and systems engineering experience on SRE teams. (01-62, 01-63)
-- Performance: Google tracks the career progress of both groups closely and found no practical difference in performance between the two tracks. (01-108)
+- Performance: Google tracks the career progress of both hiring groups closely and, at the time of writing, had found no practical difference in performance between the two tracks. (01-119)
 - Learning the role: investing up front in the education and technical orientation of new SREs makes them better engineers. (01-64)
 - Practices the SRE book recommends for new SREs: shadow the on-call rotation early, take on nontrivial project work with partial ownership in the stack, and use reverse engineering, statistical thinking and working from fundamental principles. (01-65, 01-66, 01-67)
-- Pre-on-call checklist: in a Workbook case study, a new Google SRE team compiled a checklist of two dozen focus areas to practice before going on-call. (01-107)
+- Pre-on-call checklist: in a Workbook case study of one new Google SRE team (not general Google practice), two SREs compiled a checklist of two dozen focus areas to practice before going on-call. (01-118)
 - Job ad, minimum qualifications (one ad, Software Engineer, Android SRE): a Bachelor's degree in Computer Science, a related field, or equivalent practical experience; 2 years of experience with software development in one or more programming languages. (01-71, 01-72)
 - Job ad, preferred qualifications (same ad): a Master's degree in Computer Science or Engineering; 2 years of experience designing, analyzing, and troubleshooting large-scale distributed systems. (01-73, 01-74)
 
