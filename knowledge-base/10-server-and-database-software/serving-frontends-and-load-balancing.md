@@ -137,6 +137,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-5.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck-2.md
+      result: supported
   - id: 10-09
     claim: "The SRE book says that no matter how efficient a load balancing policy is, eventually some part of a system will become overloaded, and that gracefully handling overload conditions is fundamental to running a reliable serving system."
     type: fact

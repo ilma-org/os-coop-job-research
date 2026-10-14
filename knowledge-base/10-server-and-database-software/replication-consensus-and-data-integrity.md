@@ -206,6 +206,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-5.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck-2.md
+      result: supported
   - id: 10-35
     claim: "In its AdWords example of non-abstract large system design, the SRE Workbook assumes that executing Paxos with fault-isolated datacenters at least a few hundred kilometers apart takes roughly 25 milliseconds per operation."
     type: fact
@@ -223,6 +228,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-5.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck-2.md
       result: supported
 ---
 

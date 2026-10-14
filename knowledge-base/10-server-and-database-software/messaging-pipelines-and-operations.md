@@ -22,6 +22,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-5.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck-2.md
+      result: supported
   - id: 10-31
     claim: "For data pipelines, in a section headed \"Delayed data\", the SRE Workbook says stale data is almost always better than incorrect data."
     type: fact
@@ -39,6 +44,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-5.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck-2.md
       result: supported
   - id: 10-36
     claim: "In its Waze case study, the SRE Workbook says the message queueing system was critical to operations because every component of Waze used it to communicate with other components internally."
