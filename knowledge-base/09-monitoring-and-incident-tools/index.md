@@ -6,7 +6,7 @@ assignment_section: "4.4"
 report_sections: [9]
 owner: "@nacs-970"
 issue: 14
-updated: 2026-10-11
+updated: 2026-10-14
 ---
 
 # Monitoring and incident tools
@@ -26,7 +26,7 @@ The owner organizes notes (`topic-note` files) here. List them below as they are
 <!-- notes:start -->
 - [metrics-logging-and-tracing.md](metrics-logging-and-tracing.md): Metrics, logging and tracing tools in Google's SRE books. 16 claims (09-01 to 09-10, 09-21 to 09-26): 16 ai-checked.
 - [incident-response-and-postmortems.md](incident-response-and-postmortems.md): Incident response and postmortem practice in Google's SRE books. 15 claims (09-11 to 09-20, 09-41 to 09-45): 15 ai-checked.
-- [alerting-and-on-call.md](alerting-and-on-call.md): Alerting, paging and on-call tools in Google's SRE books. 14 claims (09-27 to 09-40): 14 ai-checked.
+- [alerting-and-on-call.md](alerting-and-on-call.md): Alerting, paging and on-call tools in Google's SRE books. 15 claims (09-27 to 09-40, 09-46): 15 ai-checked.
 <!-- notes:end -->
 
 ## Sources covered so far
