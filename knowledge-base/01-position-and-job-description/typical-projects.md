@@ -542,7 +542,7 @@ claims:
 
 ## Summary
 
-Google's SRE books describe project work in four groups: building internal tools and automation, capacity planning, onboarding services through Production Readiness Reviews (PRRs), and launch support (01-36, 01-39, 01-42, 01-47). The books give named examples, such as Auxon for capacity planning, datacenter line-card repair automation and the decommissioning of filer-backed home directories (01-39, 01-51, 01-52). They also say long-term project work balances on-call and interrupt work and is needed so team size does not grow with service growth (01-38, 01-40). All examples are from Google's own books. They show the kinds of projects that exist, not a list of what a COOP student would be assigned. Not found yet: a source on intern or student SRE projects.
+Google's SRE books describe project work in four groups: building internal tools and automation, capacity planning, onboarding services through Production Readiness Reviews (PRRs), and launch support (01-36, 01-39, 01-42, 01-109). The books give named examples, such as Auxon for capacity planning, datacenter line-card repair automation and the decommissioning of filer-backed home directories (01-39, 01-51, 01-52). They also say long-term project work balances on-call and interrupt work (01-40), and that linear team growth against exponential service growth needs perpetual automation work (01-38). All examples are from Google's own books and show the kinds of projects that exist, not a list of what a COOP student would be assigned. Not found yet: a source on intern or student SRE projects.
 
 ## Key points
 
