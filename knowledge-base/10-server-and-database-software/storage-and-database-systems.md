@@ -22,6 +22,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      result: supported
   - id: 10-11
     claim: "In a section headed \"Example: Temporary Files\", Building Secure and Reliable Systems says that, according to normal behavior, a Spanner server buffered recent writes in memory and, as it ran low on memory, flushed the data to files on Colossus."
     type: org-fact
@@ -39,6 +44,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-nine14282-server-db-author-check-4.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
   - id: 10-12
     claim: "The report Case Studies in Infrastructure Change Management says GFS was designed in 2001 as Google's first cluster-level file system, supported many petabytes of storage and allowed thousands of servers to interact with thousands of clients."
@@ -58,6 +68,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      result: supported
   - id: 10-13
     claim: "The report Case Studies in Infrastructure Change Management says that in GFS, machines ran a daemon called a chunkserver to store chunks on the local filesystem, while the GFS client code split files into chunks, stored them on chunkservers and replicated them to other chunkservers for redundancy and bandwidth."
     type: org-fact
@@ -75,6 +90,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
   - id: 10-14
     claim: "The report Case Studies in Infrastructure Change Management says that in Colossus, the D server managed access to the raw data while Colossus managed the map of what data was on which D server."
@@ -94,6 +114,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check-3.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      result: supported
   - id: 10-15
     claim: "The report Creating a Production Launch Plan gives as an example that if a relational database has an upper limit on transaction throughput, there is only so much scaling you can get by adding more CPU or memory, which doesn't scale horizontally."
     type: fact
@@ -111,6 +136,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
   - id: 10-16
     claim: "The report Creating a Production Launch Plan says a product may require significantly more resources when operating on a cold cache; in its video example, if pointers to stored videos are lost when the cache clears, all video view requests start going to the video metadata service."
@@ -130,6 +160,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      result: supported
   - id: 10-17
     claim: "The SRE book says caches are sometimes added to a service to improve performance but actually wind up being hard dependencies."
     type: fact
@@ -148,6 +183,11 @@ claims:
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
+      result: supported
   - id: 10-18
     claim: "The SRE book says it may be worthwhile to move caching from a server to a separate binary like memcache, which also allows cache sharing between many servers, at the cost of introducing another RPC and slight additional latency."
     type: fact
@@ -165,6 +205,11 @@ claims:
       platform: Claude Code
       model: "Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-12-nine14282-server-db-author-check.md
+      result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-14-nacs-970-10-reviewer-recheck.md
       result: supported
 ---
 
