@@ -7,7 +7,7 @@ claims:
   - id: 12-30
     claim: "The SRE Workbook says Google's Mission Control program lets engineers from product development teams spend six months embedded in an SRE team."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.20 SRE Team Lifecycles"
       url: https://sre.google/workbook/team-lifecycles/
@@ -22,10 +22,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
   - id: 12-31
     claim: "The SRE Workbook says Google SREs who also passed the hiring bar for software engineer roles are free to transfer to product development teams."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.20 SRE Team Lifecycles"
       url: https://sre.google/workbook/team-lifecycles/
@@ -40,10 +50,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
   - id: 12-32
     claim: "In a case study, the SRE Workbook says a Google SRE team expected new team members and three interns to improve its workload in the long term."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.17 Identifying and Recovering from Overload"
       url: https://sre.google/workbook/overload/
@@ -58,10 +78,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
   - id: 12-33
     claim: "In a case study, Building Secure and Reliable Systems says Google's Chrome security team has converted a number of interns to full-time employees."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Building Secure and Reliable Systems, ch.19 Case Study: Chrome Security Team"
       url: https://google.github.io/building-secure-and-reliable-systems/raw/ch19.html
@@ -76,6 +106,16 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
 ---
 
 # Internships and job opportunities at Google

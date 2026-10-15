@@ -7,7 +7,7 @@ claims:
   - id: 12-07
     claim: "The SRE Workbook says SRE and product development are separate organizations at Google, each with its own focus, priorities and management."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.1 How SRE Relates to DevOps"
       url: https://sre.google/workbook/how-sre-relates/
@@ -22,10 +22,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
   - id: 12-08
     claim: "The SRE Workbook says product development teams at Google fund the growth of SRE with new hires when a product is successful."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.1 How SRE Relates to DevOps"
       url: https://sre.google/workbook/how-sre-relates/
@@ -40,10 +50,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
   - id: 12-09
     claim: "The SRE Workbook says product development teams at Google own their service by default, and that SRE is not available or warranted for most services."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.1 How SRE Relates to DevOps"
       url: https://sre.google/workbook/how-sre-relates/
@@ -58,10 +78,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
   - id: 12-10
     claim: "The SRE book says Google SRE has infrastructural teams, service teams and horizontal product teams."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.31 Communication and Collaboration in SRE"
       url: https://sre.google/sre-book/communication-and-collaboration/
@@ -76,10 +106,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
   - id: 12-11
     claim: "The SRE book says SRE at Google is not a command-and-control organization."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.31 Communication and Collaboration in SRE"
       url: https://sre.google/sre-book/communication-and-collaboration/
@@ -94,10 +134,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
   - id: 12-12
     claim: "The SRE book says Google is a multinational organization and that, because of emergency response and pager rotations, SRE is distributed across at least a few time zones."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.31 Communication and Collaboration in SRE"
       url: https://sre.google/sre-book/communication-and-collaboration/
@@ -112,10 +162,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
   - id: 12-13
     claim: "The SRE Workbook says Google has hundreds of on-call rotations, and that many developer teams, not only SRE, are directly on-call for their service."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.8 On-Call"
       url: https://sre.google/workbook/on-call/
@@ -130,10 +190,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
   - id: 12-14
     claim: "The SRE Workbook says Google SRE teams most commonly interact with a distinct product development team."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.20 SRE Team Lifecycles"
       url: https://sre.google/workbook/team-lifecycles/
@@ -148,10 +218,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
   - id: 12-15
     claim: "The SRE Workbook says Google uses horizontal teams, often staffed by experienced SREs, to build and run standard solutions that other SRE teams adopt."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.20 SRE Team Lifecycles"
       url: https://sre.google/workbook/team-lifecycles/
@@ -166,10 +246,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
   - id: 12-16
     claim: "In a case study, the SRE Workbook describes one of Google's internal storage SRE teams that ran backends for Gmail, Google Drive, Google Groups and other services."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.17 Identifying and Recovering from Overload"
       url: https://sre.google/workbook/overload/
@@ -184,10 +274,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
   - id: 12-17
     claim: "The SRE Workbook says it would be naive to assume that the efficacy of SRE at Google has nothing to do with Google's widely accessible unified codebase."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "The Site Reliability Workbook, ch.1 How SRE Relates to DevOps"
       url: https://sre.google/workbook/how-sre-relates/
@@ -202,6 +302,16 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
 ---
 
 # How SRE is organized at Google

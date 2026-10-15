@@ -7,7 +7,7 @@ claims:
   - id: 12-01
     claim: "The SRE book preface says Google SREs operate services such as planet-scale storage, email for hundreds of millions of users, and web search, which is where Google began."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Preface"
       url: https://sre.google/sre-book/preface/
@@ -22,10 +22,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
   - id: 12-02
     claim: "The SRE book preface says the \"site\" in SRE first meant keeping the google.com website running, and that SRE now also runs services that are not websites, from internal infrastructure such as Bigtable to Google Cloud Platform for external developers."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, Preface"
       url: https://sre.google/sre-book/preface/
@@ -40,10 +50,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
   - id: 12-03
     claim: "In the SRE book introduction, Benjamin Treynor Sloss writes that when he joined Google in 2003 he was tasked with running a \"Production Team\" of seven engineers."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.1 Introduction"
       url: https://sre.google/sre-book/introduction/
@@ -58,10 +78,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
   - id: 12-04
     claim: "The SRE book names Search, Ads, Gmail and Photos as Google services whose place on the risk continuum Google analyzes when setting reliability targets."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.3 Embracing Risk"
       url: https://sre.google/sre-book/embracing-risk/
@@ -76,10 +106,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
   - id: 12-06
     claim: "The SRE book says Google acquired YouTube and that in 2006 YouTube was focused on consumers."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.3 Embracing Risk"
       url: https://sre.google/sre-book/embracing-risk/
@@ -94,10 +134,20 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
   - id: 12-34
     claim: "The SRE book says the majority of Google Apps for Work users are enterprises, which depend on its services such as Gmail, Calendar, Drive and Docs for their employees' daily work."
     type: org-fact
-    status: ai-checked
+    status: human-verified
     source:
       title: "Site Reliability Engineering, ch.3 Embracing Risk"
       url: https://sre.google/sre-book/embracing-risk/
@@ -112,6 +162,16 @@ claims:
       model: "Claude Opus 5.5 (claude-opus-5-5)"
       prompt_log: prompts/2026-10-14-Bximai-12-author-check-2.md
       result: supported
+    ai_recheck:
+      platform: Claude Code
+      model: "Opus 5.5 (claude-opus-5-5)"
+      prompt_log: prompts/2026-10-15-nine14282-12-reviewer-recheck.md
+      result: supported
+    review:
+      by: "@Nine14282"
+      date: 2026-10-15
+      result: pass
+      opened_source: true
 ---
 
 # Google services, customers and the origin of SRE

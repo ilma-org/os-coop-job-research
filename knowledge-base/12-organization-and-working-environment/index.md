@@ -6,7 +6,7 @@ assignment_section: "4.7"
 report_sections: [5]
 owner: "@Bximai"
 issue: 17
-updated: 2026-10-14
+updated: 2026-10-15
 ---
 
 # Organization and working environment
@@ -26,10 +26,10 @@ Assignment Appendix G. Target company: **Google** (SRE). Do not claim what Googl
 The owner organizes notes (`topic-note` files) here. List them below as they are added.
 
 <!-- notes:start -->
-- [google-services-and-customers.md](google-services-and-customers.md): Google services, customers and the origin of SRE. 6 claims (12-01 to 12-04, 12-06, 12-34): 6 ai-checked.
-- [sre-organization-at-google.md](sre-organization-at-google.md): How SRE is organized at Google. 11 claims (12-07 to 12-17): 11 ai-checked.
-- [working-environment-and-culture.md](working-environment-and-culture.md): SRE working environment and culture at Google. 12 claims (12-18 to 12-29): 12 ai-checked.
-- [internships-and-job-opportunities.md](internships-and-job-opportunities.md): Internships and job opportunities at Google. 4 claims (12-30 to 12-33): 4 ai-checked.
+- [google-services-and-customers.md](google-services-and-customers.md): Google services, customers and the origin of SRE. 6 claims (12-01 to 12-04, 12-06, 12-34): 6 human-verified.
+- [sre-organization-at-google.md](sre-organization-at-google.md): How SRE is organized at Google. 11 claims (12-07 to 12-17): 11 human-verified.
+- [working-environment-and-culture.md](working-environment-and-culture.md): SRE working environment and culture at Google. 12 claims (12-18 to 12-29): 12 human-verified.
+- [internships-and-job-opportunities.md](internships-and-job-opportunities.md): Internships and job opportunities at Google. 4 claims (12-30 to 12-33): 4 human-verified.
 <!-- notes:end -->
 
 ## Sources covered so far
