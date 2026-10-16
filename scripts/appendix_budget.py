@@ -17,7 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lint_front_matter import ROOT, split_front_matter  # noqa: E402
-from make_report_data import is_confirmation, user_turns  # noqa: E402
+from make_report_data import shown_prompts  # noqa: E402
 
 WORDS_PER_PAGE = 550
 HEADER_WORDS = 60  # platform, model, date, log id and supporting-data line of one entry
@@ -41,7 +41,7 @@ def main() -> int:
             print(f"skipped {path.name}: {err or 'no front matter'}")
             continue
         if data.get("significant") is True:
-            turns = [x for x in user_turns(body) if not is_confirmation(x)]
+            turns, _ = shown_prompts(data, body)
             # Thai has no spaces between words, so count about 6 characters as one word
             words = sum(max(len(x.split()), len(x) // 6) for x in turns)
             significant.append((path.name, words + HEADER_WORDS))

@@ -371,6 +371,12 @@ class Linter:
         docs = data.get("supporting_docs")
         if not (isinstance(docs, list) and all(nonblank(d) for d in docs)):
             self.rep.error(path, "`supporting_docs` must be a list (it may be empty)")
+        skipped = data.get("appendix_skip")
+        if skipped is not None:
+            user_turns = {int(n) for n in re.findall(r"^## Turn (\d+) — user", body, re.M)}
+            if not (isinstance(skipped, list) and all(is_int(k) and k in user_turns for k in skipped)
+                    and len(set(skipped)) == len(skipped)):
+                self.rep.error(path, "`appendix_skip` must list the number of each skipped user turn once")
         redactions = data.get("redactions")
         found = len(REDACT_RE.findall(full_text))
         if not is_int(redactions) or redactions < 0:

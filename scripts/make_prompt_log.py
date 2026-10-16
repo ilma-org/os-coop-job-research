@@ -271,6 +271,8 @@ def main() -> int:
     p.add_argument("--significant", action="store_true"); p.add_argument("--reason")
     p.add_argument("--pr", type=int); p.add_argument("--claims", default="")
     p.add_argument("--supporting-doc", action="append", default=[])
+    p.add_argument("--skip", action="append", default=[], metavar="TURN",
+                   help="user turn the appendix leaves out because it only asks where a file is, reports status or gives a git or sign-off instruction and shapes no report text or claim (repeatable)")
     p.add_argument("--date"); p.add_argument("--id"); p.add_argument("--out"); p.add_argument("--force", action="store_true")
     a = p.parse_args()
 
@@ -329,6 +331,8 @@ def main() -> int:
              f"significant_reason: {kb.jstr(a.reason) if a.significant else 'null'}",
              f"purpose: {a.purpose}", f"pr: {a.pr if a.pr is not None else 'null'}",
              "claims: [" + ", ".join(c.strip() for c in a.claims.split(",") if c.strip()) + "]", "redactions: 0"]
+    if a.skip:
+        front.append("appendix_skip: [" + ", ".join(str(t) for t in sorted({int(x) for x in a.skip})) + "]")
     front += (["supporting_docs:"] + [f"  - {u}" for u in docs]) if docs else ["supporting_docs: []"]
     front += ["---", ""]
     text = "\n".join(front) + "\n" + "\n".join(body) + "\n## Tool-call ledger\n" + "\n".join(ledger) + "\n"

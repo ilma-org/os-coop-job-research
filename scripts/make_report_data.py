@@ -241,7 +241,11 @@ def prompt_tex(text: str) -> str:
 
 
 def user_turns(body: str) -> list[str]:
-    return [t.strip("\n") for t in re.findall(r"(?ms)^## Turn \d+ \u2014 user\n(.*?)(?=^## |\Z)", body)]
+def numbered_user_turns(body: str) -> list[tuple[int, str]]:
+    return [(int(n), t.strip("\n")) for n, t in re.findall(r"(?ms)^## Turn (\d+) \u2014 user\n(.*?)(?=^## |\Z)", body)]
+
+
+    return [t for _, t in numbered_user_turns(body)]
 
 
 def is_confirmation(turn: str) -> bool:
@@ -250,21 +254,32 @@ def is_confirmation(turn: str) -> bool:
 
 
 def appendix_text() -> str:
+def shown_prompts(data: dict, body: str) -> tuple[list[str], int]:
+    """The prompts the appendix shows for one log, and the number of user turns in it.
+
+    A turn named in the log's `appendix_skip` is a routine instruction and is left out whole. A shown prompt is
+    never cut, because the assignment does not accept shortened prompts."""
+    skipped = set(data.get("appendix_skip") or [])
+    turns = numbered_user_turns(body)
+    shown = [text for n, text in turns if not is_confirmation(text) and n not in skipped]
+    return shown, len(turns)
+
+
     """The user prompts of every significant log: what the assignment calls the complete input messages."""
     logs = []
     for path in sorted((kb.ROOT / "prompts").glob("*.md")):
         _, data, body = kb.load_note(path)
         if data.get("doc_type") == "prompt-log" and data.get("significant"):
-            logs.append((data, user_turns(body)))
+            logs.append((data, body))
     out = [HEADER]
     for phase, heading in PHASES:
         chosen = sorted((l for l in logs if l[0].get("phase") == phase), key=lambda l: (date_of(l[0]["date"]), l[0]["id"]))
         if not chosen:
             continue
         out.append(f"\\subsection{{{heading}}}\n")
-        for n, (d, all_turns) in enumerate(chosen, 1):
-            turns = [x for x in all_turns if not is_confirmation(x)]
-            shown = f"{len(turns)} of {len(all_turns)}" if len(turns) < len(all_turns) else f"{len(turns)}"
+        for n, (d, body) in enumerate(chosen, 1):
+            turns, total = shown_prompts(d, body)
+            shown = f"{len(turns)} of {total}" if len(turns) < total else f"{len(turns)}"
             docs = [str(x) for x in d.get("supporting_docs") or []]
             web = sum(1 for x in docs if x.startswith("http"))
             files = len(docs) - web

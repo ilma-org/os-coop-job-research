@@ -198,6 +198,7 @@ Rules:
 - The `## Tool-call ledger` heading is required. Put one line per tool call (tool name and arguments, no results), or `None.`
 - `redactions` must equal the number of `[REDACTED:` markers in the file.
 - The author redacts. The reviewer scans the diff for anything left over.
+- Optional `appendix_skip: [18, 19]`: user turns the appendix leaves out. The appendix is for significant prompts, so use it for a turn that is only a routine instruction (fix a layout detail, find a file, report status, a git or sign-off step, a "yes, next one") and that shapes no report text, claim or decision. Never use it for a turn that tells the agent what to write, what to search for, how to verify, or what to leave out of the report, and never cut part of a turn (a shortened prompt is not allowed). The log keeps every turn, and the appendix count shows how many turns it holds (for example `19 of 35`). Write it with `make_prompt_log.py --skip 18 --skip 19`.
 
 ### What is significant
 
