@@ -203,10 +203,10 @@ Rules:
 
 The instructor's rule: trivial prompts are not significant. Examples are fixing grammar or wording, and looking up where a phrase appears in a source.
 
-- `significant: true`: the interaction produced content the report relies on. That means report text, the relationship diagram, or a key claim. Add a one-line `significant_reason`.
-- `significant: false`: grammar or wording fixes, "where is this phrase in the source" lookups, formatting help, routine recheck lookups, session summaries, abandoned attempts.
+- `significant: true`: the interaction produced content the report relies on and is one of the few that matter most. That means report text, the relationship diagram, or a key claim. Add a one-line `significant_reason`. The appendix has room for about three pages, so mark only the most important logs: one or two per platform and purpose.
+- `significant: false`: grammar or wording fixes, "where is this phrase in the source" lookups, formatting help, routine recheck lookups, session summaries, abandoned attempts, and research logs whose output a more important log already covers.
 
-Significant logs are copied into the report appendix in full. The instructor accepts non-significant logs through the repo URL, so they stay in `prompts/` and are not copied into the report. The appendix counts toward the 10–15 page cap, so keep significant logs focused. `scripts/appendix_budget.py` estimates the pages they use.
+Significant logs go into the report appendix as the prompts the author typed, word for word and in order, with the platform, model, date, purpose and the amount of supporting data. The assignment asks for the complete prompts that were submitted to the model, not the replies. The replies and the tool-call ledger stay in `prompts/`, and the report cites them through the repo URL. A reply of 12 characters or fewer with no Thai text, such as "yes", is not shown. `scripts/make_report_data.py` writes `report/generated/appendix.tex` from the logs, so nobody copies a log by hand. `scripts/appendix_budget.py` estimates the pages it uses.
 
 ## Leak scan
 

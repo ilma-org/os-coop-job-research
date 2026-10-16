@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Estimate how many report pages the significant prompt logs will use.
+"""Estimate how many report pages the prompts appendix will use.
 
-The appendix counts toward the 10-15 page cap, so this shows the overrun early.
-The estimate is rough (about 550 words per page of 12-point Times New Roman on A4).
-Check the real page count in the final PDF.
+The appendix shows the user prompts of every significant log (not the replies), so only
+those are counted, plus a fixed header per log. It counts toward the 10-15 page cap, so
+this shows the overrun early. The estimate is rough (about 550 words per page of 12-point
+Times New Roman on A4). Check the real page count in the final PDF.
 
 Usage:
     python scripts/appendix_budget.py [--budget-pages 5]
@@ -16,8 +17,10 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lint_front_matter import ROOT, split_front_matter  # noqa: E402
+from make_report_data import is_confirmation, user_turns  # noqa: E402
 
 WORDS_PER_PAGE = 550
+HEADER_WORDS = 60  # platform, model, date, log id and supporting-data line of one entry
 
 
 def main() -> int:
@@ -26,8 +29,8 @@ def main() -> int:
     except AttributeError:
         pass
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--budget-pages", type=float, default=5.0,
-                        help="pages available for the appendix (default 5)")
+    parser.add_argument("--budget-pages", type=float, default=3.0,
+                        help="pages available for the appendix (default 3)")
     args = parser.parse_args()
 
     significant: list[tuple[str, int]] = []
@@ -38,7 +41,10 @@ def main() -> int:
             print(f"skipped {path.name}: {err or 'no front matter'}")
             continue
         if data.get("significant") is True:
-            significant.append((path.name, len(body.split())))
+            turns = [x for x in user_turns(body) if not is_confirmation(x)]
+            # Thai has no spaces between words, so count about 6 characters as one word
+            words = sum(max(len(x.split()), len(x) // 6) for x in turns)
+            significant.append((path.name, words + HEADER_WORDS))
         else:
             other += 1
 
@@ -51,7 +57,7 @@ def main() -> int:
     print(f"budget: {args.budget_pages:g} pages")
     if pages > args.budget_pages:
         print(f"OVER BUDGET by about {pages - args.budget_pages:.1f} pages: "
-              "mark fewer logs significant or shorten them.")
+              "mark fewer logs significant.")
     return 0
 
 
