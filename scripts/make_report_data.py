@@ -59,6 +59,14 @@ GROUPS = [
     ("sre-articles", "https://sre.google/resources/", "Google SRE website articles", "Articles"),
 ]
 
+# Who wrote each book and when, as the books' own pages state it: the editors and the copyright line of the
+# SRE book and the Workbook, and the authors and launch date given on the GitHub page of the third book.
+BOOK_INFO = {
+    "sre-book": "Edited by B. Beyer, C. Jones, J. Petoff and N. R. Murphy. Published by O'Reilly Media, Inc., copyright 2017.",
+    "workbook": "Edited by B. Beyer, N. R. Murphy, D. K. Rensin, K. Kawahara and S. Thorne. Published by O'Reilly Media, Inc., copyright 2018.",
+    "bsrs": "By H. Adkins, B. Beyer, P. Blankinship, A. Oprea, P. Lewandowski and A. Stubblefield. Launched in April 2020.",
+}
+
 TEX_SPECIAL = {"\\": r"\textbackslash{}", "&": r"\&", "%": r"\%", "$": r"\$", "#": r"\#",
                "_": r"\_", "{": r"\{", "}": r"\}", "~": r"\textasciitilde{}", "^": r"\textasciicircum{}"}
 
@@ -155,7 +163,8 @@ def group_entry(group, items: list[tuple[str, dict]]) -> str:
     claims = sorted({c for _, s in items for c in s["claims"]})
     span = dates[0] if dates[0] == dates[-1] else f"{dates[0]} to {dates[-1]}"
     if noun == "Chapters":  # a whole book: give the count, the repository lists the chapter of every claim
-        listing = f"{len(items)} chapters read at \\url{{{base}}}; the chapter of each claim is in the project repository"
+        about = f"{tex(BOOK_INFO[key])} " if key in BOOK_INFO else ""
+        listing = f"{about}{len(items)} chapters read at \\url{{{base}}}; the chapter of each claim is in the project repository"
     else:
         listing = f"{noun} read at \\url{{{base}}}: {tex(', '.join(slugs))}"
     return (f"@misc{{{key},\n  title   = {{{{{tex(title)}}}}},\n"
