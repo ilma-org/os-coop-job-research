@@ -7,8 +7,7 @@ platform: Codex
 model: "gpt-6.1-sol"
 phase: exploration
 role: research
-significant: true
-significant_reason: "Produced new mechanism claims and course-to-SRE recommendations"
+significant: false
 purpose: Add concise OS course connections for topic 11 after slide comparison
 pr: null
 claims: [11-24, 11-25, 11-26, 11-27, 11-28, 11-29, 11-30, 11-31, 11-32, 11-33]

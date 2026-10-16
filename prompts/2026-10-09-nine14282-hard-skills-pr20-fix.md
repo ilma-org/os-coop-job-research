@@ -7,8 +7,7 @@ platform: Claude Code
 model: "Opus 5.5 (claude-opus-5-5)"
 phase: exploration
 role: research
-significant: true
-significant_reason: "Rewrote 14 claims and the Summary and Key points sections of all four 02-hard-skills notes"
+significant: false
 purpose: Audit merged PR #20 against the repo rules and fix the 02-hard-skills claims, quotes and Summary/Key points for PR #27
 pr: 27
 claims: [02-02, 02-06, 02-07, 02-08, 02-09, 02-11, 02-12, 02-15, 02-16, 02-20, 02-24, 02-27, 02-28, 02-30]

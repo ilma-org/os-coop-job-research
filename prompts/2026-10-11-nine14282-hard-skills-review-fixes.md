@@ -7,8 +7,7 @@ platform: Claude Code
 model: "Opus 5.5 (claude-opus-5-5)"
 phase: exploration
 role: research
-significant: true
-significant_reason: "Rewrote claims 02-08, 02-11, 02-20 and the Summary and Key points of all four 02-hard-skills notes"
+significant: false
 purpose: Apply the PR #27 review: reword 02-08, 02-11 and 02-20, narrow the 02-hard-skills Summary and Key points, and find the CI lint failure
 pr: 27
 claims: [02-08, 02-11, 02-20]
