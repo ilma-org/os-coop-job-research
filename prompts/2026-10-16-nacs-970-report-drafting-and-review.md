@@ -9,7 +9,7 @@ phase: report
 role: drafting
 significant: true
 significant_reason: "Produced the report text, the relationship figure and the revisions after the blind review"
-purpose: Draft the LaTeX report from the knowledge base, add company and internship claims, build the cover page, and revise the report after a blind review
+purpose: Draft the LaTeX report from the knowledge base, add company and internship claims, build the cover-page template (the cover data stays local), and revise the report after a blind review
 pr: null
 claims: [12-35, 12-36, 12-37, 12-38, 12-40, 12-42, 12-44, 12-46, 12-48, 12-49, 12-50, 12-51, 12-52, 12-53, 12-54, 12-55, 12-56]
 redactions: 2
