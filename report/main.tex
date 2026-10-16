@@ -20,7 +20,7 @@
 \else
   \newcommand{\thai}[1]{{\thaifont\XeTeXlinebreaklocale "th"\XeTeXlinebreakskip=0pt plus 1pt #1}}
 \fi
-\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage[a4paper,margin=2cm]{geometry}
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{graphicx}
@@ -28,8 +28,14 @@
 \renewcommand{\textfraction}{0.1}
 \usepackage[hidelinks]{hyperref}
 \makeatletter\g@addto@macro\UrlBreaks{\do\-}\makeatother% allow a line break after a hyphen in a long URL
-\newenvironment{promptlist}{\begin{list}{}{\setlength{\leftmargin}{0em}\setlength{\itemsep}{2pt}\setlength{\topsep}{2pt}\setlength{\parsep}{2pt}\setlength{\labelwidth}{0em}}}{\end{list}}
+\makeatletter% tighter heading spacing: font size stays 12 pt
+\renewcommand\section{\@startsection{section}{1}{\z@}{2.6ex \@plus .6ex \@minus .2ex}{1.2ex \@plus .2ex}{\normalfont\large\bfseries}}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}{1.6ex \@plus .6ex \@minus .2ex}{-1em}{\normalfont\normalsize\bfseries}}
+\makeatother
+\newenvironment{promptlist}{\begin{list}{}{\setlength{\leftmargin}{0em}\setlength{\itemsep}{1pt}\setlength{\topsep}{1pt}\setlength{\parsep}{0pt}\setlength{\labelwidth}{0em}}}{\end{list}}
 
+\setlength{\emergencystretch}{1.5em}
+\linespread{0.96}% about the leading of single spacing in Word for 12 pt Times New Roman
 \input{generated/counts.tex}
 
 \begin{document}
