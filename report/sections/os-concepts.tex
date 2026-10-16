@@ -1,0 +1,30 @@
+\section{Relationship to Operating Systems Course Knowledge}
+
+Table~\ref{tab:os} connects course concepts to SRE work. The middle column holds facts from documentation. The right column holds our recommended ways to use them in an investigation. These recommendations are assumptions and not evidence of how Google works.
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.38\textwidth}>{\raggedright\arraybackslash}p{0.38\textwidth}@{}}
+\caption{OS concepts and their use in SRE work.}\label{tab:os}\\
+\hline
+Concept & Fact & SRE use (assumption) \\
+\hline
+\endfirsthead
+\hline
+Concept & Fact & SRE use (assumption) \\
+\hline
+\endhead
+Processes, threads, scheduling & The Linux scheduler selects which runnable thread runs next \cite{man7-linux-man-pages-man7-sched-7-html}. Threads of one process share data and heap but have their own stacks \cite{man7-linux-man-pages-man7-pthreads-7-html}. & For a slow multithreaded service, look at runnable threads and scheduling next to latency, and tell waiting in the ready queue from waiting for an event. For a restart, read the process logs and signals before naming a cause. \\
+\hline
+Virtual memory & Page tables translate virtual to physical addresses \cite{docs-kernel-mm-page-tables-html}. A major page fault needs I/O \cite{manpages-debian-testing-manpages-dev-getrusage-2-en-html}, and direct reclaim can stall an allocation \cite{docs-kernel-admin-guide-mm-concepts-html}. & Compare a service's virtual mappings with its resident memory. A large virtual address space does not prove a leak. Read changes in major-fault counts as evidence, not as proof of exhaustion. \\
+\hline
+File systems and I/O & A successful \texttt{write()} does not mean the data is on disk \cite{man7-linux-man-pages-man2-write-2-html}. \texttt{fsync()} waits until the device reports completion \cite{man7-linux-man-pages-man2-fsync-2-html}. & For a service that writes persistent data, separate successful writes, cache activity and completed synchronization when investigating latency or crash recovery. \\
+\hline
+Networking and permissions & Sockets connect user processes to the kernel network stack \cite{man7-linux-man-pages-man7-socket-7-html}. TCP retransmits lost packets \cite{man7-linux-man-pages-man7-tcp-7-html}. Missing search permission on a directory gives EACCES \cite{man7-linux-man-pages-man7-path-resolution-7-html}. & Investigate a failed or slow connection through its socket and TCP behavior, and file-access failures through directory permissions. Do not widen permissions before the failure is diagnosed. \\
+\hline
+Containers, virtualization and resource control & Namespaces implement containers \cite{man7-linux-man-pages-man7-namespaces-7-html}. Cgroups distribute resources \cite{docs-kernel-admin-guide-cgroup-v2-html}. Containers share one kernel \cite{docs-docker-get-started-docker-concepts-the-basics-what-is-a-container}. Kubernetes enforces CPU limits by throttling and memory limits by out-of-memory kills \cite{kubernetes-docs-concepts-configuration-manage-resources-containers}. QEMU supplies a virtual machine with its own guest OS \cite{qemu-docs-master-system-introduction-html}. & Compare the guest OS and virtual hardware of a virtual machine with the shared kernel of containers, and separate namespace isolation from cgroup resource control. \\
+\hline
+Failure detection and recovery & Kubernetes can restart unhealthy containers or stop traffic to containers that are not ready \cite{kubernetes-docs-concepts-workloads-pods-probes}. The SRE book recommends limiting retries per request \cite{sre-book}. & Separate an observed failed check from a confirmed root cause, and test bounded retries before assuming they restore availability. \\
+\hline
+\end{longtable}
+
+\paragraph{A recommended chain.}
+In the form of the assignment's examples, our recommended chain is: SRE, then a hypothetical containerized web service, then Linux, then a server or virtual machine that provides CPU, RAM, storage and network, then Docker containers managed by Kubernetes, then processes, scheduling, virtual memory, file I/O, networking, permissions and resource isolation. This is an example for study and not a verified description of Google's infrastructure. Figure~\ref{fig:chain} shows the chain for which we have sources.

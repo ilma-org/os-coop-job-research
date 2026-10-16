@@ -1,0 +1,21 @@
+\section{System Architecture and Infrastructure}
+
+The SRE book describes the infrastructure of Google's production environment as it was when the book was written. We describe it layer by layer and do not claim that it is unchanged today.
+
+\paragraph{Cluster management and virtual machines.}
+Borg starts a job by finding machines for its tasks and telling them to start the server program. A malfunctioning task is killed and restarted, possibly on another machine \cite{sre-book}. Borg accounts for failure domains, so it will not run all tasks of a job on one rack \cite{sre-book}. For virtual machines, Google decided that running each user's code of the original App Engine in an independent virtual machine was too inefficient for the planned adoption \cite{bsrs}. Running two virtual machines of mutually distrustful parties on the same hardware carries a certain risk \cite{bsrs}.
+
+\paragraph{Storage and consensus.}
+Colossus creates a cluster-wide filesystem with replication and encryption, and Bigtable is a NoSQL database that can handle petabyte-size databases \cite{sre-book}. The Chubby lock service handles locks across datacenters and uses the Paxos protocol \cite{sre-book}. The SRE book recommends formally proven and thoroughly tested distributed consensus systems for leader election, critical shared state and distributed locking \cite{sre-book}.
+
+\paragraph{Network, request path and load.}
+Google uses an OpenFlow-based software-defined network \cite{sre-book}. Its Global Software Load Balancer balances load on three levels, and all services talk to each other through an RPC infrastructure called Stubby \cite{sre-book}. The Google Front End (GFE) is a frontend layer for most Google services. It terminates incoming HTTP(S), TCP and TLS traffic, provides DDoS countermeasures, and routes and load balances traffic \cite{bsrs}. GFE can also drop or absorb connections when a service is overloaded \cite{bsrs}. A component should serve errors for excessive requests instead of crashing, because a crash removes all of its capacity \cite{bsrs}. However efficient load balancing is, some part of a system will eventually be overloaded \cite{sre-book}.
+
+\paragraph{Backup and recovery.}
+Replication and redundancy are not recoverability \cite{sre-book}. The focus of backups should be data recovery, which separates real backups from archives \cite{sre-book}. In a 2011 Gmail incident, Google recovered lost data from its previously undisclosed tape backup system \cite{sre-book}. Google also runs annual Disaster Recovery Training (DiRT) exercises \cite{bsrs}.
+
+\paragraph{Practice environment (recommendation).}
+A typical practice environment for a student is a small Linux virtual machine. That is our recommendation and not evidence about Google.
+
+% TODO(topic 06): add the request path, Kubernetes and hypervisor claims once they are human-verified.
+% They are only ai-checked now, so the drafter rules (AGENTS.md, "Roles") do not allow them in the report yet.

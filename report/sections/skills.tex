@@ -1,0 +1,23 @@
+\section{Hard Skills and Soft Skills}
+
+Each claim in this section rests on one source, and we did not compare a second source. Almost all sources are Google's own publications, so they show what Google values, not what every SRE employer values.
+
+\subsection{Hard skills}
+\begin{itemize}
+  \item \textbf{Operating systems and networking.} UNIX system internals and networking (Layer 1 to Layer 3) are the two most common specialist skills Google seeks in SREs \cite{sre-book}. Google announces its IP addresses by BGP from several points and relies on BGP routing to deliver packets to the closest frontend \cite{workbook}.
+  \item \textbf{Programming and automation.} The job advertisement asks for software development experience in one or more programming languages \cite{google-about-careers-applications-jobs-results-121141635160384198-software-engineer-android-sre}. Google's Zero Touch Prod requires every production change to come from automation, to be prevalidated by software, or to go through an audited breakglass mechanism \cite{bsrs}. Google estimates it could have prevented or mitigated about 13\% of the outages it evaluated \cite{bsrs}.
+  \item \textbf{Version control and testing.} Many Google teams keep service configuration in version control and change it through reviewed changelists \cite{workbook}. Google advocates integration testing because unit tests do not fully replicate the runtime environment \cite{static-pdf-lessonslearnedfromtwodecades-pdf}. In Google's experience, a majority of incidents are triggered by binary or configuration pushes \cite{workbook}.
+  \item \textbf{Reliability measurement.} An SLI is time series data showing how good the level of service is \cite{resources-practices-and-processes-measuring-reliability}. SLOs are reliability targets measured by SLIs \cite{resources-practices-and-processes-slo-adoption-and-usage}. At Google a well-thought-out and adopted SLO is key to prioritising reliability work, and toil is limited to 50\% of a team member's time \cite{workbook}.
+  \item \textbf{Troubleshooting distributed systems.} A Google case study shows new Borg memory limits that ignored small RAM spikes, so Borg killed tasks that went slightly over and caused local disruption and latency \cite{static-pdf-casestudiesinfrastructurechangemanagement-pdf}. Google's DiRT exercises simulate regional outages \cite{workbook}.
+\end{itemize}
+
+\subsection{Soft skills}
+\begin{itemize}
+  \item \textbf{Blameless communication.} The Incident Management Guide calls open and blameless postmortem writing the most effective tool Google has found for learning from incidents \cite{static-pdf-incidentmanagementguide-pdf}. SRE promotes blamelessness instead of citing ``human error'' \cite{static-pdf-enterprise-roadmap-to-sre-pdf}.
+  \item \textbf{Psychological safety and teamwork.} A team in control of major systems must feel psychologically safe and be able to say no to peers and leaders without fear of retribution \cite{static-pdf-enterprise-roadmap-to-sre-pdf}. Communication, agreement and trust are paramount to healthy SRE and developer relationships \cite{static-pdf-trainingsitereliabilityengineers-pdf}. One SRE says their team drops what it is doing to help an on-caller who needs it \cite{prodcast-transcripts-sre-prodcast-03-06}.
+  \item \textbf{Incident roles and calm under pressure.} Incident roles are based on knowledge and incident context, not reporting chains \cite{static-pdf-incidentmanagementguide-pdf}. Google SRE advises practising recovery mechanisms beforehand to keep your cool in a high-stress situation \cite{resources-practices-and-processes-twenty-years-of-sre-lessons-learned}.
+  \item \textbf{Managing workload.} Google says heroism should not be relied on in the long term, and that on-call done right does not need constant heroism \cite{resources-practices-and-processes-no-heroes}. Too much on-call can burn SREs out, and too little makes them lose familiarity with the service \cite{static-pdf-trainingsitereliabilityengineers-pdf}.
+\end{itemize}
+
+\paragraph{Why these matter.}
+Our reading, which is an interpretation and not a sourced claim, is that SREs work in pairs and teams during incidents and pass their knowledge on through written documents. Clear speech, careful writing and trust are therefore part of the job and not extras. We found no source that covers presentation skills, time management or English-language skills for SREs.

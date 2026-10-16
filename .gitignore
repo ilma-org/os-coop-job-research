@@ -21,3 +21,17 @@ Thumbs.db
 
 # Local artifact
 .local
+
+# LaTeX build output
+report/*.aux
+report/*.bbl
+report/*.bcf
+report/*.blg
+report/*.log
+report/*.out
+report/*.toc
+report/*.fls
+report/*.fdb_latexmk
+report/*.run.xml
+report/*.synctex.gz
+report/main.pdf

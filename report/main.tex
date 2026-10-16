@@ -1,0 +1,46 @@
+% Report for 204341 final assignment. Build: latexmk -pdf main.tex (see docs/workflow.md).
+% Page rule: 10-15 pages without the cover page; 12 pt Times New Roman; A4.
+% Generated files: references.bib and generated/*.tex come from scripts/make_report_data.py. Do not edit them.
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage{newtxtext}% Times-like fallback; use XeLaTeX or LuaLaTeX for Times New Roman itself
+\else
+  \usepackage{fontspec}
+  \IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{TeX Gyre Termes}}
+\fi
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+
+\input{generated/counts.tex}
+
+\begin{document}
+
+% The cover page is report/cover.tex. It is git-ignored (it holds student data) and optional.
+\IfFileExists{cover.tex}{\input{cover.tex}\clearpage}{}
+\pagenumbering{arabic}\setcounter{page}{1}
+
+\input{sections/introduction}
+\input{sections/position}
+\input{sections/skills}
+\input{sections/organization}
+\input{sections/os}
+\input{sections/hardware}
+\input{sections/architecture}
+\input{sections/tools}
+\input{sections/os-concepts}
+\input{sections/genai-use}
+\input{sections/conclusion}
+
+\bibliographystyle{unsrt}% classic BibTeX: works in tectonic, TeX Live and Overleaf without biber
+\bibliography{references}
+
+\appendix
+% Appendix: complete prompts of the significant GenAI interactions (see docs/schema.md, "What is significant").
+
+\end{document}

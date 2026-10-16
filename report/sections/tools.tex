@@ -1,0 +1,17 @@
+\section{Software, Tools and Applications}
+
+\paragraph{Languages and build tools.}
+Google's build tool Blaze, open sourced as Bazel, builds binaries from what Google calls its standard languages: C++, Java, Python, Go and JavaScript \cite{sre-book}. Builds are hermetic, meaning they depend on known versions of tools such as compilers and not on software installed on the build machine \cite{sre-book}. Bazel rebuilds only the part of the software that depends on a changed file \cite{sre-book}. On scripting, the SRE book describes the shell scripts Google first used to configure clusters as brittle, says the initial automation was simple Python scripts, and says Prodtest extended Python's unit test framework to test real services \cite{sre-book}.
+
+\paragraph{Editors, compilers and IDEs.}
+Compiler plug-ins such as Error Prone for Java and Tsetse for TypeScript can prohibit risky code patterns at compile time, and compiler errors give faster feedback than linters or checks at code review time \cite{bsrs}. The book names IDE plug-ins that underline problematic code, and says IDEs such as CLion integrate with the Google Sanitizers \cite{bsrs}. The SRE Workbook lists linters, debuggers, formatters and IDE integration as tooling that supports configuration files \cite{workbook}. We found no book that names an editor or an IDE as an SRE tool.
+
+\paragraph{Debugging and profiling.}
+Every Google server has an HTTP server that provides diagnostics and statistics for debugging \cite{sre-book}. Text logs suit real-time debugging, and structured binary logs support deeper retrospective analysis \cite{sre-book}. Valgrind catches memory errors without recompiling, AddressSanitizer detects buffer overflows and use after free, and ThreadSanitizer detects data races \cite{bsrs}. Instrumented binaries can be orders of magnitude slower, so many projects run the sanitizers in CI/CD less often, for example nightly \cite{bsrs}. These claims do not show that Google SREs use these tools every day.
+
+\paragraph{Server and database software.}
+Google's Ads database, a MySQL deployment, ran on Borg on shared machines that were rebooted for kernel upgrades \cite{sre-book}. The report \textit{Creating a Production Launch Plan} gives the example of a relational database with an upper limit on transaction throughput, where adding CPU or memory scales only so far \cite{static-pdf-creatingproductionlaunchplan-pdf}. Caches sometimes become hard dependencies of a service \cite{sre-book}. A message queue that stores data only in volatile memory can lose transactions \cite{bsrs}, and in the Waze case study the message queueing system was critical because every component used it \cite{workbook}. Stale data is almost always better than incorrect data in a data pipeline \cite{workbook}. We found no human-verified source on web servers such as Apache or Nginx, or on operating PostgreSQL, MongoDB or Redis.
+
+% TODO(topics 08 and 09): add the DevOps, configuration-management, CI/CD, monitoring and incident tools
+% (assignment section 4.4) once their claims are human-verified. They are only ai-checked now, so the
+% drafter rules (AGENTS.md, "Roles") do not allow them in the report yet.
