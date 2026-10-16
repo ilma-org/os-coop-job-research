@@ -10,12 +10,25 @@
 \else
   \usepackage{fontspec}
   \IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{TeX Gyre Termes}}
+  % Times New Roman has no Thai glyphs. Some prompts in the appendix are in Thai, so \thai{...} switches font.
+  \IfFontExistsTF{Noto Sans Thai}{\newfontfamily\thaifont{Noto Sans Thai}}{%
+    \IfFontExistsTF{Tahoma}{\newfontfamily\thaifont{Tahoma}}{%
+      \IfFontExistsTF{Leelawadee UI}{\newfontfamily\thaifont{Leelawadee UI}}{\newfontfamily\thaifont{Loma}}}}
 \fi
-\usepackage[a4paper,margin=2.5cm]{geometry}
+\ifPDFTeX
+  \newcommand{\thai}[1]{#1}
+\else
+  \newcommand{\thai}[1]{{\thaifont\XeTeXlinebreaklocale "th"\XeTeXlinebreakskip=0pt plus 1pt #1}}
+\fi
+\usepackage[a4paper,margin=2.2cm]{geometry}
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{graphicx}
+\renewcommand{\topfraction}{0.9}% let the 0.66-page figure float to the top of a page
+\renewcommand{\textfraction}{0.1}
 \usepackage[hidelinks]{hyperref}
+\makeatletter\g@addto@macro\UrlBreaks{\do\-}\makeatother% allow a line break after a hyphen in a long URL
+\newenvironment{promptlist}{\begin{list}{}{\setlength{\leftmargin}{0em}\setlength{\itemsep}{2pt}\setlength{\topsep}{2pt}\setlength{\parsep}{2pt}\setlength{\labelwidth}{0em}}}{\end{list}}
 
 \input{generated/counts.tex}
 
@@ -37,10 +50,19 @@
 \input{sections/genai-use}
 \input{sections/conclusion}
 
+% Remove the extra space between reference entries to save pages (the font stays 12pt).
+\makeatletter
+\let\oldthebibliography\thebibliography
+\renewcommand\thebibliography[1]{\oldthebibliography{#1}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}\sloppy}
+\makeatother
 \bibliographystyle{unsrt}% classic BibTeX: works in tectonic, TeX Live and Overleaf without biber
 \bibliography{references}
 
 \appendix
-% Appendix: complete prompts of the significant GenAI interactions (see docs/schema.md, "What is significant").
+\section{Complete GenAI Prompts}
+\sloppy
+These are the complete prompts that we typed to the GenAI platforms in the interactions that produced work we rely on, in order and word for word. \texttt{[REDACTED:kind]} marks a span removed for privacy. A reply of 12 characters or fewer, such as ``yes'', is not shown and is not counted as significant; the count of shown prompts is given in each entry. The replies and the tool-call records of each session are in the full log named in each entry, in the project repository \cite{repo}.
+
+\input{generated/appendix.tex}
 
 \end{document}
