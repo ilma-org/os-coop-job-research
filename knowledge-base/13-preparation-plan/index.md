@@ -6,7 +6,7 @@ assignment_section: "10 (outcome 8)"
 report_sections: [12]
 owner: "@TonCS05"
 issue: 18
-updated: 2026-10-13
+updated: 2026-10-16
 ---
 
 # Preparation plan
@@ -27,6 +27,7 @@ The owner organizes notes (`topic-note` files) here. List them below as they are
 <!-- notes:start -->
 - [practice-environment.md](practice-environment.md): OS, hardware and tool setup for an SRE practice lab. 6 claims (13-01 to 13-06): 4 human-verified, 2 unverified.
 - [practice-roadmap.md](practice-roadmap.md): A practical SRE preparation roadmap and completion gates. 8 claims (13-07 to 13-14): 5 human-verified, 3 unverified.
+- [genai-assistance.md](genai-assistance.md): GenAI assistance in preparation and in the job. 1 claims (13-15): 1 unverified.
 <!-- notes:end -->
 
 ## Research coverage
