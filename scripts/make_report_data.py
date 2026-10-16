@@ -241,8 +241,10 @@ PHASES = (("exploration", "Knowledge exploration"), ("report", "Report creation"
 def breakable(text: str) -> str:
     """Escape for LaTeX and allow a line break after a slash, so long paths and URLs do not overflow.
 
-    A run of hyphens is split with {}, because TeX would print `--` and `---` as an en dash and an em dash."""
-    return re.sub(r"-(?=-)", "-{}", tex(text)).replace("/", "/\\allowbreak{}")
+    A run of hyphens is split with {}, because TeX would print `--` and `---` as an en dash and an em dash. A
+    straight double quote and a backtick are typeset as themselves, because the font would print both as curly quotes."""
+    text = tex(text).replace('"', "\\textquotedbl{}").replace("`", "\\textasciigrave{}")
+    return re.sub(r"-(?=-)", "-{}", text).replace("/", "/\\allowbreak{}")
 
 
 def prompt_tex(text: str) -> str:
