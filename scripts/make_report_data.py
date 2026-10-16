@@ -56,6 +56,7 @@ GROUPS = [
     ("kernel-docs", "https://docs.kernel.org/", "The Linux Kernel documentation", "Pages"),
     ("kubernetes-docs", "https://kubernetes.io/docs/", "Kubernetes documentation", "Pages"),
     ("google-cloud-blog", "https://cloud.google.com/blog/", "Google Cloud Blog", "Posts"),
+    ("sre-articles", "https://sre.google/resources/", "Google SRE website articles", "Articles"),
 ]
 
 TEX_SPECIAL = {"\\": r"\textbackslash{}", "&": r"\&", "%": r"\%", "$": r"\$", "#": r"\#",
