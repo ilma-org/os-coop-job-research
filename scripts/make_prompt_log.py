@@ -81,6 +81,12 @@ def parse_claude_export(text: str) -> tuple[list[dict], Counter, list[str]]:
                 if j < len(lines) and indent_ge(lines[j], 2) and not is_chrome(lines[j]):
                     cur["user_lines"].append(lines[j].rstrip()[2:] if lines[j].strip() else "")
                     i = j + 1
+                elif (j == i and j < len(lines) and lines[j].strip() and lines[j][0] not in "●❯✻※› "
+                      and not is_chrome(lines[j]) and cur["user_lines"][-1].strip()
+                      and len(cur["user_lines"][-1].rstrip()) + 2 + 1 + len(lines[j].split()[0]) > 80):
+                    # a slash command is shown with its wrapped tail at column 0
+                    cur["user_lines"].append(lines[j].rstrip())
+                    i = j + 1
                 else:
                     break
             continue
@@ -185,11 +191,27 @@ def ledger_lines(entries: list) -> list[str]:
     return out
 
 
+WRAP_WIDTH = 78  # the export wraps at 80 columns, 2 of them are the "❯ " prefix or the indent
+
+
+def unwrap_lines(lines: list[str]) -> str:
+    """Join the lines that the terminal wrapped. A line is a wrap when the first word of the next line
+    would not have fitted in its row, so the user's own line breaks stay."""
+    out = ""
+    for i, raw in enumerate(lines):
+        cur = raw.strip()
+        out += cur
+        if i + 1 < len(lines):
+            nxt = lines[i + 1].strip().split(" ")[0] if lines[i + 1].strip() else ""
+            out += " " if nxt and len(cur) + 1 + len(nxt) > WRAP_WIDTH else "\n"
+    return out
+
+
 def turn_texts(turn: dict, unwrap: bool) -> tuple[str, str]:
     lines = turn["user_lines"]
     while lines and not lines[-1].strip():
         lines = lines[:-1]
-    user = " ".join(s.strip() for s in lines) if unwrap else "\n".join(lines)
+    user = unwrap_lines(lines) if unwrap else "\n".join(lines)
     assistant = "\n\n".join("\n".join(b).rstrip() for b in turn["blocks"])
     return user, assistant
 
