@@ -12,11 +12,11 @@ Concept & Fact & SRE use (our recommendation) \\
 Concept & Fact & SRE use (our recommendation) \\
 \hline
 \endhead
-Processes, threads, scheduling & The Linux scheduler selects which runnable thread runs next \cite{man7}. Threads of one process share data and heap but have their own stacks \cite{man7}. & For a slow multithreaded service, look at runnable threads and scheduling next to latency, and tell waiting in the ready queue from waiting for an event. For a restart, read the process logs and signals before naming a cause. \\
+Processes, threads, scheduling & The Linux scheduler selects which runnable thread runs next \cite{man7}. Threads of one process share data and heap but have their own stacks \cite{man7}. & For a slow multithreaded service, compare runnable threads with latency, and tell ready-queue waits from event waits. For a restart, read process logs and signals before naming a cause. \\
 \hline
 Virtual memory & Page tables translate virtual to physical addresses \cite{kernel-docs}. A major page fault needs I/O \cite{manpages-debian-testing-manpages-dev-getrusage-2-en-html}, and direct reclaim can stall an allocation \cite{kernel-docs}. & Compare a service's virtual mappings with its resident memory. Read changes in major-fault counts as evidence, not as proof of exhaustion. \\
 \hline
-File systems and I/O & A successful \texttt{write()} does not mean the data is on disk \cite{man7}. \texttt{fsync()} waits until the device reports completion \cite{man7}. & For a service that writes persistent data, separate successful writes, cache activity and completed synchronization when investigating latency or crash recovery. \\
+File systems and I/O & A successful \texttt{write()} does not mean the data is on disk \cite{man7}. \texttt{fsync()} waits until the device reports completion \cite{man7}. & When investigating latency or crash recovery of a service that writes data, separate successful writes, cache activity and completed synchronization. \\
 \hline
 Networking and permissions & Sockets connect processes to the kernel network stack, TCP retransmits lost packets, and missing directory search permission gives EACCES \cite{man7}. & For a slow or failed connection, check its socket and TCP behavior. For a file-access failure, check directory permissions before widening them. \\
 \hline
