@@ -1,12 +1,12 @@
 \section{Use of Generative AI Platforms/Models}
 
-We used two Generative AI platforms: Claude Code (Anthropic) and Codex (OpenAI). Both are coding agents that we ran in a terminal or desktop session. Table~\ref{tab:genai} lists each platform and model, what we used it for, and how many prompt logs it produced. The complete record is \logsTotal{} prompt logs in the project repository \cite{repo}; we marked \logsSignificant{} of them as significant, the ones that matter most for this report, and the Appendix shows the prompts we typed in them. The other logs are available in the repository.
+We used two Generative AI platforms: Claude Code (Anthropic) \cite{genai-claude-code-claude-opus-5-5,genai-claude-code-claude-opus-5-5-and-claude-sonnet-5-5,genai-claude-code-claude-sonnet-5-5} and Codex (OpenAI) \cite{genai-codex-gpt-6-1-sol}. We chose them because both are agent harnesses: tools that let a model read files, run scripts and search the web under rules that we wrote in the repository, so that the model does the right job at each step. One team member used Codex for their topics, and the other members used Claude Code. The same rules applied to both platforms, and we did not compare the quality of their output. Table~\ref{tab:genai} lists each platform and model, what we used it for, and how many prompt logs it produced. The complete record is \logsTotal{} prompt logs in the project repository \cite{repo}; we marked \logsSignificant{} of them as significant, the ones that matter most for this report, and the Appendix shows the prompts we typed in them.
 
 \begin{table}[ht]
 \centering
-\input{generated/genai-usage.tex}
 \caption{GenAI platforms and models used, from the prompt logs.}
 \label{tab:genai}
+\input{generated/genai-usage.tex}
 \end{table}
 
 \paragraph{How we used GenAI.}
@@ -17,10 +17,10 @@ GenAI helped us read and organise sources. It did not decide what is true. Each 
   \item \textbf{Reviewer recheck.} A different team member ran the same blind check in a separate session.
   \item \textbf{Human review.} The reviewer opened every cited source. Only then did the claim become ``human-verified''.
 \end{enumerate}
-Of \claimsTotal{} claims in our knowledge base, \claimsHumanVerified{} are human-verified, and this report relies only on those. Another \claimsAssumption{} are assumptions and recommendations. They have no source by design, are labelled as such, and can never become human-verified.
+Of \claimsTotal{} claims in our knowledge base, \claimsHumanVerified{} are human-verified and \claimsAiChecked{} have passed the blind author check. This report draws on both groups. Another \claimsAssumption{} are assumptions and recommendations. They have no source by design, are labelled as such, and can never become human-verified.
 
 \paragraph{What we corrected.}
 The checks changed the content. A reviewer recheck found that the phrase ``not a fixed limit'' went beyond what the SRE book page says, and we replaced the claim with one that stays inside the source. A recheck of 24 claims marked 10 as unreachable because the source site could not be opened, and we rechecked those 10 using archived and mirrored copies. After a review of one pull request, we dropped, reworded and retyped claims about server and database software. Reworded claims went through the blind check again; in one recheck, two of three claims were supported and one only partly.
 
 \paragraph{Report creation.}
-We also used GenAI to draft report text and to create the relationship diagram in Figure~\ref{fig:chain}. A team member edited and verified every draft. The prompts for this work are in the Appendix.
+We also used GenAI to draft report text and to create the relationship diagram in Figure~\ref{fig:chain}. A fresh agent that had none of our context checked the report against the assignment requirements. The prompts for this work are in the Appendix.
