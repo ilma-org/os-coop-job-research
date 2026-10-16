@@ -169,7 +169,12 @@ def group_entry(group, items: list[tuple[str, dict]]) -> str:
         listing = f"{noun} read at \\url{{{base}}}: {tex(', '.join(slugs))}"
     return (f"@misc{{{key},\n  title   = {{{{{tex(title)}}}}},\n"
             f"  howpublished = {{{listing}}},\n"
-            f"  note    = {{Accessed: {span}}},\n  annotation = {{claims {', '.join(claims)}}},\n}}\n")
+            f"  note    = {{{accessed(span)}}},\n  annotation = {{claims {', '.join(claims)}}},\n}}\n")
+
+
+def accessed(text: str) -> str:
+    """The access note, with the word and each date unbreakable so a line never splits them."""
+    return "\\mbox{Accessed:} " + re.sub(r"\d{4}-\d{2}-\d{2}", lambda m: "\\mbox{" + m.group(0) + "}", str(text))
 
 
 def bib_text(min_status: str) -> str:
@@ -188,17 +193,17 @@ def bib_text(min_status: str) -> str:
             sys.exit(f"duplicate BibTeX key {key}: {keys[key]} and {url}")
         keys[key] = url
         out.append(f"@misc{{{key},\n  title   = {{{{{tex(s['title'])}}}}},\n  howpublished = {{\\url{{{url}}}}},\n"
-                   f"  note    = {{Accessed: {s['accessed']}}},\n  annotation = {{claims {', '.join(s['claims'])}}},\n}}\n")
+                   f"  note    = {{{accessed(s['accessed'])}}},\n  annotation = {{claims {', '.join(s['claims'])}}},\n}}\n")
     for (platform, model), info in sorted(collect_genai().items()):
         key = f"genai-{slug(platform)}-{slug(model.split('(')[-1].rstrip(')') if '(' in model else model)}"
         vendor = VENDOR.get(platform.lower(), platform)
         out.append(f"@misc{{{key},\n  author  = {{{{{tex(vendor)}}}}},\n  title   = {{{{{tex(platform)}, {tex(model)}}}}},\n"
                    f"  howpublished = {{GenAI platform. Used for {tex(used_for(info['roles']).lower())}}},\n"
-                   f"  note    = {{Accessed: {max(info['dates'])}}},\n}}\n")
+                   f"  note    = {{{accessed(max(info['dates']))}}},\n}}\n")
     url = repo_url()
     if url:
         out.append(f"@misc{{repo,\n  title   = {{{{Knowledge base and prompt logs for the SRE career and OS research}}}},\n"
-                   f"  howpublished = {{\\url{{{url}}}}},\n  note    = {{Accessed: {kb.git('log', '-1', '--format=%cs').strip()}}},\n"
+                   f"  howpublished = {{\\url{{{url}}}}},\n  note    = {{{accessed(kb.git('log', '-1', '--format=%cs').strip())}}},\n"
                    f"  annotation = {{Cite the submitted tag, for example submitted-2026-10-18}},\n}}\n")
     return "\n".join(out)
 
