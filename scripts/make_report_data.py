@@ -241,11 +241,11 @@ def prompt_tex(text: str) -> str:
     return "\n\n".join(" \\\\{}\n".join(line(s.strip()) for s in p.split("\n")) for p in paragraphs)  # {} keeps a leading [ from being read as an option of \\
 
 
-def user_turns(body: str) -> list[str]:
 def numbered_user_turns(body: str) -> list[tuple[int, str]]:
     return [(int(n), t.strip("\n")) for n, t in re.findall(r"(?ms)^## Turn (\d+) \u2014 user\n(.*?)(?=^## |\Z)", body)]
 
 
+def user_turns(body: str) -> list[str]:
     return [t for _, t in numbered_user_turns(body)]
 
 
@@ -254,7 +254,6 @@ def is_confirmation(turn: str) -> bool:
     return len(turn.strip()) <= 12 and not THAI.search(turn)
 
 
-def appendix_text() -> str:
 def shown_prompts(data: dict, body: str) -> tuple[list[str], int]:
     """The prompts the appendix shows for one log, and the number of user turns in it.
 
@@ -266,6 +265,7 @@ def shown_prompts(data: dict, body: str) -> tuple[list[str], int]:
     return shown, len(turns)
 
 
+def appendix_text() -> str:
     """The user prompts of every significant log: what the assignment calls the complete input messages."""
     logs = []
     for path in sorted((kb.ROOT / "prompts").glob("*.md")):
