@@ -293,7 +293,7 @@ claims:
       prompt_log: prompts/2026-10-09-nacs-970-devops-iac-cicd-author-check.md
       result: supported
   - id: 08-34
-    claim: "In an SRE Workbook case study of organizational change, a small coalition of SREs and developers proposed shifting to continuous deployment using Spinnaker, an open source, multicloud continuous delivery platform."
+    claim: "In the SRE Workbook's Waze case study of organizational change (Waze is a navigation app that Google acquired in 2013 and that kept operating relatively autonomously within Google), a small coalition of SREs and developers proposed shifting to continuous deployment using Spinnaker, an open source, multicloud continuous delivery platform. This is one team's case, not a statement of general Google practice."
     type: fact
     status: ai-checked
     source:
