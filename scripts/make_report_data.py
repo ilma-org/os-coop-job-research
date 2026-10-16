@@ -212,10 +212,12 @@ def table_text() -> str:
     rows = []
     for (platform, model), info in sorted(collect_genai().items(), key=lambda kv: (kv[0][0], kv[0][1])):
         first, last = min(info["dates"]), max(info["dates"])
+        if first[:4] == last[:4]:  # one year for every row: the table caption names it, and the cell then fits on one line
+            first, last = first[5:], last[5:]
         period = first if first == last else f"{first} to {last}"
-        rows.append(f"{tex(platform)}, {tex(model)} & {tex(used_for(info['roles']))} & {info['logs']} & {period} \\\\")
-    return (HEADER + "\\begin{tabular}{@{}>{\\raggedright\\arraybackslash}p{0.34\\linewidth}>{\\raggedright\\arraybackslash}p{0.30\\linewidth}r>{\\raggedright\\arraybackslash}p{0.20\\linewidth}@{}}\n\\hline\n"
-            "Platform and model & Used for & Logs & Period \\\\\n\\hline\n" + "\n".join(rows) + "\n\\hline\n\\end{tabular}\n")
+        rows.append(f"{tex(platform)}, {tex(model)} & {tex(used_for(info['roles']))} & {info['logs']} & {period} \\\\ \\hline")
+    return (HEADER + "\\begin{tabular}{@{}>{\\raggedright\\arraybackslash}p{0.30\\linewidth}>{\\raggedright\\arraybackslash}p{0.38\\linewidth}r>{\\raggedright\\arraybackslash}p{0.17\\linewidth}@{}}\n\\hline\n"
+            "Platform and model & Used for & Logs & Period \\\\\n\\hline\n" + "\n".join(rows) + "\n\\end{tabular}\n")
 
 
 def counts_text() -> str:
