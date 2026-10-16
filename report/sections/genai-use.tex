@@ -1,6 +1,6 @@
 \section{Use of Generative AI Platforms/Models}
 
-We used two Generative AI platforms: Claude Code (Anthropic) and Codex (OpenAI). Both are coding agents that we ran in a terminal or desktop session. Table~\ref{tab:genai} lists each platform and model, what we used it for, and how many prompt logs it produced. The complete record is \logsTotal{} prompt logs in the project repository \cite{repo}; \logsSignificant{} of them are marked significant and are reproduced in the Appendix.
+We used two Generative AI platforms: Claude Code (Anthropic) and Codex (OpenAI). Both are coding agents that we ran in a terminal or desktop session. Table~\ref{tab:genai} lists each platform and model, what we used it for, and how many prompt logs it produced. The complete record is \logsTotal{} prompt logs in the project repository \cite{repo}; we marked \logsSignificant{} of them as significant, the ones that matter most for this report, and the Appendix shows the prompts we typed in them. The other logs are available in the repository.
 
 \begin{table}[ht]
 \centering
@@ -17,7 +17,7 @@ GenAI helped us read and organise sources. It did not decide what is true. Each 
   \item \textbf{Reviewer recheck.} A different team member ran the same blind check in a separate session.
   \item \textbf{Human review.} The reviewer opened every cited source. Only then did the claim become ``human-verified''.
 \end{enumerate}
-Of \claimsTotal{} claims, \claimsHumanVerified{} are human-verified and \claimsAiChecked{} have passed the AI checks but not yet the human review. The remaining \claimsAssumption{} are assumptions and recommendations. They have no source by design, are labelled as such, and can never become human-verified.
+Of \claimsTotal{} claims in our knowledge base, \claimsHumanVerified{} are human-verified, and this report relies only on those. Another \claimsAssumption{} are assumptions and recommendations. They have no source by design, are labelled as such, and can never become human-verified.
 
 \paragraph{What we corrected.}
 The checks changed the content. A reviewer recheck found that the phrase ``not a fixed limit'' went beyond what the SRE book page says, and we replaced the claim with one that stays inside the source. A recheck of 24 claims marked 10 as unreachable because the source site could not be opened, and we rechecked those 10 using archived and mirrored copies. After a review of one pull request, we dropped, reworded and retyped claims about server and database software. Reworded claims went through the blind check again; in one recheck, two of three claims were supported and one only partly.
