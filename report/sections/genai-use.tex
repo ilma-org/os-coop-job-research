@@ -1,16 +1,16 @@
 \section{Use of Generative AI Platforms/Models}\label{sec:genai}
 
-We used two Generative AI platforms: Claude Code (Anthropic) \cite{genai-claude-code-claude-opus-5-5,genai-claude-code-claude-opus-5-5-and-claude-sonnet-5-5,genai-claude-code-claude-sonnet-5-5} and Codex (OpenAI) \cite{genai-codex-gpt-6-1-sol}. We chose them because both are agent harnesses: tools that let a model read files, run scripts and search the web under rules that we wrote in the repository, so that the model does the right job at each step. One team member used Codex for their topics, and the other members used Claude Code. The same rules applied to both platforms, and we did not compare the quality of their output. Table~\ref{tab:genai} lists each platform and model, what we used it for, and how many prompt logs it produced. The complete record is \logsTotal{} prompt logs in the project repository \cite{repo}; we marked \logsSignificant{} of them as significant, the ones that matter most for this report, and the Appendix shows the prompts we typed in them.
+We used two Generative AI platforms: Claude Code (Anthropic) \cite{genai-claude-code-claude-opus-5-5,genai-claude-code-claude-opus-5-5-and-claude-sonnet-5-5,genai-claude-code-claude-sonnet-5-5} and Codex (OpenAI) \cite{genai-codex-gpt-6-1-sol}. We chose them because both are agent harnesses: tools that let a model read files, run scripts and search the web under rules that we wrote in the repository, so that the model does the right job at each step. One team member used Codex for their research topics, and the other members used Claude Code. Codex ran claim research and the blind author check only. Claude Code also ran the reviewer rechecks and drafted this report. The same rules applied to both platforms. We did not compare the quality of their output, and because different people used them on different topics, we cannot say which platform is better. Table~\ref{tab:genai} lists each platform and model, what we used it for, and how many prompt logs it produced. The complete record is \logsTotal{} prompt logs in our public project repository \cite{repo}; we marked \logsSignificant{} of them as significant, the ones that matter most for this report, and the Appendix shows the prompts we typed in them.
 
 \begin{table}[ht]
 \centering
-\caption{GenAI platforms and models used, from the prompt logs.}
+\caption{GenAI platforms and models used in 2026, from the prompt logs.}
 \label{tab:genai}
 \input{generated/genai-usage.tex}
 \end{table}
 
 \paragraph{How we used GenAI.}
-GenAI helped us read and organise sources. It did not decide what is true. Each statement in our knowledge base is a claim with a published source, an access date and an exact sentence copied from that source. A claim could pass through four steps:
+GenAI helped us read and organise sources. It did not decide what is true. Each factual statement in our knowledge base is a claim with a published source, an access date and an exact sentence copied from that source. A claim could pass through four steps:
 \begin{enumerate}
   \item \textbf{Research.} An agent read published sources (mainly the Google SRE books and official documentation) and proposed claims with a quote.
   \item \textbf{Blind author check.} A fresh agent received only the claim text and the source address, never the stored quote, and said whether the source supports the claim.
