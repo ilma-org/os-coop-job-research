@@ -18,3 +18,10 @@ As an optional extension, deploy the same service to a local minikube cluster an
 
 \paragraph{Deliverables.}
 Keep a reproducible README, the versioned lab configuration, the health-check script, the monitoring evidence and a reviewed postmortem. Ask a peer to reproduce the setup and review the incident explanation. The SRE Workbook cautions that automation should not remove human understanding of what is going wrong \cite{workbook}.
+
+\begin{figure}[!b]
+\centering
+\includegraphics[width=0.94\textwidth,height=0.60\textheight,keepaspectratio]{figures/relationship.pdf}
+\caption{From job position to required knowledge and skills for an SRE at Google. Most sources date from 2017 to 2020. Each stage rests on claims from the cited sources \cite{sre-book,workbook,bsrs,google-cloud-blog,static-pdf-incidentmanagementguide-pdf,man7,kernel-docs}. The arrows read: works at, runs on, sits on top of, is operated with, requires. The two italic lines are our assumptions, a typical practice environment and a preparation recommendation, not verified facts about Google. The link from the OS concepts to the job is our interpretation.}
+\label{fig:chain}
+\end{figure}

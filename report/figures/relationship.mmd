@@ -2,14 +2,14 @@
 %% Claim sources (human-verified unless marked assumption):
 %% 1 01-01 01-03 | 2 12-03 12-04 12-07 12-13 | 3 04-01 04-02 04-05 04-06 04-48
 %% 4 05-01 05-06 05-07 05-09 | 5 07-01 07-02 10-01; assumption 13-05 13-06 | 6 02-08 02-14 02-22 03-15 11-01 11-04 11-16 11-17; assumption 13-12 11-23
-%%{init: {'theme':'neutral','flowchart':{'htmlLabels':true,'nodeSpacing':20,'rankSpacing':26,'padding':10,'wrappingWidth':680}}}%%
+%%{init: {'theme':'neutral','themeVariables':{'fontFamily':'Times New Roman, Times, serif','fontSize':'16px'},'flowchart':{'htmlLabels':true,'nodeSpacing':20,'rankSpacing':18,'padding':8,'wrappingWidth':680}}}%%
 flowchart TB
-  S1["<div style='text-align:left'><b>1 · Job position</b><br/>Site Reliability Engineer (SRE): software engineers who run services<br/>and build systems that replace manual operations work</div>"]
-  S2["<div style='text-align:left'><b>2 · Organization and workload</b><br/>Google; services SRE runs: Search, Ads, Gmail, Photos<br/>Hundreds of on-call rotations; SRE is separate from product teams</div>"]
-  S3["<div style='text-align:left'><b>3 · Operating system</b><br/>Linux kernel underpins much of Google production<br/>Internal Linux distribution; gLinux Rodete (Debian-based) on Googler machines<br/>Borg: cluster OS that runs huge numbers of Linux containers</div>"]
-  S4["<div style='text-align:left'><b>4 · Hardware and infrastructure</b><br/>Google-designed datacenters: custom power, cooling, network and compute<br/>Jupiter Clos network inside datacenters; B4 backbone between them<br/>Thousands of machines and disks failed per cluster in a typical year</div>"]
-  S5["<div style='text-align:left'><b>5 · Software, tools and applications</b><br/>Blaze/Bazel hermetic builds for C++, Java, Python, Go, JavaScript<br/>Google Front End (GFE) terminates and routes traffic to most services<br/><i>Practice lab (assumption): Ubuntu VM, Git, Bash/Python, Docker, Prometheus, minikube</i></div>"]
-  S6["<div style='text-align:left'><b>6 · Required knowledge and skills</b><br/>Reliability practice: SLOs, toil limit of 50%, blameless postmortems<br/>OS concepts: scheduling, virtual memory, namespaces and cgroups<br/><i>Hands-on preparation (assumption): Linux shell, containers, metrics, incident write-up</i></div>"]
+  S1["<div style='text-align:left;line-height:1.2'><b>1 · Job position</b><br/>Site Reliability Engineer (SRE): software engineers who run services<br/>and build systems that replace manual operations work</div>"]
+  S2["<div style='text-align:left;line-height:1.2'><b>2 · Organization and workload</b><br/>Google; example services: Search, Ads, Gmail, Photos<br/>Hundreds of on-call rotations; SRE is separate from product teams</div>"]
+  S3["<div style='text-align:left;line-height:1.2'><b>3 · Operating system</b><br/>Linux kernel underpins much of Google production<br/>Internal Linux distribution; gLinux Rodete (Debian-based) for employee workstations<br/>No source states which OS SREs use on their workstations<br/>Borg: cluster OS that runs huge numbers of Linux containers</div>"]
+  S4["<div style='text-align:left;line-height:1.2'><b>4 · Hardware and infrastructure</b><br/>Google-designed datacenters: custom power, cooling, network and compute<br/>Jupiter Clos network inside datacenters; B4 backbone between them<br/>Thousands of machines and disks failed per cluster in a typical year</div>"]
+  S5["<div style='text-align:left;line-height:1.2'><b>5 · Software, tools and applications</b><br/>Blaze/Bazel hermetic builds for C++, Java, Python, Go, JavaScript<br/>Google Front End (GFE) terminates and routes traffic to most services<br/><i>Practice lab (assumption): Ubuntu VM, Git, Bash/Python, Docker, Prometheus, minikube</i></div>"]
+  S6["<div style='text-align:left;line-height:1.2'><b>6 · Required knowledge and skills</b><br/>Reliability practice: SLOs, toil limit of 50%, blameless postmortems<br/>OS concepts: scheduling, virtual memory, namespaces and cgroups<br/><i>Hands-on preparation (assumption): Linux shell, containers, metrics, incident write-up</i></div>"]
   S1 --> S2
   S2 --> S3
   S3 --> S4

@@ -1,13 +1,6 @@
 \section{Conclusion}\label{sec:conclusion}
 
-Figure~\ref{fig:chain} shows how our findings fit together, from the job position to the knowledge it requires.
-
-\begin{figure}[!t]
-\centering
-\includegraphics[width=0.94\textwidth,height=0.58\textheight,keepaspectratio]{figures/relationship.pdf}
-\caption{From job position to required knowledge and skills for an SRE at Google. Each stage rests on claims from the cited sources \cite{sre-book,workbook,bsrs,google-cloud-blog,static-pdf-incidentmanagementguide-pdf,man7,kernel-docs}. The arrows read: works at, runs on, sits on top of, is operated with, requires. The two italic lines are our assumptions, a typical practice environment and a preparation recommendation, not verified facts about Google. The link from the OS concepts to the job is our interpretation.}
-\label{fig:chain}
-\end{figure}
+Figure~\ref{fig:chain}, on page~\pageref{fig:chain}, shows how our findings fit together, from the job position to the knowledge it requires.
 
 \paragraph{What we found.}
 At Google, SRE means software engineers who run services and build systems to replace manual operations work, with operational work capped at 50\% of a team's time \cite{sre-book,workbook}. The work runs on Linux: the kernel underpins much of Google's production infrastructure \cite{bsrs}, and Borg, the cluster operating system, runs huge numbers of Linux containers \cite{sre-book,workbook}. It runs in Google-designed datacenters where, in the SRE book's account, thousands of machines and disks failed in a typical year in one cluster \cite{sre-book}. Containers rely on Linux namespaces and control groups and share one kernel \cite{man7,kernel-docs,docs-docker-get-started-docker-concepts-the-basics-what-is-a-container}. In our reading, this links the job to process management, scheduling, virtual memory and resource control.
