@@ -5,7 +5,7 @@
 \paragraph{Knowledge exploration 1: Plan and research the topic 04, 05 and 06 claims (OS, hardware, architecture) from the Google SRE books and official Google sources.}
 Claude Code (desktop app), Claude Opus 5.5 (claude-opus-5-5); 2026-10-09; log \texttt{2026-10-09-csinside-sre-books-04-06-research}; supporting data: 1 repository file and 1 web page. Prompts (5 of 6):
 \begin{promptlist}
-\item @"[REDACTED:path]" \\{}
+\item \textbf{Turn~1.} @"[REDACTED:path]" \\{}
 \thai{ยังไม่ต้องเขียนอะไร} just plan \thai{สรุปมาอย่างง่ายว่าทำอะไรบ้าง หัวของที่เราได้เน้นทำคือ} \\{}
 04-operating-systems \\{}
 05-hardware-requirements \\{}
@@ -13,12 +13,12 @@ Claude Code (desktop app), Claude Opus 5.5 (claude-opus-5-5); 2026-10-09; log \t
 \thai{หัวข้องอื่นจะเป็นของเพื่อน} \\{}
 \thai{เอกสารอ้างอิงหลักคือ} https:/\allowbreak{}/\allowbreak{}sre.google/\allowbreak{}books/\allowbreak{} \\{}
 \thai{อยากให้หาว่าควรไปเน้นอ่านที่ส่วนไหน วางแผนการจัดสรรเนื้อหา}
-\item writing clam 04 05 06 in 2 languages, Thai and English, separate file \\{}
+\item \textbf{Turn~2.} writing clam 04 05 06 in 2 languages, Thai and English, separate file \\{}
 Don't push Thai language file to git hub \\{}
 But now don't push anything
-\item 04 Are there any points where the information is unclear and requires external research?
-\item Have you already looked for the additional information in the documents?
-\item Discard the Thai-language files and continue the research; all information used for the write-up must be clear and factually verifiable. \\{}
+\item \textbf{Turn~3.} 04 Are there any points where the information is unclear and requires external research?
+\item \textbf{Turn~4.} Have you already looked for the additional information in the documents?
+\item \textbf{Turn~5.} Discard the Thai-language files and continue the research; all information used for the write-up must be clear and factually verifiable. \\{}
 [Request interrupted by user] \\{}
 Discard the Thai-language files and continue the research; all information used for the write-up must be clear and factually verifiable.
 \end{promptlist}
@@ -26,13 +26,13 @@ Discard the Thai-language files and continue the research; all information used 
 \paragraph{Knowledge exploration 2: Research topic 11 OS mechanisms and proposed SRE connections.}
 Codex, gpt-6.1-sol; 2026-10-10; log \texttt{2026-10-10-TonCS05-11-os-concepts-research}; supporting data: 6 repository files and 16 web pages. Prompts (1):
 \begin{promptlist}
-\item \thai{งั้นหาข้อมูลในหัวข้อที่}11\thai{แล้วบันทึกตามกติกาที่ได้ตั้งๆไว้}
+\item \textbf{Turn~1.} \thai{งั้นหาข้อมูลในหัวข้อที่}11\thai{แล้วบันทึกตามกติกาที่ได้ตั้งๆไว้}
 \end{promptlist}
 
 \paragraph{Knowledge exploration 3: Research topic 01 (SRE position and job description) into five notes of claims from the Google SRE books and one Google job ad.}
 Claude Code (desktop app), Sonnet 5.5 (claude-sonnet-5-5); 2026-10-11; log \texttt{2026-10-11-bximai-01-position-research}; supporting data: 16 web pages. Prompts (3 of 7):
 \begin{promptlist}
-\item Main Souce : https:/\allowbreak{}/\allowbreak{}sre.google/\allowbreak{}books/\allowbreak{} \\{}
+\item \textbf{Turn~1.} Main Souce : https:/\allowbreak{}/\allowbreak{}sre.google/\allowbreak{}books/\allowbreak{} \\{}
 start research on 01 . Split into 5 notes:
 
 * role-and-duties \\{}
@@ -44,17 +44,17 @@ start research on 01 . Split into 5 notes:
 Do one note at a time, starting with role-and-duties
 
 Note : do not made up or guess.
-\item Redo 01-06 by the rules: delete its block, re-add it with add\_claim.py using \\{}
+\item \textbf{Turn~2.} Redo 01-06 by the rules: delete its block, re-add it with add\_claim.py using \\{}
 the same claim text and quote, then update the claim IDs in Summary and Key points. \\{}
 From now on, never hand-edit a claim block. If the wording is wrong, delete and re-add.
-\item yes and always follow the instruction rules.
+\item \textbf{Turn~3.} yes and always follow the instruction rules.
 \end{promptlist}
 
 \paragraph{Knowledge exploration 4: Rework the uncommitted 03-soft-skills and 10-server-and-database-software claims and notes to the PR.}
 Claude Code, Opus 5.5 (claude-opus-5-5); 2026-10-12; log \texttt{2026-10-12-nine14282-soft-skills-server-db-claims-rework}; supporting data: none. Prompts (2 of 3):
 \begin{promptlist}
-\item with this standard of writing. Let's look at my old uncommit work 03 and 10 if it need changed, if so, fix those change
-\item verify with 2 sub agent again. one for word one for rule
+\item \textbf{Turn~1.} with this standard of writing. Let's look at my old uncommit work 03 and 10 if it need changed, if so, fix those change
+\item \textbf{Turn~2.} verify with 2 sub agent again. one for word one for rule
 \end{promptlist}
 
 \subsection{Report creation}
@@ -62,8 +62,8 @@ Claude Code, Opus 5.5 (claude-opus-5-5); 2026-10-12; log \texttt{2026-10-12-nine
 \paragraph{Report creation 1: Draft the LaTeX report from the knowledge base, add company and internship claims, build the cover page, and revise the report after a blind review.}
 Claude Code (CLI v2.1.299), Claude Sonnet 5.5 (claude-sonnet-5-5); 2026-10-16; log \texttt{2026-10-16-nacs-970-report-drafting-and-review}; supporting data: 2 repository files and 1 web page. Prompts (6 of 35):
 \begin{promptlist}
-\item list thing that can be add to document assignment
-\item 1 i will add it later, we will use latex from now on, i will commit most of work on main now so update workflow \\{}
+\item \textbf{Turn~1.} list thing that can be add to document assignment
+\item \textbf{Turn~2.} 1 i will add it later, we will use latex from now on, i will commit most of work on main now so update workflow \\{}
 2 we select sre because we see oppuritunity in ai era that need site engineer since ai still can only do software stuff,  google because big commpany and have delicate website on sre \\{}
 3 look in prompt log \\{}
 4 draft it for me \\{}
@@ -74,9 +74,9 @@ Claude Code (CLI v2.1.299), Claude Sonnet 5.5 (claude-sonnet-5-5); 2026-10-16; l
 -{}-{}- \\{}
 recheck un verified topic \\{}
 why 13 exisist is it really require by instuctor?
-\item i recheck everything it's ok, but recheck for weak/\allowbreak{}example claim
-\item 1 group website and book together, and appenddix only really importance log
-\item in what we clound not found this is https:/\allowbreak{}/\allowbreak{}www.google.com/\allowbreak{}about/\allowbreak{}careers/\allowbreak{}applications/\allowbreak{} look for internship program, search company history google, search for revenue or customer counts too. don't mention of no human sign off in report
-\item start blind agent check of report is it match the instuctor requirement, \\{}
+\item \textbf{Turn~14.} i recheck everything it's ok, but recheck for weak/\allowbreak{}example claim
+\item \textbf{Turn~22.} 1 group website and book together, and appenddix only really importance log
+\item \textbf{Turn~24.} in what we clound not found this is https:/\allowbreak{}/\allowbreak{}www.google.com/\allowbreak{}about/\allowbreak{}careers/\allowbreak{}applications/\allowbreak{} look for internship program, search company history google, search for revenue or customer counts too. don't mention of no human sign off in report
+\item \textbf{Turn~35.} start blind agent check of report is it match the instuctor requirement, \\{}
 write a review
 \end{promptlist}

@@ -256,15 +256,21 @@ def is_confirmation(turn: str) -> bool:
     return len(turn.strip()) <= 12 and not THAI.search(turn)
 
 
-def shown_prompts(data: dict, body: str) -> tuple[list[str], int]:
-    """The prompts the appendix shows for one log, and the number of user turns in it.
+def shown_turns(data: dict, body: str) -> tuple[list[tuple[int, str]], int]:
+    """The user turns the appendix shows for one log, with their turn numbers, and the number of user turns in it.
 
     A turn named in the log's `appendix_skip` is a routine instruction and is left out whole. A shown prompt is
     never cut, because the assignment does not accept shortened prompts."""
     skipped = set(data.get("appendix_skip") or [])
     turns = numbered_user_turns(body)
-    shown = [text for n, text in turns if not is_confirmation(text) and n not in skipped]
+    shown = [(n, text) for n, text in turns if not is_confirmation(text) and n not in skipped]
     return shown, len(turns)
+
+
+def shown_prompts(data: dict, body: str) -> tuple[list[str], int]:
+    """The text of the prompts the appendix shows for one log, and the number of user turns in it."""
+    shown, total = shown_turns(data, body)
+    return [text for _, text in shown], total
 
 
 def appendix_text() -> str:
@@ -281,7 +287,7 @@ def appendix_text() -> str:
             continue
         out.append(f"\\subsection{{{heading}}}\n")
         for n, (d, body) in enumerate(chosen, 1):
-            turns, total = shown_prompts(d, body)
+            turns, total = shown_turns(d, body)
             shown = f"{len(turns)} of {total}" if len(turns) < total else f"{len(turns)}"
             docs = [str(x) for x in d.get("supporting_docs") or []]
             web = sum(1 for x in docs if x.startswith("http"))
@@ -290,7 +296,7 @@ def appendix_text() -> str:
                                                  f"{web} web page{'s' * (web != 1)}" if web else "") if p) or "none"
             out.append(f"\\paragraph{{{heading} {n}: {tex(d['purpose'])}.}}\n"
                        f"{tex(d['platform'])}, {tex(d['model'])}; {date_of(d['date'])}; log \\texttt{{{breakable(d['id'])}}}; supporting data: {supplied}. Prompts ({shown}):\n"
-                       "\\begin{promptlist}\n" + "".join(f"\\item {prompt_tex(t)}\n" for t in turns) + "\\end{promptlist}\n")
+                       "\\begin{promptlist}\n" + "".join(f"\\item \\textbf{{Turn~{n}.}} {prompt_tex(t)}\n" for n, t in turns) + "\\end{promptlist}\n")
     return "\n".join(out)
 
 
