@@ -184,7 +184,7 @@ def bib_text(min_status: str) -> str:
         key = f"genai-{slug(platform)}-{slug(model.split('(')[-1].rstrip(')') if '(' in model else model)}"
         vendor = VENDOR.get(platform.lower(), platform)
         out.append(f"@misc{{{key},\n  author  = {{{{{tex(vendor)}}}}},\n  title   = {{{{{tex(platform)}, {tex(model)}}}}},\n"
-                   f"  howpublished = {{GenAI platform. Used for {tex(used_for(info['roles']))}}},\n"
+                   f"  howpublished = {{GenAI platform. Used for {tex(used_for(info['roles']).lower())}}},\n"
                    f"  note    = {{Accessed: {max(info['dates'])}}},\n}}\n")
     url = repo_url()
     if url:
