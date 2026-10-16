@@ -23,7 +23,7 @@ from __future__ import annotations
 import argparse
 import re
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -304,10 +304,14 @@ def appendix_text() -> str:
             turns, total = shown_turns(d, body)
             shown = f"{len(turns)} of {total}" if len(turns) < total else f"{len(turns)}"
             docs = [str(x) for x in d.get("supporting_docs") or []]
-            web = sum(1 for x in docs if x.startswith("http"))
-            files = len(docs) - web
-            supplied = " and ".join(p for p in (f"{files} repository file{'s' * (files != 1)}" if files else "",
-                                                 f"{web} web page{'s' * (web != 1)}" if web else "") if p) or "none"
+            pages = [x for x in docs if x.startswith("http")]
+            files = [x for x in docs if not x.startswith("http")]
+            hosts = Counter(urlparse(x).netloc.removeprefix("www.") for x in pages)
+            named = [f"repository file{'s' * (len(files) != 1)} " + ", ".join(f"\\texttt{{{breakable(f)}}}" for f in files)] if files else []
+            if pages:
+                named.append(f"{len(pages)} web page{'s' * (len(pages) != 1)} ("
+                             + ", ".join(f"{tex(h)} {n}" for h, n in sorted(hosts.items(), key=lambda kv: (-kv[1], kv[0]))) + ")")
+            supplied = "; ".join(named) or "none"
             out.append(f"\\paragraph{{{heading} {n}: {tex(d['purpose'])}.}}\n"
                        f"{tex(d['platform'])}, {tex(d['model'])}; {date_of(d['date'])}; log \\texttt{{{breakable(d['id'])}}}; supporting data: {supplied}. Prompts ({shown}):\n"
                        "\\begin{promptlist}\n" + "".join(f"\\item \\textbf{{Turn~{n}.}} {prompt_tex(t)}\n" for n, t in turns) + "\\end{promptlist}\n")
