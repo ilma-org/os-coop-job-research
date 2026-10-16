@@ -21,6 +21,7 @@ knowledge-base/NN-slug/        13 topic directories, one owner each
   index.md                     topic metadata and scope
   *.md                         notes with claims in the front matter
 prompts/                       exact GenAI conversations (prompt logs)
+report/                        the LaTeX report (cover page stays local and git-ignored)
 scripts/                       lint, appendix budget, hook setup
 .github/                       PR template, Issue templates, CI
 ```
@@ -88,7 +89,8 @@ These are configured on GitHub for `ilma-org/os-coop-job-research`. Apply them a
 
 - Public repository in a free GitHub Organization. Default branch `main`.
 - Squash-merge only, and delete branches after merge.
-- Protection on `main`: pull request required, 1 approval, "Require review from Code Owners" on, the `lint` status check required, applied to admins too. Do **not** turn on "Require approval of the most recent reviewable push", or the reviewer's own verification commit blocks their approval. "Dismiss stale approvals" is optional; if it is on, the reviewer must approve after pushing the verification commit.
+- **2026-10-16:** `@nacs-970` is exempt from the PR rule and commits straight to `main`. A maintainer must add them to the bypass list for the protection below (or relax the rule), or their direct pushes are rejected. Nothing in this repo changes the GitHub settings.
+- Protection on `main` (original setting): pull request required, 1 approval, "Require review from Code Owners" on, the `lint` status check required, applied to admins too. Do **not** turn on "Require approval of the most recent reviewable push", or the reviewer's own verification commit blocks their approval. "Dismiss stale approvals" is optional; if it is on, the reviewer must approve after pushing the verification commit.
 - Reviewers: the 3 code owners listed in `.github/CODEOWNERS`. Because code-owner review is required, only their approvals count. Members who are not reviewers can open PRs but cannot approve them.
 - Push and merge to `main` restricted by username to the same 3 reviewers (`restrictions.users` in the branch-protection settings; no team is used).
 - To add or remove a reviewer: give them Write access first (a code owner without write access is ignored), then change `.github/CODEOWNERS` in a PR, then update the push restriction to match. Another reviewer approves and merges that PR.
@@ -103,7 +105,11 @@ These are configured on GitHub for `ilma-org/os-coop-job-research`. Apply them a
 - The instructor accepts non-significant prompt logs through the repo URL, so the repo must stay public and unchanged until grading is done.
 - The cover page (student IDs, full names, phone numbers) is built locally and is never committed. `.gitignore` covers the usual names.
 
+## Decided
+
+- The report toolchain is LaTeX (2026-10-16). Source is in `report/`. The assignment requires 12-point Times New Roman on A4.
+- `@nacs-970` is exempt from the PR rule (2026-10-16). Everyone else keeps the PR flow. See `AGENTS.md`, "Workflow".
+
 ## Still undecided
 
-- The report toolchain (LaTeX or docx). Keep notes in Markdown so Pandoc can produce either. The assignment requires 12-point Times New Roman on A4.
 - Any internal deadline for the knowledge base.

@@ -9,6 +9,37 @@ This guide uses the GitHub CLI (`gh`) so nobody has to remember the git and pull
 3. Clone the repo: `gh repo clone ilma-org/os-coop-job-research`, then `cd os-coop-job-research`.
 4. Turn on the pre-push lint: `sh scripts/setup.sh`.
 
+## `@nacs-970`: commit straight to `main` (since 2026-10-16)
+
+`@nacs-970` is exempt from the PR rule. They commit most work directly to `main`: the report, prompt logs, docs, scripts and claims. Everyone else follows the PR flow in the sections below.
+
+```
+git pull --rebase                         # start from the latest main
+# ... edit, then check ...
+python3 scripts/lint_front_matter.py      # must pass
+python3 scripts/pr_leak_scan.py           # scans the commits not yet pushed (origin/main..HEAD)
+git add <path>                            # stage by path, never `git add -A` blindly
+git commit -m "Add intro section to report"
+git push
+```
+
+The exemption covers the PR rule only. Claims keep their gates. The blind author check gives `ai-checked`. A human who is not the claim's author gives `human-verified` in a separate verification commit, so `@nacs-970` cannot verify their own claims. Nothing in CI enforces this without a PR, so it is an honor rule.
+
+GitHub must allow the push. Branch protection on `main` requires a PR and applies to admins too, so the push is rejected until a maintainer adds `@nacs-970` to the bypass list or relaxes the rule (see README, "Maintainer reference").
+
+## Build the report (LaTeX)
+
+```
+python3 scripts/make_report_data.py            # rewrites report/references.bib and report/generated/
+cd report && tectonic -X compile main.tex --outdir ../.local/build   # or: latexmk -pdf main.tex
+```
+
+The bibliography uses classic BibTeX (`unsrt`), so no `biber` is needed. Tectonic downloads the packages it needs on the first run (a few minutes, then cached). On Linux with Times New Roman installed, XeTeX uses it; otherwise `main.tex` falls back to TeX Gyre Termes.
+
+Figure 1 comes from `report/figures/relationship.mmd`. Rebuild the PDF with `mmdc -i report/figures/relationship.mmd -o report/figures/relationship.pdf`. On Linux, `mmdc` may need `-p <file>` with `{"executablePath":"/usr/bin/chromium","args":["--no-sandbox"]}` (keep that file in `.local/`). The PDF is committed so the report builds without `mmdc`.
+
+The cover page is `report/cover.tex`. It is git-ignored. `main.tex` includes it only if the file exists. Overleaf also works: upload `report/` plus your local cover file.
+
 ## Topic owner: do new work
 
 ```
@@ -65,7 +96,7 @@ To ask for changes instead: `gh pr review <number> --request-changes --body "...
 
 ## Change the repo system (rules, scripts, skills, CI, templates)
 
-Work that adds no claim is not a topic PR. Use a `chore/<short-description>` or `meta/<short-description>` branch from `origin/main` and the title `[meta] what changed`.
+Work that adds no claim goes straight to `main` for `@nacs-970`. For everyone else it is not a topic PR: use a `chore/<short-description>` or `meta/<short-description>` branch from `origin/main` and the title `[meta] what changed`.
 
 ```
 git fetch && git switch -c chore/short-description origin/main
@@ -86,6 +117,7 @@ Run these instead of typing the output by hand. Each has `--help`.
 | `scripts/add_claim.py` | Adds one claim to a note. Checks the quote against the page and finds an archive snapshot by code, takes the next free ID, writes the YAML block. |
 | `scripts/update_index.py` | Rewrites the notes list in a topic's `index.md` from the notes' front matter. |
 | `scripts/make_prompt_log.py` | Builds `prompts/<id>.md` from a saved session: verbatim turns, redaction, ledger, front matter. |
+| `scripts/make_report_data.py` | Builds `report/references.bib` (claim sources, GenAI platforms, the repo) and `report/generated/genai-usage.tex` (GenAI table). |
 | `scripts/status.py` | Claim counts per topic, claims missing `ai_check`, notes missing a summary. |
 | `scripts/make_pr_body.py` | Drafts the PR body from the repo. Leaves `<agent: ...>` placeholders for judgment. |
 | `scripts/ship.py` | `prepare` runs the checks and drafts the body. `open` pushes and opens the PR, only with `--yes`. |
@@ -102,7 +134,7 @@ gh issue create --web            # choose the Dispute template
 
 ## Rules to remember
 
-- `main` is protected. Push to a branch and open a PR, never push to `main`.
+- `main` is protected. Push to a branch and open a PR. Only `@nacs-970` may push to `main` (see the section above). Nobody force-pushes `main`.
 - Commit in small, separate steps. See "Commits" in `AGENTS.md`.
 - A PR needs one approval from a reviewer (a code owner in `.github/CODEOWNERS`) who is not its author. Approvals from other members do not count.
 - If `git push` is rejected, run `git pull --rebase` and push again. Do not force-push a branch that others use.
