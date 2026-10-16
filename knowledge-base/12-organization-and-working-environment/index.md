@@ -6,7 +6,7 @@ assignment_section: "4.7"
 report_sections: [5]
 owner: "@Bximai"
 issue: 17
-updated: 2026-10-15
+updated: 2026-10-16
 ---
 
 # Organization and working environment
@@ -26,10 +26,10 @@ Assignment Appendix G. Target company: **Google** (SRE). Do not claim what Googl
 The owner organizes notes (`topic-note` files) here. List them below as they are added.
 
 <!-- notes:start -->
-- [google-services-and-customers.md](google-services-and-customers.md): Google services, customers and the origin of SRE. 6 claims (12-01 to 12-04, 12-06, 12-34): 6 human-verified.
+- [google-services-and-customers.md](google-services-and-customers.md): Google services, customers and the origin of SRE. 14 claims (12-01 to 12-04, 12-06, 12-34, 12-49 to 12-56): 8 ai-checked, 6 human-verified.
 - [sre-organization-at-google.md](sre-organization-at-google.md): How SRE is organized at Google. 11 claims (12-07 to 12-17): 11 human-verified.
 - [working-environment-and-culture.md](working-environment-and-culture.md): SRE working environment and culture at Google. 12 claims (12-18 to 12-29): 12 human-verified.
-- [internships-and-job-opportunities.md](internships-and-job-opportunities.md): Internships and job opportunities at Google. 4 claims (12-30 to 12-33): 4 human-verified.
+- [internships-and-job-opportunities.md](internships-and-job-opportunities.md): Internships and job opportunities at Google. 13 claims (12-30 to 12-33, 12-35 to 12-38, 12-40, 12-42, 12-44, 12-46, 12-48): 9 ai-checked, 4 human-verified.
 <!-- notes:end -->
 
 ## Sources covered so far
@@ -42,10 +42,9 @@ Computing infrastructure and technologies at Google (datacenters, Borg, Linux, t
 
 These items have no opened source that `scripts/add_claim.py` has checked. Do not put them in the report as facts.
 
-- Company background: founding year, founders, headquarters, parent company (Alphabet), employee count, revenue. The books do not give them. Try official Google pages such as about.google or Alphabet investor pages.
 - A current list of Google products and customer segments. The books name products only as examples, some under old names (Google Apps for Work).
 - Google's AI and data activities. Not searched in this round.
 - Offices and locations of SRE teams, working hours, and remote or hybrid work policy.
-- An SRE internship or student program at Google, its eligibility and how to apply. The books mention interns only in two case studies (12-32, 12-33). Try Google's careers pages and current job ads.
-- Current Google SRE job openings. The sre.google careers page links to Google careers but is not one of the books, so it was not used in this round.
-- Size of the Google SRE organization.
+- A total count of Google's business customers. The only figure found is for Workspace alone, from May 2023 (12-56).
+- An SRE internship for students outside the EMEA region. The 2027 posting found (12-35 to 12-48) is limited to students in EMEA.
+- Employee count and the number of SRE staff. Not searched in this round.

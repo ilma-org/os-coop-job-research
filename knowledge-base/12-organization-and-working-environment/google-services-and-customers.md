@@ -2,7 +2,7 @@
 doc_type: topic-note
 topic: 12-organization-and-working-environment
 title: "Google services, customers and the origin of SRE"
-updated: 2026-10-14
+updated: 2026-10-16
 claims:
   - id: 12-01
     claim: "The SRE book preface says Google SREs operate services such as planet-scale storage, email for hundreds of millions of users, and web search, which is where Google began."
@@ -172,13 +172,157 @@ claims:
       date: 2026-10-15
       result: pass
       opened_source: true
+  - id: 12-49
+    claim: "Google's own company story page says the Google story begins in 1995 at Stanford University."
+    type: org-fact
+    status: ai-checked
+    source:
+      title: "How we started and where we are today - Google - About Google"
+      url: https://about.google/company-info/our-story/
+      kind: official-doc
+      accessed: 2026-10-16
+      archive: https://web.archive.org/web/20261010142916/https://about.google/company-info/our-story/
+    quote: "The Google story begins in 1995 at Stanford University."
+    os_concepts: []
+    pr: null
+    ai_check:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-16-nacs-970-12-company-internship-author-check.md
+      result: supported
+  - id: 12-50
+    claim: "Google's own company story page says Google Inc. was officially born in August 1998, after Sun co-founder Andy Bechtolsheim wrote Larry Page and Sergey Brin a check for $100,000."
+    type: org-fact
+    status: ai-checked
+    source:
+      title: "How we started and where we are today - Google - About Google"
+      url: https://about.google/company-info/our-story/
+      kind: official-doc
+      accessed: 2026-10-16
+      archive: https://web.archive.org/web/20261010142916/https://about.google/company-info/our-story/
+    quote: "In August 1998, Sun co-founder Andy Bechtolsheim wrote Larry and Sergey a check for $100,000, and Google Inc. was officially born."
+    os_concepts: []
+    pr: null
+    ai_check:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-16-nacs-970-12-company-internship-author-check.md
+      result: supported
+  - id: 12-51
+    claim: "Google's own company story page says Google moved to its current headquarters, the Googleplex, in Mountain View, California."
+    type: org-fact
+    status: ai-checked
+    source:
+      title: "How we started and where we are today - Google - About Google"
+      url: https://about.google/company-info/our-story/
+      kind: official-doc
+      accessed: 2026-10-16
+      archive: https://web.archive.org/web/20261010142916/https://about.google/company-info/our-story/
+    quote: "Google outgrew the garage and eventually moved to its current headquarters (a.k.a.“The Googleplex”) in Mountain View, California."
+    os_concepts: []
+    pr: null
+    ai_check:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-16-nacs-970-12-company-internship-author-check.md
+      result: supported
+  - id: 12-52
+    claim: "Google's own company story page says Google makes hundreds of products used by billions of people, from YouTube and Android to Gmail and Google Search."
+    type: org-fact
+    status: ai-checked
+    source:
+      title: "How we started and where we are today - Google - About Google"
+      url: https://about.google/company-info/our-story/
+      kind: official-doc
+      accessed: 2026-10-16
+      archive: https://web.archive.org/web/20261010142916/https://about.google/company-info/our-story/
+    quote: "Today, Google makes hundreds of products used by billions of people across the globe, from YouTube and Android to Gmail and, of course, Google Search."
+    os_concepts: []
+    pr: null
+    ai_check:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-16-nacs-970-12-company-internship-author-check.md
+      result: supported
+  - id: 12-53
+    claim: "Alphabet's June 2026 investor presentation, published on Google's blog, says annual revenue more than doubled from 2020 to 2025, to over $400 billion."
+    type: org-fact
+    status: ai-checked
+    source:
+      title: "Alphabet investor presentation: June 2026"
+      url: https://blog.google/alphabet/investor-presentation-june-2026/
+      kind: official-doc
+      accessed: 2026-10-16
+      archive: https://web.archive.org/web/20261011170255/https://blog.google/alphabet/investor-presentation-june-2026/
+    quote: "From 2020 to 2025, our annual revenue more than doubled to over $400 billion."
+    os_concepts: []
+    pr: null
+    ai_check:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-16-nacs-970-12-company-internship-author-check.md
+      result: supported
+  - id: 12-54
+    claim: "Alphabet's June 2026 investor presentation says first-quarter 2026 revenue reached nearly $110 billion, up 22% year over year."
+    type: org-fact
+    status: ai-checked
+    source:
+      title: "Alphabet investor presentation: June 2026"
+      url: https://blog.google/alphabet/investor-presentation-june-2026/
+      kind: official-doc
+      accessed: 2026-10-16
+      archive: https://web.archive.org/web/20261011170255/https://blog.google/alphabet/investor-presentation-june-2026/
+    quote: "In the first quarter of 2026, our momentum has continued as revenue reached nearly $110 billion, up 22% year-over-year."
+    os_concepts: []
+    pr: null
+    ai_check:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-16-nacs-970-12-company-internship-author-check.md
+      result: supported
+  - id: 12-55
+    claim: "Alphabet's June 2026 investor presentation says Gemini now powers all of Google's 13 products that have over a billion users, including five that have over 3 billion users."
+    type: org-fact
+    status: ai-checked
+    source:
+      title: "Alphabet investor presentation: June 2026"
+      url: https://blog.google/alphabet/investor-presentation-june-2026/
+      kind: official-doc
+      accessed: 2026-10-16
+      archive: https://web.archive.org/web/20261011170255/https://blog.google/alphabet/investor-presentation-june-2026/
+    quote: "Gemini is now powering all of our 13 products that have over a billion users, including five that surpass 3 billion users."
+    os_concepts: []
+    pr: null
+    ai_check:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-16-nacs-970-12-company-internship-author-check.md
+      result: supported
+  - id: 12-56
+    claim: "A May 2023 Google Workspace blog post says three billion users and 9 million paying customers use Google Workspace. The figure is from 2023, not current."
+    type: org-fact
+    status: ai-checked
+    source:
+      title: "Build workflows across Google Workspace to connect user experiences across apps (blog post, May 2023)"
+      url: https://workspace.google.com/blog/product-announcements/workflows-across-workspace
+      kind: official-doc
+      accessed: 2026-10-16
+      archive: https://web.archive.org/web/20260927101804/https://workspace.google.com/blog/product-announcements/workflows-across-workspace
+    quote: "Three billion users and 9 million paying customers use Google Workspace to connect, create, and collaborate."
+    os_concepts: []
+    pr: null
+    ai_check:
+      platform: Claude Code
+      model: "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+      prompt_log: prompts/2026-10-16-nacs-970-12-company-internship-author-check.md
+      result: supported
 ---
 
 # Google services, customers and the origin of SRE
 
 ## Summary
 
-The Google SRE books describe the services Google SREs run: web search, where Google began, email for hundreds of millions of users, planet-scale storage, internal infrastructure such as Bigtable, and Google Cloud Platform for external developers. The SRE book names Search, Ads, Gmail and Photos as services it weighs for risk, and separates enterprise customers of Google Apps for Work from YouTube's consumer audience in 2006. SRE at Google began in 2003 with a "Production Team" of seven engineers. Product names such as Google Apps for Work are as the books give them and may not be current names. The books give no company history, revenue or customer counts beyond these examples.
+The Google SRE books describe the services Google SREs run: web search, where Google began, email for hundreds of millions of users, planet-scale storage, internal infrastructure such as Bigtable, and Google Cloud Platform for external developers. The SRE book names Search, Ads, Gmail and Photos as services it weighs for risk, and separates enterprise customers of Google Apps for Work from YouTube's consumer audience in 2006. SRE at Google began in 2003 with a "Production Team" of seven engineers. Product names such as Google Apps for Work are as the books give them and may not be current names. Google's own company page and Alphabet's June 2026 investor presentation add the company's start in 1995 and incorporation in 1998, its Mountain View headquarters, annual revenue above $400 billion in 2025, and user counts (12-49 to 12-56). None of the sources we read gives a total customer count. The only figure is a May 2023 Google Workspace post that gives 9 million paying customers for Workspace alone.
 
 ## Key points
 
@@ -186,3 +330,8 @@ The Google SRE books describe the services Google SREs run: web search, where Go
 - SRE at Google started in 2003, when Benjamin Treynor Sloss took over a seven-engineer "Production Team". (12-03)
 - Google weighs reliability risk per service, naming Search, Ads, Gmail and Photos. (12-04)
 - Customers range from enterprises using Google Apps for Work (Gmail, Calendar, Drive, Docs) to consumers of YouTube, which Google acquired. (12-06, 12-34)
+- Google's story starts in 1995 at Stanford University, and Google Inc. was officially born in August 1998; its headquarters is the Googleplex in Mountain View, California. (12-49, 12-50, 12-51)
+- Google makes hundreds of products used by billions of people. (12-52)
+- Alphabet's annual revenue more than doubled from 2020 to 2025, to over $400 billion, and first-quarter 2026 revenue was nearly $110 billion. (12-53, 12-54)
+- Thirteen Google products have over a billion users, five of them over 3 billion. (12-55)
+- A May 2023 post says Google Workspace has three billion users and 9 million paying customers; this is not a current figure. (12-56)
