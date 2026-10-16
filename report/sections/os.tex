@@ -1,6 +1,6 @@
 \section{Operating Systems Required or Recommended}\label{sec:os}
 
-The sources do not say why Google chose Linux. They do show which properties of Linux matter for SRE work, and we describe those.
+The sources do not say why Google chose Linux. They do describe Linux properties that, in our reading, matter for SRE work, and we present those.
 
 \paragraph{Production servers.}
 The Linux kernel underpins much of Google's production infrastructure \cite{bsrs}. Google has an internal Linux distribution. It first installed every datacenter machine with a ``golden'' base image and later moved to separate release units for each software package \cite{bsrs}. A 2013 paper by a Google engineer describes a live upgrade of Google's servers from a Red Hat 7.1 image to a Debian Testing based distribution built from source, without a long ``flag day'', with applications running in a different partition from the base distribution \cite{usenix-conference-lisa13-technical-sessions-presentation-merlin}. Resource allocation in the datacenters is handled by Borg, which the SRE book calls Google's cluster operating system \cite{sre-book}. The Workbook says Borg is Google's internal container management system and runs huge numbers of Linux containers \cite{workbook}.
