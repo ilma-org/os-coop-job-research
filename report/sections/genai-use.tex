@@ -10,14 +10,14 @@ We used two Generative AI platforms: Claude Code (Anthropic) \cite{genai-claude-
 \end{table}
 
 \paragraph{How we used GenAI.}
-GenAI helped us read and organise sources. It did not decide what is true. Each statement in our knowledge base is a claim with a published source, an access date and an exact sentence copied from that source. A claim passed through four steps:
+GenAI helped us read and organise sources. It did not decide what is true. Each statement in our knowledge base is a claim with a published source, an access date and an exact sentence copied from that source. A claim could pass through four steps:
 \begin{enumerate}
   \item \textbf{Research.} An agent read published sources (mainly the Google SRE books and official documentation) and proposed claims with a quote.
   \item \textbf{Blind author check.} A fresh agent received only the claim text and the source address, never the stored quote, and said whether the source supports the claim.
   \item \textbf{Reviewer recheck.} A different team member ran the same blind check in a separate session.
   \item \textbf{Human review.} The reviewer opened every cited source. Only then did the claim become ``human-verified''.
 \end{enumerate}
-Of \claimsTotal{} claims in our knowledge base, \claimsHumanVerified{} are human-verified and \claimsAiChecked{} have passed the blind author check. This report draws on both groups. Another \claimsAssumption{} are assumptions and recommendations. They have no source by design, are labelled as such, and can never become human-verified.
+Of \claimsTotal{} claims in our knowledge base, \claimsHumanVerified{} passed all four steps and are human-verified. Another \claimsAiChecked{} passed the blind author check but not the human review. This report draws on both groups. A further \claimsAssumption{} are assumptions and recommendations. They have no source by design, are labelled as such, and can never become human-verified.
 
 \paragraph{What we corrected.}
 The checks changed the content. A reviewer recheck found that the phrase ``not a fixed limit'' went beyond what the SRE book page says, and we replaced the claim with one that stays inside the source. A recheck of 24 claims marked 10 as unreachable because the source site could not be opened, and we rechecked those 10 using archived and mirrored copies. After a review of one pull request, we dropped, reworded and retyped claims about server and database software. Reworded claims went through the blind check again; in one recheck, two of three claims were supported and one only partly.
