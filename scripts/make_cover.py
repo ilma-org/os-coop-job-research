@@ -80,9 +80,9 @@ def cover_text(members: list[dict], representative: int | None) -> str:
         "No. & Student ID & Full name & Mobile phone & Section \\\\\n"
         "\\hline\n" + "\n".join(rows) + "\n\\hline\n"
         "\\end{tabular}\\\\[2cm]\n"
-        "204341 Operating Systems\\\\[0.4cm]\n"
-        "Final Assignment\\\\[1.8cm]\n"
-        "October 2026\n"
+        "204341 Operating Systems\\\\\n"
+        "Final Assignment\\\\[0.4cm]\n"
+        "05 - 18 October 2026\n"
         "\\end{center}\n"
     )
 
