@@ -71,8 +71,6 @@ def cover_text(members: list[dict], representative: int | None) -> str:
         "\\thispagestyle{empty}\n"
         "\\begin{center}\n"
         "\\vspace*{2.5cm}\n"
-        "{\\Large\\bfseries 204341 Operating Systems}\\\\[0.4cm]\n"
-        "{\\large Final Assignment}\\\\[1.8cm]\n"
         "{\\LARGE\\bfseries GenAI-Assisted Career and Operating Systems Exploration}\\\\[0.6cm]\n"
         "{\\Large Site Reliability Engineer at Google}\\\\[2.2cm]\n"
         "{\\large\\bfseries Group members}\\\\[0.4cm]\n"
@@ -82,6 +80,8 @@ def cover_text(members: list[dict], representative: int | None) -> str:
         "No. & Student ID & Full name & Mobile phone & Section \\\\\n"
         "\\hline\n" + "\n".join(rows) + "\n\\hline\n"
         "\\end{tabular}\\\\[2cm]\n"
+        "204341 Operating Systems\\\\[0.4cm]\n"
+        "Final Assignment\\\\[1.8cm]\n"
         "October 2026\n"
         "\\end{center}\n"
     )
